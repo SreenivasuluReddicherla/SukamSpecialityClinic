@@ -14,7 +14,7 @@ const ReproductiveMedicine = () => {
         <div className="surgery-hero-text-rp">
           <h1>Comprehensive Reproductive Medicine Care</h1>
           <p>Your health is in expert hands – safe, advanced, and compassionate surgical solutions</p>
-          <Link to="/doctor-profile/dr-anitha-a-manoj" className="consult-button">Consult Now</Link>
+          <Link to="/doctor-profile/dr-anitha-a-manoj" className="consult-button-rp">Consult Now</Link>
         </div>
       </div>
 
@@ -33,7 +33,7 @@ const ReproductiveMedicine = () => {
                     <li><span>🩺</span> Menstrual and hormonal disorders</li>
                     <li><span>🔬</span> Laparoscopic gynecologic surgeries</li>
                 </ul>
-                <Link to="/doctor-profile/dr-anitha-a-manoj" className="consult-button">
+                <Link to="/doctor-profile/dr-anitha-a-manoj" className="consult-button-rp">
                         Consult Now
                 </Link>
             </div>

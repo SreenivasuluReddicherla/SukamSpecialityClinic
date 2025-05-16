@@ -50,14 +50,15 @@ const GeneralSurgeryPage = () => {
             <div className="treatment-categories-box-manoj">
                 <h2>Our Treatment Categories</h2>
                 <div className="treatment-grid-manoj">
-                  
+                
                   <div className="treatment-card-manoj">
-                    <Link to="/treatments/IndividualTreatment" className="treatment-card-manoj">
+                    {/* <Link to="/treatments/IndividualTreatment" className="treatment-card-manoj"> */}
                     <img src={GS1} alt="Swelling in the Skin" className="icon-large" />
                     <h3>Swelling in the Skin</h3>
                     <p>A whole spectrum.</p>
-                    </Link>
+                    {/* </Link> */}
                   </div>
+                  
               
                       <div className="treatment-card-manoj">
                         <img src={GS2} alt="Skin Infections" className="icon-large" />

@@ -10,14 +10,7 @@ import BlogDetails from "./components/BlogDetails";
 import GoogleReviews from "./components/GoogleReviews";
 import Footer from "./components/Footer";
 import AboutUs from "./pages/AboutUs";
-// import PregnancyTreatment from "./pages/PregnancyTreatment";
 import PCODTreatment from "./pages/PCODTreatment";
-// import ThyroidSurgeries from "./pages/ThyroidSurgeries";
-// import Chronic from "./pages/chronic";
-// import Endoscopy from "./pages/endoscopy";
-// import Pancreas from "./pages/pancreas";
-// import Fertility from "./pages/fertility";
-// import Uterine from "./pages/uterine";
 import Contact from "./components/Contact";
 import AccessReportsLogin from "./pages/AccessReportsLogin";
 import Treatment1 from "./pages/treatment1";
@@ -37,74 +30,64 @@ import ReproductiveMedicine from "./pages/ReproductiveMedicine";
 import FloatingWhatsAppButton from "./components/FloatingWhatsAppButton";
 import IndividualTreatment from "./pages/IndividualTreatment";
 import CoreValues from "./pages/CoreValues";
+import './App.css';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+
+      {/* 🔷 Top Announcement Bar */}
+      <div className="top-ribbon">
+        <div className="scrolling-text">
+          📞 Call us: +91-91081 08980 | +91-81081 08310  &nbsp;&nbsp;&nbsp; 🕒 Open Daily: 9:00 AM – 9:00 PM
+        </div>
+      </div>
+
+      {/* 🔷 Main Navigation */}
       <Navbar />
-      <div className="content-wrapper">
+
+      {/* 🔷 Main Content Area */}
+      <main className="content-wrapper">
         <Routes>
-          {/* Home Page */}
           <Route
             path="/"
             element={
               <>
-              <div id="top"></div>
-              <div id="carousel"><CarouselComponent/></div>
-              <div id="exceptional-care"><HomeWelcomeBanner /></div>
-              <TabbedServicesSection/>
-              <ExperienceSection />
-              <div id="fertility-experts"><FertilityExperts /></div>
-              <div id="testimonials"><Testimonials /></div>
-              <RecentBlogs />
-              <Gallery />
-              <div id="reviews"><GoogleReviews /></div>
-      <       FAQ />
+                <CarouselComponent />
+                <HomeWelcomeBanner />
+                <TabbedServicesSection />
+                <ExperienceSection />
+                <FertilityExperts />
+                <Testimonials />
+                <RecentBlogs />
+                <Gallery />
+                <GoogleReviews />
+                <FAQ />
               </>
             }
           />
           <Route path="/services" element={<ServicesPage />} />
-          {/* About Page */}
           <Route path="/about" element={<AboutUs />} />
           <Route path="/CoreValues" element={<CoreValues />} />
           <Route path="/access-lab-reports" element={<AccessReportsLogin />} />
-
-          {/* ✅ Appointment Page */}
           <Route path="/appointment" element={<AppointmentPage />} />
           <Route path="/doctor-profile/:doctorId" element={<DoctorProfile />} />
-
-          {/* Treatment Pages */}
           <Route path="/services/surgery" element={<GeneralSurgery />} />
           <Route path="/treatments/IndividualTreatment" element={<IndividualTreatment />} />
           <Route path="/services/pregnancy" element={<ObstetricsGynaecology />} />
           <Route path="/services/gynecology" element={<ReproductiveMedicine />} />
-
-          {/* <Route path="/uterine" element={<Uterine />} />
-          <Route path="/fertility" element={<Fertility />} />
-          <Route path="/ThyroidSurgeries" element={<ThyroidSurgeries />} />
-          <Route path="/chronic" element={<Chronic />} />
-          <Route path="/endoscopy" element={<Endoscopy />} />
-          <Route path="/pancreas" element={<Pancreas />} /> */}
-
-          {/* Blog Pages */}
           <Route path="/blogs" element={<AllBlogs />} />
           <Route path="/blogs/:id" element={<BlogDetails />} />
-
-          {/* Other Resource Pages */}
           <Route path="/faq" element={<FAQ />} />
           <Route path="/gallery" element={<Gallery />} />
-
-          {/* Location Pages */}
           <Route path="/Contact" element={<Contact />} />
-
-          {/* Extra Treatments */}
           <Route path="/treatment1" element={<Treatment1 />} />
           <Route path="/treatment2" element={<Treatment2 />} />
-
-          
         </Routes>
-      </div>
+      </main>
+
+      {/* 🔷 Floating Tools and Footer */}
       <FloatingWhatsAppButton />
       <Footer />
     </Router>

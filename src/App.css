@@ -1,3 +1,74 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Reset & Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* 🔷 Top Ribbon Styles */
+.top-ribbon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0141c1;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 1100;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-left: 10px;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  display: inline-block;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* 🔷 Navbar Adjustment */
+.navbar {
+  position: fixed;
+  top: 30px; /* Just below ribbon */
+  width: 100%;
+  z-index: 1000;
+}
+
+/* 🔷 Main Content Wrapper */
+.content-wrapper {
+  padding-top: 10px; /* Adjust based on total header height */
+}
+
+/* 🔷 Responsive Layout */
+@media (max-width: 768px) {
+  .top-ribbon {
+    font-size: 12px;
+    height: 28px;
+  }
+
+  .content-wrapper {
+    padding-top: 20px;
+  }
+}
+
+/* Optional Styling for App Components */
 .App {
   text-align: center;
 }
@@ -6,7 +77,6 @@
   height: 40vmin;
   pointer-events: none;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -19,8 +89,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: left;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }

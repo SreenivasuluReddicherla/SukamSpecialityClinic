@@ -14,7 +14,7 @@ const ObstetricsGynaecology = () => {
         <div className="surgery-hero-text-obg">
           <h1>Comprehensive Obstetrics Gynaecology Care</h1>
           <p>Your health is in expert hands – safe, advanced, and compassionate surgical solutions</p>
-          <Link to="/doctor-profile/dr-anitha-a-manoj" className="consult-button-anitha">Consult Now</Link>
+          <Link to="/doctor-profile/dr-anitha-a-manoj" className="consult-button-anitha-obg">Consult Now</Link>
         </div>
       </div>
 
@@ -33,7 +33,7 @@ const ObstetricsGynaecology = () => {
                     <li><span>🩺</span> Menstrual and hormonal disorders</li>
                     <li><span>🔬</span> Hystero-Laparoscopic surgeries</li>
                 </ul>
-                <Link to="/doctor-profile/dr-anitha-a-manoj" className="consult-button-anitha">
+                <Link to="/doctor-profile/dr-anitha-a-manoj" className="consult-button-anitha-obg">
                         Consult Now
                 </Link>
             </div>

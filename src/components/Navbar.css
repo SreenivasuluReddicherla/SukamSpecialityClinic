@@ -1,6 +1,6 @@
 .navbar {
   background: white;
-  padding: 15px 20px;
+  padding: 10px 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -10,7 +10,7 @@
 }
 
 body {
-  padding-top: 80px;
+  padding-top: 70px;
 }
 
 .container {
@@ -170,11 +170,16 @@ body {
 }
 
 .menu-icon {
+  display: none; /* will be shown in responsive view */
   font-size: 25px;
-  display: none;
-  background: none;
-  border: none;
+  background-color: transparent;
+  border: 1px solid #007bff;;
   margin-left: auto;
+  padding: 0px 4px;
+  cursor: pointer;
+  color: #007bff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 7px;
 }
 
 @media (max-width: 992px) {
@@ -255,23 +260,25 @@ body {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width:992px) {
   .bottom-mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Add this */
+    right: 0; /* Add this */
+    width: 100vw; /* Use viewport width to guarantee full width */
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     background-color: #ffffff94;
-    z-index: 1050;
+    z-index: 1000; /* Bring it above other elements */
+    padding-top: 5px;
   }
-
   .bottom-mobile-nav button {
     background: none;
     border: none;
     color: #0141c1;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     display: flex;
     flex-direction: column;
