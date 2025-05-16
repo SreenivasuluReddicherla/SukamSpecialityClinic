@@ -1,0 +1,58 @@
+
+.core-values-vision-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 20px 8%;
+    background-color: #fafbfc;
+    align-items: flex-start;
+    
+    justify-content: center; /* <-- ADD THIS */
+    width: fit-content;      /* <-- ADD THIS */
+    margin: 0 auto;          /* <-- ADD THIS */
+  }
+  
+  
+  /* Section Headings with Gradient */
+  .section-heading
+  {
+    justify-content: center;
+  }
+  
+  /* Core Values Card Container */
+  .core-values {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    border-left: 10px solid #c2185b;
+    border-right: 5px solid rgba(0, 0, 0, 0.08); /* Light border color */
+    border-top: 5px solid rgba(0, 0, 0, 0.08); /* Light border color */
+    border-bottom: 5px solid rgba(0, 0, 0, 0.08); /* Light border color */
+  }
+  
+  /* Grid Layout for Cards */
+  .core-values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  /* Card Styling */
+  .core-value-card {
+    background: #fff5f9;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 13.5px;
+    color: #444;
+    font-weight: 500;
+    border: 2px solid #f7cad0;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .core-value-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: #ff5e9c;
+  }

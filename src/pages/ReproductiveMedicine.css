@@ -1,0 +1,375 @@
+.reproductive-page {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Top Banner Section */
+.surgery-banner-rp {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+.hero-section-rp {
+  width: 100%;
+  height: 100%;
+  min-height: 400px; /* or whatever height you want */
+  background-size: cover;      /* Ensures the entire container is filled */
+  background-position: center; /* Keeps the center of the image visible */
+  background-repeat: no-repeat;
+}
+
+.surgery-hero-text-rp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  max-width: 600px;
+  text-align: center;
+}
+
+.surgery-hero-text-rp h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  color:#982882;
+  font-weight: 800;
+}
+
+.surgery-hero-text-rp p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color:#982882;
+  font-weight: 600;
+}
+
+  
+  
+  
+  /* Treatment Section */
+  .treatment-section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  .icon-large {
+    font-size: 3.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .treatment-section h2 {
+    margin-bottom: 30px;
+  }
+  
+  .treatment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+  }
+  
+  .treatment-card {
+    background: #ffffff82;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .treatment-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .treatment-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .treatment-card h3 {
+    margin: 15px 0 5px;
+    font-size: 1.2rem;
+    color: #982882;
+    font-weight: 700;
+  }
+  
+  .treatment-card p {
+    padding: 0 15px 15px;
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 600;
+  }
+ 
+  
+  /* Expertise Section */
+  .expertise-section {
+    padding: 40px 20px;
+    background-color: #f0fbfb;
+  }
+  
+  .expertise-treatment-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 20px;
+  }
+  
+  .expertise-column {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f0fbfb;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .expertise-column h2 {
+    margin-bottom: 20px;
+  }
+  
+  .expertise-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .expertise-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+  
+  .expertise-list span {
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+  
+  /* Overview Section */
+  .overview-section {
+    padding: 50px 20px;
+  }
+  
+  .key-aspects {
+    margin-top: 30px;
+  }
+  
+  .key-aspects ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .key-aspects li {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  
+  /* Final CTA Section */
+  .final-cta-section {
+    padding: 40px 20px;
+    background-color: #e1f7f7;
+    text-align: center;
+  }
+  
+  /* Doctor Treatments Section */
+  .doctor-treatments-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .doctor-profile-box {
+    flex: 1;
+    min-width: 320px;
+    max-width: 420px;
+    background: #9828820f;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    text-align: center;
+  }
+  .doctor-img {
+  width: 200px;  /* Increased image size */
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+  object-fit: cover; /* Ensures image fills the area properly */
+  margin-right: 30px;  /* More spacing between image and text */
+  background-color: #982882;
+}
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(238, 148, 4, 0.2);
+  background: rgba(100, 99, 99, 0.121);
+}
+  .doctor-profile-box h2 {
+    font-size: 1.5rem;
+    color: #982882;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+  
+  .designation {
+    font-weight: 600;
+    color: #982882;
+    margin-bottom: 20px;
+  }
+  .qualification {
+    font-size: 1rem;
+    color:#982882;
+    margin-bottom: 20px;
+  }
+  .consult-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #982882;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .consult-button:hover {
+    background-color: #005fa3;
+  }
+  .treatment-categories-box {
+    flex: 2;
+    min-width: 320px;
+    background:#9828820f;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+  
+  .treatment-categories-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #982882;
+    font-weight: 700;
+  }
+  .department-overview-anitha-pm {
+    padding: 20px 20px;
+    background: #9828820f;
+    border-radius: 10px;
+    margin: 5px auto;
+    max-width: 1350px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .overview-title-anitha-pm {
+    font-size: 34px;
+    color: #982882;;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .overview-description-anitha-pm {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.7;
+    max-width: 800px;
+    font-weight: 500;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+  
+  .why-choose-section-anitha-pm {
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .why-title-anitha-pm {
+    font-size: 28px;
+    color: #006EB2;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  .benefits-grid-anitha-pm {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    padding: 0 20px;
+  }
+  
+  .benefit-card-anitha-pm {
+    background-color: #ffffff7e;
+    padding: 24px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .benefit-card-anitha-pm:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  }
+  
+  .benefit-card-anitha-pm i {
+    font-size: 32px;
+    color:#982882;
+    margin-bottom: 14px;
+  }
+  
+  .benefit-card-anitha-pm h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #982882;
+    margin-bottom: 8px;
+  }
+  
+  .benefit-card-anitha-pm p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+  .surgery-banner-rp {
+    height: 350px;
+  }
+  .hero-section-rp {
+    width: 700px;
+    height: 100%;
+    min-height: 350px;
+    background-size:cover;
+    background-position: center center;
+  }
+
+  .surgery-hero-text-rp {
+    top: 40%;
+    left: 40%;
+    transform: translate(-0%, -10%);
+    max-width: 100%
+  }
+
+  .surgery-hero-text-rp h1 {
+    font-size: 1.2rem;
+  }
+
+  .surgery-hero-text-rp p {
+    font-size: 1rem;
+  }
+}

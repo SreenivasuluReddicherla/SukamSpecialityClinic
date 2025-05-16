@@ -1,0 +1,183 @@
+.founders-section {
+    background: #fffafc;
+    padding: 20px 10px;
+    text-align: center;
+  }
+  
+  .founders-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #e91e63;
+    margin-bottom: 10px;
+  }
+  
+  .founders-vision {
+    font-size: 18px;
+    color: #7c4dff;
+    margin-bottom: 50px;
+  }
+  
+  .founder-profile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+  
+    /* ✅ Equal border on all sides */
+    border: 1px solid #f892b4;  /* Change color if needed */
+  
+    /* ✅ Box shadow for depth */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    max-width: 1300px;
+    width: 90%;
+  }
+  
+  /* Optional hover effect */
+  .founder-profile:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 32px rgba(233, 30, 99, 0.2);
+  }
+  
+  
+  /* 🔁 Reverse direction for 2nd box */
+  .founder-profile.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  /* 👤 IMAGE */
+  .founder-img {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .founder-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(233, 30, 99, 0.3);
+  }
+  
+  /* 📝 TEXT */
+  .founder-text {
+    flex: 1;
+    text-align: left;
+    padding: 0 20px;
+  }
+  
+  .founder-text h3 {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .founder-subtitle {
+    font-size: 16px;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .founder-text p {
+    color: #555;
+    margin-bottom: 12px;
+  }
+  
+  .founder-text em {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: 500;
+    color: #9c27b0;
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .founder-profile,
+    .founder-profile.reverse {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .founder-text {
+      padding: 0;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .manoj-container {
+    padding: 80px 20px;
+    background: #f0faff;
+  }
+  
+  .header-banner {
+    text-align: center;
+    background: linear-gradient(135deg, #2196f3, #21cbf3);
+    color: white;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+  
+  .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+  }
+  
+  .box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #2196f3;
+  }
+  

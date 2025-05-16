@@ -1,0 +1,20 @@
+
+.custom-carousel img {
+  max-height: 600px; /* Increased height */
+  object-fit: cover;
+}
+
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+  width: 5%; 
+  position: absolute;
+  top: 50%; /* Adjust this value to position buttons lower or higher */
+  transform: translateY(-50%); 
+}
+
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.233); /* Darker buttons for better visibility */
+  border-radius: 50%; /* Circular buttons */
+  padding: 10px;
+}

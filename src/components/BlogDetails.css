@@ -1,0 +1,56 @@
+.blog-details {
+    padding: 0px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  .back-button {
+    background: #ff69b4;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .blog-detail-image {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-detail-content h1 {
+    color: #e91e63;
+    margin-bottom: 10px;
+  }
+  
+  .blog-detail-meta {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-detail-text {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .blog-details {
+      padding: 15px;
+    }
+  
+    .blog-detail-content h1 {
+      font-size: 22px;
+    }
+  
+    .blog-detail-text {
+      font-size: 15px;
+    }
+  }
+  

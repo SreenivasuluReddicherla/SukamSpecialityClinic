@@ -1,0 +1,115 @@
+.lab-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    padding: 20px;
+  }
+  
+  .lab-login-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .lab-login-title {
+    font-size: 2rem;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .lab-login-subtitle {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .lab-login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .lab-login-form input {
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+  }
+  
+  .lab-login-form input:focus {
+    border-color: #003366;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 51, 102, 0.3);
+  }
+  
+  .lab-login-form button {
+    padding: 12px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .lab-login-form button:hover {
+    background-color: #0055a5;
+  }
+  
+  .lab-disclaimer {
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: #333;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 12px;
+    line-height: 1.6;
+  }
+  
+  .lab-disclaimer strong {
+    color: #b30000;
+  }
+  
+  .highlight {
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .support-text {
+    margin-top: 20px;
+    color: #003366;
+    font-weight: 500;
+  }
+  
+  .support-text a {
+    color: #003366;
+    text-decoration: underline;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
