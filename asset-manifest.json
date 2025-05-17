@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/SukamSpecialityClinic/static/css/main.bcc02a80.css",
-    "main.js": "/SukamSpecialityClinic/static/js/main.d837bd40.js",
+    "main.css": "/SukamSpecialityClinic/static/css/main.dbf453f6.css",
+    "main.js": "/SukamSpecialityClinic/static/js/main.3d7c370d.js",
     "static/js/453.58b19fd8.chunk.js": "/SukamSpecialityClinic/static/js/453.58b19fd8.chunk.js",
     "static/media/img11.JPG": "/SukamSpecialityClinic/static/media/img11.e47c07ddf1ef8e6ef48a.JPG",
     "static/media/img12.JPG": "/SukamSpecialityClinic/static/media/img12.ba8ba2f9dd59f691e35b.JPG",
@@ -50,12 +50,12 @@
     "static/media/about2.webp": "/SukamSpecialityClinic/static/media/about2.d59df69cbaf666fd7137.webp",
     "static/media/about3.webp": "/SukamSpecialityClinic/static/media/about3.e1c52f098d21d671d93b.webp",
     "index.html": "/SukamSpecialityClinic/index.html",
-    "main.bcc02a80.css.map": "/SukamSpecialityClinic/static/css/main.bcc02a80.css.map",
-    "main.d837bd40.js.map": "/SukamSpecialityClinic/static/js/main.d837bd40.js.map",
+    "main.dbf453f6.css.map": "/SukamSpecialityClinic/static/css/main.dbf453f6.css.map",
+    "main.3d7c370d.js.map": "/SukamSpecialityClinic/static/js/main.3d7c370d.js.map",
     "453.58b19fd8.chunk.js.map": "/SukamSpecialityClinic/static/js/453.58b19fd8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bcc02a80.css",
-    "static/js/main.d837bd40.js"
+    "static/css/main.dbf453f6.css",
+    "static/js/main.3d7c370d.js"
   ]
 }
