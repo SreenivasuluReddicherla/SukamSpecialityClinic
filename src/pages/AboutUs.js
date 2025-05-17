@@ -37,7 +37,7 @@ const AboutUs = () => {
 
   return (
     <div className="homepage">
-          <section className="home-banner-section" data-aos="fade-up">
+    <section className="home-banner-section" data-aos="fade-up">
       <div className="home-banner-text">
         <h1>
           Sukam Speciality and Fertility Clinic
@@ -61,15 +61,15 @@ const AboutUs = () => {
 
       {/* Founders Section */}
       <section className="founders-section" data-aos="fade-up">
-        <h2 className="founders-title">Founders & Directors</h2>
+        <h2 className="founders-title-heading">Founders & Directors</h2>
         <div className="founders-intro" data-aos="fade-right">
-                  <h5 className="founders-vision">The Heart. The Hands. The Vision.</h5>
+                  <h5 className="founders-vision-heading">The Heart. The Hands. The Vision.</h5>
         </div>
 
         {/* Founder 1: Image Left */}
         <div className="founder-profiles" data-aos="fade-right">
           <img src={founder1} alt="Dr. Manoj Karthik S" className="founder-img" />
-          <div className="founder-text">
+          <div className="founder-text-manoj">
             <h3>Dr. Manoj Karthik S</h3>
             <p className="founder-subtitle">
               MBBS | MS (Gen Surg) | FMAS | PGDHE | Senior General, Laparoscopic and Endoscopic Surgeon | 22+ Years of Experience Dr Manoj Karthik S 
@@ -87,7 +87,7 @@ const AboutUs = () => {
         {/* Founder 2: Image Right */}
         <div className="founder-profiles reverse" data-aos="fade-left">
           <img src={founder2} alt="Dr. Anitha A Manoj" className="founder-img" />
-          <div className="founder-text">
+          <div className="founder-text-anitha">
             <h3>Dr. Anitha A Manoj</h3>
             <p className="founder-subtitle">
             MBBS | MS (OBG) | FMAS | FRM | Senior Consultant Obstetrician & Gynecologist | Fertility Specialist | 16+ Years of Experience
@@ -130,30 +130,33 @@ const AboutUs = () => {
     <p>Unextend care, hospital & primary and care.</p>
   </div>
 </Link> 
-      </section>
-      {/* Core Values & Vision */}
-      <section className="core-values-vision-container">
-        {/* Core Values */}
-        <div className="core-values" data-aos="zoom-in">
-          <h2 className="section-heading">Our Core Values</h2>
-          <div className="core-values-grid">
-            <div className="core-value-card">🌿 <b>Compassionate Care:</b> We treat every patient with empathy, dignity, and respect — understanding that behind every case is a unique story and a human heart.</div>
-            <div className="core-value-card">🔍 <b>Clinical Excellence:</b> We are committed to the highest standards of medical expertise, continuous learning, and the use of modern technology to deliver safe, effective care.</div>
-            <div className="core-value-card">🤝 <b>Integrity & Trust:</b> We believe in transparency, honesty, and building lifelong relationships based on trust and ethical practice.</div>
-            <div className="core-value-card">🧬 <b>Personalized Approach:</b> Every patient is different. We tailor our care plans to individual needs, ensuring comfort, clarity, and confidence in every step of the journey.</div>
-            <div className="core-value-card">🌱 <b>Empowerment Through Education:</b> We educate and inform patients, enabling them to make confident decisions about their health and wellness.</div>
-            <div className="core-value-card">💖 <b>Trust-Centered Relationships:</b> We build meaningful bonds with our valuable time in our clinic.</div>
-          </div>
-        </div>
+</section>
+   {/* Vision */}
+<section>
+    <div className="vision" data-aos="fade-left">
+      <h2 className="section-heading">Our Vision</h2>
+      <p>
+        To be a leading center of excellence in General Surgery, Obstetrics & Gynecology, and Infertility care, offering compassionate, evidence-based, and patient-centered solutions that empower lives and build healthier futures.
+      </p>
+    </div>
+</section>
 
-        {/* Vision */}
-        <div className="vision" data-aos="fade-left">
-          <h2 className="section-heading">Our Vision</h2>
-          <p>
-            To be a leading center of excellence in General Surgery, Obstetrics & Gynecology, and Infertility care, offering compassionate, evidence-based, and patient-centered solutions that empower lives and build healthier futures.
-          </p>
-        </div>
-      </section>
+  {/* Core Values & Vision */}
+  <section className="core-values-vision-container">
+    {/* Core Values */}
+    <div className="core-values" data-aos="zoom-in">
+      <h2 className="section-heading">Our Core Values</h2>
+      <div className="core-values-grid">
+        <div className="core-value-card">🌿 <b>Compassionate Care:</b> We treat every patient with empathy, dignity, and respect — understanding that behind every case is a unique story and a human heart.</div>
+        <div className="core-value-card">🔍 <b>Clinical Excellence:</b> We are committed to the highest standards of medical expertise, continuous learning, and the use of modern technology to deliver safe, effective care.</div>
+        <div className="core-value-card">🤝 <b>Integrity & Trust:</b> We believe in transparency, honesty, and building lifelong relationships based on trust and ethical practice.</div>
+        <div className="core-value-card">🧬 <b>Personalized Approach:</b> Every patient is different. We tailor our care plans to individual needs, ensuring comfort, clarity, and confidence in every step of the journey.</div>
+        <div className="core-value-card">🌱 <b>Empowerment Through Education:</b> We educate and inform patients, enabling them to make confident decisions about their health and wellness.</div>
+        <div className="core-value-card">💖 <b>Trust-Centered Relationships:</b> We build meaningful bonds with our valuable time in our clinic.</div>
+      </div>
+    </div> 
+  </section>
+   
     </div>
   );
 };

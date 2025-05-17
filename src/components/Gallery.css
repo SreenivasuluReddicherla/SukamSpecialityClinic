@@ -4,17 +4,10 @@
 }
 
 .gallery-title {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: #0141c1;
-  /* background: linear-gradient(135deg, #ff5e9c, #5eb8ff); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 1.2s ease, transform 1.2s ease;
+  line-height: 1.2;
 }
 
 .gallery-container.animate .gallery-title {
@@ -47,27 +40,29 @@
 
 /* Filter Buttons */
 .gallery-filters {
+  color:#1a237e;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   animation: fadeIn 1.2s ease-in;
 }
 
 .filter-btn {
-  padding: 10px 15px;
+  padding: 5px 30px;
+  color: #1a237e;
   border: none;
-  background: #ddd;
+  background: #1a227e19;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 7px;
 }
 
 .filter-btn.active,
 .filter-btn:hover {
-  background: #0066ff;
+  background: #1a237e;
   color: white;
   transform: scale(1.05);
 }
@@ -247,7 +242,24 @@
     max-width: 90%;
     max-height: 70%;
   }
-
+  .gallery-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0141c1;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .filter-btn {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    color: #1a237e;
+    border: none;
+    background: #1a227e19;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    font-weight: 600;
+    border-radius: 7px;
+  }
   .prev-btn,
   .next-btn {
     font-size: 25px;

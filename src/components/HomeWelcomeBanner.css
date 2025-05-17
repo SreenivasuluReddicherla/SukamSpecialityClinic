@@ -18,7 +18,7 @@
 }
 
 .home-banner-text h1 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: #0141c1;
   line-height: 1.2;
@@ -105,11 +105,19 @@
     max-width: 100%;
     text-align: center;
   }
-
   .home-banner-text h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0141c1;
+    line-height: 1.2;
   }
-
+  .home-banner-text p {
+    font-size: 1.0rem;
+    line-height: 1.5;
+    color: #39006e;
+    font-weight: 500;
+    text-align: justify;
+  }
   .appointment-btn {
     padding: 0.75rem 1.2rem;
     font-size: 0.9rem;

@@ -4,33 +4,33 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "./Testimonials.css"; // Same styling remains
+import "./Testimonials.css";
 
 const videoTestimonials = [
   {
     id: 1,
     url: "https://www.youtube.com/embed/AE8Z-0N8Lzc",
-    title: "Fertile Window Explained: When are you most Likely to Conceive? | Dr. Anitha A Manoj",
+    title: "Fertile Window Explained: When Are You Most Likely to Conceive? | Dr. Anitha A Manoj",
   },
   {
     id: 2,
     url: "https://www.youtube.com/embed/mY25sY26Ztc",
-    title: "     Fatty Liver Risks, Prevention & Treatment | Dr. Manoj Karthik S",
+    title: "Fatty Liver Risks, Prevention & Treatment | Dr. Manoj Karthik S",
   },
   {
     id: 3,
     url: "https://www.youtube.com/embed/ajhkuQssQ10",
-    title: "Bleeding in Early Pregnancy? Here’s What You Need to Know | Dr. Anitha A Manoj",
+    title: "Bleeding in Early Pregnancy? Here's What You Need to Know | Dr. Anitha A Manoj",
   },
   {
     id: 4,
     url: "https://www.youtube.com/embed/uuWYyEUjrkw",
-    title: "Surgery Preparation: Essential Steps| Dr. Manoj Kathik S",
+    title: "Surgery Preparation: Essential Steps | Dr. Manoj Karthik S",
   },
   {
     id: 5,
     url: "https://www.youtube.com/embed/sirKxcCdx9k",
-    title: "What is Recurrent Pregnancy Loss, causes and its treatment | Dr. Anitha A Manoj",
+    title: "Recurrent Pregnancy Loss: Causes and Treatments | Dr. Anitha A Manoj",
   },
 ];
 
@@ -39,13 +39,15 @@ const Testimonials = () => {
     <div className="testimonials-section">
       <h2>Sukam Voices</h2>
       <Swiper
-        modules={[Navigation, Pagination]} // ❌ Only Navigation and Pagination
+        modules={[Navigation, Pagination, Autoplay]}
         navigation
         pagination={{ clickable: true }}
         loop={true}
+        autoplay={{ delay: 5000 }}
         slidesPerView={1}
-        spaceBetween={30}
+        spaceBetween={20}
         breakpoints={{
+          640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}

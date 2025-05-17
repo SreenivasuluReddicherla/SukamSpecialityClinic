@@ -8,12 +8,13 @@
 .surgery-banner-obg {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 350px;
 }
 .hero-section-obg {
   width: 100%;
   height: 100%;
   min-height: 400px; /* or whatever height you want */
+  background-image: url('../assets/OBG.jpg');
   background-size: cover;      /* Ensures the entire container is filled */
   background-position: center; /* Keeps the center of the image visible */
   background-repeat: no-repeat;
@@ -184,7 +185,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 60px 20px;
+  padding: 15px 15px;
   background-color: #BC1F6E;
 }
 
@@ -193,7 +194,7 @@
   min-width: 320px;
   max-width: 420px;
   background: #bc1f6d1c;
-  padding: 30px;
+  padding: 15px 15px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   text-align: center;
@@ -349,23 +350,25 @@ background: rgba(100, 99, 99, 0.121);
 @media (max-width: 786px) {
   .hero-section-obg {
     width: 100%;
-    height:0px;
-    background-size:cover;
-    background-position: center center;
+    height: 250px;
+    background-image: url('../assets/service2.jpg');
+    background-size: contain;
   }
   .surgery-hero-text-obg {
-    top: 40%;
-    left: 40%;
-    transform: translate(-0%, -10%);
+    top: 50%;
+    left: 0%;
+    transform: translate(-0%, -0%);
     max-width: 100%;
   }
 
   .surgery-hero-text-obg h1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    color:#982882;
   }
 
   .surgery-hero-text-obg p {
-    font-size: 0.6rem;
+    font-size: 1rem;
+    color:#ffffff;
   }
   .consult-button-anitha-obg {
     color: white;
@@ -381,8 +384,8 @@ background: rgba(100, 99, 99, 0.121);
   .doctor-treatments-section,
   .department-overview-anitha-og,
   .expertise-treatment-section {
-    padding: 10px 30px;
+    padding: 20px 20px;
     margin-top: 10px;
-    margin-left: 30px;
+    margin-left: 10px;
   }
 }

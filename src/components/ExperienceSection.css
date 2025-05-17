@@ -39,10 +39,11 @@
 }
 
 .experience-title {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: #0141c1;
-  margin-bottom: 12px;
+  line-height: 1.2;
+  margin-bottom: 10px;
   animation-delay: 0.2s;
 }
 
@@ -50,8 +51,9 @@
   font-size: 1.2rem;
   color: #0141c1;
   display: block;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 6px;
+  text-align: center;
 }
 
 .experience-desc {
@@ -130,16 +132,27 @@
     flex-direction: column;
     padding: 30px 20px;
   }
-
+  .experience-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0141c1;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 10px;
+    animation-delay: 0.2s;
+  }
+  .experience-sub {
+    font-size: 1rem;
+    color: #0141c1;
+    display: block;
+    font-weight: 600;
+    margin-top: 6px;
+    text-align: center;
+  }
   .experience-image,
   .experience-content {
     max-width: 100%;
   }
-
-  .experience-title {
-    font-size: 2rem;
-  }
-
   .experience-desc {
     font-size: 0.95rem;
   }

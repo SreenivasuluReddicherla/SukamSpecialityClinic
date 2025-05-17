@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './GeneralSurgery.css';
-import heroBg from '../assets/GS.jpg';
+// import heroBg from '../assets/GS.jpg';
 import manoj from '../assets/profile2.png';
 
 import GS1 from '../assets/GS/GS1.png';
@@ -17,7 +17,7 @@ const GeneralSurgeryPage = () => {
     <div className="general-surgery-page">
       {/* Top Banner Section */}
       <div className="surgery-banner-gs">
-        <div className="hero-section-gs" style={{ backgroundImage: `url(${heroBg})` }}>
+        <div className="hero-section-gs">
         </div>
         <div className="surgery-hero-text-gs">
           <h1>Comprehensive General Surgery Care</h1>

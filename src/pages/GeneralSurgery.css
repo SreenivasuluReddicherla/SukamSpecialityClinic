@@ -8,12 +8,13 @@
 .surgery-banner-gs {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 350px;
 }
 .hero-section-gs {
   width: 100%;
   height: 100%;
   min-height: 400px; /* or whatever height you want */
+  background-image: url('../assets/GS.jpg');
   background-size: cover;      /* Ensures the entire container is filled */
   background-position: center; /* Keeps the center of the image visible */
   background-repeat: no-repeat;
@@ -185,7 +186,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  padding: 60px 20px;
+  padding: 15px 15px;
   background-color: #f9f9f9;
 }
 
@@ -194,7 +195,7 @@
   min-width: 320px;
   max-width: 420px;
   background:  #007a7c10;
-  padding: 30px;
+  padding: 15px 15px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   text-align: center;
@@ -358,23 +359,23 @@
 @media (max-width: 786px) {
   .hero-section-gs {
     width: 100%;
-    height:0px;
-    background-size:cover;
-    background-position: center center;
+    height: 250px;
+    background-image: url('../assets/service1.jpg');
+    background-size: contain;
   }
   .surgery-hero-text-gs {
-    top: 40%;
-    left: 40%;
-    transform: translate(-0%, -10%);
+    top: 50%;
+    left: 0%;
+    transform: translate(-0%, -0%);
     max-width: 100%;
   }
 
   .surgery-hero-text-gs h1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .surgery-hero-text-gs p {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
   .consult-button-manoj {
     color: white;
@@ -390,8 +391,9 @@
   .doctor-treatments-section,
   .department-overview-manoj,
   .expertise-treatment-section {
-    padding: 10px 30px;
+    padding: 20px 20px;
     margin-top: 10px;
-    margin-left: 30px;
+    margin-left: 10px;
+    align-items: center;
   }
 }

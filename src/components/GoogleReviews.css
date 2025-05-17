@@ -9,11 +9,11 @@
 
 /* Title */
 .reviews-title {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: #0141c1;
+  line-height: 1.2;
   margin-bottom: 20px;
-  padding-bottom: 15px;
 }
 
 /* Avatar */
@@ -28,10 +28,16 @@
 /* Review Text */
 .review-text {
   font-size: 16px;
-  color: #444;
+  color: #10014b;
   margin-bottom: 10px;
 }
-
+/* Reviewer ame */
+.reviewer-name {
+  font-size: 1.6rem;
+  color: #1a237e;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
 /* Star Rating */
 .rating {
   font-size: 30px;
@@ -121,7 +127,13 @@
     min-width: 260px;
     font-size: 14px;
   }
-
+  .reviews-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0141c1;
+    line-height: 1.2;
+    text-align: center;
+  }
   .prevbtn {
     left: 10px;
     font-size: 24px;
@@ -150,7 +162,11 @@
   }
 
   .reviews-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0141c1;
+    line-height: 1.2;
+    text-align: center;
   }
 
   .review-text {

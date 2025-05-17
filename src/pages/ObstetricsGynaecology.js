@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './ObstetricsGynaecology.css';
-import heroBg from '../assets/OBG.jpg';
+// import heroBg from '../assets/OBG.jpg';
 import anitha from '../assets/profile1.png';
 
 const ObstetricsGynaecology = () => {
@@ -9,7 +9,7 @@ const ObstetricsGynaecology = () => {
     <div className="obg-page">
       {/* Top Banner Section */}
       <div className="surgery-banner-obg">
-        <div className="hero-section-obg" style={{ backgroundImage: `url(${heroBg})` }}>
+        <div className="hero-section-obg" >
         </div>
         <div className="surgery-hero-text-obg">
           <h1>Comprehensive Obstetrics Gynaecology Care</h1>

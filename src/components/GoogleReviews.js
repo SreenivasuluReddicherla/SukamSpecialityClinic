@@ -91,7 +91,7 @@ const GoogleReviews = () => {
                 alt={review.name}
                 className="review-avatar"
               /> */}
-              <h3>{review.name}</h3>
+              <h3 className="reviewer-name">{review.name}</h3>
               <p className="review-text">"{review.text}"</p>
               <div className="rating">
                 {"★".repeat(review.rating)}
