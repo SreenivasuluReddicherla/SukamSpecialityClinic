@@ -1,0 +1,129 @@
+.home-banner-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 10rem;
+  background: linear-gradient(135deg, #fff 30%, #ffffff 40%, #00f5357f 100%);
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  visibility: visible;
+  overflow: hidden; /* ✅ Corrected overflow */
+}
+
+.home-banner-text {
+  max-width: 800px;
+  flex: 1;
+}
+
+.home-banner-text h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #0141c1;
+  line-height: 1.2;
+}
+
+.home-banner-text h1 span {
+  color: #e63946;
+}
+
+.home-banner-text p {
+  font-size: 1.15rem;
+  color: #39006e;
+  font-weight: 500;
+  text-align: justify;
+  margin: 1.2rem 0 1.8rem;
+}
+
+.appointment-btn {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.7rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 20px rgba(230, 57, 70, 0.2);
+}
+
+.appointment-btn:hover {
+  background-color: #d62828;
+  transform: scale(1.06);
+  box-shadow: 0 12px 30px rgba(230, 57, 70, 0.35);
+}
+
+.home-banner-image {
+  background: transparent;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  flex: 1;
+}
+
+.home-banner-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  padding: 5px 5px;
+  animation: float 2s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  background: none; /* ✅ ensure no background */
+  filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.25)); /* ✅ logo shadow */
+}
+
+.home-banner-image img:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 12px 35px rgba(0, 0, 0, 0.35)); /* ✅ stronger on hover */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-banner-section {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .home-banner-text,
+  .home-banner-image {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  .home-banner-text h1 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0141c1;
+    line-height: 1.2;
+  }
+  .home-banner-text p {
+    font-size: 1.0rem;
+    line-height: 1.5;
+    color: #39006e;
+    font-weight: 500;
+    text-align: justify;
+  }
+  .appointment-btn {
+    padding: 0.75rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .home-banner-image img {
+    max-width: 250px;
+  }
+}

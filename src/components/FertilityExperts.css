@@ -1,0 +1,206 @@
+/* 🔷 Section Styling */
+.experts-section {
+  text-align: center;
+  background: #f4f9fc;
+  padding: 20px 20px;
+}
+
+.experts-heading {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #0141c1;
+  line-height: 1.2;
+  /* margin-bottom: 10px; */
+  /* font-family: 'Segoe UI', sans-serif; */
+}
+
+.experts-subtext {
+  font-size: 1rem;
+  color: #0141c1;
+  font-weight: 600;
+  /* font-family: 'Segoe UI', sans-serif; */
+}
+
+/* 🔹 Category Tabs */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  gap: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.category-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-button {
+  white-space: nowrap;
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a237e;
+  background-color: #e3eafc;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.tab-button:hover,
+.tab-button.active {
+  background-color: #1a237e;
+  color: #ffffff;
+  border-color: #1a237e;
+}
+
+/* 🔹 Expert Grid */
+.experts-grid {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 100px;
+}
+
+/* 🩺 Expert Card */
+.expert-card {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* 🧑‍⚕️ Dr. Manoj */
+.expert-card.dr-manoj-karthik {
+  border: 1px solid #00796b;
+  background-color: #e0f2f1;
+}
+
+.expert-card.dr-manoj-karthik .expert-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: #004d40;
+  margin-bottom: 12px;
+}
+
+.expert-card.dr-manoj-karthik .expert-qualification,
+.expert-card.dr-manoj-karthik .expert-designation {
+  font-size: 15px;
+  color: #004d40;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* 👩‍⚕️ Dr. Anitha */
+.expert-card.dr-anitha-a-manoj {
+  border: 1px solid #8e24aa;
+  background-color: #fce4ec;
+}
+
+.expert-card.dr-anitha-a-manoj .expert-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: #982882;
+  margin-bottom: 12px;
+}
+
+.expert-card.dr-anitha-a-manoj .expert-qualification,
+.expert-card.dr-anitha-a-manoj .expert-designation {
+  font-size: 15px;
+  color: #982882;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* 🖼 Expert Image */
+.expert-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 4px;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.expert-card.dr-manoj-karthik img {
+  background-color: #00796b;
+}
+
+.expert-card.dr-anitha-a-manoj img {
+  background-color: #982882;
+}
+
+/* 🔹 Responsive Enhancements */
+@media (max-width: 768px) {
+  .experts-heading {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0141c1;
+    line-height: 1.2;
+    text-align: center;
+    /* margin-bottom: 10px; */
+    /* font-family: 'Segoe UI', sans-serif; */
+  }
+  .experts-subtext {
+    /* font-family: 'Segoe UI', sans-serif; */
+    font-size: 1rem;
+    color: #0141c1;
+    display: block;
+    font-weight: 600;
+    text-align: center;
+  }
+  .tab-button {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+
+  .expert-image img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .expert-card {
+    padding: 20px;
+  }
+
+  .expert-image img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .expert-card .expert-name {
+    font-size: 16px;
+  }
+
+  .expert-card .expert-qualification,
+  .expert-card .expert-designation {
+    font-size: 13px;
+  }
+}

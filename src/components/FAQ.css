@@ -1,0 +1,108 @@
+/* FAQ Section */
+.faq-section {
+    background-color: #fef4f8; /* Light pink background */
+    padding: 20px 15px;
+    text-align: center;
+  }
+  
+  .faq-heading {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #0141c1;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  /* FAQ Container */
+  .faq-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  /* FAQ Item */
+  .faq-item {
+    margin-bottom: 2px; /* Decreased space between questions */
+    overflow: hidden;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* FAQ Question */
+  .faq-question {
+    padding: 10px 15px; /* Slightly reduced padding */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #212529;
+    transition: background 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+  
+  /* Darker Hover Effect */
+  .faq-question:hover {
+    background: #0141c129;/* Darker pink */
+  }
+  
+  /* When FAQ is opened */
+  .faq-item.open .faq-question {
+    background: #0141c1;
+    color: white;
+  }
+  
+  /* FAQ Answer */
+  .faq-answer {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    background: #0141c130;
+    display: none;
+    border-radius: 5px;
+  }
+  
+  /* Show answer when open */
+  .faq-item.open .faq-answer {
+    display: block;
+  }
+  
+  /* FAQ Icon (⬇ Default Down Arrow, ⬆ Rotates Up on Click) */
+  .faq-icon {
+    font-size: 22px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    transform: rotate(0deg); /* Default: Down */
+  }
+  
+  /* Rotate icon when open */
+  .faq-item.open .faq-icon {
+    transform: rotate(180deg); /* Rotates Up */
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .faq-heading {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #0141c1;
+      line-height: 1.2;
+      text-align: center;
+    }
+  
+    .faq-question {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  
+    .faq-answer {
+      font-size: 13px;
+      padding: 8px 12px;
+    }
+  
+    .faq-icon {
+      font-size: 20px;
+    }
+  }
+  

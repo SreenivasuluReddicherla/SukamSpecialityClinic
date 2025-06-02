@@ -1,0 +1,97 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Slightly dark background */
+  backdrop-filter: blur(6px); /* Adds the blur effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-icon {
+  cursor: pointer;
+  color: #888;
+}
+
+.modal-content {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Each phone number block */
+.phone-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out the icons and numbers */
+  background: #e6f2ff; /* Background color for each block */
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+/* Phone number style */
+.phone-number {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.phone-number a {
+  text-decoration: none;
+  color: #0077cc;
+}
+
+.phone-number a:hover {
+  text-decoration: underline;
+}
+
+/* Phone icon style */
+.phone-icon {
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+}
+
+.phone-icon a {
+  color: red;
+  text-decoration: none;
+}
+
+/* WhatsApp icon style */
+.whatsapp-icon {
+  background-color: #25d366;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px; /* adjust as needed */
+}
+
+.whatsapp-icon a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+}

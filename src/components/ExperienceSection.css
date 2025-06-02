@@ -1,0 +1,165 @@
+.experience-section {
+  width: 100%;
+  padding:20px;
+  background-attachment: fixed;
+  color: #333;
+}
+
+.experience-container {
+  display: flex;
+  max-width: 1250px;
+  margin: auto;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 20px;
+  /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); */
+}
+
+/* LEFT SIDE - Image */
+.experience-image {
+  flex: 1;
+  max-width: 50%;
+}
+.experience-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* RIGHT SIDE - Text */
+.experience-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.experience-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #0141c1;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  animation-delay: 0.2s;
+}
+
+.experience-sub {
+  font-size: 1.2rem;
+  color: #0141c1;
+  display: block;
+  font-weight: 600;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.experience-desc {
+  text-align: justify;
+  margin: 20px 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+  animation-delay: 0.4s;
+}
+
+/* Buttons */
+.experience-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  animation-delay: 0.6s;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blue-btn {
+  background-color: #0141c1;
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(1, 65, 193, 0.3);
+}
+
+.blue-btn:hover {
+  background-color: #02298a;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(1, 65, 193, 0.4);
+  color: white;
+}
+
+.border-btn {
+  background-color: transparent;
+  border: 2px solid #0141c1;
+  color: #0141c1;
+}
+
+.border-btn:hover {
+  background-color: #f1f5ff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(1, 65, 193, 0.2);
+}
+
+/* Animations */
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide {
+  opacity: 0;
+  animation: fadeSlide 1s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .experience-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  .experience-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0141c1;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 10px;
+    animation-delay: 0.2s;
+  }
+  .experience-sub {
+    font-size: 1rem;
+    color: #0141c1;
+    display: block;
+    font-weight: 600;
+    margin-top: 6px;
+    text-align: center;
+  }
+  .experience-image,
+  .experience-content {
+    max-width: 100%;
+  }
+  .experience-desc {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+  }
+}

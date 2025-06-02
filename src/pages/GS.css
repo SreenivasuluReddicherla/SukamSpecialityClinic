@@ -1,0 +1,399 @@
+.general-surgery-page {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Top Banner Section */
+.surgery-banner-gs {
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+.hero-section-gs {
+  width: 100%;
+  height: 100%;
+  min-height: 400px; /* or whatever height you want */
+  background-image: url('../assets/GS.jpg');
+  background-size: cover;      /* Ensures the entire container is filled */
+  background-position: center; /* Keeps the center of the image visible */
+  background-repeat: no-repeat;
+}
+
+.surgery-hero-text-gs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  max-width: 600px;
+  text-align: center;
+}
+
+.surgery-hero-text-gs h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  color:#ffffff;
+  font-weight: 800;
+}
+
+.surgery-hero-text-gs p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color:#ffffff;
+  font-weight: 600;
+}
+
+/* Treatment Section */
+.treatment-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+.icon-large {
+  display: block;
+  margin: 0 auto 0.5rem auto; /* auto margins center the image horizontally */
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.treatment-section h2 {
+  margin-bottom: 30px;
+}
+
+.treatment-grid-manoj {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.treatment-card-manoj {
+  background: #ffffff82;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  padding: 15px;
+  text-align: center;
+}
+
+.treatment-card-manoj:hover {
+  transform: translateY(-10px);
+}
+/* 
+.treatment-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+} */
+
+.treatment-card-manoj h3 {
+  margin: 15px 0 5px;
+  font-size: 1.2rem;
+  color: #00797C;
+  font-weight: 700;
+}
+
+.treatment-card-manoj p {
+  padding: 0 15px 15px;
+  font-size: 0.95rem;
+  color: #555;
+  font-weight: 600;
+}
+
+
+/* Expertise Section */
+.expertise-section {
+  padding: 40px 20px;
+  background-color: #f0fbfb;
+}
+
+.expertise-treatment-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px 20px;
+}
+
+.expertise-column {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f0fbfb;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+}
+
+.expertise-column h2 {
+  margin-bottom: 20px;
+}
+
+.expertise-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  text-align: left;
+  max-width: 800px;
+  margin: auto;
+}
+
+.expertise-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.expertise-list span {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Overview Section */
+.overview-section {
+  padding: 50px 20px;
+}
+
+.key-aspects {
+  margin-top: 30px;
+}
+
+.key-aspects ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.key-aspects li {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  padding: 40px 20px;
+  background-color: #e1f7f7;
+  text-align: center;
+}
+
+/* Doctor Treatments Section */
+.doctor-treatments-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 15px 15px;
+  background-color: #f9f9f9;
+}
+
+.doctor-profile-box-manoj {
+  flex: 1;
+  min-width: 320px;
+  max-width: 420px;
+  background:  #007a7c10;
+  padding: 15px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+.doctor-img-manoj {
+  width: 200px;  /* Increased image size */
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+  object-fit: cover; /* Ensures image fills the area properly */
+  margin-right: 30px;  /* More spacing between image and text */
+  background-color: #00796b;
+}
+.doctor-profile-box-manoj h2 {
+  font-size: 1.5rem;
+  color: #00797C;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.designation-manoj {
+  font-weight: 600;
+  color:#00797C;
+  margin-bottom: 20px;
+}
+.qualification-manoj {
+  font-size: 1rem;
+  color:#00797C;
+  margin-bottom: 20px;
+}
+.consult-button-manoj {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #00797C;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.consult-button-manoj:hover {
+  background-color: #005fa3;
+}
+.treatment-categories-box-manoj {
+  flex: 2;
+  min-width: 320px;
+  background: #007a7c10;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.treatment-categories-box-manoj h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color:#00797C;
+  font-weight: 700;
+}
+
+.department-overview-manoj {
+  padding: 20px 20px;
+  background: #007a7c10;
+  border-radius: 10px;
+  margin: 5px auto;
+  max-width: 1350px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 1s ease-in;
+}
+
+.overview-title-manoj {
+  font-size: 34px;
+  color:#00797C;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.overview-description-manoj {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.7;
+  max-width: 800px;
+  font-weight: 500;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.why-choose-section-manoj {
+  text-align: center;
+  font-weight: 600;
+}
+
+.why-title-manoj {
+  font-size: 28px;
+  color: #006EB2;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.benefits-grid-manoj {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  padding: 0 20px;
+}
+
+.benefit-card-manoj {
+  background-color: #ffffff7b;
+  padding: 24px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.benefit-card-manoj:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-card-manoj i {
+  font-size: 32px;
+  color: #006EB2;
+  margin-bottom: 14px;
+}
+
+.benefit-card-manoj h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00797C;
+  margin-bottom: 8px;
+}
+
+.benefit-card-manoj p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Hero Section */
+@media (max-width: 786px) {
+  .hero-section-gs {
+    width: 100%;
+    height: 250px;
+    background-image: url('../assets/service1.jpg');
+    background-size: contain;
+  }
+  .surgery-hero-text-gs {
+    top: 50%;
+    left: 0%;
+    transform: translate(-0%, -0%);
+    max-width: 100%;
+  }
+
+  .surgery-hero-text-gs h1 {
+    font-size: 1.2rem;
+  }
+
+  .surgery-hero-text-gs p {
+    font-size: 1rem;
+  }
+  .consult-button-manoj {
+    color: white;
+    font-weight: 600;
+    font-size: 0.7rem;        /* Smaller font */
+    padding: 5px 10px;         /* Reduced padding */
+    border-radius: 6px;       /* Optional: for a more compact look */
+    transition: background-color 0.3s ease;
+  }
+  .consult-button-manoj:hover {
+    background-color: #005fa3;
+  }
+  .doctor-treatments-section,
+  .department-overview-manoj,
+  .expertise-treatment-section {
+    padding: 20px 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    align-items: center;
+  }
+}
