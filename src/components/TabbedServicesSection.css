@@ -27,6 +27,7 @@
   max-width: 400px;
   height: 450px;
   position: relative;
+  
 }
 
 /* CARD STYLES */
@@ -69,6 +70,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+  
 }
 
 .service-title {

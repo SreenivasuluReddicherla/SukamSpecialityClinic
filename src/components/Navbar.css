@@ -53,13 +53,12 @@ body {
 .dropbtn:hover {
   background-color: #0141c1;
   color: white;
+  
 }
-
 .dropdown {
   position: relative;
   color: #0141c1;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -84,10 +83,14 @@ body {
   position: relative;
   padding: 10px;
 }
-
+.sub-btn{
+  margin-top: 5px;
+  border-radius: 5px;
+}
 .dropdown-subsection .dropbtn {
   background: none;
   border: none;
+  border-radius: 5px;
   font-weight: bold;
   padding: 10px;
   cursor: pointer;
@@ -97,6 +100,7 @@ body {
 .dropdown-subsection:hover > .dropbtn {
   background-color: #0141c1;
   color: white;
+  border-radius: 5px;
 }
 
 .sub-dropdown {
@@ -122,11 +126,13 @@ body {
   color: #0141c1;
   text-decoration: none;
   white-space: nowrap;
+  border-radius: 5px;
 }
 
 .sub-dropdown a:hover {
   background-color: #0141c1;
   color: white;
+  border-radius: 5px;
 }
 
 .right-section {
@@ -150,6 +156,7 @@ body {
 .btns:hover {
   background-color: #0141c1;
   color: white;
+  border-radius: 10px;
 }
 
 #emergency {

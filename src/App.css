@@ -31,17 +31,19 @@ body {
 .scrolling-text {
   white-space: nowrap;
   display: inline-block;
-  animation: scroll-left 20s linear infinite;
+  animation: scroll-pingpong 10s linear infinite alternate;
 }
 
-@keyframes scroll-left {
+/* Keyframes to move text back and forth */
+@keyframes scroll-pingpong {
   0% {
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-0%);
   }
 }
+
 
 /* 🔷 Navbar Adjustment */
 .navbar {

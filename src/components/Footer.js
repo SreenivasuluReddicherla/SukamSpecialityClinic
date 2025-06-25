@@ -64,7 +64,7 @@ const Footer = () => {
           <h4>Insights</h4>
           <ul>
             <li><Link to="/blogs">Blogs</Link></li>
-            <li><a href="/" onClick={handleScrollToTestimonials}>Sukam Voices</a></li>
+            <li><Link to="/Sukamvoices">Sukam Voices</Link></li>
             <li><Link to="/gallery">Gallery</Link></li>
             <li><Link to="/faq">FAQ</Link></li>
           </ul>

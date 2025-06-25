@@ -25,13 +25,13 @@ const treatmentData = {
       img: RP2,
       title: "Declining Fertility",
       desc: "When biology slows down, science steps in.",
-      link: "/InfertilityInsights",
+      link: "/DecliningFertility",
     },
     {
       img: RP3,
       title: "Male Infertility",
       desc: "Half the equation, equally important.",
-      link: "/InfertilityInsights",
+      link: "/MaleInfertility",
     },
   ],
   "Natural Support & First-Line Treatments": [
@@ -39,13 +39,13 @@ const treatmentData = {
       img: RP4,
       title: "Natural Pregnancy / OITI",
       desc: "Sometimes, a little guidance brings nature back on track",
-      link: "/InfertilityInsights",
+      link: "/NaturalPregnancy",
     },
     {
       img: RP5,
       title: "IUI",
       desc: "A shortcut for sperm on their journey home.",
-      link: "/InfertilityInsights",
+      link: "/IUI",
     },
   ],
   "Advanced Fertility Treatments": [
@@ -53,13 +53,13 @@ const treatmentData = {
       img: RP6,
       title: "IVF & ICSI",
       desc: "Science meets stardust to create life.",
-      link: "/InfertilityInsights",
+      link: "/IVF_ICSI",
     },
     {
       img: RP7,
       title: "Egg Freezing",
       desc: "Pause your biological clock, not your dreams.",
-      link: "/InfertilityInsights",
+      link: "/EggFreezing",
     },
   ],
 };

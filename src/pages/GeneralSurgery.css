@@ -2,6 +2,7 @@
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   line-height: 1.6;
+  margin-top: 20px;
 }
 
 /* Top Banner Section */
@@ -43,95 +44,87 @@
   color:#ffffff;
   font-weight: 600;
 }
-
-/* Treatment Section */
-.treatment-section {
-  padding: 50px 20px;
-  text-align: center;
-}
-.icon-large {
-  display: block;
-  margin: 0 auto 0.5rem auto; /* auto margins center the image horizontally */
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.treatment-section h2 {
-  margin-bottom: 30px;
-}
-
-.treatment-grid-manoj {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 20px;
-}
-
-.treatment-card-manoj {
-  background: #ffffff82;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
-  padding: 15px;
-  text-align: center;
-}
-
-.treatment-card-manoj:hover {
-  transform: translateY(-10px);
-}
-/* 
-.treatment-card img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
-} */
-
-.treatment-card-manoj h3 {
-  margin: 15px 0 5px;
-  font-size: 1.2rem;
-  color: #00797C;
-  font-weight: 700;
-}
-
-.treatment-card-manoj p {
-  padding: 0 15px 15px;
-  font-size: 0.95rem;
-  color: #555;
+.consult-button-manoj-gs {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #00797C;;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
   font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
-
-/* Expertise Section */
-.expertise-section {
-  padding: 40px 20px;
-  background-color: #f0fbfb;
+.consult-button-manoj-gs:hover {
+  background-color: #005fa3;
 }
 
-.expertise-treatment-section {
+/* ---------------------- */
+/* Doctor Profile Section */
+/* ---------------------- */
+
+.doctor-treatments-section-gs {
+  margin-top: 50px;
+  padding: 15px;
+  background-color:#007a7c83;
+}
+
+.doctor-profile-box-gs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 30px;
-  padding: 50px 20px;
-}
-
-.expertise-column {
-  flex: 1;
-  min-width: 300px;
-  background-color: #f0fbfb;
-  padding: 30px;
+  background: #f0fbfb;
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  align-items: flex-start;
 }
 
-.expertise-column h2 {
-  margin-bottom: 20px;
+.doctor-info-left-gs {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  min-width: 280px;
 }
 
-.expertise-list {
+.doctor-img-gs {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+  object-fit: cover;
+  background-color: #00797C;
+}
+
+.doctor-basic-info-gs h2
+ {
+  color:#00797C;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+
+}
+.qualification-gs,
+.designation-gs
+{
+  color:#00797C;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.doctor-info-right-gs {
+  flex: 1;
+  min-width: 280px;
+}
+/* Expertise Section */
+
+.expertise-list-gs {
   list-style: none;
   padding: 0;
   display: grid;
@@ -142,7 +135,7 @@
   margin: auto;
 }
 
-.expertise-list li {
+.expertise-list-gs li {
   margin-bottom: 10px;
   font-size: 1rem;
   font-weight: 500;
@@ -150,7 +143,7 @@
   align-items: center;
 }
 
-.expertise-list span {
+.expertise-list-gs span {
   margin-right: 10px;
   font-size: 1.2rem;
 }
@@ -181,85 +174,146 @@
   text-align: center;
 }
 
-/* Doctor Treatments Section */
-.doctor-treatments-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 15px 15px;
-  background-color: #f9f9f9;
-}
+/* ---------------------- */
+/* Treatment Categories   */
+/* ---------------------- */
 
-.doctor-profile-box-manoj {
-  flex: 1;
-  min-width: 320px;
-  max-width: 420px;
-  background:  #007a7c10;
-  padding: 15px 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+.treatment-categories-heading-gs h2 {
+  font-size: 3rem;
   text-align: center;
-}
-.doctor-img-manoj {
-  width: 200px;  /* Increased image size */
-  height: 200px;
-  border-radius: 50%;
-  border: 3px solid #ffffff;
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
-  object-fit: cover; /* Ensures image fills the area properly */
-  margin-right: 30px;  /* More spacing between image and text */
-  background-color: #00796b;
-}
-.doctor-profile-box-manoj h2 {
-  font-size: 1.5rem;
   color: #00797C;
-  margin-bottom: 5px;
-  font-weight: 700;
+  font-weight: 800;
+  margin: 30px;
 }
 
-.designation-manoj {
-  font-weight: 600;
+.treatment-section-block-gs {
+  margin-bottom: 2rem;
+  background-color:  #007a7c0f;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.subcategory-heading-gs {
+  font-size: 2rem;
+  text-align: left;
   color:#00797C;
-  margin-bottom: 20px;
-}
-.qualification-manoj {
-  font-size: 1rem;
-  color:#00797C;
-  margin-bottom: 20px;
-}
-.consult-button-manoj {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 10px 20px;
-  background-color: #00797C;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1rem;
+  border-left: 5px solid #00797C;
+  border-right: 5px solid #00797C;
+  font-weight: 800;
 }
 
-.consult-button-manoj:hover {
-  background-color: #005fa3;
-}
-.treatment-categories-box-manoj {
-  flex: 2;
-  min-width: 320px;
-  background: #007a7c10;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+.treatment-grid-gs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-.treatment-categories-box-manoj h2 {
-  font-size: 1.8rem;
-  margin-bottom: 25px;
+.treatment-card-manoj-gs {
+  background-color:  #ffffff;
+  border-radius: 20px;
+  border: 1px solid #007a7c27;
+  padding: 1.5rem;
   text-align: center;
-  color:#00797C;
-  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
 
+.treatment-card-manoj-gs:hover {
+  transform: translateY(-5px);
+}
+
+.treatment-card-manoj-gs img.icon-large {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+
+.treatment-card-manoj-gs h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #00797C;
+  margin-bottom: 0.5rem;
+}
+
+.treatment-card-manoj-gs p {
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 500;
+}
+.icon-large-gs {
+  display: block;
+  margin: 0 auto 0.5rem auto; /* auto margins center the image horizontally */
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.knowmore-gs{
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  background-color: transparent;
+  color: #00797C;
+  border: 2px solid #00797C;
+}
+.knowmore-gs:hover{
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  background-color: #00797C;
+  color: #e9e9e9;
+  border: 2px solid #1a227ed5;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .treatment-grid-gs {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .treatment-card-manoj-gs {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .treatment-card-manoj-gs img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .treatment-section-block-gs h2 {
+    font-size: 1.5rem;
+  }
+
+  .treatment-card-manoj-gs h3 {
+    font-size: 1rem;
+  }
+
+  .treatment-card-manoj-gs p {
+    font-size: 0.9rem;
+  }
+}
+/* ---------------------- */
+/* Department Overview    */
+/* ---------------------- */
 .department-overview-manoj {
   padding: 20px 20px;
   background: #007a7c10;
@@ -359,41 +413,74 @@
 @media (max-width: 786px) {
   .hero-section-gs {
     width: 100%;
-    height: 250px;
-    background-image: url('../assets/service1.jpg');
-    background-size: contain;
+    height: 350px;
+    background-image: url('../assets/service11.jpg');
+    background-size:80pc;
   }
   .surgery-hero-text-gs {
     top: 50%;
-    left: 0%;
-    transform: translate(-0%, -0%);
+    left: 20%;
+    transform: translate(-10%, -10%);
     max-width: 100%;
   }
 
   .surgery-hero-text-gs h1 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
 
   .surgery-hero-text-gs p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
-  .consult-button-manoj {
+  .consult-button-manoj-gs {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  .doctor-profile-box-gs {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .doctor-info-left-gs,
+  .doctor-info-right-gs {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .expertise-list-gs {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline-block;
+  }
+  .consult-button-manoj-gs {
     color: white;
-    font-weight: 600;
-    font-size: 0.7rem;        /* Smaller font */
-    padding: 5px 10px;         /* Reduced padding */
-    border-radius: 6px;       /* Optional: for a more compact look */
+    font-weight: 700;
+    font-size: 1rem;        /* Smaller font */
+    padding: 10px 15px;         /* Reduced padding */
+    border-radius: 7px;       /* Optional: for a more compact look */
     transition: background-color 0.3s ease;
   }
-  .consult-button-manoj:hover {
+  .consult-button-manoj-gs:hover {
     background-color: #005fa3;
   }
-  .doctor-treatments-section,
-  .department-overview-manoj,
-  .expertise-treatment-section {
+
+  .department-overview-manoj {
     padding: 20px 20px;
     margin-top: 10px;
     margin-left: 10px;
     align-items: center;
+  }
+  .doctor-treatments-section-gs{
+    margin-top: 50px;
+    padding: 20px 20px;
   }
 }

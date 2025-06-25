@@ -68,11 +68,11 @@ const AboutUs = () => {
 
         {/* Founder 1: Image Left */}
         <div className="founder-profiles" data-aos="fade-right">
-          <img src={founder1} alt="Dr. Manoj Karthik S" className="founder-img" />
+          <img src={founder1} alt="Dr. Manoj Karthik S" className="founder-img-manoj" />
           <div className="founder-text-manoj">
             <h3>Dr. Manoj Karthik S</h3>
             <p className="founder-subtitle">
-              MBBS | MS (Gen Surg) | FMAS | PGDHE | Senior General, Laparoscopic and Endoscopic Surgeon | 22+ Years of Experience Dr Manoj Karthik S 
+              MBBS | MS (Gen Surg) | FMAS | PGDHE | Senior General, Laparoscopic and Endoscopic Surgeon | 22+ Years of Experience 
 
 
             </p>
@@ -86,7 +86,7 @@ const AboutUs = () => {
 
         {/* Founder 2: Image Right */}
         <div className="founder-profiles reverse" data-aos="fade-left">
-          <img src={founder2} alt="Dr. Anitha A Manoj" className="founder-img" />
+          <img src={founder2} alt="Dr. Anitha A Manoj" className="founder-img-anitha" />
           <div className="founder-text-anitha">
             <h3>Dr. Anitha A Manoj</h3>
             <p className="founder-subtitle">
@@ -122,7 +122,7 @@ const AboutUs = () => {
 </Link>
 
 <Link to="/CoreValues" style={{ textDecoration: "none", color: "inherit" }}>
-  <div className="service-box green" data-aos="zoom-in-up">
+  <div className="service-box blue" data-aos="zoom-in-up">
     <div className="image-holder">
       <img src={about1} alt="Clinic" className="service-img" />
     </div>

@@ -148,7 +148,7 @@ const Navbar = () => {
                         "Laparoscopy",
                         "Uterine and Ovarian Surgeries",
                       ].map((item) => (
-                        <Link key={item} to="/services/pregnancy" onClick={closeMenu}>{item}</Link>
+                        <Link key={item} to="/services/gynecology" onClick={closeMenu}>{item}</Link>
                       ))}
                     </div>
                   )}
@@ -171,7 +171,7 @@ const Navbar = () => {
                         "OITI",
                         "IUI",
                       ].map((item) => (
-                        <Link key={item} to="/services/gynecology" onClick={closeMenu}>{item}</Link>
+                        <Link key={item} to="/services/pregnancy" onClick={closeMenu}>{item}</Link>
                       ))}
                     </div>
                   )}
@@ -187,10 +187,7 @@ const Navbar = () => {
             {dropdownOpen === "resources" && (
               <div className="dropdown-content">
                 <Link to="/blogs" onClick={closeMenu}>Blogs</Link>
-                
-                <Link to="#" onClick={handleScrollToTestimonials}>
-                              Sukam Voices
-                            </Link>
+                <Link to="/Sukamvoices" onClick={closeMenu}>Sukam Voices</Link>
                 <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
                 <Link to="/faq" onClick={closeMenu}>FAQ</Link>
               </div>

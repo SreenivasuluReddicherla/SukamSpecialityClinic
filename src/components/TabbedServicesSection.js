@@ -22,7 +22,7 @@ const ServicesShowcase = () => {
       description: "Holistic care for women, <br> from adolescence to maternity and beyond.",
       image: img1,
       doctorId: "dr-anitha-a-manoj",
-      link: "/services/pregnancy",
+      link: "/services/gynecology",
       titleClass: "obstetrics-gynaecology",
     },
     {
@@ -30,7 +30,7 @@ const ServicesShowcase = () => {
       description: "Compassionate, science-backed fertility care <br> tailored to your journey.",
       image: img3,
       doctorId: "dr-anitha-a-manoj",
-      link: "/services/gynecology",
+      link: "/services/pregnancy",
       titleClass: "reproductive-medicine",
     },
   ];

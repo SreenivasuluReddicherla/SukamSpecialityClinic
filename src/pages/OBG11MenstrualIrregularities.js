@@ -1,43 +1,40 @@
 import React, { useState } from 'react';
-import './InfertilityInsights.css';
+import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "What percentage of infertility cases involve male factors?",
-    options: ["10%", "25%", "50%", "75%"],
-    answer: "50%"
+    question: "What is considered a normal menstrual cycle length?",
+    options: ["10-15 days", "21-35 days", "40-50 days", "60 days or more"],
+    answer: "21-35 days"
   },
   {
-    question: "True or False: Stress can affect fertility.",
+    question: "True or False: Stress can cause menstrual irregularities.",
     options: ["True", "False"],
     answer: "True"
   },
   {
-    question: "Which is NOT a common cause of female infertility?",
-    options: ["Ovulatory disorders", "Tubal blockage", "High blood pressure", "Uterine abnormalities"],
-    answer: "High blood pressure"
+    question: "Which condition is a common cause of irregular periods?",
+    options: ["PCOS", "Diabetes", "Asthma", "Hypertension"],
+    answer: "PCOS"
   },
   {
-    question: "How long should a couple try to conceive before seeking help?",
-    options: ["3 months", "6 months", "1 year", "2 years"],
-    answer: "1 year"
+    question: "What should you do if you have consistently irregular periods?",
+    options: ["Ignore it", "Consult a healthcare provider", "Self-medicate", "Stop exercising"],
+    answer: "Consult a healthcare provider"
   },
   {
-    question: "Can lifestyle changes improve fertility?",
+    question: "Can lifestyle changes help manage menstrual irregularities?",
     options: ["Yes", "No"],
     answer: "Yes"
   }
 ];
 
-const InfertilityInsights = () => {
+const MenstrualIrregularities = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
 
   const handleOptionClick = (questionIndex, option) => {
-    setSelectedAnswers({
-      ...selectedAnswers,
-      [questionIndex]: option
-    });
+    setSelectedAnswers({ ...selectedAnswers, [questionIndex]: option });
   };
 
   const calculateResults = () => {
@@ -45,10 +42,7 @@ const InfertilityInsights = () => {
     quizData.forEach((q, i) => {
       if (selectedAnswers[i] === q.answer) correct++;
     });
-    return {
-      correct,
-      wrong: quizData.length - correct
-    };
+    return { correct, wrong: quizData.length - correct };
   };
 
   const handleTryAgain = () => {
@@ -63,42 +57,44 @@ const InfertilityInsights = () => {
 
   return (
     <div className="infertility-container">
-      <h1>🧬 Infertility – Insights</h1>
-      <p className="lead">“Every story has its hurdles — let’s decode the ‘why not yet.’”</p>
+      <h1>🔄 Menstrual Irregularities</h1>
+      <p className="lead">“When your monthly guest gets unpredictable.”</p>
 
       <section className="info-section">
         <p>
-          Infertility can be an emotional and confusing journey. It affects many couples, but understanding the causes and options available can bring hope. At Sukam Speciality Clinic and Fertility Centre, we believe every couple’s story is unique. We provide compassionate support and thorough evaluation to help uncover the reasons behind infertility and guide you towards the best path forward.
+          Menstrual irregularities refer to any variation from a normal menstrual cycle in terms of timing, flow, or symptoms. These can include missed periods, heavy bleeding, spotting, or painful menstruation.
         </p>
+        <p>
+          At Sukam Speciality Clinic and Fertility Centre, we provide a thorough evaluation and personalized treatment to help restore regularity and comfort.
+        </p>
+
         <h3>🩺 What We Offer:</h3>
         <ul>
-          <li>Comprehensive fertility assessment for both partners</li>
-          <li>Hormonal tests, semen analysis, and imaging studies</li>
-          <li>Identification of factors like ovulatory disorders, tubal blockage, male factor infertility, and unexplained infertility</li>
-          <li>Counseling and emotional support throughout the journey</li>
-          <li>Personalized treatment plans designed with your goals in mind</li>
+          <li>Detailed menstrual history and symptom analysis</li>
+          <li>Hormonal profiling and ultrasound assessments</li>
+          <li>Treatment of causes like PCOS, thyroid disorders, fibroids, or infections</li>
+          <li>Medical and lifestyle management tailored to your needs</li>
+          <li>Counseling on menstrual hygiene and symptom relief</li>
         </ul>
 
-        <h3>💡 Tips to Support Fertility Naturally:</h3>
+        <h3>💡 Tips for Managing Menstrual Irregularities:</h3>
         <ul>
-          <li>Maintain a healthy weight and balanced diet</li>
-          <li>Avoid smoking, alcohol, and excessive caffeine</li>
-          <li>Manage stress through relaxation and mindfulness</li>
-          <li>Track ovulation and fertile windows</li>
-          <li>Regular moderate exercise improves reproductive health</li>
+          <li>Maintain a balanced diet rich in iron and vitamins</li>
+          <li>Manage stress with relaxation practices</li>
+          <li>Keep a menstrual diary to track changes</li>
+          <li>Avoid excessive caffeine and smoking</li>
+          <li>Follow medical advice and check-ups</li>
         </ul>
 
         <h3>🚫 Myth vs Fact:</h3>
         <ul>
-          <li><strong>❌ Myth:</strong> “Infertility is usually the woman’s problem.”<br /><strong>✅ Truth:</strong> Male factors contribute to nearly half of all infertility cases.</li>
-          <li><strong>❌ Myth:</strong> “If you don’t get pregnant immediately, there is a problem.”<br /><strong>✅ Truth:</strong> Many couples conceive naturally within a year of trying.</li>
+          <li><strong>❌ Myth:</strong> “Irregular periods are normal at any age.”<br /><strong>✅ Truth:</strong> Persistent irregularities should be evaluated.</li>
+          <li><strong>❌ Myth:</strong> “You should avoid exercise during irregular periods.”<br /><strong>✅ Truth:</strong> Regular moderate exercise often helps regulate cycles.</li>
         </ul>
       </section>
 
       <section className="quiz-section">
-        <h2>🧠 Infertility Quiz — How Much Do You Know?</h2>
-
-        {/* Progress Bar */}
+        <h2>🧠 Menstrual Irregularities Quiz — Know Your Cycle!</h2>
         <div className="progress-bar-container">
           <div className="progress-bar" style={{ width: `${progressPercentage}%` }}></div>
         </div>
@@ -129,7 +125,6 @@ const InfertilityInsights = () => {
           <div className="results-section">
             <p>✅ Correct Answers: {results.correct}</p>
             <p>❌ Wrong Answers: {results.wrong}</p>
-
             <div className="score-breakdown">
               <h4>Detailed Score Breakdown</h4>
               <ul>
@@ -143,7 +138,6 @@ const InfertilityInsights = () => {
                 ))}
               </ul>
             </div>
-
             <div className="results-buttons">
               <button className="try-again-button" onClick={handleTryAgain}>Try Again</button>
             </div>
@@ -154,4 +148,4 @@ const InfertilityInsights = () => {
   );
 };
 
-export default InfertilityInsights;
+export default MenstrualIrregularities;
