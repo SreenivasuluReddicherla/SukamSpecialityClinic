@@ -117,7 +117,7 @@ const ReproductiveMedicine = () => {
           <div className="treatment-grid-rp">
             {treatments.map((item, index) => (
               <div className="treatment-card-anitha-rp" key={index}>
-                <img src={item.img} alt={item.title} className="icon-large" />
+                <img src={item.img} alt={item.title} className="icon-large-rp" />
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
                 <button

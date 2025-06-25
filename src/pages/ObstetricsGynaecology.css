@@ -304,14 +304,14 @@
   }
 
   .treatment-card-anitha-obg {
-    width: 90%;
+    width: 100%;
     height: auto;
     padding: 15px;
   }
 
-  .treatment-card-anitha-obg img {
+  /* .treatment-card-anitha-obg img {
     height: 120px;
-  }
+  } */
 }
 
 @media (max-width: 480px) {
@@ -429,12 +429,12 @@
   }
 
   .surgery-hero-text-obg h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color:#ffffff;
   }
 
   .surgery-hero-text-obg p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color:#ffffff;
   }
   .consult-button-obg {
@@ -476,4 +476,15 @@
     margin-top: 50px;
     padding: 20px 20px;
   } 
+  .treatment-categories-heading-obg h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    color: #BC1F6E;
+    font-weight: 800;
+    margin: 30px;
+  }
+  .subcategory-heading-obg {
+    font-size: 1.8rem;
+    text-align: center;
+  }
 }

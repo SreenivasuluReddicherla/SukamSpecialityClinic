@@ -288,14 +288,14 @@
   }
 
   .treatment-card-manoj-gs {
-    width: 90%;
+    width: 100%;
     height: auto;
     padding: 15px;
   }
 
-  .treatment-card-manoj-gs img {
+  /* .treatment-card-manoj-gs img {
     height: 120px;
-  }
+  } */
 }
 
 @media (max-width: 480px) {
@@ -418,18 +418,18 @@
     background-size:80pc;
   }
   .surgery-hero-text-gs {
-    top: 50%;
+    top: 40%;
     left: 20%;
     transform: translate(-10%, -10%);
     max-width: 100%;
   }
 
   .surgery-hero-text-gs h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .surgery-hero-text-gs p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .consult-button-manoj-gs {
     font-size: 0.7rem;
@@ -482,5 +482,15 @@
   .doctor-treatments-section-gs{
     margin-top: 50px;
     padding: 20px 20px;
+  }
+  .treatment-categories-heading-gs h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 800;
+    margin: 30px;
+  }
+  .subcategory-heading-gs {
+    font-size: 1.8rem;
+    text-align: center;
   }
 }

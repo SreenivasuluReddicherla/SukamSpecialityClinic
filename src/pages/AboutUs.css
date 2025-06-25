@@ -391,14 +391,12 @@
   text-align: justify;
 }
 /* 📱 Responsive */
-@media (max-width: 768px) {
+@media (max-width: 360px) {
   .founder-profiles,
   .founder-profiles.reverse {
     flex-direction: column;
     text-align: center;
     padding: 30px 30px;
-    width:700px;
-
   }
   .founder-img-manoj {
     width: 200px;
@@ -533,7 +531,6 @@
 
   .vision {
     padding: 30px 30px;
-    width:700px;
   }
 
   .vision p {
