@@ -12,7 +12,7 @@ const doctors = {
   "dr-manoj-karthik": {
     name: "Dr. Manoj Karthik S",
     qualification: "MBBS, MS (Gen Surg), FMAS, PGDHE",
-    designation: ["Senior General", "Laparoscopic and Endoscopic Surgeon "],
+    designation: ["Senior General,", "Laparoscopic and Endoscopic Surgeon "],
     experience: "22+ Years of Experience",
     regNumber: "674933",
     languages: ["English", "Kannada", "Hindi", "Tamil"],
@@ -35,7 +35,7 @@ const doctors = {
   "dr-anitha-a-manoj": {
     name: "Dr. Anitha A Manoj",
     qualification: "MBBS, MS (OBG), FMAS & FRM",
-    designation: ['Senior Consultant Obstetrician', 'Gynaecologist, and Fertility Specialist'],
+    designation: ['Senior Consultant Obstetrician,', 'Gynaecologist, and Fertility Specialist'],
     experience: "16+ Years of Experience",
     regNumber: "69779",
     languages: ["Kannada", "English", "Hindi", "Tamil", "Telugu"],

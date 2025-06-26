@@ -151,7 +151,7 @@ h2 {
 /* 🔹 Expertise Sections Styling */
 .expertise-section {
   margin-top: 30px;
-  padding: 20px;
+  padding: 10px;
   background-color: #f7faff;
   border-radius: 10px;
   border-left: 5px solid #0141c1;
@@ -201,7 +201,7 @@ h2 {
 }
 
 /* Responsive columns for lists */
-@media (min-width: 480px) {
+@media (min-width: 360px) {
   .expertise-section {
     margin-top: 30px;
     padding: 10px;
@@ -211,7 +211,7 @@ h2 {
     transition: background 0.3s ease;
   }
   .expertise-section h4 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: 14px;
     color: #0141c1;
@@ -224,7 +224,7 @@ h2 {
     padding: 10px 0px;
     border-radius: 8px;
     color: #333;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     display: flex;
     align-items: center;
