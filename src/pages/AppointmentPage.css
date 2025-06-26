@@ -80,11 +80,11 @@
 
 /* Individual Backgrounds Behind Image */
 .dr-manoj-karthik .doctor-image {
-  background-color: #007a7cb2; /* Teal tint */
+  background-color: #007a7c70; /* Teal tint */
 }
 
 .dr-anitha-a-manoj .doctor-image {
-  background-color: #bc1f6dbc; /* Pink tint */
+  background-color: #bc1f6d81; /* Pink tint */
 }
 
 
@@ -113,7 +113,7 @@
 
 /* ===== Dr. Manoj Karthik Custom Styles ===== */
 .dr-manoj-karthik {
-  border: 2px solid #007a7c;
+  border: 2px solid hsla(181, 100%, 24%, 0.298);
   background-color: #e0f7f654;
   font-size: 15px;
   color: #004d40;
@@ -122,11 +122,11 @@
 }
 
 .dr-manoj-karthik .profile-btn {
-  background-color: #007a7c;
+  background-color: #007a7ccf;
 }
 
 .dr-manoj-karthik .book-btn {
-  background-color: #c30404;
+  background-color: #ff0000b5;
 }
 
 .dr-manoj-karthik .profile-btn:hover,
@@ -136,7 +136,7 @@
 
 /* ===== Dr. Anitha A Manoj Custom Styles ===== */
 .dr-anitha-a-manoj {
-  border: 2px solid #bc1f6d;
+  border: 2px solid #bc1f6d5e;
   background-color: #ffffffc1;
   font-size: 15px;
   color: #982882;
@@ -145,11 +145,11 @@
 }
 
 .dr-anitha-a-manoj .profile-btn {
-  background-color: #bc1f6d;
+  background-color: #c4186ecc;
 }
 
 .dr-anitha-a-manoj .book-btn {
-  background-color: #c21818;
+  background-color:  #ff0000b5;
 }
 
 .dr-anitha-a-manoj .profile-btn:hover,
@@ -163,7 +163,8 @@
     font-size: 1.2rem;
     font-weight: 800;
     color: #0141c1;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 80px;
   }
   .doctor-cards {
     flex-direction: column;
@@ -172,7 +173,7 @@
   }
 
   .go-back {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .button-group {

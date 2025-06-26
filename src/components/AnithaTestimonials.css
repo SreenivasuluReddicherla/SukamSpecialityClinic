@@ -4,14 +4,13 @@
   background: #f4f9fc;
   border-radius: 12px;
   max-width: 1200px;
-  margin: auto;
 }
 
 .testimonials-section h2 {
   font-size: 2rem;
   color: #005b96;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 /* Swiper Slide Card */

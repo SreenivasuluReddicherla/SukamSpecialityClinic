@@ -66,13 +66,14 @@ h2 {
   font-size: 14px;
   color: #555;
   margin: 4px 0;
+  display: inline-block;
 }
 
 .badge {
   display: inline-block;
   background-color: #eef1f8;
   color: #333;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   padding: 6px 12px;
   border-radius: 30px;
@@ -164,7 +165,7 @@ h2 {
   color: #0141c1;
 }
 
-.expertise-list {
+.expertise-list-profile {
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -173,33 +174,65 @@ h2 {
   gap: 12px;
 }
 
-.expertise-list li {
+.expertise-list-profile li {
   background-color: #eef4fb;
   padding: 12px 16px;
   border-radius: 8px;
   color: #333;
   font-size: 16px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 12px;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.expertise-list li:hover {
+.expertise-list-profile li:hover {
   background-color: #dceeff;
   transform: scale(1.02);
 }
+.expertise-list-profile li span{
+  font-size: 30px;
+}
 
-.expertise-list li i,
-.expertise-list li span {
-  font-size: 18px;
+.expertise-list-profile li i {
+  font-size: 20px;
   color: #0141c1;
 }
 
 /* Responsive columns for lists */
-@media (min-width: 768px) {
-  .expertise-list {
+@media (min-width: 480px) {
+  .expertise-section {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #f7faff;
+    border-radius: 10px;
+    border-left: 5px solid #0141c1;
+    transition: background 0.3s ease;
+  }
+  .expertise-section h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: #0141c1;
+  }
+  .expertise-list-profile {
     grid-template-columns: 1fr 1fr;
+  }
+  .expertise-list-profile li {
+    background-color: #eef4fb;
+    padding: 10px 0px;
+    border-radius: 8px;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  .expertise-list-profile li span{
+    font-size: 20px;
   }
 }
 
@@ -207,7 +240,7 @@ h2 {
 /* --- TESTIMONIALS SECTION (PURE DESIGN) --- */
 .testimonials-section-profile {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 30px 10px;
   background-color: #f9fbfe;
   /* border-top: 1px solid #ddd; */
@@ -225,7 +258,7 @@ h2 {
 }
 
 /* Optional: Smooth fade-in on scroll for better UX */
-.testimonials-section {
+.testimonials-section-profile {
   animation: fadeInUp 0.6s ease-out;
 }
 
@@ -252,7 +285,7 @@ h2 {
   .profile-header {
     flex: 1;
     align-items: center;
-    padding-right: 30px;
+    padding-right: 20px;
   }
 
   .about-doctor {
@@ -277,6 +310,19 @@ h2 {
 
   h2 {
     font-size: 26px;
+  }
+}
+@media (min-width: 480px) {
+  .testimonials-section-profile {
+    width: 100%;
+    margin-top:10px;
+    padding: 10px 10px;
+    background-color: #f9fbfe;
+    /* border-top: 1px solid #ddd; */
+    text-align: center;
+    border-radius: 12px;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 }
 

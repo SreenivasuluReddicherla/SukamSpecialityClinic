@@ -34,7 +34,6 @@ const videoTestimonials = [
     },
   ];
   
-
 const Testimonials = () => {
   return (
     <div className="testimonials-section">

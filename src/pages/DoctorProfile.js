@@ -12,7 +12,7 @@ const doctors = {
   "dr-manoj-karthik": {
     name: "Dr. Manoj Karthik S",
     qualification: "MBBS, MS (Gen Surg), FMAS, PGDHE",
-    designation: "Senior General, Laparoscopic and Endoscopic Surgeon",
+    designation: ["Senior General", "Laparoscopic and Endoscopic Surgeon "],
     experience: "22+ Years of Experience",
     regNumber: "674933",
     languages: ["English", "Kannada", "Hindi", "Tamil"],
@@ -35,7 +35,7 @@ const doctors = {
   "dr-anitha-a-manoj": {
     name: "Dr. Anitha A Manoj",
     qualification: "MBBS, MS (OBG), FMAS & FRM",
-    designation: "Senior Consultant Obstetrician, Gynaecologist, and Fertility Specialist",
+    designation: ['Senior Consultant Obstetrician', 'Gynaecologist, and Fertility Specialist'],
     experience: "16+ Years of Experience",
     regNumber: "69779",
     languages: ["Kannada", "English", "Hindi", "Tamil", "Telugu"],
@@ -84,9 +84,10 @@ const DoctorProfile = () => {
           <h2>{doctor.name}</h2>
 
           <div className="badge">{doctor.qualification}</div>
-          <div className="badge">{doctor.designation}</div>
+          <div className="designation">{doctor.designation.map((des,i)=>
+            <span className="badge" key={i}>{des}</span>)}
+          </div>
           <div className="badge">{doctor.experience}</div>
-
           <div className="languages">
             <strong>Languages Known:</strong>
             {doctor.languages.map((lang, i) => (
@@ -123,16 +124,16 @@ const DoctorProfile = () => {
 
           <div className="expertise-section">
             <h4>Areas of Expertise</h4>
-            <ul className="expertise-list">
+            <ul className="expertise-list-profile">
               {doctor.expertise.map((item, index) => (
-                <li key={index}>🩺 {item}</li>
+                <li key={index}><span>🩺</span> {item}</li>
               ))}
             </ul>
           </div>
 
           <div className="expertise-section">
             <h4>📋 Common Conditions Managed</h4>
-            <ul className="expertise-list">
+            <ul className="expertise-list-profile">
               {doctor.conditions.map((condition, index) => (
                 <li key={index}><i className="fas fa-angle-right"></i> {condition}</li>
               ))}
