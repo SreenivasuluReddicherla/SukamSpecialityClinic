@@ -74,70 +74,78 @@ const DoctorProfile = () => {
     "";
 
   return (
-    <div className={`doctor-profile ${backgroundClass}`}>
-      <div className="go-back-container">
-        <button onClick={() => navigate(-1)} className="go-back-button">← Go Back</button>
-      </div>
-
-      <div className="profile-header">
-        <img src={doctor.image} alt={doctor.name} className="profile-image" />
-        <h2>{doctor.name}</h2>
-        <p className="qualification">{doctor.qualification}</p>
-        <p className="designation">{doctor.designation}</p>
-        <p className="experience">{doctor.experience}</p>
-        <p className="languages"><strong>Languages Known:</strong> {doctor.languages.join(", ")}</p>
-
-        <div className="doctor-actions">
-          <a href={`tel:${doctor.phoneNumber}`} className="btn-call">
-            <FaPhoneAlt style={{ marginRight: "8px" }} /> Call
-          </a>
-          <a
-            href={`https://wa.me/${doctor.whatsappNumber}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-whatsapp"
-          >
-            <FaWhatsapp style={{ marginRight: "8px" }} /> WhatsApp
-          </a>
-          <a
-            href={doctor.appointmentLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-book"
-          >
-            📅 Book an Appointment
-          </a>
+          <div className={`doctor-profile ${backgroundClass}`}>
+        <div className="go-back-container">
+          <button onClick={() => navigate(-1)} className="go-back-button">← Go Back</button>
         </div>
-      </div>
 
-      <div className="about-doctor">
-        <h3><strong>About {doctor.name}</strong></h3>
-        <p className="about-intro">{doctor.about}</p>
+        <div className="profile-header">
+          <img src={doctor.image} alt={doctor.name} className="profile-image" />
+          <h2>{doctor.name}</h2>
 
-        <div className="expertise-section">
-          <h4>Areas of Expertise</h4>
-          <ul className="expertise-list">
-            {doctor.expertise.map((item, index) => (
-              <li key={index}><span>🩺</span> {item}</li>
+          <div className="badge">{doctor.qualification}</div>
+          <div className="badge">{doctor.designation}</div>
+          <div className="badge">{doctor.experience}</div>
+
+          <div className="languages">
+            <strong>Languages Known:</strong>
+            {doctor.languages.map((lang, i) => (
+              <span className="badge" key={i}>{lang}</span>
             ))}
-          </ul>
+          </div>
+
+          <div className="doctor-actions">
+            <a href={`tel:${doctor.phoneNumber}`} className="btn-call">
+              <FaPhoneAlt style={{ marginRight: '8px' }} /> Call
+            </a>
+            <a
+              href={`https://wa.me/${doctor.whatsappNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-whatsapp"
+            >
+              <FaWhatsapp style={{ marginRight: '8px' }} /> WhatsApp
+            </a>
+            <a
+              href={doctor.appointmentLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-book"
+            >
+              📅 Book an Appointment
+            </a>
+          </div>
         </div>
 
-        <div className="expertise-section">
-          <h4>📋 Common Conditions Managed</h4>
-          <ul className="expertise-list">
-            {doctor.conditions.map((condition, index) => (
-              <li key={index}><i className="fas fa-angle-right"></i> {condition}</li>
-            ))}
-          </ul>
+        <div className="about-doctor">
+          <h3><strong>About {doctor.name}</strong></h3>
+          <p className="about-intro">{doctor.about}</p>
+
+          <div className="expertise-section">
+            <h4>Areas of Expertise</h4>
+            <ul className="expertise-list">
+              {doctor.expertise.map((item, index) => (
+                <li key={index}>🩺 {item}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="expertise-section">
+            <h4>📋 Common Conditions Managed</h4>
+            <ul className="expertise-list">
+              {doctor.conditions.map((condition, index) => (
+                <li key={index}><i className="fas fa-angle-right"></i> {condition}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="testimonials-section-profile">
+          {doctorId === "dr-manoj-karthik" && <KarthikTestimonials />}
+          {doctorId === "dr-anitha-a-manoj" && <AnithaTestimonials />}
         </div>
       </div>
 
-      <div className="testimonials-section">
-        {doctorId === "dr-manoj-karthik" && <KarthikTestimonials />}
-        {doctorId === "dr-anitha-a-manoj" && <AnithaTestimonials />}
-      </div>
-    </div>
   );
 };
 export default DoctorProfile;

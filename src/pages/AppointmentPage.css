@@ -8,16 +8,19 @@
 
 /* Go Back Button */
 .go-back {
-  position: absolute;
-  top: 20px;
+  position:absolute;
+  top: 40px;
   left: 20px;
   background: none;
   border: none;
-  color: #3c6da0;
-  font-size: 16px;
+  color: #ffffff;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
+  background-color: #0141c1;
+  border-radius: 5px;
+  padding:5px;
 }
 
 .go-back:hover {
@@ -38,7 +41,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 100px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -46,7 +49,7 @@
 /* Generic Doctor Card */
 .doctor-card {
   flex: 1 1 320px;
-  max-width: 360px;
+  max-width: 400px;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -77,11 +80,11 @@
 
 /* Individual Backgrounds Behind Image */
 .dr-manoj-karthik .doctor-image {
-  background-color: #007a7c; /* Teal tint */
+  background-color: #007a7cb2; /* Teal tint */
 }
 
 .dr-anitha-a-manoj .doctor-image {
-  background-color: #bc1f6d; /* Pink tint */
+  background-color: #bc1f6dbc; /* Pink tint */
 }
 
 
@@ -111,7 +114,7 @@
 /* ===== Dr. Manoj Karthik Custom Styles ===== */
 .dr-manoj-karthik {
   border: 2px solid #007a7c;
-  background-color: #e0f7f6;
+  background-color: #e0f7f654;
   font-size: 15px;
   color: #004d40;
   font-weight: 700;
@@ -134,7 +137,7 @@
 /* ===== Dr. Anitha A Manoj Custom Styles ===== */
 .dr-anitha-a-manoj {
   border: 2px solid #bc1f6d;
-  background-color: #fce4ec;
+  background-color: #ffffffc1;
   font-size: 15px;
   color: #982882;
   font-weight: 700;
@@ -156,6 +159,12 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .appointment-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #0141c1;
+    margin-bottom: 30px;
+  }
   .doctor-cards {
     flex-direction: column;
     align-items: center;
@@ -163,7 +172,6 @@
   }
 
   .go-back {
-    position: relative;
     margin-bottom: 20px;
   }
 
