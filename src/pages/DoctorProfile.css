@@ -168,7 +168,7 @@ h2 {
 .expertise-list-profile {
   list-style: none;
   padding-left: 0;
-  margin: 0;
+  margin: 10px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
@@ -211,24 +211,21 @@ h2 {
     transition: background 0.3s ease;
   }
   .expertise-section h4 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 14px;
     color: #0141c1;
   }
-  .expertise-list-profile {
-    grid-template-columns: 1fr 1fr;
-  }
   .expertise-list-profile li {
     background-color: #eef4fb;
-    padding: 10px 0px;
+    padding: 5px 10px;
     border-radius: 8px;
     color: #333;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
-    display: flex;
+    display: flex-inline;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     transition: transform 0.3s ease, background 0.3s ease;
   }
   .expertise-list-profile li span{
