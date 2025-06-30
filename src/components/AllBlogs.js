@@ -7,9 +7,9 @@ import { useNavigate } from "react-router-dom";
 
 const blogs = [
   {
-    id: 1,
+    id: "Blog1IrregularMenstruation",
     image: img1,
-    title: "Navigating the Digital Health Resolution",
+    title: "Understanding Irregular Menstruation: Causes, Signs, and When to Seek Help",
     author: "Dr. Manoj Karthik",
     date: "March 28, 2025",
     content:
@@ -68,10 +68,10 @@ const AllBlogs = () => {
               <p className="blog-author">
                 By {blog.author} | {blog.date}
               </p>
-              <p className="blog-description">{blog.content}</p>
+              {/* <p className="blog-description">{blog.content}</p> */}
               <a
   className="blog-link"
-  onClick={() => navigate(`/blogs/${blog.id}`)}
+  onClick={() => navigate(`/${blog.id}`)}
 >
   See more about it →
 </a>

@@ -194,7 +194,12 @@ const treatmentData = {
       title: "Intestinal Obstruction",
       desc: "Traffic jam in your gut.",
       link: "/IntestinalObstruction"
-    }
+    },
+    {
+      img: GS39,
+      title: "Appendicitis",
+      desc: "When your appendix calls for help, surgery answers fast."
+    },
   ],
 
   "Liver, Gallbladder & Pancreas": [
@@ -233,6 +238,11 @@ const treatmentData = {
       title: "Acute Pancreatitis",
       desc: "A fiery flare-up deep in your belly.",
       link: "/AcutePancreatitis"
+    },
+     {
+      img: GS40,
+      title: "Gallbladder Surgery (Cholecystectomy)",
+      desc: "Removing the troublemaker that causes painful attacks."
     }
   ],
 
@@ -305,20 +315,6 @@ const treatmentData = {
     //   desc: "Veins that wind, bulge, and beg for relief."
     // }
   ],
-
-  "General Surgery": [
-    {
-      img: GS39,
-      title: "Appendicitis",
-      desc: "When your appendix calls for help, surgery answers fast."
-    },
-    {
-      img: GS40,
-      title: "Gallbladder Surgery (Cholecystectomy)",
-      desc: "Removing the troublemaker that causes painful attacks."
-    }
-  ],
-
   "Cancers & Tumors": [
     {
       img: GS41,
@@ -457,7 +453,7 @@ const GeneralSurgeryPage = () => {
         <div className="overview-content-manoj">
           <h2 className="overview-title-manoj">About Our General Surgery Department</h2>
           <p className="overview-description-manoj">
-            At Sukham Speciality Clinic, our General Surgery department delivers precision-based care 
+            At Sukam Speciality Clinic, our General Surgery department delivers precision-based care 
             using minimally invasive techniques, modern tools, and compassionate expertise. 
             We prioritize safe outcomes and faster recovery for every patient.
           </p>

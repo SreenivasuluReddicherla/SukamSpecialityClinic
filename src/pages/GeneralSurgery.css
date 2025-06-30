@@ -209,21 +209,23 @@
 .treatment-grid-gs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .treatment-card-manoj-gs {
+  max-width: 360px;
   background-color:  #ffffff;
   border-radius: 20px;
-  border: 1px solid #007a7c27;
+  border: 3px solid #00797C;
   padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px  #00797C;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .treatment-card-manoj-gs:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 5px 15px #1a227ed5;
 }
 
 .treatment-card-manoj-gs img.icon-large {
@@ -231,14 +233,16 @@
   height: 200px;
   margin-bottom: 2rem;
 }
-
 .treatment-card-manoj-gs h4 {
   font-size: 1.2rem;
   font-weight: 800;
   color: #00797C;
   margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
 }
-
+.treatment-card-manoj-gs h4:hover {
+  transform: scale(1.2);
+}
 .treatment-card-manoj-gs p {
   font-size: 1rem;
   color: #000000;

@@ -82,7 +82,7 @@ const ReproductiveMedicine = () => {
   <div className="doctor-profile-box-rp">
     {/* Left Section: Image + Name + Qualification */}
     <div className="doctor-info-left">
-      <img src={anitha} alt="Dr. Anitha A Manoj" className="doctor-img" />
+      <img src={anitha} alt="Dr. Anitha A Manoj" className="doctor-img-rp" />
       <div className="doctor-basic-info">
         <h2>Dr. Anitha A Manoj</h2>
         <p className="qualification">MBBS, MS (OBG), FMAS, FRM</p>
@@ -138,7 +138,7 @@ const ReproductiveMedicine = () => {
           <div className="overview-content-anitha-pm">
             <h2 className="overview-title-anitha-pm">About Our Fertility & Reproductive Medicine Department</h2>
             <p className="overview-description-anitha-pm">
-              At Sukham Speciality Clinic, our Fertility Care team provides empathetic, science-driven 
+              At Sukam Speciality Clinic, our Fertility Care team provides empathetic, science-driven 
               solutions to help couples on their parenthood journey. We offer personalized, evidence-based 
               reproductive treatments with high success rates.
             </p>

@@ -70,7 +70,7 @@
 .doctor-treatments-section-obg {
   margin-top: 50px;
   padding: 15px;
-  background-color:#bc1f6da0;
+  background-color:#bc1f6d;
 }
 
 .doctor-profile-box-obg {
@@ -78,7 +78,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
-  background: #f0fbfb;
+  background: #ffffffee;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
@@ -94,8 +94,8 @@
 }
 
 .doctor-img-obg {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 3px solid #fff;
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
@@ -106,7 +106,7 @@
 .doctor-basic-info-obg h2,
 .qualification,
 .designation {
-  color: #BC1F6E;
+  color: #bc1f6dc5;
 }
 
 .doctor-basic-info-obg h2 {
@@ -226,21 +226,23 @@
 .treatment-grid-obg {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .treatment-card-anitha-obg {
+  max-width: 360px;
   background: #ffffff;
   border-radius: 20px;
-  border: 1px solid  #9828820a;
+  border: 3px solid #BC1F6E;
   padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px  #BC1F6E;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .treatment-card-anitha-obg:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 5px 15px #1a227ed5;
 }
 
 .treatment-card-anitha-obg img.icon-large {
@@ -254,8 +256,11 @@
   font-weight: 800;
   color: #BC1F6E;
   margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
 }
-
+.treatment-card-anitha-obg h4:hover {
+    transform: scale(1.2);
+}
 .treatment-card-anitha-obg p {
   font-size: 1rem;
   color: #000000;

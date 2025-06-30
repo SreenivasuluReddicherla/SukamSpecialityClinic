@@ -92,6 +92,7 @@ import IUI from "./pages/RP5IUI";
 import IVF_ICSI from "./pages/RP6IVF_ICSI";
 import EggFreezing from "./pages/RP7EggFreezing";
 
+import Blog1IrregularMenstruation from "./pages/blog1IrregularMenstruation";
 
 import './App.css';
 
@@ -206,6 +207,8 @@ function App() {
 
           <Route path="/blogs" element={<AllBlogs />} />
           <Route path="/blogs/:id" element={<BlogDetails />} />
+          <Route path="/Blog1IrregularMenstruation" element={<Blog1IrregularMenstruation/>}/>
+
           <Route path="/faq" element={<FAQ />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/Sukamvoices" element={<Testimonials/>} />

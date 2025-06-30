@@ -9,15 +9,15 @@ const blogs = [
   {
     id: 1,
     image: img1,
-    title: "Navigating the Digital Health Resolution",
-    author: "Dr. Manoj Karthik",
+    title: "Understanding Irregular Menstruation: Causes, Signs, and When to Seek Help",
+    author: "Dr. Anitha A Manoj",
     date: "March 28, 2025",
   },
   {
     id: 2,
     image: img2,
     title: "How Nutrition Affects Fertility?",
-    author: "Dr. Anitha A Manoj",
+    author: "Dr. Manoj Karthik",
     date: "March 25, 2025",
   },
   {
@@ -31,7 +31,7 @@ const blogs = [
     id: 4,
     image: img1,
     title: "Tips for Healthy Pregnancy",
-    author: "Dr. Kavya S",
+    author: "Dr. Anitha A Manoj",
     date: "March 18, 2025",
   },
   {
@@ -118,9 +118,6 @@ const RecentBlogs = () => {
               <p className="blog-meta">
                 By {blog.author} | {blog.date}
               </p>
-              <button className="read-more" onClick={() => handleReadMore(blog.id)}>
-                Read More
-              </button>
             </div>
           </div>
         ))}
@@ -128,9 +125,8 @@ const RecentBlogs = () => {
         {/* View All Blogs Card */}
         <div className="blog-card view-all-card">
           <div className="blog-content center-content">
-            <h3 className="blog-heading">View All Blogs</h3>
             <button className="read-more" onClick={handleViewAll}>
-              Go to Blogs
+              View Blogs
             </button>
           </div>
         </div>

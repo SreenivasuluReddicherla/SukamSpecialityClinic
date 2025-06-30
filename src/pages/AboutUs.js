@@ -40,7 +40,7 @@ const AboutUs = () => {
     <section className="home-banner-section" data-aos="fade-up">
       <div className="home-banner-text">
         <h1>
-          Sukam Speciality and Fertility Clinic
+          Expert Care with <span>Devotion</span>
         </h1>
         <p>
         Patients choose Dr. Manoj Karthik S and Dr. Anitha A Manoj for their exceptional blend of clinical expertise, compassionate care, and unwavering dedication to patient well-being. With over 38 years of combined experience, they offer advanced surgical and medical solutions tailored to individual needs. Dr. Manoj is renowned for his precision in laparoscopic and general surgery, while Dr. Anitha is trusted for her personalized approach to women’s health and fertility care. Together, they provide holistic, ethical, and patient-centered treatment—ensuring comfort, clarity, and confidence at every step of the healthcare journey. Their reputation is built on trust, results, and genuine care.

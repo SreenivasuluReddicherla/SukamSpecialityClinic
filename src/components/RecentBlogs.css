@@ -45,7 +45,7 @@
   width: 100px;
   height: 100px;
   object-fit: contain;
-  display:flex;
+  display:cover;
 }
 
 /* 🔸 Blog Content */
@@ -107,14 +107,16 @@
 }
 
 .view-all-card .read-more {
-  background-color: #00796b;
+  background-color:#0141c1;
+  color: #fff;
   padding: 12px 25px;
   border-radius: 50px;
   font-size: 1.1rem;
 }
 
 .view-all-card .read-more:hover {
-  background-color: #004d40;
+  background-color:#0141c1;
+  color: #fff;
 }
 
 /* 🩺 Animation on Scroll */
