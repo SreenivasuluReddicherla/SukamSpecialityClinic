@@ -3,41 +3,82 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "What is the ideal age to freeze eggs for best results?",
+    question: "What is the ideal age range for egg freezing?",
+    options: ["18–22", "25–35", "40–50", "Any age"],
+    answer: "25–35"
+  },
+  {
+    question: "How are eggs retrieved from the ovaries?",
     options: [
-      "Under 30",
-      "Under 35",
-      "Over 40",
-      "Any age"
+      "Through a major abdominal surgery",
+      "By inserting a needle via ultrasound guidance",
+      "Through natural ovulation",
+      "Via urine sample"
     ],
-    answer: "Under 35"
+    answer: "By inserting a needle via ultrasound guidance"
   },
   {
     question: "What is vitrification?",
     options: [
-      "Slow freezing of eggs",
-      "Rapid freezing method to preserve egg quality",
-      "Thawing frozen eggs",
-      "A fertility medication"
+      "A form of egg fertilization",
+      "A slow freezing method",
+      "A rapid freezing process used to preserve eggs",
+      "A type of hormone injection"
     ],
-    answer: "Rapid freezing method to preserve egg quality"
+    answer: "A rapid freezing process used to preserve eggs"
   },
   {
-    question: "True or False: Frozen eggs can be stored indefinitely.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "How long can frozen eggs be stored?",
+    options: ["6 months", "1 year", "10+ years", "Only 2 cycles"],
+    answer: "10+ years"
   },
   {
-    question: "Does egg freezing guarantee pregnancy?",
-    options: ["Yes", "No"],
-    answer: "No"
+    question: "Which factor most affects success after egg freezing?",
+    options: [
+      "The gender of the partner",
+      "Age at the time of freezing",
+      "Time of the month",
+      "Exercise habits"
+    ],
+    answer: "Age at the time of freezing"
   },
   {
-    question: "Can egg freezing be done for social reasons?",
-    options: ["Yes", "No"],
+    question: "Can egg freezing be done if I’m not married or in a relationship?",
+    options: ["No", "Only with legal permission", "Yes", "Only after 40"],
     answer: "Yes"
+  },
+  {
+    question: "Does egg retrieval harm my ovaries?",
+    options: [
+      "Yes, permanently",
+      "No, it only collects eggs developed in that month",
+      "Causes infertility",
+      "Damages the uterus"
+    ],
+    answer: "No, it only collects eggs developed in that month"
+  },
+  {
+    question: "How many mature eggs are ideal to freeze for one child?",
+    options: ["1–5", "10–20", "30–40", "Any number will do"],
+    answer: "10–20"
+  },
+  {
+    question: "Can lifestyle affect egg quality?",
+    options: ["No", "Yes", "Only after age 40", "Not relevant for freezing"],
+    answer: "Yes"
+  },
+  {
+    question: "When will I use these eggs?",
+    options: [
+      "Next month",
+      "Whenever I plan a pregnancy via IVF",
+      "During my periods",
+      "After menopause only"
+    ],
+    answer: "Whenever I plan a pregnancy via IVF"
   }
 ];
+
 
 const EggFreezing = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});

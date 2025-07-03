@@ -111,14 +111,15 @@ const Navbar = () => {
                   {subDropdownOpen === "generalSurgery" && (
                     <div className="sub-dropdown">
                       {[
-                        "Hernia",
-                        "Varicose Veins",
-                        "Fatty Liver",
-                        "Piles",
-                        "Foot Ulcer Care",
-                        "Gall stones",
-                        "Neck swellings",
-                        "Testicular swellings",
+                        "🩺 Skin & Vascular Conditions",
+                        "🩺 Neck & Thyroid Conditions",
+                        "🩺 ⁠Breast Conditions",
+                        "🩺 Gastrointestinal Conditions",
+                        "🩺 Liver, Gallbladder & Pancreas",
+                        "🩺 Anorectal Conditions",
+                        "🩺 Urology & General Surgery",
+                        "🩺 Surgical Techniques",
+                        "🩺 Cancers & Tumors",
                       ].map((item) => (
                         <Link key={item} to="/services/surgery" onClick={closeMenu}>{item}</Link>
                       ))}
@@ -138,15 +139,10 @@ const Navbar = () => {
                   {subDropdownOpen === "obgyn" && (
                     <div className="sub-dropdown">
                       {[
-                        "Pregnancy Care",
-                        "Deliveries",
-                        "Menstrual and Bleeding",
-                        "Ectopic Pregnancies",
-                        "Menopausal Care",
-                        "Family Planning",
-                        "Hysteroscopy",
-                        "Laparoscopy",
-                        "Uterine and Ovarian Surgeries",
+                        "🩺 Pregnancy & Antenatal Care",
+                        "🩺 ⁠Labor & Delivery",
+                        "🩺 Menstrual & Hormonal Health",
+                        "🩺 Gynecologic & Reproductive Wellness",
                       ].map((item) => (
                         <Link key={item} to="/services/gynecology" onClick={closeMenu}>{item}</Link>
                       ))}
@@ -166,10 +162,9 @@ const Navbar = () => {
                   {subDropdownOpen === "reproductive" && (
                     <div className="sub-dropdown">
                       {[
-                        "PCOD",
-                        "Infertility Issues",
-                        "OITI",
-                        "IUI",
+                        "🩺 Understanding Fertility",
+                        "🩺 Natural Support & First-Line Treatments",
+                        "🩺 Advanced Fertility Treatments",
                       ].map((item) => (
                         <Link key={item} to="/services/pregnancy" onClick={closeMenu}>{item}</Link>
                       ))}
@@ -198,7 +193,7 @@ const Navbar = () => {
         </div>
 
         <div className="right-section">
-          <button className="btns" onClick={() => navigate("/access-lab-reports")}>Access Lab Reports</button>
+          <button className="btns" onClick={() =>{ window.open("https://wa.me/919108108980", "_blank");}}>Access Lab Reports</button>
           <button className="btns" onClick={() => navigate("/appointment")}>Book an Appointment</button>
           <button className="btns" id="emergency" onClick={() => setShowEmergencyModal(true)}>
             <FaPhoneAlt className="text-white text-xl mr-1" /> Emergency
@@ -210,7 +205,7 @@ const Navbar = () => {
 
       <div className="bottom-mobile-nav">
         <button onClick={() => navigate("/")}><FaHome />Home</button>
-        <button onClick={() => navigate("/access-lab-reports")}><FaFileMedicalAlt />Lab Reports</button>
+        <button onClick={() =>{ window.open("https://wa.me/919108108980", "_blank");}}><FaFileMedicalAlt />Lab Reports</button>
         <button onClick={() => navigate("/appointment")}><FaCalendarAlt />Book</button>
         <button id="emergency-bottom" onClick={() => setShowEmergencyModal(true)}><FaPhoneAlt />Emergency</button>
       </div>
