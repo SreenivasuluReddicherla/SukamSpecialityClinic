@@ -3,31 +3,67 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "Where does an ectopic pregnancy most commonly occur?",
-    options: ["Ovary", "Fallopian tube", "Cervix", "Abdominal wall"],
+    question: "Where do most ectopic pregnancies occur?",
+    options: ["Uterus", "Ovary", "Fallopian tube", "Cervix"],
     answer: "Fallopian tube"
   },
   {
-    question: "Which symptom is NOT commonly associated with ectopic pregnancy?",
-    options: ["Lower abdominal pain", "Sudden weight gain", "Vaginal spotting", "Shoulder pain"],
-    answer: "Sudden weight gain"
+    question: "Common early symptom of ectopic pregnancy is:",
+    options: ["Sharp right shoulder pain", "Sudden swelling", "One-sided pelvic pain", "Back acne"],
+    answer: "One-sided pelvic pain"
   },
   {
-    question: "Ectopic pregnancy is diagnosed by:",
-    options: ["Blood pressure", "MRI", "Ultrasound and blood test (beta-hCG)", "X-ray"],
-    answer: "Ultrasound and blood test (beta-hCG)"
+    question: "Which test is crucial for diagnosis?",
+    options: ["MRI", "Urine glucose", "Transvaginal ultrasound", "Chest X-ray"],
+    answer: "Transvaginal ultrasound"
   },
   {
-    question: "True or False: An ectopic pregnancy can continue to full term.",
-    options: ["True", "False"],
-    answer: "False"
+    question: "Methotrexate is:",
+    options: [
+      "A painkiller",
+      "A hormone",
+      "A chemotherapy drug that stops cell growth",
+      "A fertility booster"
+    ],
+    answer: "A chemotherapy drug that stops cell growth"
   },
   {
-    question: "One risk factor for ectopic pregnancy is:",
-    options: ["Prior pelvic infection", "Drinking cold water", "Traveling during pregnancy", "Taking folic acid"],
-    answer: "Prior pelvic infection"
+    question: "Which is an emergency sign?",
+    options: ["Breast tenderness", "Spotting", "Fainting and shoulder pain", "Headache"],
+    answer: "Fainting and shoulder pain"
+  },
+  {
+    question: "After ectopic, pregnancy is possible:",
+    options: ["Never", "Only with IVF", "In many cases", "Only in surrogacy"],
+    answer: "In many cases"
+  },
+  {
+    question: "Methotrexate is most suitable when:",
+    options: [
+      "Rupture has occurred",
+      "The embryo has heartbeat",
+      "hCG is <5000, no bleeding",
+      "The woman has twins"
+    ],
+    answer: "hCG is <5000, no bleeding"
+  },
+  {
+    question: "hCG levels in ectopic pregnancy:",
+    options: ["Rise normally", "Fall sharply", "Rise slowly or plateau", "Show no change"],
+    answer: "Rise slowly or plateau"
+  },
+  {
+    question: "Risk factor for ectopic is:",
+    options: ["PCOS", "C-section", "Tubal surgery", "Diabetes"],
+    answer: "Tubal surgery"
+  },
+  {
+    question: "Treatment goal in ectopic is:",
+    options: ["Continue pregnancy", "Remove uterus", "End pregnancy safely", "Boost ovulation"],
+    answer: "End pregnancy safely"
   }
 ];
+
 
 const EctopicPregnancy = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});

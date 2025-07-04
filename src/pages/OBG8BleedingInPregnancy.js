@@ -3,51 +3,107 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "Spotting in early pregnancy can be caused by:",
+    question: "Bleeding before 12 weeks can be due to:",
     options: [
+      "Placenta previa",
+      "Implantation or miscarriage",
+      "Baby’s movement",
+      "Cord around neck"
+    ],
+    answer: "Implantation or miscarriage"
+  },
+  {
+    question: "Painless bleeding in late pregnancy suggests:",
+    options: [
+      "UTI",
+      "Ectopic pregnancy",
+      "Placenta previa",
+      "Miscarriage"
+    ],
+    answer: "Placenta previa"
+  },
+  {
+    question: "Which is an emergency cause of bleeding?",
+    options: [
+      "Implantation",
+      "Placental abruption",
+      "Light spotting after scan",
+      "Cervical polyp"
+    ],
+    answer: "Placental abruption"
+  },
+  {
+    question: "Bloody show usually occurs:",
+    options: [
+      "In 1st trimester",
+      "During miscarriage",
+      "Near delivery",
+      "After delivery"
+    ],
+    answer: "Near delivery"
+  },
+  {
+    question: "Treatment for threatened miscarriage includes:",
+    options: [
+      "Heavy activity",
+      "Methotrexate",
+      "Rest and hormone support",
+      "Immediate surgery"
+    ],
+    answer: "Rest and hormone support"
+  },
+  {
+    question: "Ectopic pregnancy is confirmed by:",
+    options: [
+      "X-ray",
+      "Ultrasound + beta-hCG",
+      "Urine test",
+      "Amniocentesis"
+    ],
+    answer: "Ultrasound + beta-hCG"
+  },
+  {
+    question: "Cervical insufficiency may be managed with:",
+    options: [
+      "Bedrest",
+      "Cerclage",
+      "Blood transfusion",
+      "Painkillers only"
+    ],
+    answer: "Cerclage"
+  },
+  {
+    question: "Most common cause of painless early bleeding:",
+    options: [
+      "Abruption",
+      "Miscarriage",
       "Implantation bleeding",
-      "Infection",
-      "Cervical irritation",
-      "All of the above"
+      "Preterm labor"
     ],
-    answer: "All of the above"
+    answer: "Implantation bleeding"
   },
   {
-    question: "Placenta previa means:",
+    question: "Emotional effects of bleeding in pregnancy may include:",
     options: [
-      "Placenta is low lying and covers the cervix",
-      "Baby’s heart is slow",
-      "Water broke prematurely",
-      "Labor has started"
+      "Anxiety",
+      "Fever",
+      "Diarrhea",
+      "Aggression"
     ],
-    answer: "Placenta is low lying and covers the cervix"
+    answer: "Anxiety"
   },
   {
-    question: "True or False: You should always lie flat on your back if you bleed during pregnancy.",
-    options: ["True", "False"],
-    answer: "False"
-  },
-  {
-    question: "What is the recommended action if you experience heavy bleeding?",
+    question: "At Sukam, care for bleeding includes:",
     options: [
-      "Call your healthcare provider immediately",
-      "Drink water and wait",
-      "Ignore it if you feel fine",
-      "Take painkillers and rest"
+      "Only medicines",
+      "Only rest",
+      "Medical + emotional support",
+      "Ignoring if mild"
     ],
-    answer: "Call your healthcare provider immediately"
-  },
-  {
-    question: "Ultrasound helps to:",
-    options: [
-      "Confirm pregnancy location",
-      "Check fetal health",
-      "Detect cause of bleeding",
-      "All of the above"
-    ],
-    answer: "All of the above"
+    answer: "Medical + emotional support"
   }
 ];
+
 
 const BleedingInPregnancy = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});

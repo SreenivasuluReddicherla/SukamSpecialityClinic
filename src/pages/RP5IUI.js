@@ -7,40 +7,150 @@ const quizData = [
     options: [
       "Intrauterine Injection",
       "Intrauterine Insemination",
-      "Internal Uterine Insemination",
-      "None of the above"
+      "Internal Uterine Irrigation",
+      "In Vitro Uterine Infusion"
     ],
     answer: "Intrauterine Insemination"
   },
   {
-    question: "When is sperm inserted during IUI?",
+    question: "When is IUI typically done in a menstrual cycle?",
     options: [
-      "At any time",
-      "Around ovulation",
-      "After menstruation",
-      "During pregnancy"
+      "During menstruation",
+      "After ovulation",
+      "During ovulation",
+      "Anytime"
     ],
-    answer: "Around ovulation"
+    answer: "During ovulation"
   },
   {
-    question: "True or False: IUI requires surgery.",
-    options: ["True", "False"],
-    answer: "False"
-  },
-  {
-    question: "Which factor can increase the success rate of IUI?",
+    question: "What is the main purpose of sperm washing?",
     options: [
-      "Smoking",
-      "Healthy sperm",
-      "High stress",
-      "None of the above"
+      "To clean sperm for donation",
+      "To remove male hormones",
+      "To concentrate healthy sperm",
+      "To color sperm for lab visibility"
     ],
-    answer: "Healthy sperm"
+    answer: "To concentrate healthy sperm"
   },
   {
-    question: "Can ovulation induction be combined with IUI?",
-    options: ["Yes", "No"],
+    question: "How long does the IUI procedure usually take?",
+    options: [
+      "1 hour",
+      "30 minutes",
+      "5–10 minutes",
+      "Overnight stay required"
+    ],
+    answer: "5–10 minutes"
+  },
+  {
+    question: "Which hormone is used to trigger ovulation before IUI?",
+    options: [
+      "Insulin",
+      "hCG",
+      "Estrogen",
+      "Cortisol"
+    ],
+    answer: "hCG"
+  },
+  {
+    question: "What is the success rate of IUI in women under 35?",
+    options: [
+      "2–5%",
+      "10–15%",
+      "25–30%",
+      "50%"
+    ],
+    answer: "10–15%"
+  },
+  {
+    question: "Can IUI be performed in a natural cycle without medications?",
+    options: [
+      "No",
+      "Yes",
+      "Only for older women",
+      "Only with IVF"
+    ],
     answer: "Yes"
+  },
+  {
+    question: "Is anesthesia required for IUI?",
+    options: [
+      "Always",
+      "Sometimes",
+      "No",
+      "Only during retrieval"
+    ],
+    answer: "No"
+  },
+  {
+    question: "What type of infertility is best suited for IUI?",
+    options: [
+      "Tubal blockages",
+      "Severe male factor",
+      "Unexplained infertility",
+      "Uterine cancer"
+    ],
+    answer: "Unexplained infertility"
+  },
+  {
+    question: "What happens after IUI?",
+    options: [
+      "Hospital admission",
+      "Immediate pregnancy test",
+      "Luteal support and wait for pregnancy test",
+      "Emergency procedure"
+    ],
+    answer: "Luteal support and wait for pregnancy test"
+  },
+  {
+    question: "Which of these is a benefit of IUI?",
+    options: [
+      "Highly invasive",
+      "Complex and risky",
+      "Less expensive and simple",
+      "Requires egg retrieval"
+    ],
+    answer: "Less expensive and simple"
+  },
+  {
+    question: "Can donor sperm be used in IUI?",
+    options: [
+      "No",
+      "Only in IVF",
+      "Yes",
+      "Only if partner agrees"
+    ],
+    answer: "Yes"
+  },
+  {
+    question: "What is hCG used for in an IUI cycle?",
+    options: [
+      "Enhancing sperm motility",
+      "Triggering ovulation",
+      "Supporting pregnancy",
+      "Reducing cramps"
+    ],
+    answer: "Triggering ovulation"
+  },
+  {
+    question: "How many IUI cycles are typically recommended before moving to IVF?",
+    options: [
+      "1",
+      "2",
+      "3–6",
+      "10–12"
+    ],
+    answer: "3–6"
+  },
+  {
+    question: "Does IUI guarantee pregnancy?",
+    options: [
+      "Yes",
+      "No",
+      "Only with twins",
+      "Only if done at home"
+    ],
+    answer: "No"
   }
 ];
 

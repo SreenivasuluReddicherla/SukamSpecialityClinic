@@ -5,32 +5,67 @@ const quizData = [
   {
     question: "What does OITI stand for?",
     options: [
-      "Ovulation Induction and Timed Intercourse",
-      "Ovarian Inflammation Treatment Initiative",
-      "Ovary Imaging and Testing Intervention",
-      "None of the above"
+      "Ovarian Injection and Treatment Initiation",
+      "Ovulation Induction with Timed Intercourse",
+      "Ovary Implant Transfer",
+      "Oocyte Insemination Timing Intervention"
     ],
-    answer: "Ovulation Induction and Timed Intercourse"
+    answer: "Ovulation Induction with Timed Intercourse"
   },
   {
-    question: "Which hormone triggers ovulation?",
-    options: ["Estrogen", "Progesterone", "Luteinizing Hormone (LH)", "Testosterone"],
-    answer: "Luteinizing Hormone (LH)"
+    question: "Which medicine is commonly used to induce ovulation?",
+    options: ["Paracetamol", "Letrozole", "Insulin", "Estrogen-only pills"],
+    answer: "Letrozole"
   },
   {
-    question: "True or False: Stress can delay ovulation.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "What is used to trigger egg release in an OITI cycle?",
+    options: ["FSH", "Estrogen", "hCG", "Vitamin D"],
+    answer: "hCG"
   },
   {
-    question: "How long is the fertile window?",
-    options: ["1 day", "3 days", "5-6 days", "10 days"],
-    answer: "5-6 days"
+    question: "How is ovulation monitored in OITI?",
+    options: ["CT scan", "Blood pressure", "Transvaginal ultrasound", "Chest X-ray"],
+    answer: "Transvaginal ultrasound"
   },
   {
-    question: "Can lifestyle changes improve ovulation?",
-    options: ["Yes", "No"],
-    answer: "Yes"
+    question: "What is the ideal follicle size before triggering ovulation?",
+    options: ["10 mm", "14 mm", "18–20 mm", "25 mm"],
+    answer: "18–20 mm"
+  },
+  {
+    question: "When is intercourse advised after hCG trigger?",
+    options: ["12 hours later", "24–36 hours later", "3 days later", "Anytime"],
+    answer: "24–36 hours later"
+  },
+  {
+    question: "How many OITI cycles are generally tried before shifting to IUI?",
+    options: ["1 cycle", "2–3 cycles", "3–6 cycles", "10 cycles"],
+    answer: "3–6 cycles"
+  },
+  {
+    question: "Who is NOT a good candidate for OITI?",
+    options: [
+      "Woman with regular periods",
+      "Woman with open tubes",
+      "Man with severe sperm abnormality",
+      "Woman under 30"
+    ],
+    answer: "Man with severe sperm abnormality"
+  },
+  {
+    question: "What support may be given in the luteal phase?",
+    options: ["Estrogen", "Progesterone", "Antibiotics", "Painkillers"],
+    answer: "Progesterone"
+  },
+  {
+    question: "What is the main goal of OITI?",
+    options: [
+      "Collecting eggs for IVF",
+      "Stimulating ovulation and planning intercourse",
+      "Donating eggs",
+      "Blocking ovulation"
+    ],
+    answer: "Stimulating ovulation and planning intercourse"
   }
 ];
 

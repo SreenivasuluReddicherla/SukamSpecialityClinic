@@ -3,44 +3,154 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "What does ICSI stand for?",
+    question: "What does IVF stand for?",
     options: [
-      "Intracytoplasmic Sperm Injection",
-      "Intra-cytoplasmic Sperm Isolation",
-      "Internal Cell Sperm Injection",
-      "None of the above"
+      "In-Vitro Fertilization",
+      "Intra Vaginal Fusion",
+      "Induced Vaginal Fertility",
+      "Internal Vaginal Follicles"
     ],
-    answer: "Intracytoplasmic Sperm Injection"
+    answer: "In-Vitro Fertilization"
   },
   {
-    question: "IVF involves fertilization of eggs:",
+    question: "When is ICSI recommended?",
     options: [
-      "Inside the body",
-      "Outside the body in a lab",
-      "Using medication only",
-      "Through natural intercourse"
+      "Only in twin pregnancies",
+      "When the uterus is small",
+      "When sperm count is low",
+      "When the eggs are immature"
     ],
-    answer: "Outside the body in a lab"
+    answer: "When sperm count is low"
   },
   {
-    question: "True or False: IVF guarantees pregnancy.",
-    options: ["True", "False"],
-    answer: "False"
-  },
-  {
-    question: "Which specialist is involved in IVF treatment?",
+    question: "How are embryos created in IVF?",
     options: [
-      "Cardiologist",
-      "Embryologist",
-      "Dermatologist",
-      "Neurologist"
+      "Inside the uterus",
+      "In a lab using egg and sperm",
+      "Through natural intercourse",
+      "Using donor placenta"
     ],
-    answer: "Embryologist"
+    answer: "In a lab using egg and sperm"
   },
   {
-    question: "Can lifestyle affect IVF success?",
-    options: ["Yes", "No"],
-    answer: "Yes"
+    question: "What is the ideal age for IVF success?",
+    options: [
+      "18–22",
+      "25–35",
+      "40–50",
+      "Any age is equally successful"
+    ],
+    answer: "25–35"
+  },
+  {
+    question: "What is embryo transfer?",
+    options: [
+      "Transfer of sperm",
+      "Transfer of fertilized egg into uterus",
+      "Transfer of uterus",
+      "Menstrual cycle regulation"
+    ],
+    answer: "Transfer of fertilized egg into uterus"
+  },
+  {
+    question: "How many embryos are usually transferred?",
+    options: [
+      "5–6",
+      "Only 1",
+      "Usually 1–2, based on age and quality",
+      "All embryos at once"
+    ],
+    answer: "Usually 1–2, based on age and quality"
+  },
+  {
+    question: "Does IVF always require ICSI?",
+    options: [
+      "Yes",
+      "No",
+      "Only for women",
+      "Only in summer"
+    ],
+    answer: "No"
+  },
+  {
+    question: "How many days after embryo transfer is a pregnancy test done?",
+    options: [
+      "3 days",
+      "7 days",
+      "14 days",
+      "30 days"
+    ],
+    answer: "14 days"
+  },
+  {
+    question: "What is ovarian stimulation?",
+    options: [
+      "Painful uterine massage",
+      "Taking hormone injections to grow eggs",
+      "Vaginal cleaning",
+      "Sperm testing"
+    ],
+    answer: "Taking hormone injections to grow eggs"
+  },
+  {
+    question: "Which hormone helps with egg maturation?",
+    options: [
+      "hCG",
+      "Insulin",
+      "Estrogen",
+      "Cortisol"
+    ],
+    answer: "hCG"
+  },
+  {
+    question: "IVF success depends MOST on:",
+    options: [
+      "Timing of ultrasound",
+      "Age and embryo quality",
+      "Size of uterus",
+      "Color of cervix"
+    ],
+    answer: "Age and embryo quality"
+  },
+  {
+    question: "Can embryos be frozen?",
+    options: [
+      "No",
+      "Only for one day",
+      "Yes, safely for years",
+      "Only if the woman is under 25"
+    ],
+    answer: "Yes, safely for years"
+  },
+  {
+    question: "Is ICSI useful in female infertility?",
+    options: [
+      "No",
+      "Yes, always",
+      "Mainly useful in male infertility",
+      "Only during ovulation"
+    ],
+    answer: "Mainly useful in male infertility"
+  },
+  {
+    question: "Do IVF or ICSI require surgery?",
+    options: [
+      "No, only minor procedures",
+      "Yes, open surgery",
+      "Cesarean",
+      "Hysterectomy"
+    ],
+    answer: "No, only minor procedures"
+  },
+  {
+    question: "Is bed rest compulsory after IVF?",
+    options: [
+      "Yes, for a month",
+      "No, only for a few hours post-transfer",
+      "Strict hospitalization",
+      "Not needed at all"
+    ],
+    answer: "No, only for a few hours post-transfer"
   }
 ];
 

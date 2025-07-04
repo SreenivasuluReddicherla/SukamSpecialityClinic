@@ -3,46 +3,67 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "How much extra energy does a pregnant woman need daily in the second trimester?",
-    options: ["100 kcal", "300 kcal", "600 kcal", "800 kcal"],
-    answer: "300 kcal"
+    question: "When is the first ultrasound usually done?",
+    options: ["2 weeks", "6–8 weeks", "10 weeks", "After 12 weeks"],
+    answer: "6–8 weeks"
   },
   {
-    question: "What’s the best way to prevent anemia in pregnancy?",
+    question: "What’s the ideal sleep position in late pregnancy?",
+    options: ["On back", "Left side", "Right side", "Stomach"],
+    answer: "Left side"
+  },
+  {
+    question: "Iron is essential in pregnancy to prevent:",
+    options: ["Diabetes", "Anemia", "Thyroid issues", "Back pain"],
+    answer: "Anemia"
+  },
+  {
+    question: "What does the NT scan detect?",
+    options: ["Baby’s weight", "Twins", "Genetic disorders", "Gestational age"],
+    answer: "Genetic disorders"
+  },
+  {
+    question: "Which food should be avoided during pregnancy?",
+    options: ["Eggs", "Raw meat", "Dosa", "Lentils"],
+    answer: "Raw meat"
+  },
+  {
+    question: "When is fetal movement usually first felt?",
+    options: ["6 weeks", "10 weeks", "20 weeks", "36 weeks"],
+    answer: "20 weeks"
+  },
+  {
+    question: "Daily fluid intake should be around:",
+    options: ["1 liter", "3 liters", "5 liters", "500 ml"],
+    answer: "3 liters"
+  },
+  {
+    question: "What is GTT?",
     options: [
-      "Skipping iron",
-      "Drinking more milk",
-      "Eating iron-rich foods with vitamin C",
-      "Avoiding leafy vegetables"
+      "Genetic test",
+      "Thyroid test",
+      "Glucose Tolerance Test",
+      "Growth scan"
     ],
-    answer: "Eating iron-rich foods with vitamin C"
+    answer: "Glucose Tolerance Test"
   },
   {
-    question: "Which position is best for sleeping during pregnancy?",
+    question: "Is exercise during pregnancy safe?",
     options: [
-      "On your back",
-      "On your right side",
-      "On your left side",
-      "On your stomach"
+      "Never",
+      "Yes, with caution",
+      "Only in 1st trimester",
+      "Only after delivery"
     ],
-    answer: "On your left side"
+    answer: "Yes, with caution"
   },
   {
-    question: "Which food should generally be avoided in pregnancy?",
-    options: [
-      "Cooked lentils",
-      "Soft cheeses made from unpasteurized milk",
-      "Ragi dosa",
-      "Boiled eggs"
-    ],
-    answer: "Soft cheeses made from unpasteurized milk"
-  },
-  {
-    question: "True or False: All nausea stops after the first trimester.",
-    options: ["True", "False"],
-    answer: "False"
+    question: "The ideal weight gain in pregnancy is:",
+    options: ["2 kg", "5 kg", "10–12 kg", "20–30 kg"],
+    answer: "10–12 kg"
   }
 ];
+
 
 const NormalPregnancyCare = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});

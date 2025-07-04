@@ -3,39 +3,144 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "How long is the postpartum period usually considered?",
-    options: ["2 weeks", "6 weeks", "3 months", "1 year"],
-    answer: "6 weeks"
-  },
-  {
-    question: "Which hormone helps with milk production?",
-    options: ["Progesterone", "Estrogen", "Prolactin", "Oxytocin"],
-    answer: "Prolactin"
-  },
-  {
-    question: "True or False: Emotional mood swings after childbirth are normal.",
-    options: ["True", "False"],
-    answer: "True"
-  },
-  {
-    question: "What is a sign that you should contact your doctor postpartum?",
+    question: "What does 'intrapartum care' refer to?",
     options: [
-      "Heavy vaginal bleeding soaking more than one pad per hour",
-      "Fever over 100.4°F (38°C)",
-      "Severe pelvic pain or swelling",
-      "All of the above"
+      "Care before pregnancy",
+      "Care during labor and delivery",
+      "Care after the baby is born",
+      "Care in the NICU"
     ],
-    answer: "All of the above"
+    answer: "Care during labor and delivery"
   },
   {
-    question: "When can gentle pelvic floor exercises begin after delivery?",
+    question: "The first sign of active labor is:",
     options: [
-      "Immediately after birth",
-      "After 6 weeks or as advised",
-      "Not recommended ever",
-      "Only after 6 months"
+      "Baby crying",
+      "Placenta delivery",
+      "Regular, strong contractions",
+      "Breast milk leakage"
     ],
-    answer: "After 6 weeks or as advised"
+    answer: "Regular, strong contractions"
+  },
+  {
+    question: "The ideal position for labor monitoring is:",
+    options: [
+      "Lying flat only",
+      "Always sitting",
+      "Any comfortable position with monitoring",
+      "Hanging legs off the bed"
+    ],
+    answer: "Any comfortable position with monitoring"
+  },
+  {
+    question: "Which of these helps reduce labor pain naturally?",
+    options: [
+      "Lying still",
+      "Hot showers and breathing exercises",
+      "Skipping meals",
+      "Pushing early"
+    ],
+    answer: "Hot showers and breathing exercises"
+  },
+  {
+    question: "Which of the following is used for continuous fetal heart rate monitoring?",
+    options: ["MRI", "CTG", "Ultrasound gel", "Endoscopy"],
+    answer: "CTG"
+  },
+  {
+    question: "What is the term for delivery of the placenta?",
+    options: [
+      "Labor",
+      "Third stage of labor",
+      "Miscarriage",
+      "Ejection"
+    ],
+    answer: "Third stage of labor"
+  },
+  {
+    question: "Which pain relief is commonly used during vaginal labor?",
+    options: [
+      "General anesthesia",
+      "Chemotherapy",
+      "Epidural injection",
+      "Muscle relaxant pills"
+    ],
+    answer: "Epidural injection"
+  },
+  {
+    question: "What is the Apgar score used for?",
+    options: [
+      "Assessing the mother’s heartbeat",
+      "Measuring fetal weight",
+      "Evaluating baby’s condition at birth",
+      "Checking the placenta"
+    ],
+    answer: "Evaluating baby’s condition at birth"
+  },
+  {
+    question: "Lochia refers to:",
+    options: [
+      "Baby’s first cry",
+      "Post-delivery bleeding from uterus",
+      "Amniotic fluid",
+      "Breast milk"
+    ],
+    answer: "Post-delivery bleeding from uterus"
+  },
+  {
+    question: "When can walking be started after normal vaginal delivery?",
+    options: [
+      "After 7 days",
+      "After 3 hours",
+      "Within a few hours",
+      "After a month"
+    ],
+    answer: "Within a few hours"
+  },
+  {
+    question: "Which of the following helps with breastfeeding success?",
+    options: [
+      "Early skin-to-skin contact",
+      "Delayed feeding for 2 days",
+      "Bottle-feeding from day 1",
+      "Avoiding breast massage"
+    ],
+    answer: "Early skin-to-skin contact"
+  },
+  {
+    question: "What is a common emotional reaction in first few days after delivery?",
+    options: ["Baby blues", "Mania", "Seizures", "Schizophrenia"],
+    answer: "Baby blues"
+  },
+  {
+    question: "After cesarean delivery, mothers are encouraged to:",
+    options: [
+      "Sleep for 7 days",
+      "Avoid food for 3 days",
+      "Start walking within 24 hours",
+      "Avoid contact with baby"
+    ],
+    answer: "Start walking within 24 hours"
+  },
+  {
+    question: "When should the first postpartum check-up usually occur?",
+    options: [
+      "Within 2 days",
+      "At 6 weeks",
+      "At 6 months",
+      "After the next baby"
+    ],
+    answer: "At 6 weeks"
+  },
+  {
+    question: "Which of the following is NOT a goal of postpartum care?",
+    options: [
+      "Monitoring bleeding",
+      "Family planning advice",
+      "Encouraging over-exercise",
+      "Mental health screening"
+    ],
+    answer: "Encouraging over-exercise"
   }
 ];
 

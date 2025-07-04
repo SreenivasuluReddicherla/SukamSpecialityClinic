@@ -5,39 +5,104 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "Pre-term labor is defined as labor before:",
-    options: ["34 weeks", "37 weeks", "39 weeks", "40 weeks"],
+    question: "Preterm labor occurs before:",
+    options: [
+      "34 weeks",
+      "37 weeks",
+      "40 weeks",
+      "28 weeks"
+    ],
     answer: "37 weeks"
   },
   {
-    question: "Which of these is a risk factor for pre-term labor?",
+    question: "A sign of preterm labor is:",
     options: [
-      "Multiple pregnancy (twins or more)",
-      "Smoking",
-      "Previous pre-term birth",
-      "All of the above"
+      "Back pain and regular contractions",
+      "Nosebleed",
+      "Fever",
+      "Increased appetite"
     ],
-    answer: "All of the above"
+    answer: "Back pain and regular contractions"
   },
   {
-    question: "True or False: Hydration can help prevent pre-term contractions.",
-    options: ["True", "False"],
-    answer: "True"
-  },
-  {
-    question: "What medication helps mature the baby’s lungs in case of early delivery?",
-    options: ["Antibiotics", "Steroids", "Painkillers", "Blood thinners"],
-    answer: "Steroids"
-  },
-  {
-    question: "When should you contact your doctor during pregnancy?",
+    question: "What is a tocolytic?",
     options: [
-      "If you notice regular contractions before 37 weeks",
-      "If you experience vaginal bleeding",
-      "If your water breaks early",
-      "All of the above"
+      "A blood thinner",
+      "A uterine relaxant",
+      "A vitamin",
+      "A painkiller"
     ],
-    answer: "All of the above"
+    answer: "A uterine relaxant"
+  },
+  {
+    question: "Betamethasone is used to:",
+    options: [
+      "Treat fever",
+      "Stop bleeding",
+      "Help baby’s lungs mature",
+      "Control nausea"
+    ],
+    answer: "Help baby’s lungs mature"
+  },
+  {
+    question: "Which test predicts risk of preterm labor?",
+    options: [
+      "HbA1c",
+      "fFN (fetal fibronectin)",
+      "LFT",
+      "BP monitoring"
+    ],
+    answer: "fFN (fetal fibronectin)"
+  },
+  {
+    question: "A mother with previous preterm birth may be given:",
+    options: [
+      "Antibiotics",
+      "Saffron",
+      "Progesterone",
+      "Estrogen"
+    ],
+    answer: "Progesterone"
+  },
+  {
+    question: "Short cervix may be managed with:",
+    options: [
+      "Bed rest only",
+      "Iron tablets",
+      "Cerclage (stitch)",
+      "Nothing"
+    ],
+    answer: "Cerclage (stitch)"
+  },
+  {
+    question: "NICU helps with:",
+    options: [
+      "Vaccination",
+      "Preterm baby care",
+      "Maternal blood tests",
+      "Blood donation"
+    ],
+    answer: "Preterm baby care"
+  },
+  {
+    question: "Kangaroo care means:",
+    options: [
+      "Bottle-feeding",
+      "Skin-to-skin bonding",
+      "Ultrasound",
+      "Exercise"
+    ],
+    answer: "Skin-to-skin bonding"
+  },
+  {
+    question: "Magnesium sulfate protects:",
+    options: [
+      "Liver",
+      "Baby’s brain",
+      "Kidneys",
+      "Lungs"
+    ],
+    answer: "Baby’s brain"
   }
 ];
 

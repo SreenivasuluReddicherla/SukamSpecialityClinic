@@ -3,31 +3,107 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "What is the most common type of operative delivery?",
-    options: ["Cesarean section", "Forceps delivery", "Vacuum extraction", "Episiotomy"],
-    answer: "Cesarean section"
+    question: "What is an operative delivery?",
+    options: [
+      "Early delivery",
+      "Assisted vaginal or cesarean birth",
+      "Home birth",
+      "Vacuuming the room"
+    ],
+    answer: "Assisted vaginal or cesarean birth"
   },
   {
-    question: "True or False: You can have a vaginal birth after cesarean (VBAC).",
-    options: ["True", "False"],
-    answer: "True"
+    question: "Forceps are used to:",
+    options: [
+      "Check cervix",
+      "Cut umbilical cord",
+      "Assist in delivery",
+      "Deliver placenta"
+    ],
+    answer: "Assist in delivery"
   },
   {
-    question: "Which anesthesia is commonly used during a cesarean?",
-    options: ["General anesthesia", "Spinal or epidural anesthesia", "Local anesthesia only", "None"],
-    answer: "Spinal or epidural anesthesia"
+    question: "Vacuum extraction involves:",
+    options: [
+      "Pulling the baby by hand",
+      "Using a suction cup",
+      "Cutting the uterus",
+      "Using scissors"
+    ],
+    answer: "Using a suction cup"
   },
   {
-    question: "Which of the following is NOT a common reason for operative delivery?",
-    options: ["Fetal distress", "Prolonged labor", "Maternal request without medical reason", "Placenta previa"],
-    answer: "Maternal request without medical reason"
+    question: "C-section is done through:",
+    options: [
+      "Vaginal opening",
+      "Belly button",
+      "Abdominal incision",
+      "Cervical cut"
+    ],
+    answer: "Abdominal incision"
   },
   {
-    question: "Postoperative care includes:",
-    options: ["Pain management", "Early walking", "Wound care", "All of the above"],
-    answer: "All of the above"
+    question: "Which one is not a reason for emergency C-section?",
+    options: [
+      "Fetal distress",
+      "Cord prolapse",
+      "Breech position",
+      "Baby's hiccups"
+    ],
+    answer: "Baby's hiccups"
+  },
+  {
+    question: "Recovery from C-section usually takes:",
+    options: [
+      "3 days",
+      "2 weeks",
+      "4–6 weeks",
+      "6 months"
+    ],
+    answer: "4–6 weeks"
+  },
+  {
+    question: "Spinal anesthesia is:",
+    options: [
+      "General anesthesia",
+      "Local arm injection",
+      "Numbing from waist down",
+      "Painful gas"
+    ],
+    answer: "Numbing from waist down"
+  },
+  {
+    question: "A small baby head swelling after vacuum delivery is:",
+    options: [
+      "Tumor",
+      "Chignon",
+      "Hemorrhage",
+      "Nothing"
+    ],
+    answer: "Chignon"
+  },
+  {
+    question: "Forceps-assisted delivery may require:",
+    options: [
+      "Forceful pushing",
+      "Cerclage",
+      "Episiotomy",
+      "Antibiotics only"
+    ],
+    answer: "Episiotomy"
+  },
+  {
+    question: "After C-section, walking is encouraged:",
+    options: [
+      "After 1 week",
+      "Same day",
+      "After 24 hours",
+      "Never"
+    ],
+    answer: "After 24 hours"
   }
 ];
+
 
 const OperativeDeliveries = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});

@@ -3,41 +3,102 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "Which hormone primarily triggers labor contractions?",
-    options: ["Oxytocin", "Estrogen", "Progesterone", "Prolactin"],
-    answer: "Oxytocin"
+    question: "How many stages are there in labor?",
+    options: ["2", "3", "4", "5"],
+    answer: "3"
   },
   {
-    question: "True or False: It’s normal for labor to last several hours to even days.",
-    options: ["True", "False"],
-    answer: "True"
-  },
-  {
-    question: "Which position can help speed up labor?",
-    options: ["Lying flat on your back", "Walking or squatting", "Sitting still", "Standing on one leg"],
-    answer: "Walking or squatting"
-  },
-  {
-    question: "When should you head to the hospital during labor?",
+    question: "The first stage of labor ends when:",
     options: [
-      "When contractions are 5 minutes apart and regular",
-      "When water breaks",
-      "If you experience bleeding or severe pain",
-      "All of the above"
+      "Water breaks",
+      "Baby is born",
+      "Placenta is delivered",
+      "Cervix is fully dilated"
     ],
-    answer: "All of the above"
+    answer: "Cervix is fully dilated"
   },
   {
-    question: "Skin-to-skin contact immediately after birth helps:",
+    question: "What does \"bloody show\" mean?",
     options: [
-      "Regulate baby’s temperature",
-      "Promote bonding and breastfeeding",
-      "Calm both mother and baby",
-      "All of the above"
+      "Bleeding from placenta",
+      "Menstruation",
+      "Passage of mucus plug",
+      "Baby’s head visible"
     ],
-    answer: "All of the above"
+    answer: "Passage of mucus plug"
+  },
+  {
+    question: "What helps relieve labor pain naturally?",
+    options: [
+      "Screaming",
+      "Cold water",
+      "Breathing and massage",
+      "Tight clothing"
+    ],
+    answer: "Breathing and massage"
+  },
+  {
+    question: "When should you go to the hospital?",
+    options: [
+      "First movement",
+      "When contractions are regular",
+      "After water intake",
+      "Baby hiccups"
+    ],
+    answer: "When contractions are regular"
+  },
+  {
+    question: "What is the Golden Hour?",
+    options: [
+      "Time of C-section",
+      "First 60 minutes after delivery",
+      "Duration of pushing",
+      "Fetal movement test"
+    ],
+    answer: "First 60 minutes after delivery"
+  },
+  {
+    question: "When does the second stage of labor begin?",
+    options: [
+      "Contractions start",
+      "Baby is born",
+      "Cervix reaches 10 cm",
+      "Water breaks"
+    ],
+    answer: "Cervix reaches 10 cm"
+  },
+  {
+    question: "What is skin-to-skin contact?",
+    options: [
+      "Baby put in crib",
+      "Baby dressed and weighed",
+      "Baby placed on mother’s chest",
+      "Cord cut quickly"
+    ],
+    answer: "Baby placed on mother’s chest"
+  },
+  {
+    question: "Partner’s role in labor includes:",
+    options: [
+      "Keeping quiet",
+      "Staying away",
+      "Emotional and physical support",
+      "Administering injections"
+    ],
+    answer: "Emotional and physical support"
+  },
+  {
+    question: "Rooming-in means:",
+    options: [
+      "Mother and baby stay in same room",
+      "Baby goes to nursery",
+      "Mother stays in ward",
+      "Doctor visits separately"
+    ],
+    answer: "Mother and baby stay in same room"
   }
 ];
+
 
 const NormalLabor = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});

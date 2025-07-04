@@ -3,46 +3,77 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "A pregnancy is considered high-risk if:",
+    question: "Which of the following is NOT a high-risk factor?",
+    options: ["Diabetes", "Age 36", "Balanced diet", "Twin pregnancy"],
+    answer: "Balanced diet"
+  },
+  {
+    question: "When is the anomaly scan done?",
+    options: ["10–12 weeks", "18–20 weeks", "24 weeks", "36 weeks"],
+    answer: "18–20 weeks"
+  },
+  {
+    question: "What is placenta previa?",
     options: [
-      "The mother is under 20 or over 35",
-      "It's an IVF pregnancy",
-      "There's a medical condition",
-      "All of the above"
+      "Low fluid",
+      "High BP",
+      "Placenta covers cervix",
+      "Early labor"
     ],
-    answer: "All of the above"
+    answer: "Placenta covers cervix"
   },
   {
-    question: "What is a Doppler scan used for?",
+    question: "High-risk pregnancy means:",
     options: [
-      "Measuring maternal blood pressure",
-      "Monitoring fetal heart and blood flow",
-      "Checking amniotic fluid color",
-      "Determining baby’s gender"
+      "Impossible to deliver",
+      "Needs closer monitoring",
+      "Always C-section",
+      "Always miscarriage"
     ],
-    answer: "Monitoring fetal heart and blood flow"
+    answer: "Needs closer monitoring"
   },
   {
-    question: "How often should you visit your doctor during a high-risk pregnancy?",
+    question: "Which scan checks blood flow in baby’s vessels?",
+    options: ["NT scan", "2D scan", "Doppler", "MRI"],
+    answer: "Doppler"
+  },
+  {
+    question: "Bed rest is advised in:",
+    options: ["Placenta previa", "PCOD", "Normal pregnancy", "After delivery"],
+    answer: "Placenta previa"
+  },
+  {
+    question: "GTT tests for:",
+    options: ["Hemoglobin", "Thyroid", "Diabetes", "Protein levels"],
+    answer: "Diabetes"
+  },
+  {
+    question: "Why is frequent ultrasound needed in high-risk pregnancy?",
     options: [
-      "Once a trimester",
-      "Monthly",
-      "As frequently as advised (sometimes weekly)",
-      "Only when symptoms arise"
+      "Entertainment",
+      "To track baby’s weight and fluid",
+      "To check gender",
+      "To detect BP"
     ],
-    answer: "As frequently as advised (sometimes weekly)"
+    answer: "To track baby’s weight and fluid"
   },
   {
-    question: "True or False: Stress can negatively affect high-risk pregnancies.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "Cervical length scan helps to:",
+    options: [
+      "Predict preterm labor",
+      "Measure baby’s heartbeat",
+      "Check placenta",
+      "Confirm dates"
+    ],
+    answer: "Predict preterm labor"
   },
   {
-    question: "High-risk pregnancies should always be delivered early. True or False?",
-    options: ["True", "False"],
-    answer: "False"
+    question: "Which is a serious pregnancy complication?",
+    options: ["Anemia", "Preeclampsia", "Nausea", "Leg cramps"],
+    answer: "Preeclampsia"
   }
 ];
+
 
 const HighRiskPregnancy = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});

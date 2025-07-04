@@ -3,29 +3,54 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "At what age does female fertility usually start to decline more rapidly?",
+    question: "At what age does female fertility begin to decline?",
     options: ["25", "30", "35", "40"],
     answer: "35"
   },
   {
-    question: "True or False: Egg freezing can help preserve fertility for later years.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "AMH is used to evaluate:",
+    options: ["Tubal function", "Uterine lining", "Ovarian reserve", "Menstrual length"],
+    answer: "Ovarian reserve"
   },
   {
-    question: "Which test measures ovarian reserve?",
-    options: ["AMH (Anti-Mullerian Hormone)", "PSA", "Blood sugar", "ECG"],
-    answer: "AMH (Anti-Mullerian Hormone)"
+    question: "A man’s sperm DNA quality can be tested with:",
+    options: ["HSG", "AFC", "DFI", "AMH"],
+    answer: "DFI"
   },
   {
-    question: "Can lifestyle affect age-related fertility decline?",
-    options: ["Yes", "No"],
-    answer: "Yes"
+    question: "Best age to consider egg freezing:",
+    options: ["After 40", "Before 35", "After menopause", "Age doesn't matter"],
+    answer: "Before 35"
   },
   {
-    question: "Is male fertility completely unaffected by age?",
-    options: ["Yes", "No"],
-    answer: "No"
+    question: "Which is NOT a method of fertility preservation?",
+    options: ["Embryo freezing", "Ovulation induction", "Sperm banking", "Oocyte freezing"],
+    answer: "Ovulation induction"
+  },
+  {
+    question: "PGT-A helps detect:",
+    options: ["Tubal scarring", "Hormonal imbalance", "Chromosomal abnormalities", "Fibroids"],
+    answer: "Chromosomal abnormalities"
+  },
+  {
+    question: "Which lifestyle factor does NOT improve fertility?",
+    options: ["Regular exercise", "Smoking", "Healthy weight", "Antioxidants"],
+    answer: "Smoking"
+  },
+  {
+    question: "What is the role of Letrozole in fertility?",
+    options: ["Stimulates ovulation", "Improves sperm count", "Treats fibroids", "Freezes eggs"],
+    answer: "Stimulates ovulation"
+  },
+  {
+    question: "Which hormone indicates poor ovarian reserve if elevated?",
+    options: ["FSH", "LH", "TSH", "Prolactin"],
+    answer: "FSH"
+  },
+  {
+    question: "Emotional wellness in fertility care includes:",
+    options: ["Counseling", "Support groups", "Mindfulness", "All of the above"],
+    answer: "All of the above"
   }
 ];
 

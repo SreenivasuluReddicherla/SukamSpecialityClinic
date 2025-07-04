@@ -3,31 +3,62 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "Which nutrient is most important for preventing neural tube defects?",
-    options: ["Vitamin C", "Folic acid", "Calcium", "Iron"],
+    question: "Which nutrient prevents neural tube defects?",
+    options: ["Iron", "Protein", "Folic acid", "Calcium"],
     answer: "Folic acid"
   },
   {
-    question: "How much weight gain is generally recommended during a normal pregnancy?",
-    options: ["2-5 kg", "7-12 kg", "15-20 kg", "25-30 kg"],
-    answer: "7-12 kg"
+    question: "Safe caffeine limit in pregnancy is:",
+    options: ["500 mg/day", "0 mg/day", "200 mg/day", "Unlimited in second trimester"],
+    answer: "200 mg/day"
   },
   {
-    question: "Which of these is a safe exercise during pregnancy?",
-    options: ["Heavy weightlifting", "Prenatal yoga", "Contact sports", "Scuba diving"],
-    answer: "Prenatal yoga"
+    question: "Which is a safe, low-impact exercise?",
+    options: ["Football", "Swimming", "CrossFit", "Jumping rope"],
+    answer: "Swimming"
   },
   {
-    question: "True or False: Pregnant women should avoid all fats in their diet.",
-    options: ["True", "False"],
-    answer: "False"
+    question: "Pregnant women should avoid:",
+    options: ["Ghee", "Junk food", "Dates", "Coconut water"],
+    answer: "Junk food"
   },
   {
-    question: "How much water should a pregnant woman drink daily?",
-    options: ["4 glasses", "6 glasses", "8-10 glasses", "12-14 glasses"],
-    answer: "8-10 glasses"
+    question: "Omega-3s help in:",
+    options: ["Liver growth", "Bone hardening", "Baby’s brain development", "Uterine contractions"],
+    answer: "Baby’s brain development"
+  },
+  {
+    question: "Which symptom needs exercise to stop immediately?",
+    options: ["Mild leg swelling", "Feeling sleepy", "Vaginal bleeding", "Mild heartburn"],
+    answer: "Vaginal bleeding"
+  },
+  {
+    question: "Best way to deal with pregnancy reflux:",
+    options: ["Lie down after meals", "Skip dinner", "Sit upright and eat small meals", "Drink soda"],
+    answer: "Sit upright and eat small meals"
+  },
+  {
+    question: "Kegel exercises strengthen:",
+    options: ["Back", "Neck", "Pelvic floor", "Shoulders"],
+    answer: "Pelvic floor"
+  },
+  {
+    question: "Papaya and pineapple are:",
+    options: [
+      "Unsafe at all stages",
+      "Always harmful",
+      "Okay in ripe, small amounts after first trimester",
+      "Nutritionally useless"
+    ],
+    answer: "Okay in ripe, small amounts after first trimester"
+  },
+  {
+    question: "How much weight should a healthy woman gain in pregnancy (on average)?",
+    options: ["2–3 kg", "5–8 kg", "11–15 kg", "20–25 kg"],
+    answer: "11–15 kg"
   }
 ];
+
 
 const NutritionExercisePregnancy = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});

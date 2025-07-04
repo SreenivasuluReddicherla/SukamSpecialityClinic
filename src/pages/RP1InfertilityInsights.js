@@ -3,29 +3,174 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
+    question: "What is the medical definition of infertility in women under 35?",
+    options: [
+      "No periods for 3 months",
+      "Failure to conceive after 6 months",
+      "Failure to conceive after 12 months",
+      "Painful periods"
+    ],
+    answer: "Failure to conceive after 12 months"
+  },
+  {
+    question: "Which condition is a common cause of anovulation in women?",
+    options: ["Endometriosis", "PCOS", "Fibroids", "Tuberculosis"],
+    answer: "PCOS"
+  },
+  {
+    question: "What is AMH primarily used to assess?",
+    options: ["Ovulation timing", "Uterine lining", "Egg reserve", "Menstrual cycle length"],
+    answer: "Egg reserve"
+  },
+  {
+    question: "Which test is done to assess if fallopian tubes are open?",
+    options: ["Transvaginal ultrasound", "HSG (Hysterosalpingography)", "Pap smear", "FSH test"],
+    answer: "HSG (Hysterosalpingography)"
+  },
+  {
+    question: "A male fertility test that checks count, motility, and shape is called:",
+    options: ["Scrotal scan", "Semen analysis", "Sperm washing", "Hormonal assay"],
+    answer: "Semen analysis"
+  },
+  {
+    question: "At what female age does fertility begin to significantly decline?",
+    options: ["28", "30", "35", "40"],
+    answer: "35"
+  },
+  {
+    question: "Which hormone triggers egg release from the ovary?",
+    options: ["FSH", "LH", "Prolactin", "TSH"],
+    answer: "LH"
+  },
+  {
+    question: "Which condition is characterized by tissue similar to the uterine lining growing outside the uterus?",
+    options: ["PCOS", "Endometriosis", "Adenomyosis", "Fibroids"],
+    answer: "Endometriosis"
+  },
+  {
+    question: "In IVF, where does fertilization take place?",
+    options: ["In the uterus", "In the lab", "In the fallopian tube", "In the ovary"],
+    answer: "In the lab"
+  },
+  {
+    question: "Which is NOT typically part of a female fertility work-up?",
+    options: ["Semen analysis", "AMH test", "HSG", "Ultrasound"],
+    answer: "Semen analysis"
+  },
+  {
+    question: "What lifestyle factor is known to negatively affect both egg and sperm quality?",
+    options: ["Caffeine", "Smoking", "Yoga", "Hydration"],
+    answer: "Smoking"
+  },
+  {
     question: "What percentage of infertility cases involve male factors?",
-    options: ["10%", "25%", "50%", "75%"],
-    answer: "50%"
+    options: ["10%", "20%", "40–50%", "80%"],
+    answer: "40–50%"
   },
   {
-    question: "True or False: Stress can affect fertility.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "Which of the following is true about unexplained infertility?",
+    options: [
+      "It means both partners have no reproductive organs",
+      "It is untreatable",
+      "It accounts for 10–15% of infertility cases",
+      "It only affects older women"
+    ],
+    answer: "It accounts for 10–15% of infertility cases"
   },
   {
-    question: "Which is NOT a common cause of female infertility?",
-    options: ["Ovulatory disorders", "Tubal blockage", "High blood pressure", "Uterine abnormalities"],
-    answer: "High blood pressure"
+    question: "Which hormone is often elevated in women with PCOS?",
+    options: ["Estrogen", "FSH", "LH", "Prolactin"],
+    answer: "LH"
   },
   {
-    question: "How long should a couple try to conceive before seeking help?",
-    options: ["3 months", "6 months", "1 year", "2 years"],
-    answer: "1 year"
+    question: "What is secondary infertility?",
+    options: [
+      "Infertility due to age",
+      "Inability to conceive after having one child",
+      "Infertility in men",
+      "Infertility due to blocked tubes"
+    ],
+    answer: "Inability to conceive after having one child"
   },
   {
-    question: "Can lifestyle changes improve fertility?",
-    options: ["Yes", "No"],
-    answer: "Yes"
+    question: "Which treatment is used for severe male infertility?",
+    options: ["IUI", "Clomiphene", "ICSI", "Hysteroscopy"],
+    answer: "ICSI"
+  },
+  {
+    question: "Which fertility treatment involves placing sperm directly into the uterus?",
+    options: ["IVF", "IUI", "OI", "HSG"],
+    answer: "IUI"
+  },
+  {
+    question: "Which of the following is a sign of ovulation?",
+    options: [
+      "Heavy bleeding",
+      "Mild abdominal pain (Mittelschmerz)",
+      "High prolactin",
+      "Fever"
+    ],
+    answer: "Mild abdominal pain (Mittelschmerz)"
+  },
+  {
+    question: "Which statement is FALSE?",
+    options: [
+      "Men’s fertility remains constant throughout life",
+      "Egg quality declines with age",
+      "IVF doesn’t guarantee success",
+      "Lifestyle changes can improve fertility"
+    ],
+    answer: "Men’s fertility remains constant throughout life"
+  },
+  {
+    question: "Which supplement may help improve sperm motility?",
+    options: ["Calcium", "Vitamin D", "Coenzyme Q10", "Iron"],
+    answer: "Coenzyme Q10"
+  },
+  {
+    question: "Which of the following is NOT a typical emotional reaction to infertility?",
+    options: ["Anxiety", "Guilt", "Joy", "Isolation"],
+    answer: "Joy"
+  },
+  {
+    question: "How does stress affect fertility?",
+    options: [
+      "It boosts ovulation",
+      "It may disrupt hormonal balance",
+      "It has no effect",
+      "It guarantees pregnancy"
+    ],
+    answer: "It may disrupt hormonal balance"
+  },
+  {
+    question: "A blocked fallopian tube prevents:",
+    options: [
+      "Egg maturation",
+      "Sperm production",
+      "Fertilization and egg transport",
+      "Menstrual flow"
+    ],
+    answer: "Fertilization and egg transport"
+  },
+  {
+    question: "When should a woman over 35 seek fertility evaluation?",
+    options: [
+      "After 1 year of trying",
+      "After 6 months of trying",
+      "Immediately",
+      "After 2 years"
+    ],
+    answer: "After 6 months of trying"
+  },
+  {
+    question: "Which statement about IVF is TRUE?",
+    options: [
+      "It always leads to twins",
+      "It guarantees pregnancy",
+      "It involves embryo transfer into the uterus",
+      "It requires surgery every time"
+    ],
+    answer: "It involves embryo transfer into the uterus"
   }
 ];
 

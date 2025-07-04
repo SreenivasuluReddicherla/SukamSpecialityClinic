@@ -3,49 +3,69 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "IVF pregnancies are considered precious because:",
-    options: [
-      "They are risky",
-      "They involve strong medications",
-      "They often follow long infertility journeys",
-      "They always have complications"
-    ],
-    answer: "They often follow long infertility journeys"
+    question: "What is the first scan in a precious pregnancy?",
+    options: ["NT scan", "Viability scan", "Anomaly scan", "Growth scan"],
+    answer: "Viability scan"
   },
   {
-    question: "What’s one way to emotionally support yourself during a precious pregnancy?",
-    options: [
-      "Suppress your feelings",
-      "Keep worries to yourself",
-      "Talk to a counselor or join a support group",
-      "Avoid discussing your pregnancy"
-    ],
-    answer: "Talk to a counselor or join a support group"
+    question: "Which hormone supports early pregnancy?",
+    options: ["Progesterone", "Estrogen", "Testosterone", "Oxytocin"],
+    answer: "Progesterone"
   },
   {
-    question: "Which scan is most important in early pregnancy to confirm viability?",
+    question: "Aspirin in pregnancy is given to:",
     options: [
-      "Growth scan",
-      "NT scan",
-      "Early transvaginal scan",
-      "Doppler scan"
+      "Reduce pain",
+      "Prevent clots and improve placenta",
+      "Cure nausea",
+      "Reduce weight"
     ],
-    answer: "Early transvaginal scan"
+    answer: "Prevent clots and improve placenta"
   },
   {
-    question: "True or False: IVF pregnancies are always twins.",
-    options: ["True", "False"],
-    answer: "False"
+    question: "Cervical length is assessed to:",
+    options: [
+      "Predict gender",
+      "Predict early labor",
+      "Detect infection",
+      "Measure uterus"
+    ],
+    answer: "Predict early labor"
   },
   {
-    question: "A key emotional aspect of a precious pregnancy is:",
+    question: "GTT is used for:",
+    options: ["Kidney health", "BP", "Diabetes screening", "Infection"],
+    answer: "Diabetes screening"
+  },
+  {
+    question: "When is fetal anomaly scan usually done?",
+    options: ["10 weeks", "18–20 weeks", "24 weeks", "28 weeks"],
+    answer: "18–20 weeks"
+  },
+  {
+    question: "In IVF pregnancies, hormonal support continues till:",
+    options: ["6 weeks", "8 weeks", "12–14 weeks", "40 weeks"],
+    answer: "12–14 weeks"
+  },
+  {
+    question: "What is a rainbow baby?",
     options: [
-      "Disinterest",
-      "Anxiety mixed with hope",
-      "Indifference",
-      "Overconfidence"
+      "IVF baby",
+      "Baby born after previous loss",
+      "Premature baby",
+      "High birth weight baby"
     ],
-    answer: "Anxiety mixed with hope"
+    answer: "Baby born after previous loss"
+  },
+  {
+    question: "What is common in precious pregnancy emotions?",
+    options: ["Indifference", "Joy only", "Joy + anxiety", "Hyperactivity"],
+    answer: "Joy + anxiety"
+  },
+  {
+    question: "Is vaginal delivery possible in precious pregnancy?",
+    options: ["No", "Yes", "Only twins", "Only after 40 weeks"],
+    answer: "Yes"
   }
 ];
 

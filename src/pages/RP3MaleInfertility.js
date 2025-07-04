@@ -3,31 +3,132 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "What percentage of infertility cases involve male factors?",
-    options: ["10%", "25%", "40-50%", "75%"],
-    answer: "40-50%"
+    question: "What is the normal sperm concentration as per WHO?",
+    options: [">10 million/mL", ">15 million/mL", ">20 million/mL", ">5 million/mL"],
+    answer: ">15 million/mL"
   },
   {
-    question: "True or False: Smoking negatively affects sperm quality.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "Which condition is defined as complete absence of sperm in the ejaculate?",
+    options: ["Oligospermia", "Asthenospermia", "Azoospermia", "Teratospermia"],
+    answer: "Azoospermia"
   },
   {
-    question: "Which test evaluates sperm count and motility?",
-    options: ["Hormonal assay", "Semen analysis", "Ultrasound", "MRI"],
-    answer: "Semen analysis"
+    question: "Which hormone stimulates sperm production in men?",
+    options: ["LH", "FSH", "Prolactin", "Estrogen"],
+    answer: "FSH"
   },
   {
-    question: "Can lifestyle changes improve male fertility?",
-    options: ["Yes", "No"],
-    answer: "Yes"
+    question: "Which is a common structural cause of male infertility?",
+    options: ["Varicocele", "Fibroids", "PCOS", "Retroverted uterus"],
+    answer: "Varicocele"
   },
   {
-    question: "Is male infertility treatable?",
-    options: ["Sometimes", "Never"],
-    answer: "Sometimes"
+    question: "What does asthenozoospermia refer to?",
+    options: ["Low sperm count", "Poor sperm motility", "Abnormal sperm shape", "High semen volume"],
+    answer: "Poor sperm motility"
+  },
+  {
+    question: "Which of the following is NOT a part of semen analysis?",
+    options: ["Sperm count", "Motility", "Testosterone level", "Morphology"],
+    answer: "Testosterone level"
+  },
+  {
+    question: "Which vitamin is considered an antioxidant beneficial for sperm health?",
+    options: ["Vitamin A", "Vitamin C", "Vitamin K", "Vitamin B1"],
+    answer: "Vitamin C"
+  },
+  {
+    question: "What is the role of Coenzyme Q10 in male fertility?",
+    options: ["Boosts testosterone only", "Improves sperm DNA", "Enhances sperm motility", "Prevents infection"],
+    answer: "Enhances sperm motility"
+  },
+  {
+    question: "What is the ideal abstinence period before semen collection?",
+    options: ["1–2 days", "2–7 days", "10 days", "24 hours"],
+    answer: "2–7 days"
+  },
+  {
+    question: "Which test helps identify chromosomal defects in azoospermia?",
+    options: ["Ultrasound", "Karyotyping", "HSG", "Doppler scan"],
+    answer: "Karyotyping"
+  },
+  {
+    question: "What lifestyle factor has a proven negative impact on sperm quality?",
+    options: ["Moderate caffeine", "Balanced diet", "Smoking", "Meditation"],
+    answer: "Smoking"
+  },
+  {
+    question: "Which surgical procedure is done for varicocele correction?",
+    options: ["Vasectomy", "Varicocelectomy", "TESE", "Cystoscopy"],
+    answer: "Varicocelectomy"
+  },
+  {
+    question: "Which ART technique involves injecting a sperm into an egg?",
+    options: ["IUI", "IVF", "ICSI", "HSG"],
+    answer: "ICSI"
+  },
+  {
+    question: "What is retrograde ejaculation?",
+    options: ["Sperm going into vas deferens", "Sperm not formed", "Semen flows backward into the bladder", "Low sperm count"],
+    answer: "Semen flows backward into the bladder"
+  },
+  {
+    question: "Which herbal supplement is commonly used in Ayurveda to support male fertility?",
+    options: ["Tulsi", "Neem", "Ashwagandha", "Brahmi"],
+    answer: "Ashwagandha"
+  },
+  {
+    question: "What does necrozoospermia indicate?",
+    options: ["All sperm are immobile", "All sperm are dead", "No sperm", "High volume of semen"],
+    answer: "All sperm are dead"
+  },
+  {
+    question: "Testosterone therapy is contraindicated in men trying to conceive because:",
+    options: ["It increases sperm count", "It enhances libido", "It suppresses sperm production", "It improves erections"],
+    answer: "It suppresses sperm production"
+  },
+  {
+    question: "Micro-TESE is most useful in:",
+    options: ["Oligospermia", "Erectile dysfunction", "Obstructive azoospermia", "Non-obstructive azoospermia"],
+    answer: "Non-obstructive azoospermia"
+  },
+  {
+    question: "Which mineral is essential for sperm production?",
+    options: ["Iron", "Zinc", "Copper", "Potassium"],
+    answer: "Zinc"
+  },
+  {
+    question: "Klinefelter syndrome is associated with:",
+    options: ["Overproduction of testosterone", "Chromosomal abnormality (XXY)", "Normal sperm production", "High sperm motility"],
+    answer: "Chromosomal abnormality (XXY)"
+  },
+  {
+    question: "DNA fragmentation in sperm leads to:",
+    options: ["Increased motility", "Improved fertilization", "Poor embryo development", "Faster conception"],
+    answer: "Poor embryo development"
+  },
+  {
+    question: "A semen sample should be examined within how many minutes of collection?",
+    options: ["10 minutes", "30–60 minutes", "2 hours", "Immediately"],
+    answer: "30–60 minutes"
+  },
+  {
+    question: "One of the most common infections affecting male fertility is:",
+    options: ["Malaria", "Hepatitis", "Chlamydia", "Typhoid"],
+    answer: "Chlamydia"
+  },
+  {
+    question: "PESA is a technique to:",
+    options: ["Extract testicular tissue", "Remove varicocele", "Aspirate sperm from epididymis", "Enhance ejaculation"],
+    answer: "Aspirate sperm from epididymis"
+  },
+  {
+    question: "Which of the following is FALSE about male infertility?",
+    options: ["It contributes to about 50% of infertility cases", "Most cases are untreatable", "Sperm quality declines with age", "ART can help overcome severe sperm issues"],
+    answer: "Most cases are untreatable"
   }
 ];
+
 
 const MaleInfertility = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});
