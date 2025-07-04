@@ -138,38 +138,112 @@ const NormalLabor = () => {
       <p className="lead">“Nature’s way of saying, ‘It’s showtime!’”</p>
 
       <section className="info-section">
-        <p>
-          Labor is the amazing process through which your body prepares to welcome your baby into the world. At Sukam Speciality Clinic and Fertility Centre, we support natural, healthy labor by combining expert medical care with a calm, reassuring environment that honors your birthing choices.
-        </p>
+  <h3>🤰 What Is Normal Labor?</h3>
+  <p>
+    Normal labor refers to the natural process of childbirth where a woman delivers her baby through the vagina without major interventions like cesarean section or instruments. It usually happens between 37 and 42 weeks of pregnancy.
+  </p>
+  <p>
+    It progresses through regular contractions and ends with the delivery of the baby and placenta. It’s called “normal” not because it’s easy — but because it’s safe, natural, and most common.
+  </p>
 
-        <p>
-          Our goal is to guide you safely through every contraction and push, empowering you to embrace childbirth with confidence and comfort.
-        </p>
+  <h3>⏱️ Signs That Labor Is Starting</h3>
+  <p><strong>Pre-Labor Signs:</strong></p>
+  <ul>
+    <li>Baby drops lower (lightening)</li>
+    <li>Increased discharge</li>
+    <li>Nesting urge or sudden energy</li>
+    <li>Backache and mild cramps</li>
+  </ul>
+  <p><strong>True Labor Signs:</strong></p>
+  <ul>
+    <li>Regular strong contractions (5–10 min apart)</li>
+    <li>Lower belly/back pain that worsens</li>
+    <li>Loss of mucus plug (bloody show)</li>
+    <li>Water breaking (fluid leak or gush)</li>
+  </ul>
+  <p>If you're unsure whether labor has started, contact your doctor or visit the labor ward.</p>
 
-        <h3>🩺 What We Offer:</h3>
-        <ul>
-          <li>Continuous labor monitoring with modern fetal heart and contraction tracking</li>
-          <li>Supportive midwifery and obstetric care tailored to your birth plan</li>
-          <li>Pain management options including breathing techniques, labor positions, and medication</li>
-          <li>Immediate newborn care and skin-to-skin bonding support</li>
-          <li>Postpartum recovery and breastfeeding guidance</li>
-        </ul>
+  <h3>⏳ The 3 Stages of Labor – In Detail</h3>
+  <p><strong>Stage 1: Cervical Dilation</strong></p>
+  <ul>
+    <li>Starts with regular contractions and ends at 10 cm dilation</li>
+    <li>Takes 6–12 hours for first-time mothers</li>
+    <li>Latent phase: 0–4 cm dilation (mild contractions)</li>
+    <li>Active phase: 5–10 cm dilation (stronger contractions)</li>
+  </ul>
+  <p><em>What helps: walking, warm showers, breathing, massage</em></p>
 
-        <h3>🤰 Tips for a Smooth Normal Labor:</h3>
-        <ul>
-          <li>Stay hydrated and keep light snacks handy (if allowed by your doctor)</li>
-          <li>Practice breathing and relaxation techniques learned during antenatal classes</li>
-          <li>Use upright positions or walking to help labor progress naturally</li>
-          <li>Surround yourself with supportive people</li>
-          <li>Trust your body’s rhythm and ask for help when needed</li>
-        </ul>
+  <p><strong>Stage 2: Pushing and Delivery</strong></p>
+  <ul>
+    <li>Starts at 10 cm and ends with baby’s birth</li>
+    <li>Lasts 30 mins–2 hours (shorter in 2nd+ pregnancies)</li>
+    <li>Push with each contraction as guided by your doctor</li>
+  </ul>
 
-        <h3>🚫 Labor Myths Busted:</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “You have to rush to the hospital as soon as contractions start.”<br /><strong>✅ Truth:</strong> Early labor can be slow—timing contractions and consulting your doctor helps decide when to come.</li>
-          <li><strong>❌ Myth:</strong> “All labor pains require an epidural.”<br /><strong>✅ Truth:</strong> Many women manage labor naturally with coping techniques; epidurals are optional.</li>
-        </ul>
-      </section>
+  <p><strong>Stage 3: Delivery of Placenta</strong></p>
+  <ul>
+    <li>Happens 5–30 mins after baby’s birth</li>
+    <li>Contractions help expel the placenta</li>
+    <li>Uterus contracts to reduce bleeding</li>
+  </ul>
+
+  <h3>🌬️ Breathing & Relaxation Techniques</h3>
+  <ul>
+    <li>Inhale slowly through nose, exhale gently through mouth</li>
+    <li>Repeat with each contraction to stay calm</li>
+    <li>Massage, warm compresses, walking and birthing balls are encouraged</li>
+    <li>Partner support and calming music can help reduce stress</li>
+  </ul>
+
+  <h3>🩺 Monitoring During Labor</h3>
+  <ul>
+    <li>Contraction strength and frequency</li>
+    <li>Fetal heart rate (via CTG or Doppler)</li>
+    <li>Your vitals: BP, pulse, temperature</li>
+    <li>Amniotic fluid after rupture (color and amount)</li>
+    <li>Cervical dilation checks</li>
+  </ul>
+  <p>Any intervention is done with your consent if needed for safety.</p>
+
+  <h3>🍼 What to Expect Emotionally and Physically</h3>
+  <p><strong>Emotionally:</strong></p>
+  <ul>
+    <li>Excitement, nervousness, crying, laughter — all normal</li>
+    <li>We create a safe space for all feelings</li>
+  </ul>
+  <p><strong>Physically:</strong></p>
+  <ul>
+    <li>Cramping, back pressure, sweating, exhaustion</li>
+    <li>Stretching or burning sensation during crowning</li>
+  </ul>
+
+  <h3>👩‍⚕️ Role of Doctors and Partners</h3>
+  <ul>
+    <li>OB-GYN, nurses, midwives guide and monitor throughout</li>
+    <li>Partner can support emotionally, help change positions, and even cut the cord</li>
+  </ul>
+  <p>At Sukam, we encourage and celebrate partner involvement.</p>
+
+  <h3>👶 After Birth – The First Hour</h3>
+  <ul>
+    <li>Skin-to-skin contact on mother’s chest</li>
+    <li>Initiate breastfeeding (if stable)</li>
+    <li>Delayed cord clamping</li>
+    <li>Uterus and bleeding are monitored</li>
+  </ul>
+  <p>This Golden Hour strengthens bonding and breastfeeding success.</p>
+
+  <h3>💗 Sukam’s Gentle Birth Approach</h3>
+  <ul>
+    <li>Respectful, calm, pain-managed labor</li>
+    <li>Natural birth methods and evidence-based care</li>
+    <li>Customized birth plans and skin-to-skin bonding</li>
+    <li>Lactation support and emotional care</li>
+    <li>Family-friendly, private labor rooms</li>
+  </ul>
+  <p>We prepare mothers with breathing classes, hospital orientation, and counseling from 36 weeks onward.</p>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Labor Quiz – Ready for the Big Day?</h2>

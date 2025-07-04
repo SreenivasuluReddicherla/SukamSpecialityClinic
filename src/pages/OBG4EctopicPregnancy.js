@@ -103,39 +103,116 @@ const EctopicPregnancy = () => {
       <p className="lead">“A twist in the journey of life that needs urgent attention.”</p>
 
       <section className="info-section">
-        <p>
-          An ectopic pregnancy happens when a fertilized egg implants outside the uterus—most often in the fallopian tube.
-          Though it cannot continue as a normal pregnancy, early detection and expert care are vital to protect the mother's health and future fertility.
-        </p>
+  <h3>💡 What Is an Ectopic Pregnancy?</h3>
+  <p>
+    An ectopic pregnancy occurs when a fertilized egg implants outside the uterus, most commonly in a fallopian tube. It is a life-threatening condition if not treated promptly, as the embryo cannot survive and the surrounding tissues cannot safely support its growth. About 1 in 50 pregnancies is ectopic.
+  </p>
+  <p>
+    Early diagnosis and treatment are essential to protect health, future fertility, and life.
+  </p>
 
-        <p>
-          At Sukam, we recognize the emotional and physical toll this condition can bring.
-          Our compassionate team ensures prompt diagnosis, safe treatment, and heartfelt support as you recover—medically and emotionally.
-        </p>
+  <h3>📍 Where Can Ectopic Pregnancies Occur?</h3>
+  <ul>
+    <li>Fallopian tube (98% cases)</li>
+    <li>Ovary</li>
+    <li>Cervix</li>
+    <li>Abdominal cavity</li>
+    <li>Cesarean scar</li>
+    <li>Cornual (corner of uterus) — especially dangerous</li>
+  </ul>
+  <p>⚠️ These locations lack the support for normal pregnancy, and rupture can lead to shock or death.</p>
 
-        <h3>🩺 What We Offer:</h3>
-        <ul>
-          <li>Early pregnancy scans and beta-hCG monitoring</li>
-          <li>Expert diagnosis through transvaginal ultrasound</li>
-          <li>Medical or minimally invasive surgical management</li>
-          <li>Post-treatment fertility guidance</li>
-          <li>Emotional and psychological counseling support</li>
-        </ul>
+  <h3>⚠️ Causes and Risk Factors</h3>
+  <ul>
+    <li>Pelvic Inflammatory Disease (PID)</li>
+    <li>Previous ectopic pregnancy</li>
+    <li>Fallopian tube surgery or sterilization</li>
+    <li>Endometriosis</li>
+    <li>IVF or assisted reproductive technology</li>
+    <li>Smoking</li>
+    <li>Maternal age over 35</li>
+  </ul>
+  <p>Note: Even women with no risk factors can have an ectopic pregnancy.</p>
 
-        <h3>🧠 Know the Signs of Ectopic Pregnancy:</h3>
-        <ul>
-          <li>One-sided lower abdominal pain</li>
-          <li>Vaginal spotting or bleeding</li>
-          <li>Shoulder-tip pain or dizziness (a red flag for internal bleeding)</li>
-          <li>Missed period with unusual symptoms</li>
-        </ul>
+  <h3>🩸 Symptoms of Ectopic Pregnancy</h3>
+  <p><strong>Early signs (5–8 weeks):</strong></p>
+  <ul>
+    <li>One-sided pelvic pain</li>
+    <li>Spotting or light bleeding</li>
+    <li>Low backache</li>
+    <li>Breast tenderness, nausea</li>
+  </ul>
+  <p><strong>Emergency signs (suggesting rupture):</strong></p>
+  <ul>
+    <li>Sharp or stabbing abdominal pain</li>
+    <li>Shoulder tip pain</li>
+    <li>Fainting or dizziness</li>
+    <li>Heavy bleeding</li>
+    <li>Fast heart rate</li>
+  </ul>
+  <p>🚨 Immediate care is critical if these symptoms occur.</p>
 
-        <h3>⚠️ Myth vs. Fact</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “Ectopic pregnancies are rare and not serious.”<br /><strong>✅ Truth:</strong> While not common, they can be life-threatening and require urgent attention.</li>
-          <li><strong>❌ Myth:</strong> “You can never conceive again after an ectopic.”<br /><strong>✅ Truth:</strong> Many women go on to have healthy pregnancies with proper care and monitoring.</li>
-        </ul>
-      </section>
+  <h3>🔬 Diagnosis – How Is Ectopic Pregnancy Confirmed?</h3>
+  <ul>
+    <li><strong>hCG blood tests:</strong> Typically rise slowly or remain low</li>
+    <li><strong>Transvaginal ultrasound:</strong> Absence of intrauterine pregnancy; ectopic sac visible in some cases</li>
+    <li><strong>Pelvic exam:</strong> May detect tenderness or mass</li>
+  </ul>
+  <p>⏳ Diagnosis may take a few days with repeated scans or blood tests.</p>
+
+  <h3>🩺 Treatment Options for Ectopic Pregnancy</h3>
+  <p><strong>Medical (Non-surgical):</strong></p>
+  <ul>
+    <li>Methotrexate injection to stop cell growth</li>
+    <li>Best for hCG &lt; 5000, early stage, no rupture, no fetal heartbeat</li>
+    <li>Follow-up with serial hCG monitoring</li>
+  </ul>
+  <p><strong>Surgical:</strong></p>
+  <ul>
+    <li><strong>Salpingostomy:</strong> Removes ectopic and preserves tube</li>
+    <li><strong>Salpingectomy:</strong> Removes damaged tube if ruptured</li>
+    <li><strong>Emergency surgery:</strong> For internal bleeding or rupture</li>
+  </ul>
+
+  <h3>🌱 Can I Get Pregnant Again?</h3>
+  <p>Yes! Many women conceive naturally after an ectopic pregnancy. Success depends on:</p>
+  <ul>
+    <li>Remaining fallopian tube’s health</li>
+    <li>Cause of the ectopic</li>
+    <li>Treatment method used</li>
+  </ul>
+  <p>
+    Recommendations may include waiting 3–6 months, doing early scans in future pregnancies, and considering IVF if both tubes are damaged.
+  </p>
+
+  <h3>🧠 Emotional Healing After Ectopic Pregnancy</h3>
+  <p>Grieving after an ectopic is real and valid. Common feelings include:</p>
+  <ul>
+    <li>Guilt and confusion</li>
+    <li>Fear of trying again</li>
+    <li>Loss of confidence in one’s body</li>
+  </ul>
+  <p><strong>At Sukam, we support healing through:</strong></p>
+  <ul>
+    <li>Compassionate counseling</li>
+    <li>Partner support sessions</li>
+    <li>Mind-body therapy and grief circles</li>
+    <li>Safe space to process and recover</li>
+  </ul>
+  <p>❤️ Your body did not fail — it protected you.</p>
+
+  <h3>👩‍⚕️ Sukam’s Ectopic Pregnancy Care</h3>
+  <ul>
+    <li>🧪 Early detection and pregnancy monitoring</li>
+    <li>🩺 Fertility-preserving treatments (methotrexate or laparoscopy)</li>
+    <li>🔁 Post-treatment hCG monitoring</li>
+    <li>🧑‍⚕️ Fertility planning and counseling</li>
+    <li>🧘 Mental health & emotional recovery programs</li>
+    <li>🤝 Partner-inclusive healing approach</li>
+  </ul>
+  <p><strong>At Sukam, ectopic care is never “just a medical event.” We walk with you — fully and compassionately.</strong></p>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Ectopic Pregnancy Quiz – Test Your Knowledge!</h2>

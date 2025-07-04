@@ -112,38 +112,105 @@ const HighRiskPregnancy = () => {
       <h1>🔍 High-Risk Pregnancy Care</h1>
       <p className="lead">“Special care for special journeys.”</p>
 
-      <section className="info-section">
-        <p>
-          Not all pregnancies follow a predictable path. At Sukam, our High-Risk Pregnancy Care is crafted with compassion and precision for mothers-to-be who require extra medical attention due to pre-existing conditions, age-related risks, or complications in pregnancy.
-        </p>
-        <p>
-          Whether you’re navigating gestational diabetes, high blood pressure, thyroid issues, IVF-conceived pregnancy, or a history of miscarriages, our multidisciplinary team ensures you’re never alone. We combine advanced diagnostics, constant monitoring, and heartfelt reassurance—because every mother and baby deserves a safe, supported journey.
-        </p>
+     <section className="info-section">
+  <h3>🚨 What Is a High-Risk Pregnancy?</h3>
+  <p>
+    A high-risk pregnancy means there’s a higher chance of complications affecting the mother, baby, or both. But high-risk doesn’t mean hopeless — it simply means you need closer monitoring, more support, and expert care.
+    Some pregnancies begin as high-risk. Others become high-risk during the journey.
+  </p>
+  <p>
+    At Sukam Speciality Clinic, we specialize in identifying risks early and managing them with precision, compassion, and constant vigilance.
+  </p>
 
-        <h3>🩺 What We Offer:</h3>
-        <ul>
-          <li>Tailored antenatal checkups with maternal-fetal medicine specialists</li>
-          <li>Advanced fetal imaging (Doppler, anomaly scans)</li>
-          <li>Diabetology and endocrinology support</li>
-          <li>High-risk delivery planning with NICU standby</li>
-          <li>Emotional support and birth readiness counseling</li>
-        </ul>
+  <h3>📌 Common Risk Factors for High-Risk Pregnancy</h3>
+  <ul>
+    <li><strong>Pre-existing maternal conditions:</strong> Diabetes, Hypertension, Thyroid disorders, PCOS, Obesity, Epilepsy, Asthma, Autoimmune diseases</li>
+    <li><strong>Pregnancy-related complications:</strong> Preeclampsia, Gestational diabetes, Placenta previa/abruption, Preterm labor history, Twin/multiple pregnancy, Abnormal fetal growth/anomalies</li>
+    <li><strong>Maternal factors:</strong> Age &lt;18 or &gt;35, Previous miscarriage/stillbirth, IVF/ICSI pregnancy, Smoking, alcohol/drug use, Poor nutrition or low BMI</li>
+  </ul>
 
-        <h3>🧘‍♀️ Wellness Tips for High-Risk Pregnancies:</h3>
-        <ul>
-          <li>Avoid self-medication—always consult your doctor before taking anything</li>
-          <li>Monitor blood pressure, sugar levels, or weight as advised</li>
-          <li>Take prescribed medications and supplements without fail</li>
-          <li>Reduce stress with guided prenatal meditation</li>
-          <li>Sleep well, stay hydrated, and eat nutrient-dense meals</li>
-        </ul>
+  <h3>📝 First Steps After a High-Risk Diagnosis</h3>
+  <ul>
+    <li>✅ Don’t panic</li>
+    <li>✅ Understand your risk type</li>
+    <li>✅ Stick to all appointments</li>
+    <li>✅ Ask about every test and its reason</li>
+    <li>✅ Keep an emergency contact system ready</li>
+  </ul>
+  <p>
+    You may need more frequent scans, specialist consultations, lifestyle/diet changes, and an early hospital delivery plan.
+  </p>
 
-        <h3>🚫 Busting the Myths:</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “High-risk means guaranteed C-section.”<br /><strong>✅ Truth:</strong> With good care, many high-risk pregnancies still result in normal deliveries.</li>
-          <li><strong>❌ Myth:</strong> “You should just lie in bed all day.”<br /><strong>✅ Truth:</strong> Bed rest is only needed in specific cases; gentle movement is often encouraged.</li>
-        </ul>
-      </section>
+  <h3>🧪 Key Tests and Monitoring</h3>
+  <ul>
+    <li><strong>Week 6–10:</strong> Early ultrasound – confirm heartbeat, rule out ectopic</li>
+    <li><strong>Week 11–13:</strong> NT Scan + Dual Marker – genetic screening</li>
+    <li><strong>Week 16–18:</strong> Cervical length scan – predict preterm labor</li>
+    <li><strong>Week 18–20:</strong> Anomaly scan – birth defects check</li>
+    <li><strong>Week 24–28:</strong> OGTT – test for gestational diabetes</li>
+    <li><strong>Week 32–36:</strong> Growth scan + Doppler – placenta & blood flow check</li>
+  </ul>
+  <p>You may also require: 24-hr BP monitoring, fetal echocardiography, or amniocentesis (if needed).</p>
+
+  <h3>🧘‍♀️ Daily Care & Lifestyle in High-Risk Pregnancy</h3>
+  <ul>
+    <li>Rest and prioritize sleep/naps</li>
+    <li>Eat small, frequent, balanced meals with sugar/salt control</li>
+    <li>Strictly follow prescribed medications</li>
+    <li>Avoid stress, long travel, physical strain</li>
+    <li>Stay hydrated – 2.5 to 3L/day</li>
+    <li>Take supplements – Iron, Calcium, Folic acid, and condition-specific vitamins</li>
+  </ul>
+  <p>⚠️ Some high-risk mothers may need bed rest, injections, or hospitalization – this is for your safety, not punishment.</p>
+
+  <h3>🍼 Delivery Planning for High-Risk Pregnancies</h3>
+  <ul>
+    <li>Early delivery (before 40 weeks) may be needed</li>
+    <li>Plan delivery at a hospital with NICU</li>
+    <li>C-section may be preferred based on your or baby’s health</li>
+    <li>Fetal distress or maternal emergencies are pre-anticipated & monitored</li>
+  </ul>
+  <p>
+    At Sukam, our OB-GYNs, anesthetists, pediatricians, and MFM specialists work as a team for safe delivery outcomes.
+  </p>
+
+  <h3>🧠 Emotional & Mental Health Support</h3>
+  <p>High-risk pregnancy can cause emotional challenges:</p>
+  <ul>
+    <li>Fear of complications</li>
+    <li>Overwhelming pressure to “do everything right”</li>
+    <li>Loneliness due to limited mobility</li>
+    <li>Anxiety about test results</li>
+  </ul>
+  <p>What helps:</p>
+  <ul>
+    <li>✅ Counseling or joining support groups</li>
+    <li>✅ Open communication with doctors</li>
+    <li>✅ Breathing techniques, guided meditation, prayer</li>
+    <li>✅ Strong support from family</li>
+  </ul>
+  <p><strong>Note:</strong> You don’t have to stay strong all the time — vulnerability is human.</p>
+
+  <h3>📖 Real-Life Stories from Sukam</h3>
+  <ul>
+    <li><strong>Gestational Diabetes:</strong> Mrs. A (age 33) followed diet + walking + glucose checks. Delivered naturally at 38 weeks.</li>
+    <li><strong>IVF Twin Pregnancy with BP:</strong> Mrs. B had high BP at 30 weeks. With close monitoring and meds, she delivered twins via C-section at 36 weeks.</li>
+    <li><strong>Placenta Previa:</strong> Mrs. C was diagnosed at 28 weeks, managed with bed rest, and had a smooth vaginal delivery at 39 weeks.</li>
+  </ul>
+
+  <h3>🏥 What We Do at Sukam for High-Risk Pregnancies</h3>
+  <ul>
+    <li>✅ Specialist obstetricians for high-risk pregnancies</li>
+    <li>✅ MFM expert access</li>
+    <li>✅ 24x7 fetal monitoring and emergency care</li>
+    <li>✅ Endocrinology and dietician support</li>
+    <li>✅ NICU support with pediatricians on standby</li>
+    <li>✅ Mental health and partner education</li>
+    <li>✅ Regular scans and blood work</li>
+    <li>✅ Staff trained in high-risk care protocols</li>
+  </ul>
+  <p><strong>At Sukam, we don’t just manage complications — we care, support, and journey with you.</strong></p>
+</section>
 
       <section className="quiz-section">
         <h2>🧠 Quick Quiz – Are You High-Risk Savvy?</h2>

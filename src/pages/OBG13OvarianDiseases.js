@@ -3,31 +3,227 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "What is a common symptom of ovarian cysts?",
-    options: ["Sudden weight gain", "Pelvic pain or pressure", "Frequent headaches", "Hair loss"],
-    answer: "Pelvic pain or pressure"
+    question: "Ovaries are responsible for:",
+    options: [
+      "Insulin production",
+      "Estrogen and egg release",
+      "Bile secretion",
+      "Blood cell production"
+    ],
+    answer: "Estrogen and egg release"
   },
   {
-    question: "True or False: PCOS affects hormone levels and menstrual cycles.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "PCOS is caused by:",
+    options: [
+      "Infection",
+      "Excess male hormones",
+      "Cancer",
+      "Uterine fibroids"
+    ],
+    answer: "Excess male hormones"
   },
   {
-    question: "Which test is commonly used to evaluate ovarian cysts?",
-    options: ["Ultrasound", "ECG", "MRI of the brain", "Colonoscopy"],
-    answer: "Ultrasound"
+    question: "Endometriomas are also known as:",
+    options: [
+      "Chocolate cysts",
+      "Water cysts",
+      "Dermoid cysts",
+      "Blood clots"
+    ],
+    answer: "Chocolate cysts"
   },
   {
-    question: "Can ovarian diseases impact fertility?",
-    options: ["Yes", "No"],
-    answer: "Yes"
+    question: "Ovarian torsion is a:",
+    options: [
+      "Normal part of menstruation",
+      "Medical emergency",
+      "Menopausal symptom",
+      "Type of infection"
+    ],
+    answer: "Medical emergency"
   },
   {
-    question: "Which lifestyle change can help manage PCOS symptoms?",
-    options: ["Regular exercise", "Increased sugar intake", "Smoking", "Sedentary lifestyle"],
-    answer: "Regular exercise"
+    question: "Which test assesses ovarian reserve?",
+    options: ["CA-125", "Hemoglobin", "AMH", "ESR"],
+    answer: "AMH"
+  },
+  {
+    question: "Most common ovarian cysts are:",
+    options: [
+      "Cancerous",
+      "Functional",
+      "Endometriomas",
+      "Torsions"
+    ],
+    answer: "Functional"
+  },
+  {
+    question: "Which ovarian disease affects teenage girls most often?",
+    options: ["PCOS", "Ovarian cancer", "POI", "None of the above"],
+    answer: "PCOS"
+  },
+  {
+    question: "What hormone is high in PCOS?",
+    options: ["Insulin", "Estrogen", "Oxytocin", "Cortisol"],
+    answer: "Insulin"
+  },
+  {
+    question: "Common PCOS symptoms include:",
+    options: [
+      "Acne",
+      "Irregular periods",
+      "Facial hair",
+      "All of the above"
+    ],
+    answer: "All of the above"
+  },
+  {
+    question: "Ovarian cancer risk increases with:",
+    options: [
+      "Smoking",
+      "Age >50",
+      "Family history",
+      "All of the above"
+    ],
+    answer: "All of the above"
+  },
+  {
+    question: "Which is NOT a cyst type?",
+    options: [
+      "Dermoid",
+      "Endometrial",
+      "Hemorrhagic",
+      "Insulin"
+    ],
+    answer: "Insulin"
+  },
+  {
+    question: "Pain on one side during ovulation may suggest:",
+    options: [
+      "Torsion",
+      "Mittelschmerz",
+      "Infection",
+      "Fibroid"
+    ],
+    answer: "Mittelschmerz"
+  },
+  {
+    question: "CA-125 is used to detect:",
+    options: [
+      "Liver disease",
+      "Kidney failure",
+      "Ovarian cancer",
+      "PCOS"
+    ],
+    answer: "Ovarian cancer"
+  },
+  {
+    question: "Which hormone is often low in POI?",
+    options: ["FSH", "AMH", "TSH", "LH"],
+    answer: "AMH"
+  },
+  {
+    question: "Fertility is preserved best with:",
+    options: [
+      "Hysterectomy",
+      "Oophorectomy",
+      "Cystectomy",
+      "Oncosurgery"
+    ],
+    answer: "Cystectomy"
+  },
+  {
+    question: "Ultrasound helps in:",
+    options: [
+      "Blood test",
+      "Cyst detection",
+      "CT scanning",
+      "MRI"
+    ],
+    answer: "Cyst detection"
+  },
+  {
+    question: "Early menopause is also called:",
+    options: ["PCOS", "POI", "PID", "PMS"],
+    answer: "POI"
+  },
+  {
+    question: "Laparoscopy is used for:",
+    options: [
+      "Thyroid surgery",
+      "Appendix",
+      "Ovary & pelvic disease",
+      "Headache"
+    ],
+    answer: "Ovary & pelvic disease"
+  },
+  {
+    question: "Ovarian drilling is used in:",
+    options: ["Endometriosis", "PCOS", "Menopause", "POI"],
+    answer: "PCOS"
+  },
+  {
+    question: "Which is a non-cancerous cyst?",
+    options: [
+      "Endometrioma",
+      "Functional cyst",
+      "Oncocyst",
+      "Sarcoma"
+    ],
+    answer: "Functional cyst"
+  },
+  {
+    question: "PCOS affects fertility by:",
+    options: [
+      "Preventing ovulation",
+      "Affecting uterus",
+      "Blocking tubes",
+      "Thinning the lining"
+    ],
+    answer: "Preventing ovulation"
+  },
+  {
+    question: "Which test is most reliable for PCOS diagnosis?",
+    options: [
+      "Ultrasound and hormones",
+      "CT scan",
+      "ECG",
+      "X-ray"
+    ],
+    answer: "Ultrasound and hormones"
+  },
+  {
+    question: "Ovarian cysts often resolve in:",
+    options: [
+      "1–2 days",
+      "1–2 months",
+      "1–2 years",
+      "Never"
+    ],
+    answer: "1–2 months"
+  },
+  {
+    question: "A dermoid cyst may contain:",
+    options: [
+      "Air",
+      "Teeth and hair",
+      "Fat only",
+      "Blood"
+    ],
+    answer: "Teeth and hair"
+  },
+  {
+    question: "POI may cause:",
+    options: [
+      "Excess bleeding",
+      "Late menopause",
+      "Hot flashes, infertility",
+      "Acne only"
+    ],
+    answer: "Hot flashes, infertility"
   }
 ];
+
 
 const OvarianDiseases = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});
@@ -67,35 +263,134 @@ const OvarianDiseases = () => {
       <p className="lead">"Silent disruptors of hormonal harmony."</p>
 
       <section className="info-section">
-        <p>
-          Ovarian diseases encompass a range of conditions that affect ovarian health and function, including cysts, infections, hormonal imbalances, and tumors. Many ovarian disorders can impact fertility, menstrual regularity, and overall well-being. At Sukam Speciality Clinic and Fertility Centre, we offer comprehensive diagnosis and personalized treatment plans to restore ovarian health and hormonal balance.
-        </p>
+  <h3>1️⃣ Understanding the Ovaries</h3>
+  <p>
+    The ovaries are two small, oval-shaped organs located on either side of the uterus. These powerhouse glands serve two primary roles:
+  </p>
+  <ul>
+    <li>Produce eggs (ova) for reproduction</li>
+    <li>Secrete hormones — estrogen, progesterone, and small amounts of testosterone</li>
+  </ul>
+  <p>
+    Ovaries orchestrate the menstrual cycle, regulate fertility, and influence mood, skin, and heart health. Disruptions in ovarian function can lead to various conditions.
+  </p>
 
-        <h3>🩺 What We Offer:</h3>
-        <ul>
-          <li>Detailed evaluation including ultrasound and hormonal testing</li>
-          <li>Diagnosis of ovarian cysts, PCOS, infections, and tumors</li>
-          <li>Medical management of hormonal imbalances and symptoms</li>
-          <li>Minimally invasive surgical treatment when necessary</li>
-          <li>Fertility counseling and support</li>
-          <li>Regular follow-up for monitoring and health maintenance</li>
-        </ul>
+  <h3>2️⃣ Categories of Ovarian Diseases</h3>
+  <p>Ovarian diseases typically fall into four categories:</p>
+  <ul>
+    <li><strong>Hormonal disorders:</strong> PCOS, POI</li>
+    <li><strong>Structural abnormalities:</strong> Cysts, tumors, torsion</li>
+    <li><strong>Infectious/inflammatory:</strong> PID affecting ovaries</li>
+    <li><strong>Malignancy:</strong> Ovarian cancer</li>
+  </ul>
 
-        <h3>💡 Tips for Ovarian Health:</h3>
-        <ul>
-          <li>Maintain a balanced diet rich in antioxidants and vitamins</li>
-          <li>Exercise regularly to support hormonal balance</li>
-          <li>Avoid excessive stress through relaxation techniques</li>
-          <li>Keep regular gynecological check-ups and screenings</li>
-          <li>Follow prescribed treatments diligently</li>
-        </ul>
+  <h3>3️⃣ Common Ovarian Conditions</h3>
+  <h4>🌀 A. Polycystic Ovary Syndrome (PCOS)</h4>
+  <p>
+    Affects 1 in 10 women globally. Causes include genetic predisposition, insulin resistance, and elevated androgens.
+  </p>
+  <ul>
+    <li><strong>Symptoms:</strong> Irregular cycles, hirsutism, acne, weight gain, infertility</li>
+    <li><strong>Complications:</strong> Diabetes, high cholesterol, endometrial hyperplasia</li>
+    <li><strong>Diagnosis:</strong> Based on Rotterdam criteria</li>
+    <li><strong>Management:</strong> Lifestyle changes, metformin, oral contraceptives, ovulation induction, ovarian drilling</li>
+  </ul>
 
-        <h3>❌ Myth vs Fact:</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> "Ovarian cysts always need surgery."<br /><strong>✅ Truth:</strong> Many cysts resolve on their own and can be monitored without surgery.</li>
-          <li><strong>❌ Myth:</strong> "PCOS only affects overweight women."<br /><strong>✅ Truth:</strong> PCOS can affect women of all body types.</li>
-        </ul>
-      </section>
+  <h4>🌀 B. Ovarian Cysts</h4>
+  <p>Fluid-filled sacs; most are benign and self-resolving.</p>
+  <ul>
+    <li><strong>Types:</strong> Functional, dermoid, endometriomas, hemorrhagic, cystadenomas</li>
+    <li><strong>Symptoms:</strong> Pelvic pain, bloating, pain during intercourse, irregular bleeding</li>
+    <li><strong>Treatment:</strong> Observation or surgical removal depending on complexity</li>
+  </ul>
+
+  <h4>🌀 C. Endometriosis of the Ovary (Endometrioma)</h4>
+  <p>
+    Endometriomas are cysts filled with old blood caused by endometriosis.
+  </p>
+  <ul>
+    <li><strong>Symptoms:</strong> Chronic pelvic pain, painful periods, infertility</li>
+    <li><strong>Diagnosis:</strong> Ultrasound, MRI, or laparoscopy</li>
+    <li><strong>Management:</strong> Hormonal suppression, laparoscopy, IVF</li>
+  </ul>
+
+  <h4>🌀 D. Ovarian Torsion</h4>
+  <p>A medical emergency involving ovary twisting and reduced blood flow.</p>
+  <ul>
+    <li><strong>Symptoms:</strong> Sudden one-sided pelvic pain, nausea, vomiting</li>
+    <li><strong>Diagnosis:</strong> Doppler ultrasound</li>
+    <li><strong>Treatment:</strong> Emergency laparoscopy; oophorectomy if necrotic</li>
+  </ul>
+
+  <h4>🌀 E. Premature Ovarian Insufficiency (POI)</h4>
+  <p>
+    Early menopause before age 40. Often due to genetics, autoimmune disease, or cancer treatment.
+  </p>
+  <ul>
+    <li><strong>Symptoms:</strong> Hot flashes, irregular periods, infertility</li>
+    <li><strong>Diagnosis:</strong> High FSH, low estrogen & AMH, small follicles on ultrasound</li>
+    <li><strong>Management:</strong> HRT, egg donation or IVF if needed</li>
+  </ul>
+
+  <h4>🌀 F. Ovarian Cancer</h4>
+  <p>
+    Known as the "silent killer" due to vague symptoms. Types include epithelial (common), germ cell, and sex cord-stromal tumors.
+  </p>
+  <ul>
+    <li><strong>Symptoms:</strong> Bloating, pelvic pain, early satiety, urinary symptoms</li>
+    <li><strong>Diagnosis:</strong> CA-125, ultrasound, MRI, biopsy</li>
+    <li><strong>Treatment:</strong> Surgery, chemotherapy, targeted therapy</li>
+  </ul>
+
+  <h3>4️⃣ Diagnosis at Sukam Speciality Clinic</h3>
+  <ul>
+    <li>Detailed history and pelvic exam</li>
+    <li>Hormonal blood tests (FSH, LH, AMH, Prolactin, TSH)</li>
+    <li>Ultrasound (transvaginal or abdominal)</li>
+    <li>MRI/CT for complex cases</li>
+    <li>Tumor markers: CA-125, AFP, hCG, LDH</li>
+    <li>Laparoscopy if needed</li>
+  </ul>
+
+  <h3>5️⃣ Treatment Principles</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Condition</th>
+        <th>Goal</th>
+        <th>Treatment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>PCOS</td><td>Hormone balance & ovulation</td><td>Lifestyle, meds, ovulation drugs</td></tr>
+      <tr><td>Cysts</td><td>Relieve pain, prevent rupture</td><td>Observe or surgical removal</td></tr>
+      <tr><td>Endometriosis</td><td>Pain relief & fertility</td><td>Hormonal suppression, excision</td></tr>
+      <tr><td>POI</td><td>Restore hormones & protect bones</td><td>HRT, egg donation if desired</td></tr>
+      <tr><td>Torsion</td><td>Save ovary</td><td>Emergency laparoscopy</td></tr>
+      <tr><td>Cancer</td><td>Cure or control spread</td><td>Surgery, chemotherapy, targeted therapy</td></tr>
+    </tbody>
+  </table>
+
+  <h3>6️⃣ Lifestyle Advice</h3>
+  <ul>
+    <li>Eat hormone-supportive foods (fiber-rich, healthy fats, low sugar)</li>
+    <li>Exercise 150 minutes/week</li>
+    <li>Maintain a healthy weight — crucial in PCOS</li>
+    <li>Practice stress-reduction: yoga, mindfulness</li>
+    <li>Avoid smoking</li>
+    <li>Schedule regular gynecological checkups</li>
+  </ul>
+
+  <h3>7️⃣ Patient FAQ</h3>
+  <ul>
+    <li><strong>Can I get pregnant with a cyst or PCOS?</strong><br />Yes — many women conceive with treatment.</li>
+    <li><strong>Do all cysts require surgery?</strong><br />No — many resolve without surgery.</li>
+    <li><strong>What if I have pain on one side each month?</strong><br />Could be ovulation (mittelschmerz) or a cyst — get an ultrasound.</li>
+    <li><strong>Should I do CA-125 testing regularly?</strong><br />Not unless symptoms or strong family history exist.</li>
+    <li><strong>I had one ovary removed. Can I still conceive?</strong><br />Yes — the other ovary can ovulate and support pregnancy.</li>
+  </ul>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Ovarian Diseases Quiz – How Much Do You Know?</h2>

@@ -140,49 +140,119 @@ const OperativeDeliveries = () => {
       <p className="lead">“When safe arrival needs surgical precision.”</p>
 
       <section className="info-section">
-        <p>
-          Operative deliveries—such as cesarean sections or assisted vaginal deliveries with forceps or vacuum—are critical options when normal labor faces complications. At Sukam Speciality Clinic and Fertility Centre, we combine advanced technology, expert surgical skill, and compassionate care to ensure the best outcomes for mother and baby.
-        </p>
-        <p>
-          Our multidisciplinary team supports you before, during, and after the procedure, focusing on safety, comfort, and recovery.
-        </p>
+  <h3>⚕️ What Are Operative Deliveries?</h3>
+  <p>
+    An operative delivery means your doctor uses medical tools or surgery to help safely deliver your baby during labor. This is done only when it's necessary for your baby’s health, your safety, or both.
+  </p>
+  <p>Types of operative deliveries:</p>
+  <ul>
+    <li>1. Assisted Vaginal Deliveries
+      <ul>
+        <li>• Forceps Delivery</li>
+        <li>• Vacuum (Ventouse) Extraction</li>
+      </ul>
+    </li>
+    <li>2. Cesarean Section (C-Section)
+      <ul>
+        <li>• Elective (planned)</li>
+        <li>• Emergency (during labor)</li>
+      </ul>
+    </li>
+  </ul>
+  <p>
+    At Sukam, we aim for natural birth but are fully equipped for operative delivery when needed — with safety, compassion, and minimal intervention.
+  </p>
 
-        <h3>🩺 What We Offer:</h3>
-        <ul>
-          <li>Comprehensive pre-operative counseling and birth planning</li>
-          <li>State-of-the-art surgical facilities with infection control</li>
-          <li>Skilled obstetricians experienced in emergency and elective C-sections</li>
-          <li>Assisted vaginal delivery options when safe and appropriate</li>
-          <li>Postoperative pain management and early mobilization</li>
-          <li>Breastfeeding and newborn care support after surgery</li>
-          <li>Emotional counseling to address birth experience and expectations</li>
-        </ul>
+  <h3>📌 When Is Operative Delivery Needed?</h3>
+  <ul>
+    <li><strong>For the baby:</strong>
+      <ul>
+        <li>• Heart rate drops (fetal distress)</li>
+        <li>• Not descending despite strong pushing</li>
+        <li>• Cord around neck</li>
+        <li>• Meconium-stained fluid</li>
+      </ul>
+    </li>
+    <li><strong>For the mother:</strong>
+      <ul>
+        <li>• Prolonged second stage of labor</li>
+        <li>• Severe exhaustion or inability to push</li>
+        <li>• Health conditions (heart disease, preeclampsia)</li>
+        <li>• Uterine rupture risk or previous C-section complications</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Remember:</strong> A healthy baby and mother are always the ultimate goal — the method of delivery does not define your strength.</p>
 
-        <h3>🤔 When Is Operative Delivery Needed?</h3>
-        <ul>
-          <li>Prolonged labor or failure to progress</li>
-          <li>Fetal distress or abnormal heart rate</li>
-          <li>Placenta previa or abruptio placentae</li>
-          <li>Multiple pregnancies (twins, triplets)</li>
-          <li>Maternal health issues (e.g., high blood pressure, diabetes)</li>
-          <li>Previous cesarean section with risk factors</li>
-        </ul>
+  <h3>🔧 Forceps-Assisted Delivery</h3>
+  <p>Forceps are spoon-shaped metal instruments gently placed around the baby’s head to help guide them out during a contraction.</p>
+  <p><strong>Used when:</strong></p>
+  <ul>
+    <li>• Baby is low in the birth canal</li>
+    <li>• Mother is too exhausted to push</li>
+    <li>• Baby needs quick delivery</li>
+  </ul>
+  <p><strong>Experience:</strong> Pressure, not pain (anesthesia is provided). Minor marks may appear on baby’s head but usually fade in a few days.</p>
 
-        <h3>💡 Tips for Preparing for Operative Delivery:</h3>
-        <ul>
-          <li>Discuss your birth preferences and fears openly with your care team</li>
-          <li>Attend prenatal classes covering cesarean and assisted deliveries</li>
-          <li>Understand anesthesia options and recovery timelines</li>
-          <li>Arrange emotional support for after delivery</li>
-          <li>Follow post-operative care instructions closely for faster healing</li>
-        </ul>
+  <h3>🧲 Vacuum-Assisted Delivery (Ventouse)</h3>
+  <p>A soft suction cup is placed on the baby’s head to help gently pull the baby out during contractions.</p>
+  <p><strong>Used when:</strong></p>
+  <ul>
+    <li>• Prolonged pushing</li>
+    <li>• Baby’s head needs repositioning</li>
+    <li>• Preferred over forceps in selected cases</li>
+  </ul>
+  <p>May cause a temporary swelling (chignon) on the baby’s head — usually resolves in 2–3 days.</p>
 
-        <h3>🚫 Myth vs Fact:</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “C-section means you failed to deliver naturally.”<br /><strong>✅ Truth:</strong> It’s a medically necessary intervention to keep you and baby safe—not a failure.</li>
-          <li><strong>❌ Myth:</strong> “Operative delivery means the baby won’t bond or breastfeed well.”<br /><strong>✅ Truth:</strong> Early skin-to-skin contact and breastfeeding support make bonding strong regardless of delivery mode.</li>
-        </ul>
-      </section>
+  <h3>✂️ Cesarean Section (C-Section)</h3>
+  <p>A C-section is a surgical procedure to deliver the baby through an incision in the mother's abdomen and uterus.</p>
+  <p><strong>Planned when:</strong></p>
+  <ul>
+    <li>• Breech/transverse baby</li>
+    <li>• Placenta previa</li>
+    <li>• Twins or higher-order multiples</li>
+    <li>• Maternal medical conditions</li>
+    <li>• Previous C-section or uterine surgery</li>
+  </ul>
+  <p><strong>Emergency C-section:</strong> Non-progressive labor, fetal distress, cord prolapse, or uterine rupture risk.</p>
+
+  <h3>🔍 What Happens During a C-Section?</h3>
+  <ul>
+    <li>• Spinal anesthesia is given (you’re awake, but no pain)</li>
+    <li>• Horizontal incision is made (bikini line)</li>
+    <li>• Baby is delivered within 10–15 minutes</li>
+    <li>• Total surgery duration: ~45 minutes</li>
+    <li>• Partner may be allowed inside for elective surgeries — check with your doctor</li>
+  </ul>
+
+  <h3>💪 Recovery After Operative Delivery</h3>
+  <p><strong>After Forceps/Vacuum:</strong></p>
+  <ul>
+    <li>• Mild soreness or swelling</li>
+    <li>• Episiotomy stitches heal in 1–2 weeks</li>
+    <li>• Pain relief medications provided</li>
+  </ul>
+  <p><strong>After C-Section:</strong></p>
+  <ul>
+    <li>• Hospital stay: 3–5 days</li>
+    <li>• Walking encouraged within 24 hours</li>
+    <li>• Breastfeeding can begin early</li>
+    <li>• Full recovery: 4–6 weeks</li>
+  </ul>
+  <p>Sukam provides postnatal physiotherapy, scar care, and lactation support during recovery.</p>
+
+  <h3>🌸 Operative Delivery at Sukam – Your Safety Comes First</h3>
+  <ul>
+    <li>💗 Shared decision-making and full explanation of procedures</li>
+    <li>🧑‍⚕️ Skilled obstetricians and anesthetists</li>
+    <li>🧴 Pain-relief and gentle surgical methods</li>
+    <li>🧘 Post-op yoga, breathing, and early mobility support</li>
+    <li>🍼 Breastfeeding help and emotional reassurance</li>
+    <li>📦 Mental health counseling for those who hoped for vaginal birth</li>
+  </ul>
+  <p><strong>Every birth is beautiful — and your strength is never defined by the method of delivery.</strong></p>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Operative Delivery Quiz — How Much Do You Know?</h2>

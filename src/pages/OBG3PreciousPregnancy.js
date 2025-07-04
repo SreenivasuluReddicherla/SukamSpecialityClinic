@@ -108,38 +108,99 @@ const PreciousPregnancy = () => {
       </p>
 
       <section className="info-section">
-        <p>
-          A Precious Pregnancy is one that follows a long wait, emotional journey, or medical challenges—often after fertility treatments like IVF, IUI, or following previous pregnancy losses. At Sukam, we understand that these pregnancies come wrapped in hope, fear, and deep emotion.
-        </p>
+  <h3>💖 What Is a Precious Pregnancy?</h3>
+  <p>
+    A precious pregnancy is one that holds special emotional and medical value — typically following a long journey of hope, heartbreak, and healing. This may include:
+  </p>
+  <ul>
+    <li>Conception after fertility treatment (IVF, ICSI, IUI)</li>
+    <li>Pregnancy after multiple miscarriages or losses</li>
+    <li>Pregnancy following stillbirth or neonatal loss</li>
+    <li>Older maternal age (35+)</li>
+    <li>Pregnancy after long-standing infertility or uterine surgery</li>
+  </ul>
+  <p>
+    These pregnancies require closer medical supervision and emotional support to ensure the well-being of both mother and baby.
+  </p>
 
-        <p>
-          Our care goes beyond the medical—we offer constant reassurance, expert supervision, and emotional nurturing every step of the way. With compassion at our core and clinical excellence in our hands, we help you walk this path with confidence and peace.
-        </p>
+  <h3>🩺 Medical Background & Risk Factors</h3>
+  <ul>
+    <li><strong>Fertility Treatments:</strong> IVF, ICSI, IUI, donor gametes, frozen embryo transfers, low ovarian reserve</li>
+    <li><strong>Maternal Conditions:</strong> Recurrent losses, thyroid dysfunction, APLA syndrome, fibroids, autoimmune issues</li>
+    <li><strong>Emotional Circumstances:</strong> Anxiety, emotional/financial exhaustion, social pressure</li>
+  </ul>
+  <p>These cases need both medical expertise and emotional care — a combination we provide at Sukam.</p>
 
-        <h3>🧪 What We Offer:</h3>
-        <ul>
-          <li>Personalized antenatal care for IVF/IUI pregnancies</li>
-          <li>Close fetal monitoring with high-frequency scans and growth charts</li>
-          <li>High-level emotional and psychological support</li>
-          <li>Multidisciplinary care team including fertility specialists and obstetricians</li>
-          <li>Planning and support for smooth delivery and recovery</li>
-        </ul>
+  <h3>📋 First Steps in Precious Pregnancy Care</h3>
+  <ul>
+    <li>Viability scan at 6–8 weeks to confirm heartbeat</li>
+    <li>Continued hormonal support (progesterone, hCG)</li>
+    <li>Bloodwork: beta-hCG trends, progesterone, thyroid, clotting, sugar</li>
+    <li>Begin early emotional support and counseling</li>
+  </ul>
+  <p>More frequent checkups — weekly or biweekly — are common in the first trimester, especially after previous losses.</p>
 
-        <h3>💡 Gentle Tips for a Precious Pregnancy:</h3>
-        <ul>
-          <li>Practice mindfulness and positive visualization daily</li>
-          <li>Keep a pregnancy journal to process emotions and track milestones</li>
-          <li>Avoid online over-research—trust your care team</li>
-          <li>Ask for support when you feel overwhelmed</li>
-          <li>Attend childbirth and breastfeeding preparation classes</li>
-        </ul>
+  <h3>🧠 Emotional Wellbeing in Precious Pregnancy</h3>
+  <p>
+    Thoughts like “I’m afraid to hope” or “I still cry for the baby I lost” are common. We support emotional safety with:
+  </p>
+  <ul>
+    <li>✅ Private, unrushed consultations</li>
+    <li>✅ Partner counseling & validation</li>
+    <li>✅ Guided journaling, mindfulness support</li>
+    <li>✅ Optional support group referrals</li>
+  </ul>
+  <p><strong>Joy and fear can coexist — and that’s okay.</strong></p>
 
-        <h3>❌ Myth vs. Fact</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “Precious pregnancies always need C-sections.”<br /><strong>✅ Truth:</strong> Many precious pregnancies can result in normal deliveries with proper support.</li>
-          <li><strong>❌ Myth:</strong> “You shouldn’t move around much.”<br /><strong>✅ Truth:</strong> Moderate activity is healthy unless advised otherwise by your doctor.</li>
-        </ul>
-      </section>
+  <h3>🍎 Nutrition & 🛌 Rest for the Precious Mother</h3>
+  <ul>
+    <li><strong>Nutrition:</strong> Protein-rich diet, folic acid, iron, calcium, low-GI foods, 8–10 glasses water/day</li>
+    <li><strong>Avoid:</strong> Raw meat, processed snacks, excess caffeine, papaya/pineapple in early pregnancy</li>
+    <li><strong>Rest:</strong> 8–10 hours sleep + naps, avoid long travel, heavy lifting, climbing stairs quickly</li>
+  </ul>
+  <p>Even mental rest matters — limit stress, screen time, and loud environments.</p>
+
+  <h3>📅 Scans and Monitoring Schedule</h3>
+  <ul>
+    <li><strong>6–8 weeks:</strong> Viability scan</li>
+    <li><strong>11–13 weeks:</strong> NT scan + dual marker</li>
+    <li><strong>16–18 weeks:</strong> Cervical length scan</li>
+    <li><strong>18–20 weeks:</strong> Anomaly scan</li>
+    <li><strong>24–28 weeks:</strong> Glucose tolerance test (GTT)</li>
+    <li><strong>28–32 weeks:</strong> Growth + Doppler scan</li>
+    <li><strong>36–38 weeks:</strong> Final growth scan</li>
+  </ul>
+  <p>Additional tests may include clotting profiles, beta-hCG serial testing, or fetal echocardiography.</p>
+
+  <h3>💊 Medication & Medical Support</h3>
+  <ul>
+    <li><strong>Hormones:</strong> Progesterone, hCG, estrogen (in FET cycles)</li>
+    <li><strong>Blood thinners:</strong> Low-dose aspirin, heparin (for clotting disorders)</li>
+    <li><strong>Hospital rest:</strong> For placental issues, bleeding, or short cervix</li>
+  </ul>
+  <p>Medication plans are personalized — avoid comparing your regimen with others.</p>
+
+  <h3>🍼 Delivery Planning in Precious Pregnancy</h3>
+  <ul>
+    <li>Delivery plan based on conception type, placental and fetal health</li>
+    <li>Options: Monitored vaginal birth or elective cesarean</li>
+    <li>NICU alert, birth coach and emotional preparation included</li>
+  </ul>
+
+  <h3>👩‍⚕️ How Sukam Supports Precious Pregnancies</h3>
+  <ul>
+    <li>✅ OB-GYNs with expertise in IVF and pregnancy loss</li>
+    <li>✅ In-house Fetal Medicine Unit</li>
+    <li>✅ Weekly progesterone clinics & custom scan schedules</li>
+    <li>✅ Clotting profile and genetic counseling</li>
+    <li>✅ 24x7 NICU support</li>
+    <li>✅ Nutrition and psychology support</li>
+    <li>✅ Partner education & gentle birth planning</li>
+    <li>✅ Postpartum mental health care</li>
+  </ul>
+  <p><strong>We care with our minds, and treat with our hearts.</strong></p>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Quiz – How Well Do You Know Precious Pregnancy?</h2>

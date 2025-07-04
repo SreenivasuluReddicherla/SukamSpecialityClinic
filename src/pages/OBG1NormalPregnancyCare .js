@@ -101,48 +101,98 @@ const NormalPregnancyCare = () => {
       </p>
 
       <section className="info-section">
-        <p>
-          At Sukam Speciality Clinic and Fertility Centre, we believe that every pregnancy deserves joyful beginnings and trusted care. Our Normal Pregnancy Care services are designed to support expectant mothers through a healthy, natural journey—ensuring the well-being of both mother and baby.
-        </p>
-        <p>
-          From your first positive test to the moment you hear your baby cry for the first time, we’re with you every step of the way. Our warm, family-friendly environment, coupled with experienced doctors, makes your experience safe, empowering, and memorable.
-        </p>
+  <h3>🤰 What Is Normal Pregnancy Care?</h3>
+  <p>
+    Normal pregnancy care refers to regular medical checkups, screenings, nutrition, emotional support, and lifestyle practices for a healthy pregnancy journey. It ensures that both the mother and baby are growing well and prepares the family for safe childbirth.
+  </p>
+  <p>
+    At Sukam Speciality Clinic & Fertility Centre, we follow an evidence-based yet compassionate approach — blending clinical precision with holistic wellness.
+  </p>
 
-        <h3>🧪 What We Offer:</h3>
-        <ul>
-          <li>Monthly to weekly antenatal checkups</li>
-          <li>Fetal scans and growth monitoring</li>
-          <li>Nutritional counseling and meal planning</li>
-          <li>Prenatal yoga and fitness guidance</li>
-          <li>Personalized birthing plans</li>
-          <li>Breastfeeding preparation and parent education</li>
-        </ul>
+  <h3>🩺 Your First Antenatal Visit (Week 6–8)</h3>
+  <ul>
+    <li>✅ Confirmation of pregnancy via scan</li>
+    <li>✅ Estimating due date</li>
+    <li>✅ Initial blood and urine tests</li>
+    <li>✅ Thyroid, hemoglobin, and sugar level testing</li>
+    <li>✅ Starting folic acid and iron supplements</li>
+    <li>✅ Counseling on nutrition, rest, and red-flag symptoms</li>
+  </ul>
+  <p><strong>Emotional Tip:</strong> It’s normal to feel anxious. Ask questions and express fears — your doctor is here to listen.</p>
 
-        <h3>🥗 Nutrition Tips for a Healthy Pregnancy:</h3>
-        <ul>
-          <li>Include iron-rich foods (leafy greens, dates, millets) and calcium sources (dairy, ragi)</li>
-          <li>Eat small, frequent meals to manage nausea and energy levels</li>
-          <li>Stay hydrated—aim for at least 8–10 glasses of water per day</li>
-          <li>Include good fats like ghee, nuts, and seeds in moderation</li>
-          <li>Take folic acid and other prenatal supplements as advised</li>
-        </ul>
+  <h3>📅 Your Trimester-Wise Pregnancy Journey</h3>
+  <ul>
+    <li><strong>First Trimester (0–12 weeks):</strong> Fatigue, nausea, emotional swings. Focus on folic acid, hydration, rest, NT scan.</li>
+    <li><strong>Second Trimester (13–28 weeks):</strong> Appetite changes, backache. Anomaly scan, GTT, iron/calcium supplements, light exercise.</li>
+    <li><strong>Third Trimester (29–40 weeks):</strong> Pelvic discomfort, breathlessness. Growth scans, fetal monitoring, labor preparation.</li>
+  </ul>
 
-        <h3>🧘‍♀️ Tips to Support Natural Delivery:</h3>
-        <ul>
-          <li>Stay physically active with regular walking and prenatal stretches</li>
-          <li>Practice breathing techniques and meditation to ease labor anxiety</li>
-          <li>Keep your posture upright during daily activities</li>
-          <li>Trust your body’s strength and attend birthing classes</li>
-          <li>Communicate openly with your care team about labor preferences</li>
-        </ul>
+  <h3>🥗 Nutrition and Supplements for Pregnancy</h3>
+  <p>Pregnancy requires an extra 300–500 calories/day in later trimesters. Key nutrients include:</p>
+  <ul>
+    <li><strong>Folic Acid:</strong> Prevents birth defects – green leafy vegetables, fortified grains</li>
+    <li><strong>Iron:</strong> Prevents anemia – spinach, dates, jaggery, meats</li>
+    <li><strong>Calcium:</strong> Baby’s bones & teeth – milk, ragi, sesame seeds</li>
+    <li><strong>Protein:</strong> Tissue building – eggs, legumes, lean meat</li>
+    <li><strong>Fiber:</strong> Prevents constipation – fruits, whole grains</li>
+  </ul>
+  <p>⚠️ Avoid raw meat, papaya/pineapple (early pregnancy), alcohol, excess caffeine, and unpasteurized cheese.</p>
 
-        <h3>❌ Common Myths About Pregnancy:</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “You need to eat for two.”<br /><strong>✅ Truth:</strong> Quality over quantity matters—balanced nutrition, not double meals.</li>
-          <li><strong>❌ Myth:</strong> “Exercise is dangerous in pregnancy.”<br /><strong>✅ Truth:</strong> Moderate, guided physical activity is beneficial and supports normal delivery.</li>
-          <li><strong>❌ Myth:</strong> “All cravings must be fulfilled.”<br /><strong>✅ Truth:</strong> Listen to your body, but keep portions and health in check.</li>
-        </ul>
-      </section>
+  <h3>🧘‍♀️ Exercise, Sleep & Emotional Health</h3>
+  <ul>
+    <li>Walking, prenatal yoga, breathing (with clearance)</li>
+    <li>7–9 hrs sleep/day; left-side sleeping from 2nd trimester</li>
+    <li>Meditation, journaling, and mother-to-mother support</li>
+    <li>Partner involvement in appointments and support planning</li>
+  </ul>
+  <p><strong>Note:</strong> A happy mind builds a secure baby. Mind and body are deeply connected.</p>
+
+  <h3>📝 Essential Tests & Scans (Checklist Format)</h3>
+  <ul>
+    <li><strong>Week 6–8:</strong> Ultrasound – Confirm pregnancy & heartbeat</li>
+    <li><strong>Week 11–13:</strong> NT Scan – Screen for Down Syndrome</li>
+    <li><strong>Week 18–20:</strong> Anomaly Scan – Baby’s organ development</li>
+    <li><strong>Week 24–28:</strong> GTT – Detect gestational diabetes</li>
+    <li><strong>Week 32–36:</strong> Growth Scan – Baby’s size, fluid, position</li>
+  </ul>
+  <p>All scans are safe, non-invasive, and performed with privacy and care.</p>
+
+  <h3>👜 Preparing for Labor & Delivery</h3>
+  <ul>
+    <li>✅ Choose your delivery hospital</li>
+    <li>✅ Know signs of labor: contractions, fluid leak, back pain</li>
+    <li>✅ Attend antenatal classes</li>
+    <li>✅ Pack hospital bag by 36 weeks</li>
+    <li>✅ Discuss pain relief options (epidural, breathing techniques)</li>
+  </ul>
+  <p>
+    <strong>Delivery Modes:</strong> 
+    <br />
+    • Normal vaginal delivery – safe and natural for most <br />
+    • C-section – considered for complications or baby’s position
+  </p>
+  <p>Your doctor will guide you – mother and baby’s safety come first.</p>
+
+  <h3>👨‍👩‍👧 What to Expect at Sukam</h3>
+  <ul>
+    <li>✨ Expert obstetric care from conception to delivery</li>
+    <li>🧬 In-house blood tests & scans</li>
+    <li>🥗 Antenatal diet & nutrition counseling</li>
+    <li>🧘 Prenatal yoga & pelvic floor strengthening</li>
+    <li>🍼 Lactation support and postnatal counseling</li>
+    <li>❤️ Peaceful, mother-friendly care space</li>
+    <li>🤱 Continuous support during labor with birth planning</li>
+  </ul>
+
+  <h3>🌈 Your Pregnancy Journey with Sukam</h3>
+  <p>
+    Pregnancy is not just about waiting — it’s about preparing, caring, and celebrating.
+    <br />
+    At Sukam, we offer a complete pregnancy care ecosystem — from diagnosis to delivery and beyond.
+  </p>
+  <blockquote>“We don’t just count your weeks, we walk your journey.”</blockquote>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧐 Fun Pregnancy Quiz – Test Your Knowledge!</h2>

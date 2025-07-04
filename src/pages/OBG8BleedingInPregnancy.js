@@ -140,33 +140,81 @@ const BleedingInPregnancy = () => {
       <p className="lead">“A red flag on the road to motherhood.”</p>
 
       <section className="info-section">
-        <p>Bleeding during pregnancy can be alarming, but it doesn’t always mean danger. From spotting in early weeks to more significant bleeding later on, it requires careful evaluation and timely intervention.</p>
-        <p>At Sukam Speciality Clinic and Fertility Centre, we offer thorough diagnostics, personalized treatment plans, and compassionate care to ensure the safety of both mother and baby through every stage.</p>
+  <h3>💧 Is Bleeding During Pregnancy Normal?</h3>
+  <p>
+    Bleeding during pregnancy can be common, but it should never be ignored. It may happen at any point — from early implantation to labor — and causes range from harmless to serious.
+  </p>
+  <ul>
+    <li><strong>20–30% of pregnant women</strong> experience some bleeding</li>
+    <li>Many go on to have healthy pregnancies and deliveries</li>
+  </ul>
+  <p><strong>Key takeaway:</strong> Bleeding is not always dangerous, but must always be evaluated by a doctor.</p>
 
-        <h3>🩺 What We Offer:</h3>
-        <ul>
-          <li>Early pregnancy ultrasounds to determine cause of bleeding</li>
-          <li>Monitoring of maternal and fetal wellbeing</li>
-          <li>Management of conditions like threatened miscarriage, placenta previa, or abruptio placentae</li>
-          <li>Bed rest guidance and medication when needed</li>
-          <li>Continuous emotional support and counseling</li>
-        </ul>
+  <h3>🩸 Bleeding in the First Trimester (Weeks 1–12)</h3>
+  <ul>
+    <li><strong>Implantation Bleeding:</strong> Light pink/brown spotting, painless, lasts 1–2 days – <em>harmless</em></li>
+    <li><strong>Threatened Miscarriage:</strong> Bleeding + cramps, cervix is closed – <em>pregnancy may continue</em></li>
+    <li><strong>Miscarriage:</strong> Heavier bleeding, clots, pain, cervix may open – <em>confirmed by scan</em></li>
+    <li><strong>Ectopic Pregnancy:</strong> Severe pain, shoulder tip pain, dizziness – <em>life-threatening emergency</em></li>
+    <li><strong>Infections/Cervical Irritation:</strong> Light spotting after intercourse or Pap smear</li>
+  </ul>
 
-        <h3>⚠️ When to Seek Immediate Help:</h3>
-        <ul>
-          <li>Heavy bleeding with clots</li>
-          <li>Severe abdominal pain</li>
-          <li>Dizziness or fainting</li>
-          <li>Fever or chills</li>
-          <li>Decreased fetal movements</li>
-        </ul>
+  <h3>📅 Bleeding in the Second Trimester (Weeks 13–27)</h3>
+  <ul>
+    <li><strong>Placenta Previa:</strong> Painless bright red bleeding, placenta covers cervix – may require C-section</li>
+    <li><strong>Cervical Insufficiency:</strong> Painless cervical dilation – may be managed with cerclage</li>
+    <li><strong>Infections or Polyps:</strong> Vaginal or cervical sources of bleeding</li>
+  </ul>
+  <p><em>Close monitoring often prevents complications in these cases.</em></p>
 
-        <h3>🚫 Myth vs Fact</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “Light bleeding is harmless during pregnancy.”<br/><strong>✅ Truth:</strong> Even light bleeding should be evaluated to rule out complications.</li>
-          <li><strong>❌ Myth:</strong> “Bleeding always means miscarriage.”<br/><strong>✅ Truth:</strong> Many women with bleeding go on to have healthy pregnancies.</li>
-        </ul>
-      </section>
+  <h3>🩸 Bleeding in the Third Trimester (Weeks 28–40)</h3>
+  <ul>
+    <li><strong>Placenta Previa:</strong> Can bleed again later in pregnancy</li>
+    <li><strong>Placental Abruption:</strong> Painful bleeding, hard abdomen – <strong>emergency</strong></li>
+    <li><strong>Preterm Labor:</strong> Bleeding with early contractions</li>
+    <li><strong>Bloody Show:</strong> Mucus + blood near due date – <em>sign labor is starting</em></li>
+  </ul>
+
+  <h3>🔬 How Bleeding Is Evaluated at Sukam</h3>
+  <ul>
+    <li><strong>Pelvic Exam:</strong> To assess cervix and check for infection</li>
+    <li><strong>Ultrasound:</strong> To check baby’s heartbeat, placental location, cervical length</li>
+    <li><strong>Blood Tests:</strong> Beta-hCG, hemoglobin, blood group (Rh), etc.</li>
+    <li><strong>Urine/Vaginal Swab:</strong> To detect infections</li>
+  </ul>
+  <p>We ensure gentle care, reassurance, and transparent communication during every step.</p>
+
+  <h3>💊 Treatment Based on Cause</h3>
+  <ul>
+    <li><strong>Light bleeding (e.g., implantation):</strong> Rest, avoid intercourse, reassurance</li>
+    <li><strong>Threatened miscarriage:</strong> Bed rest, progesterone, serial scans</li>
+    <li><strong>Ectopic pregnancy:</strong> Methotrexate or emergency surgery</li>
+    <li><strong>Placenta previa/abruption:</strong> Hospital care, steroids, transfusion, emergency delivery if needed</li>
+  </ul>
+
+  <h3>🧠 Emotional Impact and Support</h3>
+  <p>Bleeding may trigger anxiety, fear, guilt, or sadness. At Sukam, we prioritize mental health alongside physical care.</p>
+  <ul>
+    <li>Private counseling and stress support</li>
+    <li>Partner involvement and education</li>
+    <li>Yoga and meditation for emotional balance</li>
+    <li>24x7 helpline for reassurance</li>
+  </ul>
+  <p><strong>You're not alone – we’re with you every step of the way.</strong></p>
+
+  <h3>🏥 How Sukam Handles Bleeding in Pregnancy</h3>
+  <ul>
+    <li>🩺 24x7 emergency evaluation and admission</li>
+    <li>🩷 Onsite ultrasound, lab, and fetal monitoring</li>
+    <li>💉 Blood transfusion access</li>
+    <li>👶 High-risk pregnancy team coordination</li>
+    <li>🧘 Stress and emotional counseling</li>
+    <li>🧑‍⚕️ OB-GYNs trained in first, second, and third-trimester bleeding</li>
+    <li>🧬 NICU and early delivery support if required</li>
+  </ul>
+  <p><strong>Every bleeding episode is managed with skill, speed, and sincere compassion at Sukam.</strong></p>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Bleeding in Pregnancy Quiz – Test Your Awareness</h2>

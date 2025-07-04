@@ -98,47 +98,128 @@ const NutritionExercisePregnancy = () => {
       <p className="lead">“Fuel the bump, move with purpose!”</p>
 
       <section className="info-section">
-        <p>
-          Healthy nutrition and safe exercise during pregnancy form the cornerstone of a smooth journey for both mother and baby. At Sukam Speciality Clinic and Fertility Centre, we guide you to eat well and stay active in ways that support growth, strength, and emotional balance.
-        </p>
+  <h3>🍎 Why Nutrition & Exercise Matter in Pregnancy</h3>
+  <p>
+    Pregnancy isn’t about “eating for two” — it’s about eating smart, moving safely, and living mindfully.
+  </p>
+  <ul>
+    <li>🧠 Nutrition fuels your baby’s development — from brain to bones</li>
+    <li>🩺 Exercise strengthens the body, prevents complications, and aids delivery</li>
+    <li>❤️ Healthy habits reduce the risks of gestational diabetes, preeclampsia, and fatigue</li>
+  </ul>
+  <p>At Sukam, we offer safe, practical, and personalized nutrition and fitness guidance throughout all trimesters.</p>
 
-        <p>
-          Good nutrition fuels your body and baby’s development, while tailored exercise helps reduce discomfort, boost mood, and prepare you for labor.
-        </p>
+  <h3>🥗 Daily Nutritional Needs in Pregnancy</h3>
+  <p>Pregnancy increases your need for nutrients more than calories. Focus on:</p>
+  <ul>
+    <li><strong>Folic Acid (400–600 mcg):</strong> Prevents neural tube defects (Green leafy vegetables, citrus fruits, supplements)</li>
+    <li><strong>Iron (27 mg):</strong> Prevents anemia (Spinach, dates, lentils, meats)</li>
+    <li><strong>Calcium (1000–1200 mg):</strong> Bone & tooth development (Milk, paneer, sesame, almonds)</li>
+    <li><strong>Protein (75–100 g):</strong> Builds baby’s tissues (Eggs, dal, tofu, chicken)</li>
+    <li><strong>Vitamin D & B12:</strong> Nerve & immune health (Sunlight, cereals, supplements)</li>
+    <li><strong>Omega-3s (DHA):</strong> Brain development (Fish, walnuts, flaxseeds, DHA capsules)</li>
+  </ul>
 
-        <h3>🩺 What We Offer:</h3>
-        <ul>
-          <li>Personalized nutrition plans based on trimester and health status</li>
-          <li>Safe prenatal workout and yoga sessions</li>
-          <li>Guidance on managing common pregnancy symptoms through diet and movement</li>
-          <li>Weight gain monitoring and counseling</li>
-          <li>Workshops on mindfulness and stress reduction through exercise</li>
-        </ul>
+  <h3>🗓️ What to Eat in Each Trimester</h3>
+  <p><strong>First Trimester (Weeks 1–12):</strong></p>
+  <ul>
+    <li>Focus on nausea relief and early development</li>
+    <li>Eat: dry snacks, soups, coconut water</li>
+    <li>Avoid: raw sprouts, spicy food, strong smells</li>
+  </ul>
+  <p><strong>Second Trimester (Weeks 13–27):</strong></p>
+  <ul>
+    <li>Focus on rapid baby growth</li>
+    <li>Eat: protein-rich meals, fresh fruits, home-cooked grains</li>
+    <li>Include: moderate ghee</li>
+  </ul>
+  <p><strong>Third Trimester (Weeks 28–40):</strong></p>
+  <ul>
+    <li>Focus on weight gain, brain & lung development</li>
+    <li>Eat: omega-rich foods, frequent meals</li>
+    <li>Include: fiber to ease constipation</li>
+  </ul>
 
-        <h3>🍽️ Nutrition Tips:</h3>
-        <ul>
-          <li>Include a variety of colorful fruits and vegetables daily</li>
-          <li>Eat whole grains like brown rice, oats, and millets</li>
-          <li>Prioritize lean protein sources such as legumes, eggs, and poultry</li>
-          <li>Limit caffeine and avoid alcohol completely</li>
-          <li>Stay hydrated—water is your best friend</li>
-        </ul>
+  <h3>🚫 What to Avoid During Pregnancy</h3>
+  <ul>
+    <li>Raw meat, sushi</li>
+    <li>Unpasteurized milk or cheese</li>
+    <li>More than 200 mg caffeine per day</li>
+    <li>Alcohol and tobacco</li>
+    <li>Junk food, packaged snacks, soda</li>
+  </ul>
+  <p><strong>Myth Busting:</strong></p>
+  <ul>
+    <li>✅ Ripe papaya and pineapple are safe after first trimester</li>
+    <li>✅ Ghee helps digestion, doesn’t “grease” the baby</li>
+    <li>✅ Saffron doesn’t lighten baby’s skin — it may aid digestion</li>
+  </ul>
 
-        <h3>🤸‍♀️ Exercise Tips:</h3>
-        <ul>
-          <li>Start with gentle stretching or walking for 20-30 minutes daily</li>
-          <li>Prenatal yoga to improve flexibility and reduce stress</li>
-          <li>Avoid high-impact or risky activities</li>
-          <li>Listen to your body—stop if you feel pain or dizziness</li>
-          <li>Consult your doctor before starting any new exercise routine</li>
-        </ul>
+  <h3>💧 Hydration, Cravings & Eating Habits</h3>
+  <ul>
+    <li>Drink 8–10 glasses of water daily</li>
+    <li>Include coconut water, buttermilk, herbal teas</li>
+    <li>Monitor for dehydration signs (dry lips, less urine)</li>
+    <li>Cravings are normal — but if craving clay/soap (pica), consult your doctor</li>
+  </ul>
+  <p><strong>Tips:</strong></p>
+  <ul>
+    <li>Eat small, frequent meals</li>
+    <li>Never skip breakfast</li>
+    <li>Sit upright after meals to avoid reflux</li>
+    <li>Chew slowly, eat mindfully</li>
+  </ul>
 
-        <h3>🚫 Nutrition Myths Busted:</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “Pregnant women should eat a lot of sugar to satisfy cravings.”<br /><strong>✅ Truth:</strong> Excess sugar can harm you and the baby; choose natural sweets like fruits.</li>
-          <li><strong>❌ Myth:</strong> “You should avoid exercise to prevent miscarriage.”<br /><strong>✅ Truth:</strong> Moderate, safe exercise is beneficial unless medically contraindicated.</li>
-        </ul>
-      </section>
+  <h3>🏃‍♀️ Is Exercise Safe in Pregnancy?</h3>
+  <p>Yes! With doctor’s clearance, moderate exercise offers huge benefits:</p>
+  <ul>
+    <li>✅ Improved posture & back support</li>
+    <li>✅ Less swelling, better digestion</li>
+    <li>✅ Improved sleep & energy</li>
+    <li>✅ Better labor & quicker recovery</li>
+  </ul>
+  <p>Avoid contact sports, high heat yoga, and overexertion. Always check with your doctor first.</p>
+
+  <h3>🤸 Recommended Safe Exercises</h3>
+  <ul>
+    <li><strong>Walking:</strong> 20–30 minutes daily</li>
+    <li><strong>Prenatal Yoga:</strong> Builds strength & calms anxiety (avoid belly pressure or lying flat after 20 weeks)</li>
+    <li><strong>Kegels:</strong> Strengthens pelvic muscles, supports postpartum recovery</li>
+    <li><strong>Swimming:</strong> Eases joint pressure in later trimesters</li>
+    <li><strong>Stretching & Deep Breathing:</strong> Reduces tension & promotes calm</li>
+  </ul>
+
+  <h3>⏰ Exercise Tips & Red Flags</h3>
+  <p><strong>Do:</strong></p>
+  <ul>
+    <li>Wear good shoes and supportive clothing</li>
+    <li>Stay well hydrated</li>
+    <li>Warm up before, cool down after</li>
+    <li>Listen to your body and rest when tired</li>
+    <li>Exercise 3–5 times a week, 20–45 mins/session</li>
+  </ul>
+  <p><strong>Avoid Exercise if You Experience:</strong></p>
+  <ul>
+    <li>Vaginal bleeding</li>
+    <li>Dizziness or shortness of breath</li>
+    <li>Severe abdominal or pelvic pain</li>
+    <li>Leaking fluid</li>
+    <li>History of miscarriage or cervical weakness (unless cleared)</li>
+  </ul>
+
+  <h3>👩‍⚕️ Sukam’s Nutrition & Fitness Support</h3>
+  <ul>
+    <li>🥗 Customized diet plans by expert nutritionists</li>
+    <li>🩺 Weekly weight and BP tracking</li>
+    <li>💊 Supplement guidance based on test reports</li>
+    <li>🧘 Prenatal yoga with certified trainers</li>
+    <li>💬 Craving & nausea counseling</li>
+    <li>🤝 Personal fitness consults based on trimester</li>
+    <li>📋 Birth prep sessions: posture, breathing, relaxation</li>
+  </ul>
+  <p>✨ At Sukam, we care for every expecting mother like family — with nutrition, movement, and mindfulness.</p>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Nutrition & Exercise Quiz – Test Your Pregnancy Smarts!</h2>
