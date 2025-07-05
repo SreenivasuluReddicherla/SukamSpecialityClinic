@@ -192,35 +192,116 @@ const IUI = () => {
       <p className="lead">“A simple, effective step closer to your dream.”</p>
 
       <section className="info-section">
-        <p>
-          Intrauterine insemination (IUI) is a minimally invasive fertility treatment where specially prepared sperm is placed directly into the uterus around the time of ovulation. This helps sperm reach the egg faster and increases the chances of fertilization. At Sukam Speciality Clinic and Fertility Centre, we provide precise timing, expert care, and personalized protocols to give you the best chance for pregnancy.
-        </p>
+  <h3>💗 Introduction – What is IUI?</h3>
+  <p>
+    Intrauterine Insemination (IUI) is a fertility treatment that involves placing specially prepared sperm
+    directly into a woman’s uterus during ovulation. It is a simpler, lower-cost, and less invasive option than IVF,
+    and is often the first-line treatment offered for infertility.
+  </p>
+  <p>
+    The goal of IUI is to help more healthy sperm reach the egg at the right time—giving nature a helpful push.
+  </p>
 
-        <h3>🩺 What We Offer:</h3>
-        <ul>
-          <li>Comprehensive fertility evaluation for both partners</li>
-          <li>Ovulation monitoring and timing of insemination</li>
-          <li>Preparation and washing of sperm to enhance motility</li>
-          <li>Comfortable, outpatient IUI procedure</li>
-          <li>Follow-up monitoring and support</li>
-          <li>Counseling on combining IUI with ovulation induction if needed</li>
-        </ul>
+  <h3>🩺 When is IUI Recommended?</h3>
+  <ul>
+    <li>Unexplained infertility</li>
+    <li>Mild male factor infertility (low count or motility)</li>
+    <li>Cervical mucus issues</li>
+    <li>Mild endometriosis</li>
+    <li>Ovulation problems like PCOS</li>
+    <li>Single women or same-sex couples using donor sperm</li>
+  </ul>
+  <p>IUI is not suitable for women with blocked fallopian tubes or severe male infertility.</p>
 
-        <h3>💡 Tips for IUI Success:</h3>
-        <ul>
-          <li>Maintain healthy habits—balanced diet, exercise, and sleep</li>
-          <li>Avoid alcohol, smoking, and excessive caffeine</li>
-          <li>Keep stress low through relaxation techniques</li>
-          <li>Follow your doctor’s timing instructions carefully</li>
-          <li>Stay positive and patient—sometimes it takes a few cycles</li>
-        </ul>
+  <h3>🔬 Step-by-Step IUI Process</h3>
+  <ol>
+    <li>
+      <strong>Initial Evaluation:</strong> Blood tests (AMH, FSH, LH, TSH), ultrasound, semen analysis
+    </li>
+    <li>
+      <strong>Ovulation Monitoring:</strong> Natural or stimulated cycle, follicle tracking, and trigger shot
+    </li>
+    <li>
+      <strong>Sperm Collection & Preparation:</strong> Lab washing and processing of semen sample
+    </li>
+    <li>
+      <strong>Insemination Procedure:</strong> Painless 5–10 min procedure using soft catheter; no anesthesia needed
+    </li>
+    <li>
+      <strong>Luteal Phase Support:</strong> Progesterone supplements and pregnancy test after 14 days
+    </li>
+  </ol>
 
-        <h3>🚫 Myth vs Fact:</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “IUI is painful and risky.”<br /><strong>✅ Truth:</strong> IUI is a simple, low-risk outpatient procedure with minimal discomfort.</li>
-          <li><strong>❌ Myth:</strong> “IUI guarantees pregnancy.”<br /><strong>✅ Truth:</strong> Success varies based on individual factors; multiple cycles may be needed.</li>
-        </ul>
-      </section>
+  <h3>📅 IUI Timeline at a Glance</h3>
+  <table>
+    <thead>
+      <tr><th>Day</th><th>Process</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1–3</td><td>Period begins, baseline scan</td></tr>
+      <tr><td>3–7</td><td>Ovulation medications (if needed)</td></tr>
+      <tr><td>8–13</td><td>Ultrasound monitoring</td></tr>
+      <tr><td>12–14</td><td>Trigger injection + IUI</td></tr>
+      <tr><td>15–28</td><td>Luteal support</td></tr>
+      <tr><td>28+</td><td>Pregnancy test</td></tr>
+    </tbody>
+  </table>
+
+  <h3>📈 How Many IUI Cycles Should I Try?</h3>
+  <ul>
+    <li>Try 3–6 IUI cycles before considering IVF</li>
+    <li>Success depends on age, egg quality, sperm health, uterine condition</li>
+  </ul>
+  <p><strong>Per Cycle Success Rates:</strong></p>
+  <ul>
+    <li>Women under 35: 10–15%</li>
+    <li>Age 35–39: 7–10%</li>
+    <li>Over 40: less than 5%</li>
+  </ul>
+
+  <h3>👩‍⚕️ Who is an Ideal Candidate for IUI?</h3>
+  <ul>
+    <li>Mild male factor infertility (low count/motility)</li>
+    <li>PCOS and other ovulatory issues</li>
+    <li>Unexplained infertility</li>
+    <li>At least one open fallopian tube and normal uterus</li>
+    <li>Single women or LGBTQ+ couples using donor sperm</li>
+  </ul>
+
+  <h3>💖 Sukam’s Approach to IUI – Natural, Nurturing, Personalized</h3>
+  <ul>
+    <li>
+      <strong>Customized Stimulation:</strong> Based on age and hormone levels; minimal or natural cycle options
+    </li>
+    <li>
+      <strong>Precision Ovulation Tracking:</strong> Serial scans, trigger timing based on follicle size
+    </li>
+    <li>
+      <strong>Advanced Sperm Preparation:</strong> Density gradient/swim-up for motility enhancement
+    </li>
+    <li>
+      <strong>Nutrition & Lifestyle Support:</strong> Fertility-friendly diet, supplement guidance
+    </li>
+    <li>
+      <strong>Emotional Counseling:</strong> Transparent sessions, clear cost explanation, stress care
+    </li>
+  </ul>
+  <p>We ensure every couple feels informed, calm, and confident throughout the IUI process.</p>
+
+  <h3>🌟 Patient Story – "A Simple Step That Brought Big Joy"</h3>
+  <p>
+    <strong>Riya, 30 years, Teacher:</strong> "After a year of trying, we tried IUI. Sukam's team kept us
+    reassured and informed. I conceived in my second cycle. I’m forever grateful."
+  </p>
+
+  <h3>👣 Take the First Step Toward Parenthood</h3>
+  <p>
+    IUI isn’t just a treatment — it’s a doorway to hope, courage, and new beginnings. At
+    <strong> Sukam Speciality Clinic & Fertility Centre</strong>, we walk beside you from consultation to the
+    moment you hear a heartbeat. Begin your journey with clarity, care, and confidence.
+  </p>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 IUI Quiz — How Fertility-Savvy Are You?</h2>

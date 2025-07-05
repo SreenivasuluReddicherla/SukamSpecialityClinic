@@ -168,34 +168,146 @@ const MaleInfertility = () => {
       <p className="lead">“Half the equation, equally important.”</p>
 
       <section className="info-section">
-        <p>
-          Male infertility contributes to nearly half of all couples’ fertility challenges. Factors like low sperm count, poor motility, or structural issues can affect the ability to conceive. At Sukam Speciality Clinic and Fertility Centre, we provide thorough diagnosis and tailored treatments to support male reproductive health, working alongside our female fertility services for holistic care.
-        </p>
-        <h3>🩺 What We Offer:</h3>
-        <ul>
-          <li>Detailed semen analysis and hormonal evaluation</li>
-          <li>Treatment for infections, varicocele, and hormonal imbalances</li>
-          <li>Lifestyle counseling to improve sperm health</li>
-          <li>Assisted reproductive techniques including IUI and IVF/ICSI</li>
-          <li>Genetic counseling and advanced diagnostics</li>
-          <li>Supportive care addressing emotional and psychological factors</li>
-        </ul>
+  <h3>💙 What is Male Infertility?</h3>
+  <p>
+    Male infertility is the inability to cause pregnancy in a fertile female partner and contributes to 40–50% of infertility cases globally. It can be due to hormonal, genetic, physical, or environmental causes.
+  </p>
+  <p>
+    Though often overlooked, male infertility is common and treatable. With the right evaluation and support, many men can father children successfully.
+  </p>
 
-        <h3>💡 Tips to Boost Male Fertility:</h3>
-        <ul>
-          <li>Maintain a balanced diet rich in antioxidants and vitamins</li>
-          <li>Exercise regularly but avoid excessive heat exposure to testes</li>
-          <li>Avoid smoking, alcohol, and recreational drugs</li>
-          <li>Manage stress through relaxation and counseling</li>
-          <li>Schedule regular check-ups and follow prescribed treatments</li>
-        </ul>
+  <h3>📚 Key Definitions in Male Fertility</h3>
+  <ul>
+    <li><strong>Oligospermia:</strong> Low sperm count (&lt;15 million/mL)</li>
+    <li><strong>Azoospermia:</strong> No sperm in semen</li>
+    <li><strong>Asthenozoospermia:</strong> Poor sperm motility</li>
+    <li><strong>Teratozoospermia:</strong> Abnormally shaped sperm</li>
+    <li><strong>Necrozoospermia:</strong> All sperm are non-viable or dead</li>
+    <li><strong>Hypospermia:</strong> Low semen volume (&lt;1.5 mL)</li>
+  </ul>
 
-        <h3>🚫 Myth vs Fact:</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “Male infertility is rare.”<br /><strong>✅ Truth:</strong> It accounts for about 40-50% of infertility cases.</li>
-          <li><strong>❌ Myth:</strong> “Only women need fertility treatments.”<br /><strong>✅ Truth:</strong> Male evaluation and treatment are crucial parts of fertility care.</li>
-        </ul>
-      </section>
+  <h3>🔬 Anatomy and Physiology of Male Reproduction</h3>
+  <p>
+    Key organs include the testes, epididymis, vas deferens, seminal vesicles, prostate, and penis. Sperm production (spermatogenesis) takes ~64–72 days and is easily affected by stress, toxins, or hormones.
+  </p>
+
+  <h3>⚠️ Causes of Male Infertility</h3>
+  <ul>
+    <li><strong>Hormonal:</strong> Hypogonadism, pituitary dysfunction, high prolactin</li>
+    <li><strong>Structural:</strong> Varicocele, vas deferens blockage, CBAVD</li>
+    <li><strong>Infections:</strong> STIs, mumps orchitis, prostatitis</li>
+    <li><strong>Ejaculation disorders:</strong> Retrograde ejaculation, ED, premature ejaculation</li>
+    <li><strong>Genetic:</strong> Klinefelter’s, Y-chromosome deletions, CF mutations</li>
+  </ul>
+
+  <h3>🌍 Environmental & Lifestyle Factors</h3>
+  <ul>
+    <li>Exposure to pesticides, heavy metals, solvents</li>
+    <li>Smoking, alcohol, drug abuse</li>
+    <li>Obesity, sedentary habits, sleep deprivation</li>
+    <li>Heat (laptops on lap, saunas, tight clothing)</li>
+    <li>Medications (anabolic steroids, chemo, SSRIs)</li>
+  </ul>
+
+  <h3>🩺 Symptoms of Male Infertility</h3>
+  <ul>
+    <li>Low libido or erectile dysfunction</li>
+    <li>Swelling or pain in testicles</li>
+    <li>Gynecomastia or low facial/body hair</li>
+    <li>Small or firm testicles</li>
+  </ul>
+  <p>If unable to conceive in 12 months (&lt;35) or 6 months (&gt;35), evaluation is recommended.</p>
+
+  <h3>📈 Diagnostic Tests</h3>
+  <ul>
+    <li><strong>Semen Analysis:</strong> Sperm count, motility, morphology, volume</li>
+    <li><strong>Hormonal tests:</strong> FSH, LH, Testosterone, Prolactin</li>
+    <li><strong>Scrotal Ultrasound:</strong> For varicocele, testis health</li>
+    <li><strong>Genetic Tests:</strong> For azoospermia or family history</li>
+    <li><strong>DNA Fragmentation:</strong> Sperm genetic quality</li>
+  </ul>
+
+  <h3>🥗 Lifestyle & Nutritional Interventions</h3>
+  <ul>
+    <li>Zinc-rich foods (pumpkin seeds, shellfish)</li>
+    <li>Antioxidants: Vitamin C, E, selenium, CoQ10</li>
+    <li>Omega-3s and L-carnitine</li>
+    <li>Stop smoking, limit alcohol</li>
+    <li>Regular moderate exercise, stress reduction</li>
+  </ul>
+
+  <h3>💊 Medical Treatments</h3>
+  <ul>
+    <li>Clomiphene Citrate: Boosts sperm production</li>
+    <li>hCG and FSH Injections: Stimulate testes</li>
+    <li>Antibiotics for infections</li>
+    <li><strong>Note:</strong> Testosterone therapy is not used if fertility is the goal</li>
+  </ul>
+
+  <h3>🔧 Surgical Treatments</h3>
+  <ul>
+    <li>Varicocelectomy: Varicocele correction</li>
+    <li>Vasovasostomy: Reversal of vasectomy</li>
+    <li>Sperm Retrieval:
+      <ul>
+        <li>TESA: Testicular Sperm Aspiration</li>
+        <li>PESA: Epididymal Sperm Aspiration</li>
+        <li>Micro-TESE: For non-obstructive azoospermia</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>🧪 ART (Assisted Reproductive Technology)</h3>
+  <ul>
+    <li>IUI: For mild male factor</li>
+    <li>IVF + ICSI: Direct sperm injection into egg</li>
+    <li>Donor sperm if no viable sperm</li>
+    <li>Embryo freezing for future cycles</li>
+  </ul>
+
+  <h3>🧠 Psychological Impact</h3>
+  <p>Infertility can affect mental health, relationships, and self-worth.</p>
+  <ul>
+    <li>Guilt, frustration, anxiety, or low self-esteem</li>
+    <li>Sexual performance pressure</li>
+    <li>Stigma from society or family</li>
+  </ul>
+  <p>At Sukam, we provide counseling, peer support, and safe spaces to talk.</p>
+
+  <h3>🌿 Complementary Therapies</h3>
+  <ul>
+    <li>Ayurveda: Ashwagandha, Shilajit, Gokshura</li>
+    <li>Acupuncture: May improve sperm parameters</li>
+    <li>Yoga and meditation for hormonal balance</li>
+    <li>Always use alongside medical care</li>
+  </ul>
+
+  <h3>📖 Real Patient Stories</h3>
+  <ul>
+    <li><strong>Rakesh (32):</strong> Varicocele surgery & IUI success</li>
+    <li><strong>Amit (29):</strong> Hypogonadism treated with hCG+FSH, conceived naturally</li>
+    <li><strong>Mohammed (35):</strong> Azoospermia; Micro-TESE + ICSI → twins born</li>
+  </ul>
+
+  <h3>🤝 Sukam’s Male Fertility Program</h3>
+  <ul>
+    <li>Advanced Semen Analysis & DNA testing</li>
+    <li>Onsite hormonal & genetic labs</li>
+    <li>Hormone-based & nutritional therapy</li>
+    <li>Microsurgeries & sperm retrieval</li>
+    <li>Ayurveda + ART combined care</li>
+    <li>ICSI success for even severe cases</li>
+    <li>Confidential counseling & emotional support</li>
+  </ul>
+
+  <h3>✨ Final Words – Reclaim Your Fertility</h3>
+  <p>
+    Male infertility is common — and treatable. With the right diagnosis, modern treatment, and whole-person care,
+    fatherhood is absolutely possible.
+  </p>
+  <p><strong>At Sukam, we walk with you — with clarity, care, and compassion.</strong></p>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Male Infertility Quiz — Test Your Fertility Know-How!</h2>

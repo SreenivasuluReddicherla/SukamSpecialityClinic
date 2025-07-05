@@ -107,35 +107,96 @@ const NaturalPregnancy = () => {
       <p className="lead">“Sometimes, a little guidance brings nature back on track.”</p>
 
       <section className="info-section">
-        <p>
-          Many couples conceive naturally with some simple support and lifestyle adjustments. OITI (Ovulation Induction and Timed Intercourse) helps those who need a little extra help to synchronize ovulation and intercourse for the best chance of pregnancy. At Sukam Speciality Clinic and Fertility Centre, we offer gentle, evidence-based natural fertility treatments designed to work with your body’s rhythm.
-        </p>
+  <h3>💗 What is OITI?</h3>
+  <p>
+    Ovulation Induction with Timed Intercourse (OITI) is one of the simplest and most natural forms of fertility treatment. 
+    It involves stimulating ovulation in women who are not ovulating regularly (or at all), and then guiding couples 
+    on the best time for intercourse to maximize the chance of conception.
+  </p>
+  <p>
+    OITI is non-invasive, affordable, and often the first-line treatment for many women with ovulatory disorders or 
+    unexplained infertility. It beautifully blends medical science with natural conception.
+  </p>
 
-        <h3>🩺 What We Offer:</h3>
-        <ul>
-          <li>Hormonal evaluation and ovulation tracking</li>
-          <li>Ovulation induction with safe medications</li>
-          <li>Timed intercourse guidance for optimal fertility</li>
-          <li>Nutritional and lifestyle counseling to boost natural fertility</li>
-          <li>Regular monitoring to assess response and progress</li>
-          <li>Emotional support and education throughout treatment</li>
-        </ul>
+  <h3>🩺 Who Can Benefit from OITI?</h3>
+  <ul>
+    <li>Women with irregular or absent periods (e.g., PCOS)</li>
+    <li>Couples with unexplained infertility</li>
+    <li>Couples with normal test results seeking natural conception</li>
+    <li>Young couples with good egg reserve and open fallopian tubes</li>
+    <li>Those wanting to try natural methods before IUI/IVF</li>
+  </ul>
+  <p><strong>Not suitable for:</strong> Women with blocked fallopian tubes or couples with severe male infertility.</p>
 
-        <h3>💡 Tips to Boost Natural Fertility:</h3>
-        <ul>
-          <li>Track basal body temperature and cervical mucus for ovulation signs</li>
-          <li>Eat fertility-friendly foods rich in folate, zinc, and antioxidants</li>
-          <li>Reduce caffeine and avoid smoking/alcohol</li>
-          <li>Maintain a healthy weight and exercise moderately</li>
-          <li>Manage stress with yoga, meditation, or hobbies</li>
-        </ul>
+  <h3>🔄 Step-by-Step OITI Process</h3>
+  <ol>
+    <li>
+      <strong>Baseline Evaluation:</strong> Hormone blood tests (FSH, LH, AMH, TSH, Prolactin), and ultrasound scan.
+    </li>
+    <li>
+      <strong>Ovulation Induction:</strong> Medicines like Letrozole or Clomiphene Citrate (Day 2–5); hormone injections if needed.
+    </li>
+    <li>
+      <strong>Follicular Monitoring:</strong> Ultrasounds on Days 8, 10, 12 to monitor follicle growth and endometrial thickness.
+    </li>
+    <li>
+      <strong>Triggering Ovulation:</strong> hCG shot given when follicle reaches 18–20 mm.
+    </li>
+    <li>
+      <strong>Timed Intercourse:</strong> Intercourse guided 24–36 hours after the trigger; may be advised over 2–3 days.
+    </li>
+    <li>
+      <strong>Luteal Phase Support:</strong> Progesterone supplements as needed; pregnancy test after 14 days.
+    </li>
+  </ol>
 
-        <h3>🚫 Myth vs Fact:</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “You can only get pregnant on the exact day of ovulation.”<br /><strong>✅ Truth:</strong> The fertile window spans about 5-6 days, including days before ovulation.</li>
-          <li><strong>❌ Myth:</strong> “Ovulation induction drugs always cause multiple pregnancies.”<br /><strong>✅ Truth:</strong> With careful monitoring, risks are minimized.</li>
-        </ul>
-      </section>
+  <h3>📅 Timeline for an OITI Cycle</h3>
+  <table>
+    <thead>
+      <tr><th>Day</th><th>Activity</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Day 1–3</td><td>Period begins</td></tr>
+      <tr><td>Day 2–5</td><td>Start ovulation medications</td></tr>
+      <tr><td>Day 8–12</td><td>Follicle scan monitoring</td></tr>
+      <tr><td>Day 12–14</td><td>Trigger shot + Timed intercourse</td></tr>
+      <tr><td>Day 15–28</td><td>Wait and support phase</td></tr>
+      <tr><td>Day 28+</td><td>Pregnancy test</td></tr>
+    </tbody>
+  </table>
+
+  <h3>📈 How Many OITI Cycles Should I Try?</h3>
+  <ul>
+    <li>Most couples try 3–6 cycles based on age and egg reserve.</li>
+    <li>Cumulative success increases when ovulation is well monitored.</li>
+    <li>If no pregnancy after 4–6 cycles, move to IUI or IVF.</li>
+  </ul>
+
+  <h3>💖 Sukam’s Approach to OITI</h3>
+  <ul>
+    <li>Customized medication plans for each woman</li>
+    <li>Minimal scans and stress-free cycle tracking</li>
+    <li>Natural cycle support with lifestyle guidance</li>
+    <li>Fertility diet and supplement recommendations</li>
+    <li>Clear advice on timing, signs, and intercourse guidance</li>
+  </ul>
+  <p>We aim to help couples conceive in the most natural and least invasive way possible.</p>
+
+  <h3>🌼 Real Story – "A Natural Blessing"</h3>
+  <p>
+    <strong>Anjali, 29 years, Newly Married:</strong> “I have PCOS and irregular cycles. I didn’t want to jump into IVF.
+    With simple medicines and timely guidance from the Sukam team, I ovulated and conceived naturally in just my second OITI cycle.
+    It felt so empowering.”
+  </p>
+
+  <h3>🌱 Let Nature Take Its Course</h3>
+  <p>
+    OITI is where simplicity meets science. It’s a gentle, guided path for couples who wish to start a family 
+    naturally. At <strong>Sukam Speciality Clinic & Fertility Centre</strong>, we support your journey with clarity, compassion, and hope.
+  </p>
+  <p><strong>Take your first step today — the most beautiful journeys often begin with the smallest steps.</strong></p>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Natural Pregnancy / OITI Quiz — Are You Fertility-Smart?</h2>

@@ -212,33 +212,128 @@ const InfertilityInsights = () => {
       <p className="lead">“Every story has its hurdles — let’s decode the ‘why not yet.’”</p>
 
       <section className="info-section">
-        <p>
-          Infertility can be an emotional and confusing journey. It affects many couples, but understanding the causes and options available can bring hope. At Sukam Speciality Clinic and Fertility Centre, we believe every couple’s story is unique. We provide compassionate support and thorough evaluation to help uncover the reasons behind infertility and guide you towards the best path forward.
-        </p>
-        <h3>🩺 What We Offer:</h3>
-        <ul>
-          <li>Comprehensive fertility assessment for both partners</li>
-          <li>Hormonal tests, semen analysis, and imaging studies</li>
-          <li>Identification of factors like ovulatory disorders, tubal blockage, male factor infertility, and unexplained infertility</li>
-          <li>Counseling and emotional support throughout the journey</li>
-          <li>Personalized treatment plans designed with your goals in mind</li>
-        </ul>
+  <h3>💗 What is Infertility?</h3>
+  <p>
+    Infertility is defined as the inability to conceive after 12 months of regular, unprotected intercourse 
+    (or 6 months if the woman is over 35). It may affect individuals or couples and can involve male, 
+    female, or combined factors.
+  </p>
+  <p>
+    <strong>It is a medical condition</strong> — not a personal failure. Around 15–20% of couples experience infertility, 
+    but with the right care, many go on to conceive successfully.
+  </p>
+  <ul>
+    <li><strong>Primary infertility:</strong> No prior pregnancies</li>
+    <li><strong>Secondary infertility:</strong> Difficulty conceiving after a previous successful pregnancy</li>
+  </ul>
 
-        <h3>💡 Tips to Support Fertility Naturally:</h3>
-        <ul>
-          <li>Maintain a healthy weight and balanced diet</li>
-          <li>Avoid smoking, alcohol, and excessive caffeine</li>
-          <li>Manage stress through relaxation and mindfulness</li>
-          <li>Track ovulation and fertile windows</li>
-          <li>Regular moderate exercise improves reproductive health</li>
-        </ul>
+  <h3>🔍 Common Causes of Infertility</h3>
+  <p><strong>In Women:</strong></p>
+  <ul>
+    <li>Ovulatory disorders (PCOS, premature ovarian insufficiency)</li>
+    <li>Blocked fallopian tubes (due to infections, surgery, endometriosis)</li>
+    <li>Uterine abnormalities (fibroids, polyps, adhesions)</li>
+    <li>Endometriosis</li>
+    <li>Age-related decline in egg quality and reserve</li>
+  </ul>
+  <p><strong>In Men:</strong></p>
+  <ul>
+    <li>Low sperm count or poor motility</li>
+    <li>Varicocele</li>
+    <li>Hormonal imbalances (low testosterone, high prolactin)</li>
+    <li>Infections or lifestyle-related sperm damage (smoking, obesity, alcohol)</li>
+  </ul>
+  <p><strong>Unexplained Infertility:</strong> Normal test results, but conception still doesn’t occur (10–15% cases).</p>
 
-        <h3>🚫 Myth vs Fact:</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “Infertility is usually the woman’s problem.”<br /><strong>✅ Truth:</strong> Male factors contribute to nearly half of all infertility cases.</li>
-          <li><strong>❌ Myth:</strong> “If you don’t get pregnant immediately, there is a problem.”<br /><strong>✅ Truth:</strong> Many couples conceive naturally within a year of trying.</li>
-        </ul>
-      </section>
+  <h3>🩺 How is Infertility Diagnosed?</h3>
+  <p><strong>For Women:</strong></p>
+  <ul>
+    <li>Hormonal tests: AMH, FSH, LH, TSH, Prolactin, Estradiol</li>
+    <li>Ultrasound scan for follicle count, ovarian and uterine evaluation</li>
+    <li>HSG (Hysterosalpingography) to check tube patency</li>
+    <li>Hysteroscopy/SIS to evaluate uterine cavity</li>
+  </ul>
+  <p><strong>For Men:</strong></p>
+  <ul>
+    <li>Semen analysis: count, motility, morphology</li>
+    <li>Hormone tests: FSH, LH, Testosterone</li>
+    <li>Scrotal ultrasound (if needed)</li>
+  </ul>
+  <p><strong>Advanced options:</strong> Genetic tests, post-coital test (rare), infection screening</p>
+
+  <h3>📉 Fertility Timeline and Age Impact</h3>
+  <table>
+    <thead>
+      <tr><th>Age Range</th><th>Monthly Pregnancy Rate</th><th>Egg Reserve & Quality</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>&lt;30</td><td>20–25%</td><td>Excellent</td></tr>
+      <tr><td>30–34</td><td>15–20%</td><td>Good</td></tr>
+      <tr><td>35–37</td><td>10–15%</td><td>Declining</td></tr>
+      <tr><td>38–40</td><td>5–10%</td><td>Reduced</td></tr>
+      <tr><td>41–43</td><td>&lt;5%</td><td>Poor</td></tr>
+      <tr><td>&gt;44</td><td>&lt;2%</td><td>Very poor</td></tr>
+    </tbody>
+  </table>
+  <p>Male fertility also declines with age, affecting motility and DNA integrity.</p>
+
+  <h3>⚕️ Treatment Options Based on Cause</h3>
+  <ul>
+    <li><strong>Lifestyle changes:</strong> Weight loss, antioxidants, stress reduction</li>
+    <li><strong>Ovulation Induction:</strong> Letrozole, Clomiphene for women with irregular ovulation</li>
+    <li><strong>OITI:</strong> Timed intercourse after ovulation tracking</li>
+    <li><strong>IUI:</strong> For mild male factor, cervical factor, or unexplained infertility</li>
+    <li><strong>IVF:</strong> For tubal issues, endometriosis, or failed IUI cycles</li>
+    <li><strong>ICSI:</strong> For poor sperm quality or failed fertilization in IVF</li>
+    <li><strong>Advanced options:</strong> Donor eggs/sperm, surrogacy, PGT (genetic testing)</li>
+  </ul>
+
+  <h3>💬 Emotional and Social Impact</h3>
+  <ul>
+    <li>Feelings of shame, guilt, or inadequacy</li>
+    <li>Relationship strain and intimacy challenges</li>
+    <li>Social stigma or family pressure</li>
+    <li>Anxiety and depression during long treatment periods</li>
+  </ul>
+  <p>
+    At Sukam, emotional wellness is part of every fertility journey. We offer:<br />
+    🧘‍♀️ Counseling • Peer groups • Mind-body therapies • Partner communication guidance
+  </p>
+
+  <h3>❌ Fertility Myths & Misconceptions</h3>
+  <ul>
+    <li><strong>Myth:</strong> Infertility is always due to the woman → <em>Fact:</em> Male factors are involved in ~50% cases</li>
+    <li><strong>Myth:</strong> IVF guarantees pregnancy → <em>Fact:</em> Success depends on age, gametes, uterus</li>
+    <li><strong>Myth:</strong> Just relax and it will happen → <em>Fact:</em> Stress is not the only cause; proper diagnosis is key</li>
+    <li><strong>Myth:</strong> If you had a child once, infertility can’t happen → <em>Fact:</em> Secondary infertility is real</li>
+    <li><strong>Myth:</strong> Donor eggs or sperm means it’s not “your baby” → <em>Fact:</em> Parenthood is about love and care</li>
+  </ul>
+
+  <h3>🧑‍⚕️ When to See a Fertility Specialist</h3>
+  <ul>
+    <li>If under 35 and not conceived in 12 months</li>
+    <li>If over 35 and not conceived in 6 months</li>
+    <li>Irregular periods, PCOS, endometriosis, thyroid problems</li>
+    <li>History of multiple miscarriages</li>
+    <li>Low sperm count or sexual dysfunction in men</li>
+    <li>Interested in fertility preservation (egg/sperm freezing)</li>
+  </ul>
+
+  <h3>📘 Knowledge is the First Step</h3>
+  <p>
+    Infertility may feel overwhelming, but it is highly treatable. Early diagnosis, the right support, and 
+    personalized care make a huge difference. Whether you pursue natural methods or advanced ART 
+    like IVF/ICSI, your dream of parenthood is within reach.
+  </p>
+  <p>
+    <strong>At Sukam Speciality Clinic & Fertility Centre, we believe in:</strong><br />
+    ✅ Medical precision + emotional sensitivity<br />
+    ✅ Personalized protocols<br />
+    ✅ Full transparency and holistic wellness
+  </p>
+  <p><strong>Let us walk beside you — from uncertainty to new beginnings.</strong></p>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Infertility Quiz — How Much Do You Know?</h2>

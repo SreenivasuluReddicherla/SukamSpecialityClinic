@@ -64,39 +64,132 @@ const CervicalCancer = () => {
       <p className="lead">“Preventable, detectable, beatable.”</p>
 
       <section className="info-section">
-        <p>
-          Cervical cancer is a serious but highly preventable and treatable condition when detected early.
-          Regular screenings and HPV vaccination are key to protecting women’s health. At Sukam Speciality Clinic and
-          Fertility Centre, we provide comprehensive cervical health services — from screening and early diagnosis
-          to treatment and counseling — empowering women to stay healthy and confident.
-        </p>
+  <h3>🌸 A Gentle Beginning – Why This Matters</h3>
+  <p><strong>“Cervical cancer whispers before it roars. Listen to your body. Trust screening. Take control.”</strong></p>
+  <p>
+    Cervical cancer begins in the cervix, the narrow passage at the base of the uterus that opens into the vagina.
+    While it may sound frightening, here is the truth:
+  </p>
+  <ul>
+    <li>✅ It is one of the most preventable cancers in women.</li>
+    <li>✅ Early detection almost always means cure.</li>
+    <li>✅ Vaccines exist that can stop it before it starts.</li>
+  </ul>
+  <p>
+    And yet, cervical cancer continues to claim the lives of thousands of women each year in India — not because it’s incurable,
+    but because it often goes undiagnosed until it’s too late. This is not a failure of medicine, but a failure of awareness.
+    Let this guide change that.
+  </p>
 
-        <h3>🩺 What We Offer:</h3>
-        <ul>
-          <li>Pap smear and HPV DNA testing for early detection</li>
-          <li>Visual inspection with acetic acid (VIA) screening</li>
-          <li>Colposcopy and biopsy for accurate diagnosis</li>
-          <li>Vaccination against HPV (Human Papillomavirus)</li>
-          <li>Treatment options including cryotherapy, LEEP, or referral for advanced care</li>
-          <li>Patient education on cervical cancer prevention and healthy lifestyle</li>
-          <li>Emotional support and follow-up care</li>
-        </ul>
+  <h3>🔬 Knowing the Cervix – Understanding the Basics</h3>
+  <ul>
+    <li><strong>What is the cervix?</strong> Lower part of the uterus, opens into the vagina</li>
+    <li>Allows menstrual flow, directs sperm, and opens during childbirth</li>
+    <li><strong>Where does cancer start?</strong> Abnormal changes in the cervical lining (CIN)</li>
+  </ul>
+  <p>Without treatment, CIN can develop into invasive cancer over 5–15 years.</p>
 
-        <h3>💡 Tips for Cervical Health:</h3>
-        <ul>
-          <li>Get regular Pap smears as recommended by your healthcare provider</li>
-          <li>Complete the HPV vaccination schedule early, ideally before sexual debut</li>
-          <li>Practice safe sex and limit the number of sexual partners</li>
-          <li>Avoid smoking as it increases cancer risk</li>
-          <li>Maintain good genital hygiene</li>
-        </ul>
+  <h3>🧬 The Real Culprit – HPV Infection</h3>
+  <p>
+    HPV (Human Papillomavirus) is a very common virus transmitted through sexual contact.
+    Of 100+ HPV types, about 14 are high-risk. Types 16 and 18 cause 70% of cervical cancer cases.
+  </p>
+  <p>Most infections clear within 1–2 years. Persistent infection leads to risk.</p>
+  <p><strong>🛡️ HPV is the cause of nearly all cervical cancers.</strong></p>
 
-        <h3>🚫 Myth vs Fact:</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “Cervical cancer shows symptoms early.”<br /><strong>✅ Truth:</strong> Early stages often have no symptoms, which is why screening is crucial.</li>
-          <li><strong>❌ Myth:</strong> “HPV vaccination is only for teenagers.”<br /><strong>✅ Truth:</strong> Vaccination can be beneficial for women up to age 26 and sometimes beyond, based on risk factors.</li>
-        </ul>
-      </section>
+  <h3>⚠️ Risk Factors – Who Is More Vulnerable?</h3>
+  <ul>
+    <li>🌿 Early sexual activity</li>
+    <li>🌿 Multiple sexual partners</li>
+    <li>🌿 Smoking or secondhand smoke exposure</li>
+    <li>🌿 Long-term use of oral contraceptives</li>
+    <li>🌿 Weak immune system (e.g., HIV)</li>
+    <li>🌿 Not vaccinated against HPV</li>
+    <li>🌿 Poor hygiene or screening awareness</li>
+    <li>🌿 Family history (rare, but possible)</li>
+  </ul>
+  <p><em>Even one partner is enough for HPV exposure — it’s about contact, not promiscuity.</em></p>
+
+  <h3>🔊 When Silence Speaks – Symptoms of Cervical Cancer</h3>
+  <ul>
+    <li>🔴 Vaginal bleeding between periods, after sex, or post-menopause</li>
+    <li>🟡 Watery or foul-smelling discharge</li>
+    <li>🟠 Pain during intercourse</li>
+    <li>🔵 Pelvic or back pain</li>
+    <li>⚫ Fatigue, leg swelling, weight loss (late stages)</li>
+  </ul>
+  <p><strong>Listen to your body — early action saves lives.</strong></p>
+
+  <h3>🩺 Screening – Your First Line of Defense</h3>
+  <table>
+    <thead>
+      <tr><th>Test</th><th>Purpose</th><th>Age Group</th><th>Frequency</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Pap Smear</td><td>Detects abnormal cells</td><td>21–65 yrs</td><td>Every 3 years</td></tr>
+      <tr><td>HPV DNA Test</td><td>Detects high-risk HPV</td><td>30–65 yrs</td><td>Every 5 years</td></tr>
+      <tr><td>Co-testing</td><td>Pap + HPV</td><td>30–65 yrs</td><td>Every 5 years</td></tr>
+      <tr><td>Colposcopy</td><td>Magnified cervical exam</td><td>If abnormal results</td><td>As advised</td></tr>
+      <tr><td>Biopsy</td><td>Confirm diagnosis</td><td>As needed</td><td>One-time or follow-up</td></tr>
+    </tbody>
+  </table>
+  <p>✅ Painless, quick, and life-saving.</p>
+
+  <h3>💉 HPV Vaccination – A Gift for the Next Generation</h3>
+  <ul>
+    <li><strong>Ideal age:</strong> 9–14 years (before sexual activity)</li>
+    <li><strong>Catch-up:</strong> Up to 26 years, sometimes 45 after consultation</li>
+    <li><strong>Even sexually active women can benefit</strong></li>
+  </ul>
+  <table>
+    <thead>
+      <tr><th>Vaccine</th><th>Protection</th><th>Doses</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Cervarix</td><td>HPV 16, 18</td><td>2–3 doses</td></tr>
+      <tr><td>Gardasil-4</td><td>HPV 6, 11, 16, 18</td><td>2–3 doses</td></tr>
+      <tr><td>Gardasil-9</td><td>9 HPV types (not widely available)</td><td>2–3 doses</td></tr>
+    </tbody>
+  </table>
+  <p><em>Vaccination empowers — it doesn’t promote early sexual activity.</em></p>
+
+  <h3>🛠️ Treatment Options – A Stage-Based Approach</h3>
+  <table>
+    <thead>
+      <tr><th>Stage</th><th>Treatment Options</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>CIN I–III</td><td>LEEP, cryotherapy, conization</td></tr>
+      <tr><td>Stage IA–IB1</td><td>Conization, radical hysterectomy</td></tr>
+      <tr><td>Stage IB2–IIA</td><td>Hysterectomy or chemoradiation</td></tr>
+      <tr><td>Stage IIB–IVA</td><td>Radiation + chemo (cisplatin)</td></tr>
+      <tr><td>Stage IVB</td><td>Chemo ± immunotherapy/targeted therapy</td></tr>
+    </tbody>
+  </table>
+  <ul>
+    <li>Fertility-sparing surgeries possible in early stages</li>
+    <li>Emotional, sexual, and physical healing support is vital</li>
+  </ul>
+
+  <h3>🌈 Life After Cervical Cancer – You Are Not Alone</h3>
+  <ul>
+    <li>Follow-up visits every 3–6 months</li>
+    <li>Pelvic exams, scans</li>
+    <li>Manage side effects: dryness, fatigue, anxiety</li>
+    <li>Fertility counseling if relevant</li>
+    <li>Join support groups for emotional recovery</li>
+  </ul>
+  <p>💖 Many survivors live long, full, and healthy lives.</p>
+
+  <h3>❓ FAQs, Myth Busters & Quiz</h3>
+  <ul>
+    <li>❌ “Only promiscuous women get HPV.” → <strong>False:</strong> Just one exposure is enough</li>
+    <li>❌ “Vaccinated = No Pap smear.” → <strong>False:</strong> Vaccines don’t cover all strains</li>
+    <li>❌ “Pap smear is painful.” → <strong>False:</strong> Slight discomfort at most</li>
+    <li>❌ “I had a hysterectomy, I’m safe.” → <strong>Depends:</strong> If due to cancer, screening may still be needed</li>
+  </ul>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Cervical Cancer Quiz — Test Your Knowledge</h2>

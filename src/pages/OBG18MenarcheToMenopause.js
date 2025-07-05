@@ -67,36 +67,86 @@ const MenarcheToMenopause = () => {
       <p className="lead">“From first flow to final pause – complete care.”</p>
 
       <section className="info-section">
-        <p>
-          Women’s health evolves through different life stages, from the first menstrual cycle (menarche) to menopause and beyond. Each phase brings unique changes and challenges. At Sukam Speciality Clinic and Fertility Centre, we provide comprehensive care tailored to every stage — supporting hormonal balance, reproductive health, and overall wellness for a vibrant life.
-        </p>
+  <h3>🎀 Introduction — Celebrating the Journey of Womanhood</h3>
+  <p>
+    The journey from menarche to menopause is one of the most remarkable biological and emotional transformations 
+    a woman undergoes. Spanning nearly four decades of hormonal, physical, reproductive, emotional, and societal shifts, 
+    this path defines much more than just fertility. It is the rhythm of a woman’s body, echoing resilience, cycles, growth, and wisdom.
+  </p>
+  <p>
+    At <strong>Sukam Speciality Clinic and Fertility Centre</strong>, we celebrate every phase—from the first period to the graceful arrival of menopause—
+    with care, compassion, education, and clinical precision.
+  </p>
 
-        <h3>🩺 What We Offer:</h3>
-        <ul>
-          <li>Education and counseling on menstrual health and hygiene</li>
-          <li>Diagnosis and management of irregular cycles, painful periods, and hormonal imbalances</li>
-          <li>Screening and treatment for conditions like PCOD/PCOS, endometriosis, and thyroid disorders</li>
-          <li>Support for fertility planning and contraception choices</li>
-          <li>Menopause management including symptom relief and bone health</li>
-          <li>Lifestyle and nutrition counseling for hormonal wellness</li>
-          <li>Emotional and mental health support</li>
-        </ul>
+  <h3>🩸 Menarche — More Than Just the First Period</h3>
+  <ul>
+    <li><strong>Typical age:</strong> 9–15 years</li>
+    <li><strong>Signals:</strong> Hormonal surge, breast growth, body hair, mood shifts</li>
+    <li><strong>Experience:</strong> Confusion, curiosity, cultural emotions</li>
+  </ul>
+  <p><strong>Sukam Support:</strong> Period education kits, hygiene guides, parent-teen workshops</p>
 
-        <h3>💡 Tips for Hormonal Health:</h3>
-        <ul>
-          <li>Maintain a balanced diet rich in whole grains, fruits, and vegetables</li>
-          <li>Regular physical activity helps regulate cycles and mood</li>
-          <li>Track your menstrual cycle to notice any changes early</li>
-          <li>Manage stress through relaxation techniques like yoga or meditation</li>
-          <li>Get regular health check-ups and hormonal screening as advised</li>
-        </ul>
+  <h3>🌿 Navigating Adolescence — Hormones in High Gear</h3>
+  <ul>
+    <li><strong>Challenges:</strong> Painful periods, social discomfort, hormonal acne</li>
+    <li><strong>Teen PCOD Signs:</strong> Weight gain, facial hair, acne</li>
+    <li><strong>Tools:</strong> Menstrual tracking apps, gyne consults, lifestyle kits</li>
+  </ul>
 
-        <h3>🚫 Myth vs Fact:</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “Irregular periods are always normal.”<br /><strong>✅ Truth:</strong> While common, persistent irregularities should be evaluated by a healthcare provider.</li>
-          <li><strong>❌ Myth:</strong> “Menopause means the end of a healthy sex life.”<br /><strong>✅ Truth:</strong> With proper care, many women enjoy a fulfilling sex life after menopause.</li>
-        </ul>
-      </section>
+  <h3>🌼 Reproductive Bloom — 20s to 30s</h3>
+  <ul>
+    <li><strong>Priorities:</strong> Fertility awareness, ovulation tracking</li>
+    <li><strong>Concerns:</strong> PCOS, fibroids, endometriosis, PMDD</li>
+    <li><strong>Our Role:</strong> Fertility workshops, wellness planning, conception guidance</li>
+  </ul>
+
+  <h3>🛡️ Contraception — Informed Choices, Confident Steps</h3>
+  <ul>
+    <li><strong>Short-term:</strong> Condoms, pills</li>
+    <li><strong>Long-term:</strong> IUDs, implants</li>
+    <li><strong>Natural:</strong> Rhythm, mucus tracking</li>
+  </ul>
+  <p><strong>Sukam Offers:</strong> Life-stage contraceptive counseling, postpartum options, open Q&A lines</p>
+
+  <h3>🌱 Planning for Pregnancy — Creating the Right Soil</h3>
+  <ul>
+    <li><strong>Tests:</strong> Thyroid, hemoglobin, sugar, rubella, hepatitis, varicella</li>
+    <li><strong>Prepping:</strong> Folic acid, medication reviews, emotional readiness</li>
+    <li><strong>Sukam Services:</strong> Preconception cleanse, fertility mapping, couple consults</li>
+  </ul>
+
+  <h3>🤰 Pregnancy — When the Body Becomes a Universe</h3>
+  <ul>
+    <li><strong>First Trimester:</strong> Fatigue, nausea, emotional swings</li>
+    <li><strong>Second:</strong> Stability, appetite, glow</li>
+    <li><strong>Third:</strong> Heaviness, pressure, nesting</li>
+  </ul>
+  <p><strong>We Offer:</strong> Trimester yoga, nutrition, emotional & clinical support</p>
+
+  <h3>👶 The Fourth Trimester — Rediscovering the Self Post-Birth</h3>
+  <ul>
+    <li><strong>Issues:</strong> Lochia, engorgement, sleep loss, identity shifts</li>
+    <li><strong>Hormones:</strong> Estrogen drop, prolactin rise</li>
+    <li><strong>Care:</strong> Lactation help, PPD screening, pelvic healing</li>
+  </ul>
+
+  <h3>🔥 Perimenopause — When the Symphony Slows</h3>
+  <ul>
+    <li><strong>Symptoms:</strong> Irregular cycles, hot flashes, anxiety</li>
+    <li><strong>Checks:</strong> Thyroid, endometrial scan</li>
+    <li><strong>Sukam Plan:</strong> Lifestyle reset, hormone balance, bone health</li>
+  </ul>
+
+  <h3>🧘‍♀️ Menopause — Closing One Chapter, Opening Another</h3>
+  <ul>
+    <li><strong>Changes:</strong> Dryness, weight gain, skin thinning, urgency</li>
+    <li><strong>Risks:</strong> Osteoporosis, heart disease</li>
+    <li><strong>Support:</strong> HRT options, vaginal care, strength training, dietary help</li>
+  </ul>
+
+  <p><strong>From menarche to menopause, Sukam walks beside every woman — with empathy, expertise, and empowerment.</strong></p>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Menarche to Menopause Quiz — How Well Do You Know Your Cycle?</h2>
