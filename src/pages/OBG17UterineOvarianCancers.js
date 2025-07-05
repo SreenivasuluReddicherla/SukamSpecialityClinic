@@ -3,29 +3,79 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "Which is the most common symptom of uterine cancer?",
-    options: ["Abnormal uterine bleeding", "Weight gain", "Hair loss", "Frequent urination"],
-    answer: "Abnormal uterine bleeding"
+    question: "What is the most common type of uterine cancer?",
+    options: ["Uterine sarcoma", "Endometrial cancer", "Cervical cancer", "Fallopian tube cancer"],
+    answer: "Endometrial cancer"
   },
   {
-    question: "Ovarian cancer is often diagnosed at:",
-    options: ["Early stages", "Late stages", "Before symptoms", "Not diagnosable"],
-    answer: "Late stages"
+    question: "Which of the following is a key early sign of uterine cancer?",
+    options: ["Headache", "Vaginal itching", "Abnormal vaginal bleeding", "Breast lump"],
+    answer: "Abnormal vaginal bleeding"
   },
   {
-    question: "True or False: Family history can increase risk for ovarian cancer.",
+    question: "Ovarian cancer is often called a “silent killer” because:",
+    options: ["It doesn’t cause pain", "It’s common in young girls", "Symptoms appear very late", "It’s always fatal"],
+    answer: "Symptoms appear very late"
+  },
+  {
+    question: "CA-125 is a tumor marker primarily used in:",
+    options: ["Breast cancer", "Colon cancer", "Ovarian cancer", "Lung cancer"],
+    answer: "Ovarian cancer"
+  },
+  {
+    question: "Which diagnostic tool is used for uterine lining evaluation?",
+    options: ["Mammogram", "Endometrial biopsy", "Colonoscopy", "Pap smear"],
+    answer: "Endometrial biopsy"
+  },
+  {
+    question: "BRCA gene mutations increase the risk of:",
+    options: ["Skin cancer", "Cervical cancer", "Uterine fibroids", "Ovarian and breast cancer"],
+    answer: "Ovarian and breast cancer"
+  },
+  {
+    question: "Which symptom is least likely linked to ovarian cancer?",
+    options: ["Bloating", "Pelvic pain", "Cough", "Feeling full quickly"],
+    answer: "Cough"
+  },
+  {
+    question: "Which of the following treatments is considered systemic?",
+    options: ["Radiation", "Chemotherapy", "Surgery", "Cryotherapy"],
+    answer: "Chemotherapy"
+  },
+  {
+    question: "The risk of uterine cancer increases with:",
+    options: ["Early menopause", "Obesity", "High calcium diet", "Iron deficiency"],
+    answer: "Obesity"
+  },
+  {
+    question: "True or False: Ovarian cancer is usually detected early.",
     options: ["True", "False"],
-    answer: "True"
+    answer: "False"
   },
   {
-    question: "Which test helps detect ovarian cancer?",
-    options: ["Pap smear", "CA-125 blood test", "Mammogram", "Colonoscopy"],
-    answer: "CA-125 blood test"
+    question: "Which food group is considered protective against cancer?",
+    options: ["Refined carbs", "Sugary drinks", "Cruciferous vegetables", "Red meat"],
+    answer: "Cruciferous vegetables"
   },
   {
-    question: "Can uterine cancer be treated successfully if caught early?",
-    options: ["Yes", "No"],
-    answer: "Yes"
+    question: "Which test is least useful in diagnosing uterine cancer?",
+    options: ["Pap smear", "Transvaginal ultrasound", "Endometrial biopsy", "D&C"],
+    answer: "Pap smear"
+  },
+  {
+    question: "Which of these is a hormone-sensitive cancer?",
+    options: ["Cervical", "Endometrial", "Lung", "Liver"],
+    answer: "Endometrial"
+  },
+  {
+    question: "Women with Lynch syndrome have a higher risk of:",
+    options: ["Breast cancer only", "Endometrial and colorectal cancers", "Melanoma", "Prostate cancer"],
+    answer: "Endometrial and colorectal cancers"
+  },
+  {
+    question: "Oophorectomy refers to the surgical removal of:",
+    options: ["Uterus", "Cervix", "Ovaries", "Fallopian tubes"],
+    answer: "Ovaries"
   }
 ];
 

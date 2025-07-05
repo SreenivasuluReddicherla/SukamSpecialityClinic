@@ -5,32 +5,202 @@ const quizData = [
   {
     question: "A breast abscess is:",
     options: [
-      "A harmless cyst",
-      "A pus-filled infection",
-      "A milk-filled sac",
-      "A muscle spasm"
+      "Cancer",
+      "Cyst",
+      "Pus-filled infection",
+      "Milk clot"
     ],
-    answer: "A pus-filled infection"
+    answer: "Pus-filled infection"
   },
   {
-    question: "True or False: Breast abscesses only occur in breastfeeding women.",
-    options: ["True", "False"],
-    answer: "False"
+    question: "Commonest cause of breast abscess is:",
+    options: [
+      "Bacteria entering cracked nipple",
+      "Breast cancer",
+      "Hormonal changes",
+      "Allergy"
+    ],
+    answer: "Bacteria entering cracked nipple"
   },
   {
-    question: "One common symptom of a breast abscess is:",
-    options: ["Itching", "Coldness of skin", "Red, painful swelling", "Hair loss"],
-    answer: "Red, painful swelling"
+    question: "Which group is at highest risk of breast abscess?",
+    options: [
+      "Men",
+      "Teenagers",
+      "Breastfeeding mothers",
+      "Postmenopausal women"
+    ],
+    answer: "Breastfeeding mothers"
   },
   {
-    question: "What is a common treatment for an abscess?",
-    options: ["Ignoring it", "Cold showers", "Drainage and antibiotics", "Eye drops"],
-    answer: "Drainage and antibiotics"
+    question: "Most breast abscesses occur due to:",
+    options: [
+      "Diabetes",
+      "Blocked ducts + infection",
+      "Smoking",
+      "Milk allergy"
+    ],
+    answer: "Blocked ducts + infection"
   },
   {
-    question: "Which habit increases the risk of abscesses healing poorly?",
-    options: ["Drinking water", "Regular exercise", "Smoking", "Eating fruits"],
-    answer: "Smoking"
+    question: "Key symptom of a breast abscess is:",
+    options: [
+      "Painless lump",
+      "Coldness of breast",
+      "Painful red lump",
+      "Nipple retraction"
+    ],
+    answer: "Painful red lump"
+  },
+  {
+    question: "Which imaging is most useful in breast abscess?",
+    options: [
+      "CT scan",
+      "X-ray",
+      "Ultrasound",
+      "Mammogram"
+    ],
+    answer: "Ultrasound"
+  },
+  {
+    question: "Needle aspiration is suitable for abscesses:",
+    options: [
+      "Less than 3 cm",
+      "More than 5 cm",
+      "With no pus",
+      "That are cancerous"
+    ],
+    answer: "Less than 3 cm"
+  },
+  {
+    question: "If untreated, breast abscess may lead to:",
+    options: [
+      "Discharge of milk",
+      "Fistula",
+      "Improved pain",
+      "No problem"
+    ],
+    answer: "Fistula"
+  },
+  {
+    question: "Which bacteria most often causes abscesses?",
+    options: [
+      "E. coli",
+      "Pseudomonas",
+      "Staphylococcus aureus",
+      "H. pylori"
+    ],
+    answer: "Staphylococcus aureus"
+  },
+  {
+    question: "Pain, fever, redness, and lump in breastfeeding woman suggests:",
+    options: [
+      "Galactorrhea",
+      "Fibroadenoma",
+      "Breast abscess",
+      "Ovarian cyst"
+    ],
+    answer: "Breast abscess"
+  },
+  {
+    question: "Women with nipple piercings are at risk because:",
+    options: [
+      "Better milk flow",
+      "Increased infection entry",
+      "Less hormones",
+      "Reduced breast pain"
+    ],
+    answer: "Increased infection entry"
+  },
+  {
+    question: "Antibiotic therapy is started:",
+    options: [
+      "After surgery only",
+      "Only if fever is present",
+      "Immediately",
+      "After stopping breastfeeding"
+    ],
+    answer: "Immediately"
+  },
+  {
+    question: "Breastfeeding should be:",
+    options: [
+      "Completely stopped",
+      "Continued on both sides",
+      "Continued on unaffected side",
+      "Not discussed"
+    ],
+    answer: "Continued on unaffected side"
+  },
+  {
+    question: "Which of the following is NOT a risk factor?",
+    options: [
+      "Smoking",
+      "Poor latching during feeding",
+      "Hormone replacement",
+      "Diabetes"
+    ],
+    answer: "Hormone replacement"
+  },
+  {
+    question: "Post-surgery, patients should:",
+    options: [
+      "Avoid washing the area",
+      "Leave wound open",
+      "Follow proper wound dressing",
+      "Restart gym immediately"
+    ],
+    answer: "Follow proper wound dressing"
+  },
+  {
+    question: "Recurrent abscesses may need:",
+    options: [
+      "Core biopsy",
+      "Fistula surgery",
+      "Diet changes only",
+      "Chemotherapy"
+    ],
+    answer: "Fistula surgery"
+  },
+  {
+    question: "What kind of scar is expected after incision?",
+    options: [
+      "Big deforming scar",
+      "Disfiguring mark",
+      "Usually small, well-healed",
+      "Always infected"
+    ],
+    answer: "Usually small, well-healed"
+  },
+  {
+    question: "A woman with mastitis should:",
+    options: [
+      "Stop all feeds",
+      "Wait till pus forms",
+      "See a doctor early",
+      "Start antibiotics on her own"
+    ],
+    answer: "See a doctor early"
+  },
+  {
+    question: "Painkillers used in abscess include:",
+    options: [
+      "Insulin",
+      "Paracetamol or ibuprofen",
+      "Morphine only",
+      "None"
+    ],
+    answer: "Paracetamol or ibuprofen"
+  },
+  {
+    question: "Pus culture helps in:",
+    options: [
+      "Diagnosing cancer",
+      "Choosing the right antibiotic",
+      "Breastfeeding technique",
+      "Checking hormones"
+    ],
+    answer: "Choosing the right antibiotic"
   }
 ];
 
@@ -72,52 +242,114 @@ const BreastAbscess = () => {
       <p className="lead">“A painful boil that needs a quick fix.”</p>
 
       <section className="info-section">
-        <p>
-          A breast abscess is like a red, throbbing alarm bell under your skin — usually caused by a bacterial infection, often in breastfeeding women. It’s hot, swollen, and tender, and it can make daily life feel unbearable. But the good news? It’s highly treatable when caught early.
-        </p>
+  <h3>💢 What Is a Breast Abscess?</h3>
+  <p>
+    A breast abscess is a painful, pus-filled infection in the breast tissue. It usually develops from untreated mastitis or a blocked milk duct,
+    most commonly in breastfeeding women. However, it may also affect non-lactating women with risk factors like smoking, diabetes, or immune suppression.
+  </p>
 
-        <h3>What’s Going On Inside?</h3>
-        <ul>
-          <li>Bacteria sneak in through cracked skin or milk ducts</li>
-          <li>An infection builds, forming a pus-filled lump</li>
-          <li>Your body fights back — hence the swelling, pain, and even fever</li>
-        </ul>
+  <h3>🧬 What Causes a Breast Abscess?</h3>
+  <ul>
+    <li>Blocked milk duct → Milk stasis</li>
+    <li>Untreated mastitis (inflammation) turns infectious</li>
+    <li>Bacteria entering through cracked nipples</li>
+    <li>Poor breastfeeding technique</li>
+    <li>Smoking or diabetes in non-lactating women</li>
+  </ul>
+  <p><strong>Most common organism:</strong> <em>Staphylococcus aureus</em></p>
 
-        <h3>Who’s at Risk?</h3>
-        <ul>
-          <li>Breastfeeding moms (especially with mastitis)</li>
-          <li>Women with nipple trauma or piercings</li>
-          <li>Diabetics and those with weakened immunity</li>
-          <li>Smokers (less healing power = higher risk)</li>
-        </ul>
+  <h3>🩺 Who Is at Risk?</h3>
+  <table>
+    <thead>
+      <tr><th>Group</th><th>Why?</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Breastfeeding mothers</td><td>Milk stasis, cracked nipples, blocked ducts</td></tr>
+      <tr><td>Smokers</td><td>Weakened immune defenses in ducts</td></tr>
+      <tr><td>Diabetic or immunocompromised</td><td>Delayed healing, increased infection risk</td></tr>
+      <tr><td>Women with nipple piercings/trauma</td><td>Entry point for bacterial infection</td></tr>
+    </tbody>
+  </table>
 
-        <h3>Signs You Shouldn’t Ignore:</h3>
-        <ul>
-          <li>🚨 Hard, painful lump</li>
-          <li>🚨 Redness and warmth on the skin</li>
-          <li>🚨 Fever or chills</li>
-          <li>🚨 Pus discharge from nipple</li>
-          <li>🚨 Feeling drained and unwell</li>
-        </ul>
+  <h3>🔍 Common Symptoms of Breast Abscess</h3>
+  <ul>
+    <li>Localized pain, swelling, and warmth</li>
+    <li>Red, firm lump that may enlarge</li>
+    <li>Fever, chills, and body aches</li>
+    <li>Nipple discharge (possibly pus or blood)</li>
+    <li>Pain or difficulty while breastfeeding</li>
+    <li>Fatigue, feeling unwell</li>
+  </ul>
 
-        <h3>How Sukam Helps You Heal:</h3>
-        <ul>
-          <li>Quick clinical diagnosis</li>
-          <li>Ultrasound to confirm the abscess</li>
-          <li>Antibiotics to knock out the infection</li>
-          <li>Drainage — sometimes via needle, sometimes minor surgery</li>
-          <li>Supportive care and lactation advice (if breastfeeding)</li>
-        </ul>
+  <h3>🧪 Diagnosis at Our Clinic</h3>
+  <ul>
+    <li>✅ <strong>Clinical Breast Exam:</strong> Tenderness, skin changes, lump characteristics</li>
+    <li>✅ <strong>Ultrasound:</strong> Confirms fluid collection and rules out cyst or mastitis</li>
+    <li>✅ <strong>Pus Culture:</strong> Tailors antibiotic treatment (if drainage performed)</li>
+    <li>✅ <strong>Blood Tests:</strong> CBC, CRP if fever/severe infection suspected</li>
+  </ul>
 
-        <h3>Tips to Prevent and Recover:</h3>
-        <ul>
-          <li>✔ Keep nipples clean and moisturized if nursing</li>
-          <li>✔ Don’t delay treatment for breast pain or redness</li>
-          <li>✔ Empty breasts regularly if breastfeeding</li>
-          <li>✔ Apply warm compresses for comfort</li>
-          <li>✔ Rest and stay hydrated — healing takes energy</li>
-        </ul>
-      </section>
+  <h3>💊 Treatment Options</h3>
+  <table>
+    <thead>
+      <tr><th>Approach</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Antibiotics</td><td>Broad-spectrum initially; adjusted per culture report</td></tr>
+      <tr><td>Drainage</td><td>Needle aspiration (small abscess) or I&D surgery (large or ruptured abscess)</td></tr>
+      <tr><td>Pain relief</td><td>Paracetamol, ibuprofen</td></tr>
+      <tr><td>Lactation support</td><td>Continue breastfeeding from unaffected breast; express milk from affected side</td></tr>
+      <tr><td>Wound care</td><td>Daily dressing and hygiene counseling</td></tr>
+    </tbody>
+  </table>
+
+  <h3>🔪 When Is Surgery Required?</h3>
+  <ul>
+    <li>Abscess &gt;3 cm or rupturing</li>
+    <li>Not resolving with aspiration</li>
+    <li>Extensive necrosis or fistula formation</li>
+    <li>Multiple recurrences</li>
+  </ul>
+
+  <h3>🤱 Breastfeeding Guidance</h3>
+  <ul>
+    <li>Continue breastfeeding from the other breast</li>
+    <li>Express milk from the infected side to prevent engorgement</li>
+    <li>Maintain nipple hygiene</li>
+    <li>Consult lactation expert if breastfeeding becomes painful</li>
+  </ul>
+
+  <h3>⚠️ Complications If Left Untreated</h3>
+  <ul>
+    <li>Spread of infection to surrounding tissue</li>
+    <li>Chronic abscess or fistula formation</li>
+    <li>Sepsis (in rare, severe cases)</li>
+    <li>Scarring or cosmetic distortion of breast</li>
+  </ul>
+
+  <h3>🧐 Myths vs. Facts</h3>
+  <table>
+    <thead>
+      <tr><th>Myth</th><th>Fact</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Only breastfeeding women get abscesses</td><td>Can occur in non-lactating women too</td></tr>
+      <tr><td>You must stop breastfeeding</td><td>Breastfeeding is usually continued with care</td></tr>
+      <tr><td>All breast lumps are cancer</td><td>Abscesses are infections, not tumors</td></tr>
+      <tr><td>Surgery always leaves a scar</td><td>Minimal scarring possible with expert care</td></tr>
+    </tbody>
+  </table>
+
+  <h3>🏥 How We Manage Breast Abscess at [Your Clinic Name]</h3>
+  <ul>
+    <li>✅ Rapid diagnosis with bedside ultrasound</li>
+    <li>✅ On-the-spot aspiration or minor surgical drainage</li>
+    <li>✅ Early antibiotic therapy tailored to the infection</li>
+    <li>✅ Wound dressing support and at-home guidance</li>
+    <li>✅ Lactation support and pain relief</li>
+    <li>✅ Follow-up to ensure healing and cosmetic care</li>
+  </ul>
+</section>
 
       <section className="quiz-section">
         <h2>🧠 Quick Quiz — Breast Abscess</h2>

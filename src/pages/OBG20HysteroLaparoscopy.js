@@ -3,41 +3,132 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "What type of procedure is hysteroscopy?",
-    options: [
-      "Open surgery",
-      "Minimally invasive endoscopic procedure",
-      "Blood test",
-      "X-ray"
-    ],
-    answer: "Minimally invasive endoscopic procedure"
+    question: "Hysteroscopy is done through:",
+    options: ["Abdominal incision", "Vaginal route", "Rectum", "Mouth"],
+    answer: "Vaginal route"
   },
   {
-    question: "True or False: Laparoscopy helps treat endometriosis.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "Which fluid is commonly used to distend the uterus during hysteroscopy?",
+    options: ["Iodine", "CO₂", "Normal saline", "Blood"],
+    answer: "Normal saline"
   },
   {
-    question: "Which organ is NOT evaluated during hysteroscopy?",
-    options: ["Uterus", "Ovaries", "Fallopian tubes", "Liver"],
-    answer: "Liver"
+    question: "Chromopertubation checks for:",
+    options: ["Ovarian cysts", "Fallopian tube patency", "PCOS", "Uterine contractions"],
+    answer: "Fallopian tube patency"
   },
   {
-    question: "What is a common benefit of hystero-laparoscopy?",
-    options: ["Longer hospital stay", "Faster recovery", "Larger surgical scars", "No diagnosis"],
-    answer: "Faster recovery"
+    question: "Best time to perform hysteroscopy is:",
+    options: ["Day 2", "Day 10", "Day 18", "Any time"],
+    answer: "Day 10"
   },
   {
-    question: "When should you contact your doctor after the procedure?",
-    options: [
-      "If pain is severe or fever occurs",
-      "Only after a month",
-      "Never",
-      "Immediately after discharge"
-    ],
-    answer: "If pain is severe or fever occurs"
+    question: "Hysteroscopy is helpful in detecting:",
+    options: ["Ectopic pregnancy", "Ovarian torsion", "Endometrial polyps", "Cervical cancer"],
+    answer: "Endometrial polyps"
+  },
+  {
+    question: "Laparoscopy is contraindicated in:",
+    options: ["Endometriosis", "Acute pelvic infection", "Uterine fibroids", "Infertility"],
+    answer: "Acute pelvic infection"
+  },
+  {
+    question: "Which of these is NOT visible in hysteroscopy?",
+    options: ["Endometrium", "Ovaries", "Cervical canal", "Uterine cavity"],
+    answer: "Ovaries"
+  },
+  {
+    question: "Ovarian drilling is done in:",
+    options: ["Endometriosis", "Fibroid uterus", "PCOS", "Menopause"],
+    answer: "PCOS"
+  },
+  {
+    question: "Septum resection improves:",
+    options: ["Pain", "Miscarriage rate", "Thyroid function", "IUD placement"],
+    answer: "Miscarriage rate"
+  },
+  {
+    question: "Shoulder pain post laparoscopy is due to:",
+    options: ["Muscle strain", "CO₂ gas irritation", "Nerve damage", "Anemia"],
+    answer: "CO₂ gas irritation"
+  },
+  {
+    question: "Hysteroscopy is useful in:",
+    options: ["Diagnosing ovarian cancer", "Removing submucosal fibroids", "Assessing endometriomas", "Fallopian tube block repair"],
+    answer: "Removing submucosal fibroids"
+  },
+  {
+    question: "Common complication of hysteroscopy is:",
+    options: ["Uterine perforation", "Appendicitis", "Gallstones", "Vaginal prolapse"],
+    answer: "Uterine perforation"
+  },
+  {
+    question: "Laparoscopic dye test is called:",
+    options: ["Chromo-scan", "Hysterosonography", "Chromopertubation", "Lipo-tubation"],
+    answer: "Chromopertubation"
+  },
+  {
+    question: "Uterine anomalies like septum are best corrected by:",
+    options: ["Laparotomy", "Vaginal dilation", "Hysteroscopic resection", "Ovarian stimulation"],
+    answer: "Hysteroscopic resection"
+  },
+  {
+    question: "Which is a diagnostic laparoscopy sign for endometriosis?",
+    options: ["Polyp", "Chocolate cyst", "Fibroid", "Septum"],
+    answer: "Chocolate cyst"
+  },
+  {
+    question: "Entry point for laparoscope is:",
+    options: ["Vagina", "Umbilicus", "Groin", "Perineum"],
+    answer: "Umbilicus"
+  },
+  {
+    question: "Which hormone phase is preferred for hysteroscopy?",
+    options: ["Follicular", "Luteal", "Menstrual", "Ovulation"],
+    answer: "Follicular"
+  },
+  {
+    question: "Adhesiolysis is:",
+    options: ["Removal of cysts", "Treatment for fibroids", "Separation of pelvic adhesions", "Dilatation of cervix"],
+    answer: "Separation of pelvic adhesions"
+  },
+  {
+    question: "IUD retrieval under hysteroscopy is done when:",
+    options: ["It is in place", "It is expelled", "It is embedded or not visualized", "It is removed already"],
+    answer: "It is embedded or not visualized"
+  },
+  {
+    question: "CO₂ gas is used in laparoscopy to:",
+    options: ["Clean blood", "Stop bleeding", "Inflate abdominal cavity", "Decrease pain"],
+    answer: "Inflate abdominal cavity"
+  },
+  {
+    question: "After hystero-laparoscopy, when can one attempt conception?",
+    options: ["After 6 months", "Immediately", "After 1 menstrual cycle", "After a year"],
+    answer: "After 1 menstrual cycle"
+  },
+  {
+    question: "Tubal blockage can be treated during laparoscopy by:",
+    options: ["Polypectomy", "Dye instillation", "Fimbrioplasty or cannulation", "Ablation"],
+    answer: "Fimbrioplasty or cannulation"
+  },
+  {
+    question: "Saline infusion sonography is less sensitive than:",
+    options: ["Hysteroscopy", "USG", "X-ray", "Pap smear"],
+    answer: "Hysteroscopy"
+  },
+  {
+    question: "Uterine fibroids may be removed through hysteroscopy if they are:",
+    options: ["Intramural", "Subserosal", "Submucosal", "Cervical"],
+    answer: "Submucosal"
+  },
+  {
+    question: "Which is a relative contraindication to laparoscopy?",
+    options: ["Obesity", "Severe cardiopulmonary disease", "Infertility", "PCOS"],
+    answer: "Severe cardiopulmonary disease"
   }
 ];
+
 
 const HysteroLaparoscopy = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});

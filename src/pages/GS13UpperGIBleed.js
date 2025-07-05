@@ -3,26 +3,207 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "What symptom suggests an upper GI bleed?",
-    options: ["Vomiting blood", "Diarrhea", "Joint pain", "Headache"],
-    answer: "Vomiting blood"
+    question: "Upper GI bleeding refers to bleeding from:",
+    options: [
+      "Colon and rectum",
+      "Esophagus, stomach, duodenum",
+      "Small intestine only",
+      "Pancreas"
+    ],
+    answer: "Esophagus, stomach, duodenum"
   },
   {
-    question: "True or False: Black, tarry stools can indicate bleeding in the upper GI tract.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "Most common cause of upper GI bleed is:",
+    options: [
+      "Esophageal cancer",
+      "Duodenal ulcer",
+      "Colon cancer",
+      "Hemorrhoids"
+    ],
+    answer: "Duodenal ulcer"
   },
   {
-    question: "Which test helps find the bleeding source?",
-    options: ["Endoscopy", "ECG", "Ultrasound of leg veins", "Hearing test"],
-    answer: "Endoscopy"
+    question: "Black, tarry stool is called:",
+    options: [
+      "Hematemesis",
+      "Hematochezia",
+      "Melena",
+      "Steatorrhea"
+    ],
+    answer: "Melena"
   },
   {
-    question: "What can cause upper GI bleeding?",
-    options: ["Peptic ulcers", "Esophageal varices", "NSAIDs overuse", "All of the above"],
-    answer: "All of the above"
+    question: "Which test is most useful to locate upper GI bleeding?",
+    options: [
+      "Colonoscopy",
+      "Ultrasound",
+      "Upper GI endoscopy",
+      "X-ray"
+    ],
+    answer: "Upper GI endoscopy"
+  },
+  {
+    question: "Coffee-ground vomiting suggests:",
+    options: [
+      "Recent bleeding",
+      "Digested blood in the stomach",
+      "Liver failure",
+      "Pancreatic leakage"
+    ],
+    answer: "Digested blood in the stomach"
+  },
+  {
+    question: "A tear at the gastroesophageal junction is called:",
+    options: [
+      "Barrett’s esophagus",
+      "Mallory-Weiss tear",
+      "Zenker’s diverticulum",
+      "Achalasia"
+    ],
+    answer: "Mallory-Weiss tear"
+  },
+  {
+    question: "Which of the following can cause painless upper GI bleeding?",
+    options: [
+      "Gastric ulcer",
+      "Varices",
+      "Appendicitis",
+      "Crohn’s disease"
+    ],
+    answer: "Varices"
+  },
+  {
+    question: "Which drug class can increase risk of GI bleeding?",
+    options: [
+      "Statins",
+      "NSAIDs",
+      "Antihistamines",
+      "Antacids"
+    ],
+    answer: "NSAIDs"
+  },
+  {
+    question: "Which infection is linked to peptic ulcers?",
+    options: [
+      "Hepatitis B",
+      "H. pylori",
+      "HPV",
+      "E. coli"
+    ],
+    answer: "H. pylori"
+  },
+  {
+    question: "Anemia with no visible bleeding may suggest:",
+    options: [
+      "Pancreatitis",
+      "Occult GI bleed",
+      "Hyperthyroidism",
+      "Gallstones"
+    ],
+    answer: "Occult GI bleed"
+  },
+  {
+    question: "Recurrent retching in alcoholism may cause:",
+    options: [
+      "Gallbladder stones",
+      "Mallory-Weiss tear",
+      "Jaundice",
+      "Ulcerative colitis"
+    ],
+    answer: "Mallory-Weiss tear"
+  },
+  {
+    question: "Varices are associated with which organ’s disease?",
+    options: [
+      "Kidney",
+      "Lung",
+      "Liver",
+      "Pancreas"
+    ],
+    answer: "Liver"
+  },
+  {
+    question: "Octreotide is used to treat bleeding from:",
+    options: [
+      "Ulcers",
+      "Varices",
+      "Cancers",
+      "Gallbladder"
+    ],
+    answer: "Varices"
+  },
+  {
+    question: "First step in active bleeding is:",
+    options: [
+      "Endoscopy",
+      "CT scan",
+      "IV fluids and stabilization",
+      "Surgery"
+    ],
+    answer: "IV fluids and stabilization"
+  },
+  {
+    question: "Which blood test is useful to assess severity?",
+    options: [
+      "ESR",
+      "CBC",
+      "Lipase",
+      "PSA"
+    ],
+    answer: "CBC"
+  },
+  {
+    question: "Brisk bleeding with shock and vomiting blood needs:",
+    options: [
+      "Home rest",
+      "Oral rehydration",
+      "Emergency hospital care",
+      "Colonoscopy"
+    ],
+    answer: "Emergency hospital care"
+  },
+  {
+    question: "Which drug reduces stomach acid?",
+    options: [
+      "NSAIDs",
+      "Beta-blockers",
+      "Proton pump inhibitors",
+      "Diuretics"
+    ],
+    answer: "Proton pump inhibitors"
+  },
+  {
+    question: "Which lifestyle habit worsens ulcers and GI bleeds?",
+    options: [
+      "Yoga",
+      "Alcohol",
+      "Walking",
+      "Fruit intake"
+    ],
+    answer: "Alcohol"
+  },
+  {
+    question: "Melena typically indicates bleeding from:",
+    options: [
+      "Lower rectum",
+      "Small intestine",
+      "Upper GI tract",
+      "Colon"
+    ],
+    answer: "Upper GI tract"
+  },
+  {
+    question: "A patient with cirrhosis and GI bleed is most likely to have:",
+    options: [
+      "Gallstones",
+      "Constipation",
+      "Esophageal varices",
+      "Intestinal worms"
+    ],
+    answer: "Esophageal varices"
   }
 ];
+
 
 const UpperGIBleed = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});
@@ -62,51 +243,101 @@ const UpperGIBleed = () => {
       <p className="lead">“Blood from above, demanding urgent attention.”</p>
 
       <section className="info-section">
-        <p>
-          An upper gastrointestinal (GI) bleed means bleeding in the upper part of your digestive tract — the esophagus, stomach, or first part of the small intestine. It can cause vomiting blood or black, tarry stools and requires prompt medical care to stop the bleeding and treat the cause.
-        </p>
+  <h3>🩸 Where Does the Bleeding Come From?</h3>
+  <p>
+    Upper GI bleeding refers to any bleeding originating from the esophagus, stomach, or duodenum (first part of the small intestine), located above the ligament of Treitz.
+  </p>
+  <p>
+    The bleeding may be:
+    <ul>
+      <li><strong>Obvious (visible):</strong> Vomiting blood or passing black stools</li>
+      <li><strong>Occult (hidden):</strong> Detected only by testing or through symptoms like fatigue or low hemoglobin</li>
+    </ul>
+  </p>
 
-        <h3>What Causes Upper GI Bleeding?</h3>
-        <ul>
-          <li>Peptic ulcers (sores in stomach or duodenum)</li>
-          <li>Gastritis (inflammation of the stomach lining)</li>
-          <li>Esophageal varices (swollen veins, often from liver disease)</li>
-          <li>Tear in the esophagus lining (Mallory-Weiss tear)</li>
-          <li>Certain medications like NSAIDs or blood thinners</li>
-        </ul>
+  <h3>🚨 Signs That Warrant Immediate Attention</h3>
+  <ul>
+    <li>Vomiting fresh red blood (hematemesis)</li>
+    <li>Black, tarry stools (melena)</li>
+    <li>Coffee-ground like vomitus</li>
+    <li>Sudden fatigue, dizziness, or fainting</li>
+    <li>Pale skin, rapid heartbeat, low blood pressure</li>
+  </ul>
+  <p>Chronic bleeding may only show as anemia or breathlessness—never ignore subtle signs.</p>
 
-        <h3>When to See a Doctor?</h3>
-        <ul>
-          <li>Vomiting blood or material that looks like coffee grounds</li>
-          <li>Black or tarry stools</li>
-          <li>Feeling dizzy, weak, or faint</li>
-          <li>Severe abdominal pain</li>
-          <li>History of liver disease or ulcers</li>
-        </ul>
+  <h3>📋 What Causes the Bleeding?</h3>
+  <table>
+    <thead>
+      <tr><th>Source</th><th>Examples</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Peptic Ulcers</td><td>Most common; caused by H. pylori or acid-related damage</td></tr>
+      <tr><td>Esophageal Varices</td><td>Due to liver cirrhosis and portal hypertension</td></tr>
+      <tr><td>Gastritis/Erosive Esophagitis</td><td>Often from alcohol, NSAIDs, or infections</td></tr>
+      <tr><td>Mallory-Weiss Tear</td><td>From violent vomiting or retching</td></tr>
+      <tr><td>Tumors</td><td>Stomach or esophageal cancers</td></tr>
+      <tr><td>Post-Surgical Bleeding</td><td>Following gastric surgery or endoscopy</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Risk factors:</strong> NSAID overuse, alcohol, smoking</p>
 
-        <h3>How Do We Help?</h3>
-        <ul>
-          <li>Emergency assessment and stabilization</li>
-          <li>Blood tests and vital monitoring</li>
-          <li>Endoscopy to locate and treat the bleeding source</li>
-          <li>Medications to reduce stomach acid and protect the lining</li>
-          <li>Address underlying causes like liver disease or ulcers</li>
-        </ul>
+  <h3>🧪 How It Is Diagnosed</h3>
+  <ol>
+    <li><strong>Clinical Examination:</strong> Check for signs of shock, anemia, or liver disease</li>
+    <li><strong>Blood Tests:</strong> CBC, LFTs, RFTs, coagulation, blood group</li>
+    <li><strong>Upper GI Endoscopy:</strong> Gold standard for diagnosis and treatment</li>
+    <li><strong>CT Angiography:</strong> In cases where endoscopy fails to localize source</li>
+  </ol>
 
-        <h3>Tips for Gut Health:</h3>
-        <ul>
-          <li>Avoid excessive use of painkillers and NSAIDs without medical advice</li>
-          <li>Limit alcohol consumption</li>
-          <li>Eat balanced meals and avoid spicy or irritating foods if sensitive</li>
-          <li>Manage stress, which can worsen ulcers and gastritis</li>
-        </ul>
+  <h3>📹 What Happens During Endoscopy?</h3>
+  <ul>
+    <li>A flexible tube with a camera is passed through the mouth</li>
+    <li>Stomach and duodenum are visualized for ulcers or varices</li>
+    <li>Bleeding is controlled using clips, cautery, or injections</li>
+    <li>Biopsies are taken if tumors are suspected</li>
+  </ul>
 
-        <h3>Myth-Busting:</h3>
-        <ul>
-          <li><strong>❌ “If bleeding stops on its own, no treatment is needed.”</strong><br /><strong>✅ Truth:</strong> Even if bleeding stops, underlying problems need medical evaluation.</li>
-          <li><strong>❌ “Bleeding always means cancer.”</strong><br /><strong>✅ Truth:</strong> Many causes of upper GI bleeding are treatable and not cancerous.</li>
-        </ul>
-      </section>
+  <h3>🛑 Treatment Strategy – Stopping the Bleed</h3>
+  <ul>
+    <li>IV fluids and proton pump inhibitors (PPIs)</li>
+    <li>Blood transfusions for severe anemia</li>
+    <li>Endoscopic control using clips, cauterization, or adrenaline injection</li>
+    <li>Surgery (&lt;5% cases) when endoscopy fails</li>
+    <li>Antibiotics and beta-blockers for variceal bleeds</li>
+    <li>Portal pressure reduction medications (e.g., octreotide)</li>
+  </ul>
+
+  <h3>⚠️ Special Focus: Esophageal Varices</h3>
+  <p>
+    Dilated veins due to liver cirrhosis can rupture and cause severe bleeding. Urgent endoscopy with band ligation or sclerotherapy is life-saving. Long-term use of beta-blockers helps prevent rebleeding.
+  </p>
+
+  <h3>🛡️ Preventing Recurrence</h3>
+  <ul>
+    <li>H. pylori eradication in peptic ulcers</li>
+    <li>Long-term PPIs for NSAID users</li>
+    <li>Regular endoscopic surveillance for cirrhotic patients</li>
+    <li>Avoid alcohol, NSAIDs, and smoking</li>
+    <li>Maintain liver health with diet and compliance</li>
+  </ul>
+
+  <h3>❓ Patient FAQs</h3>
+  <ul>
+    <li><strong>Q:</strong> Can upper GI bleeding happen without pain?<br/><strong>A:</strong> Yes. Especially with varices or chronic ulcers.</li>
+    <li><strong>Q:</strong> Will I need hospitalization?<br/><strong>A:</strong> Most likely — for stabilization, diagnosis, and monitoring.</li>
+    <li><strong>Q:</strong> Is vomiting blood always serious?<br/><strong>A:</strong> Yes. Even one episode requires urgent care.</li>
+  </ul>
+
+  <h3>🏥 How We Handle It at Sukam Speciality Clinic</h3>
+  <ul>
+    <li>✅ Emergency stabilization protocols</li>
+    <li>✅ 24x7 upper GI endoscopy availability</li>
+    <li>✅ Onsite ICU and blood bank access</li>
+    <li>✅ Expert endoscopic and medical care</li>
+    <li>✅ Personalized aftercare to prevent recurrence</li>
+  </ul>
+  <p><strong>Your safety, stability, and recovery are our top priorities.</strong></p>
+</section>
 
       <section className="quiz-section">
         <h2>🧠 Upper GI Bleeding — Quick Quiz</h2>

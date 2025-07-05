@@ -3,29 +3,204 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "What does gastric outlet obstruction block?",
-    options: ["The throat", "The stomach’s exit to the small intestine", "The colon", "The esophagus"],
-    answer: "The stomach’s exit to the small intestine"
+    question: "Gastric outlet obstruction blocks:",
+    options: [
+      "Colon",
+      "Esophagus",
+      "Duodenum or pylorus",
+      "Ileum"
+    ],
+    answer: "Duodenum or pylorus"
   },
   {
-    question: "Which symptom suggests gastric outlet obstruction?",
-    options: ["Frequent urination", "Joint pain", "Persistent vomiting of undigested food", "Headache"],
-    answer: "Persistent vomiting of undigested food"
+    question: "Most common benign cause in adults:",
+    options: [
+      "Gallstones",
+      "Peptic ulcer disease",
+      "Appendicitis",
+      "Hernia"
+    ],
+    answer: "Peptic ulcer disease"
   },
   {
-    question: "True or False: Gastric outlet obstruction can be caused by peptic ulcers.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "Projectile vomiting of undigested food suggests:",
+    options: [
+      "Liver failure",
+      "GOO",
+      "GERD",
+      "Asthma"
+    ],
+    answer: "GOO"
   },
   {
-    question: "What procedure helps diagnose gastric outlet obstruction?",
-    options: ["ECG", "Upper GI endoscopy", "MRI brain", "Skin biopsy"],
-    answer: "Upper GI endoscopy"
+    question: "Visible peristalsis is a sign of:",
+    options: [
+      "Functional bloating",
+      "Intestinal perforation",
+      "GOO",
+      "Jaundice"
+    ],
+    answer: "GOO"
   },
   {
-    question: "Which treatment may be needed for severe obstruction?",
-    options: ["Antibiotics only", "Painkillers only", "Surgery", "Eye drops"],
-    answer: "Surgery"
+    question: "Which electrolyte disturbance is common?",
+    options: [
+      "Hypernatremia",
+      "Hyperkalemia",
+      "Hypokalemia",
+      "Hyperchloremia"
+    ],
+    answer: "Hypokalemia"
+  },
+  {
+    question: "Non-bilious vomiting suggests obstruction:",
+    options: [
+      "Before pylorus",
+      "After ileum",
+      "Below rectum",
+      "Past ampulla of Vater"
+    ],
+    answer: "Before pylorus"
+  },
+  {
+    question: "Best investigation for diagnosis:",
+    options: [
+      "Colonoscopy",
+      "Endoscopy",
+      "EEG",
+      "Thyroid scan"
+    ],
+    answer: "Endoscopy"
+  },
+  {
+    question: "A major malignant cause in elderly:",
+    options: [
+      "Pancreatic carcinoma",
+      "TB",
+      "Hemorrhoids",
+      "GERD"
+    ],
+    answer: "Pancreatic carcinoma"
+  },
+  {
+    question: "Infantile GOO is often due to:",
+    options: [
+      "Cyst",
+      "Pyloric stenosis",
+      "Gallstone",
+      "Ulcer"
+    ],
+    answer: "Pyloric stenosis"
+  },
+  {
+    question: "Repeated vomiting leads to:",
+    options: [
+      "Acidosis",
+      "Metabolic alkalosis",
+      "Respiratory acidosis",
+      "Hypernatremia"
+    ],
+    answer: "Metabolic alkalosis"
+  },
+  {
+    question: "Which symptom may lead to aspiration pneumonia?",
+    options: [
+      "Burping",
+      "Bloating",
+      "Vomiting",
+      "Diarrhea"
+    ],
+    answer: "Vomiting"
+  },
+  {
+    question: "Endoscopic biopsy is essential when:",
+    options: [
+      "GERD is suspected",
+      "Mass lesion found",
+      "Functional bloating",
+      "Fatty liver seen"
+    ],
+    answer: "Mass lesion found"
+  },
+  {
+    question: "Which of the following is not a cause of GOO?",
+    options: [
+      "Pancreatic head tumor",
+      "Duodenal ulcer",
+      "Hemorrhoids",
+      "Gastric cancer"
+    ],
+    answer: "Hemorrhoids"
+  },
+  {
+    question: "What is used to temporarily relieve malignant GOO?",
+    options: [
+      "Band ligation",
+      "NG tube",
+      "Endoscopic stenting",
+      "Colon resection"
+    ],
+    answer: "Endoscopic stenting"
+  },
+  {
+    question: "One major complication if left untreated:",
+    options: [
+      "Brain swelling",
+      "Gastric perforation",
+      "Eye damage",
+      "Kidney cyst"
+    ],
+    answer: "Gastric perforation"
+  },
+  {
+    question: "Which blood test result is common in GOO?",
+    options: [
+      "Low amylase",
+      "High TSH",
+      "Hypokalemia",
+      "Hyperbilirubinemia"
+    ],
+    answer: "Hypokalemia"
+  },
+  {
+    question: "In cancer-associated GOO, the treatment goal is often:",
+    options: [
+      "Cure diabetes",
+      "Palliative relief",
+      "Cure tuberculosis",
+      "Stop bleeding"
+    ],
+    answer: "Palliative relief"
+  },
+  {
+    question: "Post-vagotomy care must include:",
+    options: [
+      "Steroids",
+      "Antivirals",
+      "Diet control and acid suppression",
+      "Thyroxine"
+    ],
+    answer: "Diet control and acid suppression"
+  },
+  {
+    question: "Nutritional rehab should begin:",
+    options: [
+      "Before NG tube",
+      "After bypass/stent",
+      "After 30 days",
+      "Only in children"
+    ],
+    answer: "After bypass/stent"
+  },
+  {
+    question: "GOO is best described as:",
+    options: [
+      "A kidney disease",
+      "Food poisoning",
+      "Outflow blockage at stomach exit",
+      "Small bowel twist"
+    ],
+    answer: "Outflow blockage at stomach exit"
   }
 ];
 
@@ -64,56 +239,88 @@ const GastricOutletObstruction = () => {
       <p className="lead">“A bottleneck that blocks your appetite.”</p>
 
       <section className="info-section">
-        <p>
-          Gastric Outlet Obstruction (GOO) occurs when the passage from your stomach to the small intestine becomes narrowed or blocked,
-          making it difficult for food to pass. It can cause vomiting, weight loss, and nutritional issues.
-        </p>
+  <h3>🚫 What’s Going Wrong?</h3>
+  <p>
+    Gastric Outlet Obstruction (GOO) refers to a mechanical or functional blockage at the pylorus or the beginning of the duodenum — the passage from the stomach to the small intestine. This blockage causes retention of food and secretions in the stomach, leading to symptoms like vomiting, bloating, and poor digestion.
+  </p>
 
-        <h3>🔍 Causes of Gastric Outlet Obstruction</h3>
-        <ul>
-          <li>Peptic ulcers causing scarring</li>
-          <li>Stomach or duodenal tumors</li>
-          <li>Swelling from inflammation (e.g. gastritis, pancreatitis)</li>
-          <li>Foreign bodies or bezoars</li>
-          <li>Congenital abnormalities</li>
-          <li>Post-surgical complications</li>
-        </ul>
+  <h3>🧍‍♀️ Who Is at Risk?</h3>
+  <p>
+    The cause of GOO varies with age. In younger individuals, benign causes such as ulcers are more common. In older adults, malignancies must be considered carefully.
+  </p>
 
-        <h3>🚩 Symptoms to Watch For</h3>
-        <ul>
-          <li>Persistent vomiting of undigested food</li>
-          <li>Abdominal pain or fullness after eating</li>
-          <li>Loss of appetite and weight loss</li>
-          <li>Dehydration due to vomiting</li>
-          <li>Reflux and heartburn</li>
-        </ul>
+  <h3>📌 Causes at a Glance</h3>
+  <table>
+    <thead>
+      <tr><th>Category</th><th>Common Causes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Benign</td><td>Peptic ulcer disease, chronic gastritis, caustic ingestion, post-surgical scarring</td></tr>
+      <tr><td>Malignant</td><td>Gastric cancer, pancreatic cancer, duodenal cancer, lymphoma</td></tr>
+      <tr><td>Congenital</td><td>Pyloric stenosis (especially in infants)</td></tr>
+      <tr><td>Others</td><td>Crohn’s disease, bezoars, foreign body obstruction</td></tr>
+    </tbody>
+  </table>
 
-        <h3>🏥 Diagnosis & Treatment at Sukam</h3>
-        <ul>
-          <li>Physical examination and medical history</li>
-          <li>Upper GI endoscopy to view obstruction</li>
-          <li>Ultrasound or CT scan for detailed imaging</li>
-          <li>Blood tests for dehydration/electrolyte imbalance</li>
-          <li>Nasogastric tube to relieve pressure</li>
-          <li>Medications for ulcers or inflammation</li>
-          <li>Endoscopic dilation or surgery if needed</li>
-        </ul>
+  <h3>🩺 How It Presents</h3>
+  <p>
+    Symptoms vary from mild to severe. Patients often feel full after a few bites, experience vomiting of undigested food, or lose weight unintentionally. Some cases show signs of advanced dehydration and malnutrition.
+  </p>
+  <ul>
+    <li>Persistent vomiting (non-bilious if obstruction is proximal, bilious if distal)</li>
+    <li>Visible gastric peristalsis (abdominal wall movement)</li>
+    <li>Unexplained weight loss</li>
+    <li>Epigastric pain or bloating</li>
+    <li>Signs of dehydration (dry tongue, sunken eyes)</li>
+    <li>Constipation or gastric distention (in late stages)</li>
+  </ul>
 
-        <h3>🍽️ Tips to Support Recovery</h3>
-        <ul>
-          <li>✔ Eat small, frequent meals</li>
-          <li>✔ Stay hydrated</li>
-          <li>✔ Avoid spicy or acidic foods</li>
-          <li>✔ Follow all dietary advice carefully</li>
-          <li>✔ Don’t miss follow-up visits</li>
-        </ul>
+  <h3>🔍 The Diagnostic Trail</h3>
+  <ul>
+    <li><strong>Abdominal X-ray:</strong> Shows large gastric bubble or air-fluid levels</li>
+    <li><strong>Ultrasound/CT scan:</strong> Detects masses, thickening, or inflammation</li>
+    <li><strong>Upper GI Endoscopy:</strong> Visualizes ulcers, narrowing, or tumors; allows biopsy</li>
+    <li><strong>Electrolyte Tests:</strong> May show hypokalemia, metabolic alkalosis from vomiting</li>
+  </ul>
 
-        <h3>🧠 Myth-Busting:</h3>
-        <ul>
-          <li><strong>❌ “Vomiting after eating is harmless.”</strong><br />✅ Truth: Persistent vomiting is a warning sign that needs medical evaluation.</li>
-          <li><strong>❌ “Only tumors cause gastric outlet obstruction.”</strong><br />✅ Truth: Ulcers and inflammation are also common causes.</li>
-        </ul>
-      </section>
+  <h3>💡 Strategies for Relief and Cure</h3>
+  <p><strong>Benign GOO Management:</strong></p>
+  <ul>
+    <li>Nasogastric (NG) tube decompression</li>
+    <li>IV fluid resuscitation and electrolyte correction</li>
+    <li>Proton Pump Inhibitors (PPIs) to promote ulcer healing</li>
+    <li>Endoscopic balloon dilatation for scar-related narrowing</li>
+    <li>Surgical options: Vagotomy, pyloroplasty, antrectomy if unresponsive</li>
+  </ul>
+
+  <p><strong>Malignant GOO Management:</strong></p>
+  <ul>
+    <li>Resection of tumors (if operable)</li>
+    <li>Endoscopic stenting or gastrojejunostomy (if unresectable)</li>
+    <li>Palliative care and nutritional support in advanced stages</li>
+  </ul>
+
+  <h3>⚠️ Risks if Left Untreated</h3>
+  <ul>
+    <li>Severe dehydration and electrolyte imbalances</li>
+    <li>Aspiration pneumonia from recurrent vomiting</li>
+    <li>Metabolic alkalosis and hypokalemia</li>
+    <li>Stomach dilation and risk of rupture</li>
+    <li>Cachexia and fatal complications in elderly or cancer patients</li>
+  </ul>
+
+  <h3>👨‍⚕️ Our Approach to GOO at [Your Clinic Name]</h3>
+  <ul>
+    <li>✅ Fast-track evaluation via bedside ultrasound and endoscopy</li>
+    <li>✅ Immediate NG tube insertion and IV correction when needed</li>
+    <li>✅ Interdisciplinary GI-surgical coordination for ulcer and cancer-related cases</li>
+    <li>✅ Personalized nutrition recovery plans</li>
+    <li>✅ Psycho-social support for patients with cancer-related GOO</li>
+  </ul>
+
+  <p><strong>Gastric Outlet Obstruction is a manageable condition — but early detection and appropriate intervention can make all the difference in outcome and quality of life.</strong></p>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Quick Quiz — Gastric Outlet Obstruction</h2>

@@ -3,24 +3,204 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "Fibroadenoma is usually:",
-    options: ["Cancerous", "Benign", "Infectious", "Allergic reaction"],
-    answer: "Benign"
+    question: "Fibroadenoma is usually a:",
+    options: [
+      "Cancerous tumor",
+      "Cyst",
+      "Benign breast lump",
+      "Pus collection"
+    ],
+    answer: "Benign breast lump"
   },
   {
-    question: "True or False: Fibroadenomas commonly occur in young women.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "Most fibroadenomas are found in women aged:",
+    options: [
+      "60–70",
+      "40–50",
+      "15–35",
+      "After menopause"
+    ],
+    answer: "15–35"
   },
   {
-    question: "What is a common test to check a breast lump?",
-    options: ["Ultrasound", "Blood sugar test", "ECG", "Hearing test"],
+    question: "The typical feel of a fibroadenoma is:",
+    options: [
+      "Soft and fixed",
+      "Firm, mobile, rubbery",
+      "Painful and hot",
+      "Hard and stuck to skin"
+    ],
+    answer: "Firm, mobile, rubbery"
+  },
+  {
+    question: "Which imaging test is preferred for breast lumps in young women?",
+    options: [
+      "MRI",
+      "CT scan",
+      "Mammogram",
+      "Ultrasound"
+    ],
     answer: "Ultrasound"
   },
   {
-    question: "When should you see a doctor about a breast lump?",
-    options: ["When it appears suddenly", "If it grows or hurts", "If you notice skin or nipple changes", "All of the above"],
+    question: "A fibroadenoma larger than 5 cm is called:",
+    options: [
+      "Microadenoma",
+      "Complex fibroadenoma",
+      "Giant fibroadenoma",
+      "Phyllodes tumor"
+    ],
+    answer: "Giant fibroadenoma"
+  },
+  {
+    question: "FNAC is done to:",
+    options: [
+      "Remove the lump",
+      "Detect pus",
+      "Sample lump cells",
+      "Stop bleeding"
+    ],
+    answer: "Sample lump cells"
+  },
+  {
+    question: "If a fibroadenoma is small and not changing, the best approach is:",
+    options: [
+      "Radiation",
+      "Chemotherapy",
+      "Monitoring",
+      "Urgent surgery"
+    ],
+    answer: "Monitoring"
+  },
+  {
+    question: "What is NOT a typical feature of fibroadenoma?",
+    options: [
+      "Sudden weight loss",
+      "Breast lump",
+      "Painless swelling",
+      "Lump moves with finger pressure"
+    ],
+    answer: "Sudden weight loss"
+  },
+  {
+    question: "Which type may have higher cancer risk?",
+    options: [
+      "Simple",
+      "Complex",
+      "Cyst",
+      "Milk duct swelling"
+    ],
+    answer: "Complex"
+  },
+  {
+    question: "The breast lump that increases with pregnancy may be:",
+    options: [
+      "Breast abscess",
+      "Cancer",
+      "Fibroadenoma",
+      "Sebaceous cyst"
+    ],
+    answer: "Fibroadenoma"
+  },
+  {
+    question: "Which hormone influences fibroadenoma growth?",
+    options: [
+      "Insulin",
+      "Thyroxine",
+      "Estrogen",
+      "Testosterone"
+    ],
+    answer: "Estrogen"
+  },
+  {
+    question: "Fibroadenoma can be confused with:",
+    options: [
+      "Lipoma",
+      "Cyst",
+      "Breast cancer",
+      "All of the above"
+    ],
     answer: "All of the above"
+  },
+  {
+    question: "After excision of a fibroadenoma:",
+    options: [
+      "Cancer risk increases",
+      "Lump always recurs",
+      "Pathology confirms diagnosis",
+      "Breastfeeding is not possible"
+    ],
+    answer: "Pathology confirms diagnosis"
+  },
+  {
+    question: "Phyllodes tumor is different from fibroadenoma because it can be:",
+    options: [
+      "Malignant",
+      "Fluid-filled",
+      "Painful",
+      "Seen in men"
+    ],
+    answer: "Malignant"
+  },
+  {
+    question: "Best way to prevent worry with a breast lump is:",
+    options: [
+      "Self-diagnose",
+      "Massage it",
+      "Ignore it",
+      "Consult a doctor early"
+    ],
+    answer: "Consult a doctor early"
+  },
+  {
+    question: "Mammography is routinely advised in:",
+    options: [
+      "Women under 20",
+      "Pregnant women",
+      "Women above 40",
+      "Men only"
+    ],
+    answer: "Women above 40"
+  },
+  {
+    question: "Which lump is more mobile and well-defined?",
+    options: [
+      "Cancer",
+      "Fibroadenoma",
+      "Abscess",
+      "TB node"
+    ],
+    answer: "Fibroadenoma"
+  },
+  {
+    question: "Can fibroadenoma reappear after removal?",
+    options: [
+      "No",
+      "Yes",
+      "Only after menopause",
+      "Only with infection"
+    ],
+    answer: "Yes"
+  },
+  {
+    question: "When is surgery recommended for fibroadenoma?",
+    options: [
+      "If it is painful",
+      "If it grows",
+      "If the patient desires removal",
+      "All of the above"
+    ],
+    answer: "All of the above"
+  },
+  {
+    question: "Fibroadenomas do NOT usually cause:",
+    options: [
+      "Nipple discharge",
+      "Pain",
+      "Skin dimpling",
+      "Cancer"
+    ],
+    answer: "Cancer"
   }
 ];
 
@@ -62,48 +242,124 @@ const Fibroadenoma = () => {
       <p className="lead">“A breast lump that’s more chill than scary.”</p>
 
       <section className="info-section">
-        <p>
-          Fibroadenoma is a common benign (non-cancerous) breast lump, especially in young women. It feels firm, smooth, and moves easily under the skin. While it’s usually harmless, any new lump should be checked to confirm the diagnosis and rule out other conditions.
-        </p>
+  <h3>🎀 What Is a Fibroadenoma?</h3>
+  <p>
+    A fibroadenoma is a benign (non-cancerous) breast tumor, commonly seen in young women between the
+    ages of 15 and 35. It consists of both glandular (fibro-) and connective (-adenoma) tissues. These
+    lumps are usually smooth, firm, mobile under the skin, and often painless.
+  </p>
+  <p>
+    Though harmless in most cases, any breast lump should be clinically examined and confirmed to rule out
+    other possibilities.
+  </p>
 
-        <h3>What Causes Fibroadenoma?</h3>
-        <ul>
-          <li>Hormonal changes, especially during reproductive years</li>
-          <li>Genetic factors</li>
-          <li>Usually no clear cause; it’s a benign tumor made of glandular and fibrous tissue</li>
-        </ul>
+  <h3>🔎 Key Features of Fibroadenoma</h3>
+  <ul>
+    <li>Firm, round or oval-shaped breast lump</li>
+    <li>Painless and easily movable</li>
+    <li>Feels like a marble under the skin</li>
+    <li>May remain the same size, shrink, or grow over time</li>
+    <li>Usually &lt; 3 cm but may reach up to 5 cm (giant fibroadenoma)</li>
+  </ul>
 
-        <h3>When to See a Doctor?</h3>
-        <ul>
-          <li>Discovery of any new breast lump</li>
-          <li>Changes in size, shape, or pain in the lump</li>
-          <li>Family history of breast cancer</li>
-          <li>Other breast symptoms like nipple discharge</li>
-        </ul>
+  <h3>🩺 Who Is at Risk?</h3>
+  <table>
+    <thead>
+      <tr><th>Factor</th><th>Explanation</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Young age (15–35 years)</td><td>Most common in this age group</td></tr>
+      <tr><td>Family history</td><td>May have a hereditary link</td></tr>
+      <tr><td>Hormonal influence</td><td>Can grow during pregnancy or hormone therapy</td></tr>
+      <tr><td>Oral contraceptives</td><td>May affect size in some women</td></tr>
+    </tbody>
+  </table>
 
-        <h3>How We Help:</h3>
-        <ul>
-          <li>Clinical breast examination</li>
-          <li>Imaging tests like ultrasound or mammogram</li>
-          <li>Fine needle aspiration or biopsy if needed</li>
-          <li>Monitoring for changes or removal if large or symptomatic</li>
-          <li>Patient education on breast self-exams and awareness</li>
-        </ul>
+  <h3>🔬 Types of Fibroadenoma</h3>
+  <ul>
+    <li><strong>Simple Fibroadenoma:</strong> Most common; uniform, non-cancerous</li>
+    <li><strong>Complex Fibroadenoma:</strong> May contain cysts or calcium; slightly higher cancer risk</li>
+    <li><strong>Giant/Juvenile Fibroadenoma:</strong> Rapidly growing; often seen in teens</li>
+  </ul>
 
-        <h3>Tips for Breast Health:</h3>
-        <ul>
-          <li>Perform regular self-breast exams</li>
-          <li>Report any new lumps or changes promptly</li>
-          <li>Maintain a healthy lifestyle with balanced diet and exercise</li>
-          <li>Avoid smoking and limit alcohol intake</li>
-        </ul>
+  <h3>📌 Symptoms to Watch For</h3>
+  <ul>
+    <li>New lump detected during self-exam</li>
+    <li>Usually painless and located on one side</li>
+    <li>Doesn’t vary with menstrual cycle</li>
+    <li>Typically no nipple discharge or skin changes</li>
+  </ul>
+  <p><strong>Reminder:</strong> All breast lumps, even if painless, need medical evaluation.</p>
 
-        <h3>🚫 Myth vs Fact:</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “All breast lumps mean cancer.”<br /><strong>✅ Truth:</strong> Most breast lumps like fibroadenomas are benign.</li>
-          <li><strong>❌ Myth:</strong> “Breast lumps always need surgery.”<br /><strong>✅ Truth:</strong> Many fibroadenomas can be safely monitored without surgery.</li>
-        </ul>
-      </section>
+  <h3>🩻 How We Diagnose Fibroadenoma</h3>
+  <ul>
+    <li><strong>Clinical Breast Exam:</strong> Physical check for lump characteristics</li>
+    <li><strong>Breast Ultrasound:</strong> Preferred imaging for women under 40</li>
+    <li><strong>Mammography:</strong> Used for women over 40 to detect mass/calcifications</li>
+    <li><strong>FNAC or Core Needle Biopsy:</strong> Confirms diagnosis and rules out malignancy</li>
+  </ul>
+
+  <h3>🛠️ Treatment Options</h3>
+  <table>
+    <thead>
+      <tr><th>Option</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Observation</td>
+        <td>If benign and asymptomatic, monitor every 6–12 months</td>
+      </tr>
+      <tr>
+        <td>Surgical Removal (Excision)</td>
+        <td>Advised if lump is &gt;3–4 cm, painful, growing, or patient prefers removal</td>
+      </tr>
+      <tr>
+        <td>Minimal Scar Techniques</td>
+        <td>Cosmetic excision under local or general anesthesia, often same-day</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>❤️ After Surgery – What to Expect</h3>
+  <ul>
+    <li>Outpatient procedure with fast recovery</li>
+    <li>Minimal scarring with cosmetic techniques</li>
+    <li>Resume daily activities in 2–3 days</li>
+    <li>Final confirmation via pathology report</li>
+  </ul>
+
+  <h3>🚩 When to Seek Immediate Care</h3>
+  <ul>
+    <li>Sudden lump growth</li>
+    <li>Redness, pain, or swelling over lump</li>
+    <li>Bloody or unusual nipple discharge</li>
+    <li>Skin retraction or fixed mass</li>
+  </ul>
+
+  <h3>❌ Myths vs ✅ Facts</h3>
+  <table>
+    <thead>
+      <tr><th>Myth</th><th>Fact</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>"All lumps mean cancer."</td><td>Most breast lumps in young women are benign.</td></tr>
+      <tr><td>"If painless, it's harmless."</td><td>Every lump must be evaluated to confirm safety.</td></tr>
+      <tr><td>"Only older women get breast issues."</td><td>Fibroadenomas are common in teens and young women.</td></tr>
+      <tr><td>"Removing a lump increases cancer risk."</td><td>Excision doesn’t increase risk — it helps provide clarity.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>🏥 Our Clinic’s Breast Lump Care Program</h3>
+  <ul>
+    <li>✅ Clinical exam + same-day imaging (ultrasound/mammogram)</li>
+    <li>✅ FNAC or biopsy under local anesthesia if required</li>
+    <li>✅ Quick pathology turnaround</li>
+    <li>✅ Treatment options based on lump size and patient preference</li>
+    <li>✅ Cosmetic excision with minimal scarring by experienced surgeons</li>
+    <li>✅ Support for teenage and adult patients with compassionate care</li>
+  </ul>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Quick Quiz — Fibroadenoma Facts</h2>

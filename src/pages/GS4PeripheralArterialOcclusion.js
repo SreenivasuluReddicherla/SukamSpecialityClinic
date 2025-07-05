@@ -3,21 +3,107 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "What is a common cause of peripheral arterial occlusion?",
-    options: ["A. Atherosclerosis", "B. Viral infection", "C. Allergies", "D. Kidney failure"],
-    answer: "A. Atherosclerosis"
+    question: "Peripheral Arterial Occlusion is most commonly caused by:",
+    options: ["Bacterial infection", "Atherosclerosis", "Venous thrombosis", "Arthritis"],
+    answer: "Atherosclerosis"
   },
   {
-    question: "True or False: Smoking increases risk for artery blockage.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "Which of the following is NOT a risk factor for PAO?",
+    options: ["Smoking", "Diabetes", "Hypothyroidism", "High cholesterol"],
+    answer: "Hypothyroidism"
   },
   {
-    question: "Which symptom suggests peripheral artery disease?",
-    options: ["A. Leg cramps while walking", "B. Headache", "C. Blurred vision", "D. Chest pain"],
-    answer: "A. Leg cramps while walking"
+    question: "What does claudication refer to?",
+    options: ["Leg pain at rest", "Leg pain while walking", "Swelling of the ankle", "Redness of the skin"],
+    answer: "Leg pain while walking"
+  },
+  {
+    question: "Which test compares arm and leg blood pressures?",
+    options: ["ECG", "ABI", "Chest X-ray", "ESR"],
+    answer: "ABI"
+  },
+  {
+    question: "What is a critical sign of acute arterial occlusion?",
+    options: ["Slow weight gain", "6 P's symptoms", "Mild fever", "Nail thickening"],
+    answer: "6 P's symptoms"
+  },
+  {
+    question: "Which medicine helps prevent clot formation?",
+    options: ["Ibuprofen", "Clopidogrel", "Paracetamol", "Vitamin C"],
+    answer: "Clopidogrel"
+  },
+  {
+    question: "Which of these is a cholesterol-lowering drug?",
+    options: ["Amlodipine", "Metformin", "Atorvastatin", "Furosemide"],
+    answer: "Atorvastatin"
+  },
+  {
+    question: "Which lifestyle change is MOST crucial for a smoker with PAO?",
+    options: ["Reduce sugar intake", "Quit smoking", "Avoid dairy", "Take vitamin supplements"],
+    answer: "Quit smoking"
+  },
+  {
+    question: "Blackened toes are an indication of:",
+    options: ["Fungal infection", "Gangrene", "Warts", "Cellulitis"],
+    answer: "Gangrene"
+  },
+  {
+    question: "An emergency form of PAO due to a sudden clot is called:",
+    options: ["Chronic ischemia", "Acute arterial occlusion", "Acute DVT", "Vasculitis"],
+    answer: "Acute arterial occlusion"
+  },
+  {
+    question: "The “P” in 6 Ps that means 'lack of sensation' is:",
+    options: ["Pallor", "Pain", "Paresthesia", "Pulse"],
+    answer: "Paresthesia"
+  },
+  {
+    question: "Which procedure involves inserting a balloon in the artery?",
+    options: ["Amputation", "Bypass surgery", "Angioplasty", "Doppler scan"],
+    answer: "Angioplasty"
+  },
+  {
+    question: "Cilostazol is used to:",
+    options: ["Treat infection", "Relieve leg swelling", "Improve walking distance", "Heal ulcers"],
+    answer: "Improve walking distance"
+  },
+  {
+    question: "Which organ’s disease is most likely linked to PAO?",
+    options: ["Liver", "Heart", "Brain", "Pancreas"],
+    answer: "Heart"
+  },
+  {
+    question: "Peripheral arterial occlusion can be worsened by:",
+    options: ["Cold exposure", "Green vegetables", "Hydration", "Light exercise"],
+    answer: "Cold exposure"
+  },
+  {
+    question: "Which of the following is a red flag symptom?",
+    options: ["Foot cramping after jogging", "Rest pain in the foot", "Mild foot dryness", "Toe nail changes"],
+    answer: "Rest pain in the foot"
+  },
+  {
+    question: "Which investigation shows real-time blood flow?",
+    options: ["CT scan", "ECG", "Doppler ultrasound", "HbA1c"],
+    answer: "Doppler ultrasound"
+  },
+  {
+    question: "An ABI <0.9 typically indicates:",
+    options: ["Normal circulation", "Mild anemia", "Peripheral artery disease", "Varicose veins"],
+    answer: "Peripheral artery disease"
+  },
+  {
+    question: "Which of the following is NOT used to manage PAO?",
+    options: ["Blood thinners", "Statins", "Beta blockers", "Corticosteroids"],
+    answer: "Corticosteroids"
+  },
+  {
+    question: "Which group of people should inspect their feet daily?",
+    options: ["Healthy athletes", "Children", "Diabetic patients", "People with dandruff"],
+    answer: "Diabetic patients"
   }
 ];
+
 
 const PeripheralArterialOcclusion = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});
@@ -54,45 +140,149 @@ const PeripheralArterialOcclusion = () => {
       <p className="lead">“A heart attack for your legs.”</p>
 
       <section className="info-section">
-        <p>Peripheral arterial occlusion happens when blood flow to your legs is blocked or reduced by clogged arteries. This can cause pain, ulcers, and in severe cases, tissue death.</p>
+  <h3>📌 Introduction</h3>
+  <p>
+    Peripheral Arterial Occlusion refers to a blockage of blood flow through the arteries that supply the limbs—most commonly the legs. The condition is typically due to atherosclerosis, where cholesterol-rich plaques narrow or block arteries. It can present gradually or suddenly and, if not managed, may lead to tissue damage, ulcers, gangrene, or even amputation.
+    It’s a major complication in diabetics, smokers, and patients with uncontrolled cholesterol or hypertension.
+  </p>
 
-        <h3>🔍 Causes:</h3>
-        <ul>
-          <li>Atherosclerosis (fatty plaques in arteries)</li>
-          <li>Blood clots blocking vessels</li>
-          <li>Smoking and diabetes increase risk</li>
-        </ul>
+  <h3>🩺 Causes and Risk Factors</h3>
+  <h4>📌 Common Causes:</h4>
+  <ul>
+    <li>Atherosclerosis (most common): Plaque buildup</li>
+    <li>Embolism: A clot from the heart (e.g., in atrial fibrillation)</li>
+    <li>Thrombosis: Clot formation directly in the peripheral artery</li>
+    <li>Trauma: Crush injury or vascular damage</li>
+    <li>Arteritis: Inflammatory vascular diseases like Buerger’s disease</li>
+  </ul>
 
-        <h3>🩺 When to See a Doctor?</h3>
-        <ul>
-          <li>Pain or cramping in legs while walking</li>
-          <li>Non-healing wounds on feet or legs</li>
-          <li>Cold or numb feet</li>
-          <li>Changes in skin color or texture</li>
-        </ul>
+  <h4>⚠️ Major Risk Factors:</h4>
+  <ul>
+    <li>Diabetes mellitus</li>
+    <li>Smoking</li>
+    <li>Hypertension</li>
+    <li>High cholesterol (LDL)</li>
+    <li>Age &gt;50</li>
+    <li>Sedentary lifestyle</li>
+    <li>History of stroke or heart disease</li>
+  </ul>
 
-        <h3>💡 How We Help:</h3>
-        <ul>
-          <li>Detailed vascular examination</li>
-          <li>Doppler ultrasound and angiography for diagnosis</li>
-          <li>Medications to improve blood flow and reduce clots</li>
-          <li>Procedures like angioplasty or surgery if needed</li>
-          <li>Lifestyle advice on smoking cessation, exercise, and diet</li>
-        </ul>
+  <h3>🧠 Pathophysiology in Simple Terms</h3>
+  <p>
+    When an artery gets narrowed or blocked, the tissue beyond that point gets less oxygen and nutrients. In early stages, this causes pain while walking (claudication). In severe cases, even resting pain and tissue death (gangrene) occur.
+  </p>
 
-        <h3>✅ Tips for Healthy Legs:</h3>
-        <ul>
-          <li>Don’t smoke</li>
-          <li>Exercise regularly to improve circulation</li>
-          <li>Manage diabetes and blood pressure</li>
-          <li>Inspect feet daily for wounds</li>
-        </ul>
+  <h3>🦵 Symptoms of Peripheral Arterial Occlusion</h3>
+  <table>
+    <thead>
+      <tr><th>Stage</th><th>Symptoms</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Mild</td><td>Leg cramps during walking (claudication)</td></tr>
+      <tr><td>Moderate</td><td>Pain at rest, especially at night</td></tr>
+      <tr><td>Severe</td><td>Non-healing wounds, blackened toes, ulcers</td></tr>
+      <tr><td>Acute PAO</td><td>Sudden leg pain, coldness, numbness, paralysis (a vascular emergency)</td></tr>
+    </tbody>
+  </table>
 
-        <h3>🚫 Myth vs Fact:</h3>
-        <ul>
-          <li><strong>❌ Myth:</strong> “Leg pain while walking is just normal aging.”<br /><strong>✅ Truth:</strong> It can be a sign of serious artery blockage needing treatment.</li>
-        </ul>
-      </section>
+  <h4>🧾 The “6 Ps” of Acute Arterial Occlusion:</h4>
+  <ul>
+    <li>Pain</li>
+    <li>Pallor (pale skin)</li>
+    <li>Pulselessness</li>
+    <li>Paresthesia (tingling/numbness)</li>
+    <li>Paralysis</li>
+    <li>Poikilothermia (cold limb)</li>
+  </ul>
+
+  <h3>📸 Image Suggestions</h3>
+  <ul>
+    <li>Infographic: “How Arteries Get Blocked” – plaque buildup, narrowed lumen.</li>
+    <li>Clinical photos: Foot ulcers due to poor circulation, black toes (gangrene), Doppler ultrasound image.</li>
+  </ul>
+
+  <h3>🧪 Diagnostic Tests</h3>
+  <ul>
+    <li>Ankle-Brachial Index (ABI): Compares blood pressure in legs vs. arms</li>
+    <li>Doppler Ultrasound: Shows blood flow</li>
+    <li>CT Angiography / MR Angiography: Imaging of blocked vessels</li>
+    <li>Peripheral Angiogram: Gold standard to locate and assess severity</li>
+  </ul>
+
+  <h3>💊 Treatment Options</h3>
+  <ol>
+    <li>
+      <strong>Lifestyle Modifications</strong><br />
+      • Smoking cessation<br />
+      • Blood sugar and BP control<br />
+      • Regular exercise (supervised walking programs)
+    </li>
+    <li>
+      <strong>Medications</strong><br />
+      • Antiplatelets: Aspirin, Clopidogrel<br />
+      • Statins: For cholesterol control<br />
+      • Cilostazol: Improves walking distance by increasing blood flow<br />
+      • Pain control and infection management in ulcers
+    </li>
+    <li>
+      <strong>Revascularization Procedures</strong><br />
+      • Angioplasty with stenting: Balloon to open vessel<br />
+      • Bypass graft surgery: Reroute blood flow around the blockage<br />
+      • Thrombolysis: Clot-busting drugs for acute occlusion
+    </li>
+    <li>
+      <strong>Amputation</strong><br />
+      • Last resort in non-salvageable limbs with gangrene or deep infection
+    </li>
+  </ol>
+
+  <h3>❗ Complications If Left Untreated</h3>
+  <ul>
+    <li>Critical Limb Ischemia</li>
+    <li>Skin Ulcers</li>
+    <li>Gangrene</li>
+    <li>Infection → Sepsis</li>
+    <li>Amputation</li>
+    <li>Loss of mobility</li>
+    <li>Depression and reduced quality of life</li>
+  </ul>
+
+  <h3>✅ Prevention Tips</h3>
+  <ul>
+    <li>Control blood sugar, blood pressure, and cholesterol</li>
+    <li>Exercise daily: 30–45 minutes of walking helps form collateral vessels</li>
+    <li>Regular foot checks (especially for diabetics)</li>
+    <li>Avoid walking barefoot</li>
+    <li>Stop smoking immediately</li>
+    <li>Maintain proper hydration and circulation</li>
+  </ul>
+
+  <h3>🧠 Myths vs. Facts</h3>
+  <table>
+    <thead>
+      <tr><th>Myth</th><th>Fact</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pain while walking is just due to aging.</td>
+        <td>It can indicate arterial blockage (claudication).</td>
+      </tr>
+      <tr>
+        <td>If the skin is warm, blood flow must be okay.</td>
+        <td>Skin can feel normal until circulation is critically reduced.</td>
+      </tr>
+      <tr>
+        <td>Only surgery helps in PAO.</td>
+        <td>Many cases improve with lifestyle changes and medicines.</td>
+      </tr>
+      <tr>
+        <td>You can ignore numb toes.</td>
+        <td>Numbness may be a sign of nerve or blood supply damage.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Peripheral Arterial Occlusion Quiz — Test Your Knowledge!</h2>

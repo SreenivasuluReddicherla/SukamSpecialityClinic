@@ -3,31 +3,152 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "What is the main cause of cervical cancer?",
-    options: ["Smoking", "HPV infection", "Poor diet", "Lack of exercise"],
-    answer: "HPV infection"
+    question: "Which virus is most commonly associated with cervical cancer?",
+    options: [
+      "Hepatitis B",
+      "Human Immunodeficiency Virus (HIV)",
+      "Human Papillomavirus (HPV)",
+      "Epstein-Barr Virus"
+    ],
+    answer: "Human Papillomavirus (HPV)"
   },
   {
-    question: "How often should women get a Pap smear?",
-    options: ["Every year after age 21", "Every 3 years after normal results", "Only if symptoms occur", "Never"],
-    answer: "Every 3 years after normal results"
+    question: "What does a Pap smear test detect?",
+    options: [
+      "Cervical muscle strength",
+      "Abnormal cervical cells",
+      "Vaginal infections",
+      "Ovarian tumors"
+    ],
+    answer: "Abnormal cervical cells"
   },
   {
-    question: "True or False: HPV vaccine can prevent most cervical cancers.",
+    question: "The HPV vaccine is most effective when given at what age?",
+    options: [
+      "After menopause",
+      "At 9–14 years",
+      "Between 30–40 years",
+      "After marriage"
+    ],
+    answer: "At 9–14 years"
+  },
+  {
+    question: "Which of the following is an early symptom of cervical cancer?",
+    options: [
+      "Severe nausea",
+      "Abdominal bloating",
+      "Abnormal vaginal bleeding",
+      "Breast pain"
+    ],
+    answer: "Abnormal vaginal bleeding"
+  },
+  {
+    question: "How often should women between ages 30–65 undergo co-testing (Pap + HPV)?",
+    options: [
+      "Every year",
+      "Every 2 years",
+      "Every 5 years",
+      "Only once after marriage"
+    ],
+    answer: "Every 5 years"
+  },
+  {
+    question: "What is LEEP used for?",
+    options: [
+      "Removing fibroids",
+      "Removing abnormal cervical cells",
+      "Treating vaginal infections",
+      "Curing HPV"
+    ],
+    answer: "Removing abnormal cervical cells"
+  },
+  {
+    question: "True or False: Most HPV infections clear on their own.",
     options: ["True", "False"],
     answer: "True"
   },
   {
-    question: "Which of these is NOT a symptom of advanced cervical cancer?",
-    options: ["Abnormal vaginal bleeding", "Pelvic pain", "Frequent urination", "High blood pressure"],
-    answer: "High blood pressure"
+    question: "Which of the following is NOT a method of cervical cancer prevention?",
+    options: [
+      "Pap smear",
+      "HPV vaccine",
+      "Safe sex practices",
+      "Mammogram"
+    ],
+    answer: "Mammogram"
   },
   {
-    question: "At what age is HPV vaccination ideally given?",
-    options: ["Before age 12", "After age 30", "During menopause", "Any age is equally effective"],
-    answer: "Before age 12"
+    question: "Cervical cancer affects which part of the female body?",
+    options: [
+      "Uterus lining",
+      "Fallopian tube",
+      "Cervix",
+      "Ovary"
+    ],
+    answer: "Cervix"
+  },
+  {
+    question: "HPV is transmitted primarily through:",
+    options: [
+      "Sharing utensils",
+      "Insect bites",
+      "Sexual contact",
+      "Kissing"
+    ],
+    answer: "Sexual contact"
+  },
+  {
+    question: "What is a colposcopy?",
+    options: [
+      "Removal of uterus",
+      "Biopsy of ovaries",
+      "A test to view the cervix with magnification",
+      "A scan to view the brain"
+    ],
+    answer: "A test to view the cervix with magnification"
+  },
+  {
+    question: "A woman with HPV but no symptoms should:",
+    options: [
+      "Ignore it",
+      "Wait until she has symptoms",
+      "Begin regular screening and follow-up",
+      "Take antibiotics"
+    ],
+    answer: "Begin regular screening and follow-up"
+  },
+  {
+    question: "Smoking increases cervical cancer risk by:",
+    options: [
+      "Directly mutating DNA in cervical cells",
+      "Weakening immune response to HPV",
+      "Increasing blood flow to abnormal cells",
+      "Causing hormonal imbalance"
+    ],
+    answer: "Weakening immune response to HPV"
+  },
+  {
+    question: "What is CIN (Cervical Intraepithelial Neoplasia)?",
+    options: [
+      "Cervical muscle weakness",
+      "A benign ovarian cyst",
+      "Precancerous changes in the cervix",
+      "A type of fibroid"
+    ],
+    answer: "Precancerous changes in the cervix"
+  },
+  {
+    question: "After successful treatment, a cervical cancer survivor should:",
+    options: [
+      "Avoid further checkups",
+      "Only take herbal medicines",
+      "Undergo regular follow-up and monitoring",
+      "Stop all medications"
+    ],
+    answer: "Undergo regular follow-up and monitoring"
   }
 ];
+
 
 const CervicalCancer = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});

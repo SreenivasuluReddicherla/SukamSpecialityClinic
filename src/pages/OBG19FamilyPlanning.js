@@ -3,34 +3,129 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "Which of these is a long-acting reversible contraceptive?",
-    options: ["Birth control pill", "IUD", "Condom", "Withdrawal method"],
+    question: "Which method provides STI protection?",
+    options: ["Copper-T", "Male condom", "IUD", "Pills"],
+    answer: "Male condom"
+  },
+  {
+    question: "The lactational amenorrhea method is effective up to:",
+    options: ["2 years", "6 months", "3 months", "1 year"],
+    answer: "6 months"
+  },
+  {
+    question: "Mini-pill contains:",
+    options: ["Estrogen only", "Progesterone only", "Both hormones", "No hormones"],
+    answer: "Progesterone only"
+  },
+  {
+    question: "Most suitable contraception during breastfeeding is:",
+    options: ["Combined pill", "Progesterone-only pill", "Vaginal ring", "Patch"],
+    answer: "Progesterone-only pill"
+  },
+  {
+    question: "Copper IUD prevents pregnancy by:",
+    options: ["Killing sperm", "Thickening cervical mucus", "Stopping ovulation", "None of the above"],
+    answer: "Killing sperm"
+  },
+  {
+    question: "Which of the following is irreversible?",
+    options: ["Pills", "IUD", "Vasectomy", "Implants"],
+    answer: "Vasectomy"
+  },
+  {
+    question: "Hormonal IUD benefit includes:",
+    options: ["Heavy bleeding", "Lighter periods", "Infertility", "Early menopause"],
+    answer: "Lighter periods"
+  },
+  {
+    question: "Injectable contraceptive is given:",
+    options: ["Weekly", "Monthly", "Every 3 months", "Annually"],
+    answer: "Every 3 months"
+  },
+  {
+    question: "Emergency contraception is best within:",
+    options: ["12 hrs", "24 hrs", "72 hrs", "7 days"],
+    answer: "72 hrs"
+  },
+  {
+    question: "Method with immediate fertility return after stopping is:",
+    options: ["Pills", "Injection", "Implant", "Vasectomy"],
+    answer: "Pills"
+  },
+  {
+    question: "Sterilization failure rate is:",
+    options: ["5%", "1%", "10%", "0%"],
+    answer: "1%"
+  },
+  {
+    question: "Condoms are effective if:",
+    options: ["Reused", "Used correctly", "Washed", "Stored in heat"],
+    answer: "Used correctly"
+  },
+  {
+    question: "COCs are contraindicated in:",
+    options: ["PCOS", "Smokers >35 yrs", "Acne", "Fibroids"],
+    answer: "Smokers >35 yrs"
+  },
+  {
+    question: "Most effective reversible method is:",
+    options: ["Patch", "Pills", "IUD", "Foam"],
     answer: "IUD"
   },
   {
-    question: "True or False: Vasectomy is a permanent contraceptive method.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "Which doesn’t affect ovulation?",
+    options: ["Pills", "Copper-T", "Injection", "Implant"],
+    answer: "Copper-T"
   },
   {
-    question: "Which method also protects against sexually transmitted infections?",
-    options: ["Pill", "Condom", "Implant", "Injection"],
-    answer: "Condom"
+    question: "Common side effect of injection (DMPA) is:",
+    options: ["Weight loss", "Spotting", "Bone strength increase", "Migraine"],
+    answer: "Spotting"
   },
   {
-    question: "What is the main hormone in combined oral contraceptive pills?",
-    options: ["Insulin", "Estrogen and Progesterone", "Cortisol", "Testosterone"],
-    answer: "Estrogen and Progesterone"
+    question: "Postpartum IUD can be placed at:",
+    options: ["6 hours", "6 weeks", "6 months", "Never"],
+    answer: "6 weeks"
   },
   {
-    question: "When should you consult your doctor about contraceptive side effects?",
-    options: [
-      "Only if you want to stop contraception",
-      "If you experience severe or persistent side effects",
-      "Never, side effects are normal",
-      "Only during pregnancy"
-    ],
-    answer: "If you experience severe or persistent side effects"
+    question: "Vasectomy involves cutting:",
+    options: ["Vas deferens", "Urethra", "Penis", "Testes"],
+    answer: "Vas deferens"
+  },
+  {
+    question: "Ring method is placed in:",
+    options: ["Uterus", "Cervix", "Vagina", "Abdomen"],
+    answer: "Vagina"
+  },
+  {
+    question: "Natural method effectiveness is around:",
+    options: ["25%", "50%", "75%", "99%"],
+    answer: "75%"
+  },
+  {
+    question: "IUD insertion is ideally done:",
+    options: ["During ovulation", "Post-menstrual", "Anytime", "During pregnancy"],
+    answer: "Post-menstrual"
+  },
+  {
+    question: "A woman with uncontrolled hypertension should avoid:",
+    options: ["Barrier method", "Progesterone-only pill", "Combined pill", "IUD"],
+    answer: "Combined pill"
+  },
+  {
+    question: "Male condom failure rate (typical use):",
+    options: ["2%", "15%", "0.1%", "100%"],
+    answer: "15%"
+  },
+  {
+    question: "Post sterilization, confirmation requires:",
+    options: ["Urine test", "Pelvic scan", "Semen analysis", "Hormonal test"],
+    answer: "Semen analysis"
+  },
+  {
+    question: "Most cost-effective method over 10 years:",
+    options: ["Pills", "IUD", "Patch", "Emergency pill"],
+    answer: "IUD"
   }
 ];
 

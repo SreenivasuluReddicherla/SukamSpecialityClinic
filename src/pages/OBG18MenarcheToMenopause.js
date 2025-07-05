@@ -3,31 +3,107 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "At what age does menarche typically occur?",
-    options: ["8-15 years", "16-20 years", "21-25 years", "26-30 years"],
-    answer: "8-15 years"
+    question: "At what age range does menarche typically occur?",
+    options: ["6–8 years", "9–15 years", "16–20 years", "18–25 years"],
+    answer: "9–15 years"
   },
   {
-    question: "Which hormone mainly regulates the menstrual cycle?",
-    options: ["Insulin", "Estrogen", "Cortisol", "Testosterone"],
+    question: "Which hormone primarily surges during the first half of the menstrual cycle?",
+    options: ["Progesterone", "Estrogen", "Testosterone", "Cortisol"],
     answer: "Estrogen"
   },
   {
-    question: "True or False: Hot flashes are a common symptom of menopause.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "Irregular cycles in teenage years are usually due to:",
+    options: ["Thyroid cancer", "Fully established ovulation", "Immature hormonal axis", "Poor hygiene"],
+    answer: "Immature hormonal axis"
   },
   {
-    question: "What condition is characterized by multiple ovarian cysts and hormonal imbalance?",
-    options: ["Endometriosis", "PCOS", "Thyroid disorder", "Fibroids"],
-    answer: "PCOS"
+    question: "Which is NOT a symptom of PCOD?",
+    options: ["Acne", "Sudden weight loss", "Irregular periods", "Hirsutism (excess hair growth)"],
+    answer: "Sudden weight loss"
   },
   {
-    question: "What is a healthy way to manage menopausal symptoms?",
-    options: ["Avoid physical activity", "Balanced diet and regular exercise", "Ignore symptoms", "Only medications"],
-    answer: "Balanced diet and regular exercise"
+    question: "The most fertile period in a woman’s life is usually:",
+    options: ["10–20 years", "20–30 years", "30–40 years", "After 40"],
+    answer: "20–30 years"
+  },
+  {
+    question: "Basal body temperature rises after:",
+    options: ["Menstruation", "Ovulation", "Estrogen drop", "Contraceptive use"],
+    answer: "Ovulation"
+  },
+  {
+    question: "Which of the following is a long-term contraceptive?",
+    options: ["Emergency pill", "Male condom", "Copper IUD", "Cervical cap"],
+    answer: "Copper IUD"
+  },
+  {
+    question: "Which vitamin is recommended during preconception?",
+    options: ["Vitamin A", "Vitamin C", "Folic acid", "Calcium"],
+    answer: "Folic acid"
+  },
+  {
+    question: "A common side effect of oral contraceptive pills is:",
+    options: ["Increased height", "Breast tenderness", "Hearing loss", "Vision improvement"],
+    answer: "Breast tenderness"
+  },
+  {
+    question: "Which of the following is a natural method of contraception?",
+    options: ["Vaginal ring", "Calendar method", "IUD", "Patch"],
+    answer: "Calendar method"
+  },
+  {
+    question: "The hormone responsible for ovulation is:",
+    options: ["FSH", "LH", "Estrogen", "Cortisol"],
+    answer: "LH"
+  },
+  {
+    question: "Menstrual hygiene products include all except:",
+    options: ["Tampons", "Menstrual cups", "Reusable pads", "Sterile gloves"],
+    answer: "Sterile gloves"
+  },
+  {
+    question: "PCOD is primarily associated with:",
+    options: ["Hypothyroidism", "Estrogen deficiency", "Insulin resistance", "Low iron"],
+    answer: "Insulin resistance"
+  },
+  {
+    question: "Which symptom is common during PMS?",
+    options: ["Hair loss", "Joint dislocation", "Mood swings", "Itching"],
+    answer: "Mood swings"
+  },
+  {
+    question: "Anovulatory cycles mean:",
+    options: ["Periods without ovulation", "Periods with bleeding only once a year", "Periods during pregnancy", "No menstruation"],
+    answer: "Periods without ovulation"
+  },
+  {
+    question: "Which hormone is dominant in the second half of the cycle?",
+    options: ["Estrogen", "Progesterone", "Testosterone", "Oxytocin"],
+    answer: "Progesterone"
+  },
+  {
+    question: "Which of these can worsen PCOS?",
+    options: ["Healthy fats", "Excessive sugar", "Balanced exercise", "High fiber"],
+    answer: "Excessive sugar"
+  },
+  {
+    question: "The first menstrual cycle is called:",
+    options: ["Ovulation", "Menopause", "Menarche", "Dysmenorrhea"],
+    answer: "Menarche"
+  },
+  {
+    question: "Cervical mucus during ovulation is usually:",
+    options: ["Thick and dry", "Clear and stretchy", "Milky and clumpy", "None of the above"],
+    answer: "Clear and stretchy"
+  },
+  {
+    question: "Sukam Speciality Clinic offers which of the following?",
+    options: ["Teen menstrual workshops", "Only surgical care", "Men-only counseling", "None of the above"],
+    answer: "Teen menstrual workshops"
   }
 ];
+
 
 const MenarcheToMenopause = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});
