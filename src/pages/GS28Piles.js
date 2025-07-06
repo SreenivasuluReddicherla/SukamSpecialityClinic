@@ -3,31 +3,107 @@ import './RP1InfertilityInsights.css';
 
 const quizData = [
   {
-    question: "What is a common cause of hemorrhoids?",
-    options: ["Prolonged sitting", "Drinking water", "High-fiber diet", "Walking"],
-    answer: "Prolonged sitting"
+    question: "Most common presenting symptom of internal piles:",
+    options: ["Severe pain", "Bright red bleeding per rectum", "Constipation", "Diarrhea"],
+    answer: "Bright red bleeding per rectum"
   },
   {
-    question: "Which symptom suggests hemorrhoids?",
-    options: ["Bright red rectal bleeding", "Headache", "Chest pain", "Cough"],
-    answer: "Bright red rectal bleeding"
+    question: "Which hemorrhoids are usually painful?",
+    options: ["Grade I", "Internal", "External thrombosed", "All are painless"],
+    answer: "External thrombosed"
   },
   {
-    question: "True or False: Hemorrhoids can be prevented by a high-fiber diet.",
-    options: ["True", "False"],
-    answer: "True"
+    question: "A common trigger for piles:",
+    options: ["High protein diet", "Low fiber diet", "Excess water", "Antibiotic use"],
+    answer: "Low fiber diet"
   },
   {
-    question: "What minimally invasive procedure can treat hemorrhoids?",
-    options: ["Rubber band ligation", "Appendectomy", "Cataract surgery", "Tonsillectomy"],
-    answer: "Rubber band ligation"
+    question: "Grade II hemorrhoids:",
+    options: ["Do not prolapse", "Prolapse and need manual reduction", "Prolapse and reduce spontaneously", "Bleed profusely"],
+    answer: "Prolapse and reduce spontaneously"
   },
   {
-    question: "When should you see a doctor about hemorrhoids?",
-    options: ["If bleeding is heavy or persistent", "If symptoms worsen", "If pain is severe", "All of the above"],
-    answer: "All of the above"
+    question: "Best non-surgical measure for early piles:",
+    options: ["Antibiotics", "Laxatives only", "High fiber diet and water", "Iron supplements"],
+    answer: "High fiber diet and water"
+  },
+  {
+    question: "Rubber band ligation is used for:",
+    options: ["Grade I", "Grade IV", "Grade II/III", "External piles"],
+    answer: "Grade II/III"
+  },
+  {
+    question: "Common postoperative complaint after hemorrhoidectomy:",
+    options: ["Nausea", "Constipation", "Pain", "Jaundice"],
+    answer: "Pain"
+  },
+  {
+    question: "Which technique uses stapler?",
+    options: ["Milligan-Morgan", "PPH", "DG-HAL", "Laser"],
+    answer: "PPH"
+  },
+  {
+    question: "Diagnostic tool for hemorrhoids:",
+    options: ["MRI", "Colonoscopy", "Proctoscopy", "Sigmoid biopsy"],
+    answer: "Proctoscopy"
+  },
+  {
+    question: "Sitz bath helps by:",
+    options: ["Dissolving piles", "Improving blood circulation", "Preventing stones", "Treating diarrhea"],
+    answer: "Improving blood circulation"
+  },
+  {
+    question: "Hemorrhoids are swollen:",
+    options: ["Lymph nodes", "Arteries", "Veins", "Glands"],
+    answer: "Veins"
+  },
+  {
+    question: "External hemorrhoids are located:",
+    options: ["Above pectinate line", "In small intestine", "Below pectinate line", "Inside rectum"],
+    answer: "Below pectinate line"
+  },
+  {
+    question: "Stapled hemorrhoidectomy causes:",
+    options: ["More pain", "Less pain", "No bleeding", "High infection"],
+    answer: "Less pain"
+  },
+  {
+    question: "One major complication if untreated:",
+    options: ["Appendicitis", "Anemia", "Asthma", "UTI"],
+    answer: "Anemia"
+  },
+  {
+    question: "Which therapy uses heat to shrink hemorrhoids?",
+    options: ["Rubber band", "Infrared coagulation", "PPH", "Steroids"],
+    answer: "Infrared coagulation"
+  },
+  {
+    question: "Hemorrhoids in pregnancy:",
+    options: ["Never occur", "Require immediate surgery", "Often resolve after delivery", "Are cancerous"],
+    answer: "Often resolve after delivery"
+  },
+  {
+    question: "Preventive step:",
+    options: ["High fat diet", "Use of antacids", "Increased fluid and fiber", "Using hot pads"],
+    answer: "Increased fluid and fiber"
+  },
+  {
+    question: "Bleeding with piles is:",
+    options: ["Dark and mixed with stool", "Bright red, painless", "Tarry and black", "Mucous only"],
+    answer: "Bright red, painless"
+  },
+  {
+    question: "Colonoscopy is indicated in:",
+    options: ["Children", "Elderly with rectal bleeding", "Grade I piles", "Diabetic patients"],
+    answer: "Elderly with rectal bleeding"
+  },
+  {
+    question: "Lifestyle advice includes:",
+    options: ["Avoid water", "Suppress urge to defecate", "Avoid long sitting in toilet", "Eat raw meat"],
+    answer: "Avoid long sitting in toilet"
   }
 ];
+
 
 const Piles = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});
@@ -67,54 +143,142 @@ const Piles = () => {
       <p className="lead">“Swollen veins that cause discomfort down under.”</p>
 
       <section className="info-section">
-        <p>
-          Hemorrhoids, commonly known as piles, are swollen blood vessels in and around the anus and lower rectum. They can cause pain, itching, bleeding during bowel movements, and a feeling of fullness or lump near the anus.
-        </p>
+  <h3>🔍 What Really Are Piles?</h3>
+  <p>
+    Piles, or hemorrhoids, are dilated, swollen blood vessels in the anal canal — similar to varicose veins in the legs.
+    These vascular cushions normally help with stool control and continence. But when they become engorged, inflamed, or prolapsed, they turn pathological.
+    They’re one of the most common anorectal complaints, often underreported due to embarrassment.
+    Chronic straining, constipation, sedentary lifestyle, and certain medical conditions increase the risk.
+  </p>
 
-        <h3>🔍 Causes of Hemorrhoids</h3>
-        <ul>
-          <li>Straining during bowel movements</li>
-          <li>Chronic constipation or diarrhea</li>
-          <li>Prolonged sitting or standing</li>
-          <li>Pregnancy and childbirth</li>
-          <li>Obesity and poor diet</li>
-          <li>Aging and weakening of supporting tissues</li>
-        </ul>
+  <h3>📍 Understanding Internal vs. External Piles</h3>
+  <h4>📌 Internal Hemorrhoids:</h4>
+  <ul>
+    <li>Originate above the dentate (pectinate) line</li>
+    <li>Usually painless, but bleed during or after passing stool</li>
+    <li>Graded based on prolapse:
+      <ul>
+        <li>Grade I – No prolapse, only bleeding</li>
+        <li>Grade II – Prolapse but retracts spontaneously</li>
+        <li>Grade III – Prolapse, needs manual reduction</li>
+        <li>Grade IV – Permanently prolapsed and irreducible</li>
+      </ul>
+    </li>
+  </ul>
 
-        <h3>🚩 Symptoms to Recognize</h3>
-        <ul>
-          <li>Pain or discomfort around the anus</li>
-          <li>Bright red bleeding during or after bowel movements</li>
-          <li>Itching or irritation</li>
-          <li>Swelling or lumps near the anus</li>
-          <li>Mucus discharge</li>
-        </ul>
+  <h4>📌 External Hemorrhoids:</h4>
+  <ul>
+    <li>Originate below the dentate line</li>
+    <li>Covered by skin, often painful — especially if thrombosed</li>
+    <li>Present as lumps, itching, pain, and bleeding</li>
+  </ul>
 
-        <h3>🏥 Diagnosis & Treatment at Sukam</h3>
-        <ul>
-          <li>Detailed history and physical exam including inspection and digital rectal exam</li>
-          <li>Anoscopy or proctoscopy if needed</li>
-          <li>Lifestyle changes: high-fiber diet, hydration</li>
-          <li>Topical creams, stool softeners, and pain relievers</li>
-          <li>Minimally invasive procedures: rubber band ligation, sclerotherapy</li>
-          <li>Surgery: hemorrhoidectomy for severe or persistent cases</li>
-        </ul>
+  <h3>🚩 What Brings It On?</h3>
+  <ul>
+    <li>Chronic constipation or diarrhea</li>
+    <li>Prolonged straining during defecation</li>
+    <li>Low-fiber diet</li>
+    <li>Sedentary lifestyle, prolonged sitting</li>
+    <li>Pregnancy and childbirth</li>
+    <li>Portal hypertension (rarely)</li>
+    <li>Obesity and heavy lifting</li>
+  </ul>
+  <p>They’re also more common with aging, as the supportive connective tissue of the anal cushions weakens.</p>
 
-        <h3>🍽️ Tips to Prevent & Manage Hemorrhoids</h3>
-        <ul>
-          <li>✔ Eat plenty of fiber-rich foods like fruits, vegetables, and whole grains</li>
-          <li>✔ Drink plenty of water daily</li>
-          <li>✔ Avoid prolonged sitting or straining</li>
-          <li>✔ Exercise regularly to improve bowel function</li>
-          <li>✔ Maintain a healthy weight</li>
-        </ul>
+  <h3>🔎 Key Symptoms That Raise a Red Flag</h3>
+  <ul>
+    <li>Bright red bleeding per rectum — often coating the stool or dripping into the pan</li>
+    <li>Anal itching or discomfort</li>
+    <li>Feeling of incomplete evacuation</li>
+    <li>Bulge or swelling at the anus during/after defecation</li>
+    <li>Mucous discharge</li>
+    <li>Pain (usually external piles or thrombosed internal piles)</li>
+    <li>Soiling of undergarments in advanced cases</li>
+  </ul>
+  <p><strong>Note:</strong> If there's dark blood, weight loss, or altered bowel habits, one must rule out colorectal cancer or inflammatory bowel disease.</p>
 
-        <h3>🧠 Myth-Busting</h3>
-        <ul>
-          <li><strong>❌ “Bleeding from hemorrhoids is always dangerous.”</strong><br />✅ Truth: It’s usually benign but should always be evaluated.</li>
-          <li><strong>❌ “Surgery is the only cure for hemorrhoids.”</strong><br />✅ Truth: Many cases respond well to conservative treatment.</li>
-        </ul>
-      </section>
+  <h3>🩺 How the Diagnosis Is Made</h3>
+  <ul>
+    <li><strong>Digital Rectal Examination (DRE):</strong> To palpate internal swelling or rule out masses</li>
+    <li><strong>Proctoscopy / Anoscopy:</strong> Direct visualization of internal hemorrhoids</li>
+    <li><strong>Sigmoidoscopy / Colonoscopy:</strong> For patients:
+      <ul>
+        <li>Over 45 years</li>
+        <li>With change in bowel habits</li>
+        <li>With persistent bleeding</li>
+        <li>With malignancy risk factors</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>🧴 When to Treat Conservatively?</h3>
+  <p>First-line for early-stage (Grade I/II):</p>
+  <ul>
+    <li>High-fiber diet (fruits, vegetables, whole grains)</li>
+    <li>Adequate water intake</li>
+    <li>Stool softeners or bulk-forming laxatives</li>
+    <li>Warm sitz baths</li>
+    <li>Topical creams (lidocaine, hydrocortisone, flavonoids)</li>
+    <li>Avoid prolonged straining or sitting on the toilet</li>
+  </ul>
+  <p>✅ In many patients, Grade I/II hemorrhoids improve significantly with lifestyle and dietary changes.</p>
+
+  <h3>💉 When Is a Procedure Necessary?</h3>
+  <h4>🔹 Minimally Invasive (OPD-based) Treatments:</h4>
+  <ul>
+    <li>Rubber band ligation – common for Grade II/III</li>
+    <li>Infrared coagulation (IRC)</li>
+    <li>Sclerotherapy – injection to obliterate veins</li>
+  </ul>
+
+  <h4>🔹 Surgical Options – Reserved for:</h4>
+  <ul>
+    <li>Grade III/IV hemorrhoids</li>
+    <li>Recurrent, bleeding, painful piles</li>
+    <li>Complicated or thrombosed hemorrhoids</li>
+    <li>Failure of outpatient procedures</li>
+  </ul>
+  <p><strong>Common Surgical Techniques:</strong></p>
+  <ul>
+    <li>Conventional hemorrhoidectomy (Milligan-Morgan)</li>
+    <li>Stapled hemorrhoidopexy (PPH)</li>
+    <li>Laser hemorrhoidoplasty</li>
+    <li>Doppler-guided hemorrhoidal artery ligation (DG-HAL)</li>
+  </ul>
+  <p><em>Recovery from hemorrhoidectomy may take 1–2 weeks, with postoperative pain being the most reported issue.</em></p>
+
+  <h3>⚠️ Possible Complications (If Untreated or Mismanaged)</h3>
+  <ul>
+    <li>Anemia due to chronic blood loss</li>
+    <li>Thrombosis and intense pain</li>
+    <li>Ulceration and infection</li>
+    <li>Prolapse and soiling</li>
+    <li>Rarely, abscess or fistula formation</li>
+  </ul>
+  <p>Psychologically, patients suffer embarrassment, social withdrawal, and anxiety — making it a quality-of-life condition, not just a surgical one.</p>
+
+  <h3>🏥 At Our Clinic – What You Can Expect</h3>
+  <ul>
+    <li>✅ Detailed evaluation and confirmation with anoscopy/proctoscopy</li>
+    <li>✅ Staging of hemorrhoids and tailoring treatment accordingly</li>
+    <li>✅ Nutrition counselling with a high-fiber recovery plan</li>
+    <li>✅ Same-day procedures like banding, sclerotherapy, or laser</li>
+    <li>✅ Dedicated surgical team for advanced or complex hemorrhoids</li>
+    <li>✅ Postoperative care with sitz bath guidance, wound care tips, and anxiety support</li>
+    <li>✅ Follow-up reviews to ensure healing and lifestyle compliance</li>
+  </ul>
+  <p>Our emphasis is always on non-invasive options first, with surgery reserved for necessary cases — in line with global best practices.</p>
+
+  <h3>💡 Clinical Pearls</h3>
+  <ul>
+    <li>Painless bleeding during defecation in a young adult = suspect internal hemorrhoids</li>
+    <li>Painful anal lump = usually external thrombosed hemorrhoid</li>
+    <li>High-fiber + fluids + activity = long-term prevention</li>
+    <li>Avoid long bathroom sitting or mobile phone use while defecating</li>
+    <li>Colonoscopy is essential in older patients to rule out cancer</li>
+  </ul>
+</section>
+
 
       <section className="quiz-section">
         <h2>🧠 Quick Quiz — Hemorrhoids</h2>

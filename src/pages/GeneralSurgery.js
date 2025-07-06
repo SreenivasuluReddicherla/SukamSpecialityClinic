@@ -241,7 +241,7 @@ const treatmentData = {
     },
      {
       img: GS40,
-      title: "Gallbladder Surgery (Cholecystectomy)",
+      title: "Gallbladder Surgery",
       desc: "Removing the troublemaker that causes painful attacks."
     }
   ],
