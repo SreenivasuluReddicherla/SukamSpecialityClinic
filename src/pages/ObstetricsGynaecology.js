@@ -233,7 +233,7 @@ const ObstetricsGynaecology = () => {
           <div className="overview-content-anitha-obg">
             <h2 className="overview-title-anitha-obg">About Our Obstetrics & Gynecology Department</h2>
             <p className="overview-description-anitha-obg">
-              Our Obstetrics & Gynecology department at Sukam Speciality Clinic is dedicated to women’s 
+              Our Obstetrics & Gynecology department at Sukam Speciality and Fertility Clinic is dedicated to women’s 
               health across all stages of life—from adolescence to pregnancy, childbirth, and menopause. 
               We blend compassionate care with modern treatments for every woman’s unique needs.
             </p>

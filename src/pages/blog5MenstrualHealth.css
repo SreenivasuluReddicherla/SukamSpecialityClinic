@@ -1,0 +1,55 @@
+.menstrual-blog-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.7;
+}
+
+.menstrual-blog-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+  color: #6a1b9a;
+}
+
+.subheading {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.menstrual-blog-container section {
+  margin-bottom: 2rem;
+}
+
+.menstrual-blog-container h2 {
+  font-size: 1.4rem;
+  color: #8e24aa;
+  border-bottom: 2px solid #f3e5f5;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.menstrual-blog-container h4 {
+  margin-top: 1.2rem;
+  color: #4e342e;
+}
+
+.menstrual-blog-container ul {
+  padding-left: 1.4rem;
+}
+
+.menstrual-blog-container ul li {
+  margin: 0.4rem 0;
+}
+
+.cta-box {
+  background: #fce4ec;
+  padding: 1rem;
+  border-left: 5px solid #ad1457;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #880e4f;
+}

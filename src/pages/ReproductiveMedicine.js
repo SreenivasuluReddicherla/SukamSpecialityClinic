@@ -138,7 +138,7 @@ const ReproductiveMedicine = () => {
           <div className="overview-content-anitha-pm">
             <h2 className="overview-title-anitha-pm">About Our Fertility & Reproductive Medicine Department</h2>
             <p className="overview-description-anitha-pm">
-              At Sukam Speciality Clinic, our Fertility Care team provides empathetic, science-driven 
+              At Sukam Speciality and Fertility Clinic, our Fertility Care team provides empathetic, science-driven 
               solutions to help couples on their parenthood journey. We offer personalized, evidence-based 
               reproductive treatments with high success rates.
             </p>

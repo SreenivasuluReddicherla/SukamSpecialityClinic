@@ -44,7 +44,7 @@ import GS36 from '../assets/GS/GS36.png';
 // import GS37 from '../assets/GS/GS49.webp';
 // import GS38 from '../assets/GS/GS49.webp';
 import GS39 from '../assets/GS/GS49.webp';
-import GS40 from '../assets/GS/GS49.webp';
+// import GS40 from '../assets/GS/GS49.webp';
 import GS41 from '../assets/GS/GS41.png';
 import GS42 from '../assets/GS/GS42.png';
 import GS43 from '../assets/GS/GS43.png';
@@ -198,7 +198,8 @@ const treatmentData = {
     {
       img: GS39,
       title: "Appendicitis",
-      desc: "When your appendix calls for help, surgery answers fast."
+      desc: "When your appendix calls for help, surgery answers fast.",
+      link: "/Appendicitis"
     },
   ],
 
@@ -239,11 +240,11 @@ const treatmentData = {
       desc: "A fiery flare-up deep in your belly.",
       link: "/AcutePancreatitis"
     },
-     {
-      img: GS40,
-      title: "Gallbladder Surgery",
-      desc: "Removing the troublemaker that causes painful attacks."
-    }
+    //  {
+    //   img: GS40,
+    //   title: "Gallbladder Surgery",
+    //   desc: "Removing the troublemaker that causes painful attacks."
+    // }
   ],
 
   "Anorectal Conditions": [
@@ -292,17 +293,20 @@ const treatmentData = {
     {
       img: GS34,
       title: "Minimally Invasive Surgery",
-      desc: "Small cuts, speedy comebacks."
+      desc: "Small cuts, speedy comebacks.",
+      link: "/MinimallyInvasiveSurgery"
     },
     {
       img: GS35,
       title: "LASER Surgery",
-      desc: "Light-powered precision, scar-light results."
+      desc: "Light-powered precision, scar-light results.",
+      link: "/LASERSurgery",
     },
     {
       img: GS36,
       title: "Robotic Surgery",
-      desc: "Surgeon’s skill meets robotic perfection."
+      desc: "Surgeon’s skill meets robotic perfection.",
+      link: "/RoboticSurgery",
     },
     // {
     //   img: GS37,
@@ -319,62 +323,74 @@ const treatmentData = {
     {
       img: GS41,
       title: "Carcinoma Oral Cavity",
-      desc: "Cancer that starts where words begin."
+      desc: "Cancer that starts where words begin.",
+      link: "/OralCavity",
     },
     {
       img: GS42,
       title: "Carcinoma Skin",
-      desc: "A mole that means more than it looks."
+      desc: "A mole that means more than it looks.",
+      link: "/Skin",
     },
     {
       img: GS43,
       title: "Carcinoma Penis",
-      desc: "A rare cancer that calls for early action."
+      desc: "A rare cancer that calls for early action.",
+      link: "/Penis",
     },
     {
       img: GS44,
       title: "Soft Tissue Sarcoma",
-      desc: "A deep-growing threat in muscles or fat."
+      desc: "A deep-growing threat in muscles or fat.",
+      link: "/SoftTissueSarcom",
     },
     {
       img: GS45,
       title: "Carcinoma Thyroid",
-      desc: "A neck lump that may signal more."
+      desc: "A neck lump that may signal more.",
+      link: "/Thyroid",
     },
     {
       img: GS46,
       title: "Carcinoma Breast",
-      desc: "Early checks save more than lives—they save futures."
+      desc: "Early checks save more than lives—they save futures.",
+      link: "/Breast",
     },
     {
       img: GS47,
       title: "Carcinoma Oesophagus",
-      desc: "Swallowing struggles that shouldn't be ignored."
+      desc: "Swallowing struggles that shouldn't be ignored.",
+      link: "/Oesophagus",
     },
     {
       img: GS48,
       title: "Carcinoma Stomach",
-      desc: "Silent weight loss may speak volumes."
+      desc: "Silent weight loss may speak volumes.",
+      link: "/Stomach",
     },
     {
       img: GS49,
       title: "Carcinoma Liver",
-      desc: "Your detox center under siege."
+      desc: "Your detox center under siege.",
+      link: "/Liver",
     },
     {
       img: GS50,
       title: "Carcinoma Pancreas",
-      desc: "Quiet, quick, and deadly if missed."
+      desc: "Quiet, quick, and deadly if missed.",
+      link: "/Pancreas",
     },
     {
       img: GS51,
       title: "Carcinoma Colon",
-      desc: "Blood in the stool could be more than a bother."
+      desc: "Blood in the stool could be more than a bother.",
+      link: "/Colon",
     },
     {
       img: GS52,
       title: "Carcinoma Anorectum",
-      desc: "Changes in bowels that could signal cancer."
+      desc: "Changes in bowels that could signal cancer.",
+      link: "/Anorectum",
     }
   ]
 };
@@ -453,7 +469,7 @@ const GeneralSurgeryPage = () => {
         <div className="overview-content-manoj">
           <h2 className="overview-title-manoj">About Our General Surgery Department</h2>
           <p className="overview-description-manoj">
-            At Sukam Speciality Clinic, our General Surgery department delivers precision-based care 
+            At Sukam Speciality and Fertility Clinic, our General Surgery department delivers precision-based care 
             using minimally invasive techniques, modern tools, and compassionate expertise. 
             We prioritize safe outcomes and faster recovery for every patient.
           </p>

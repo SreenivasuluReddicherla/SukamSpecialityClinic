@@ -12,8 +12,6 @@ import Footer from "./components/Footer";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./components/Contact";
 import AccessReportsLogin from "./pages/AccessReportsLogin";
-import Treatment1 from "./pages/treatment1";
-import Treatment2 from "./pages/treatment2";
 import Testimonials from "./components/Testimonials";
 import AppointmentPage from "./pages/AppointmentPage";
 import DoctorProfile from "./pages/DoctorProfile";
@@ -60,6 +58,22 @@ import PerianalAbscess from "./pages/GS30PerianalAbscess";
 import BPH from "./pages/GS31BPH";
 import Hernia from "./pages/GS32Hernia";
 import Hydrocele from "./pages/GS33Hydrocele";
+import Appendicitis from "./pages/GS49Appendicitis";
+import MinimallyInvasiveSurgery from "./pages/GS34MinimallyInvasiveSurgery";
+import LASERSurgery from "./pages/GS35LASERSurgery";
+import RoboticSurgery from "./pages/GS36RoboticSurgery";
+import OralCavity from "./pages/GS37OralCavity";
+import Skin from "./pages/GS38Skin";
+import Penis from "./pages/GS39Penis";
+import SoftTissueSarcom from "./pages/GS40SoftTissueSarcoma";
+import Thyroid from "./pages/GS41Thyroid";
+import Breast from "./pages/GS42Breast";
+import Oesophagus from "./pages/GS43Oesophagus";
+import Stomach from "./pages/GS44Stomach";
+import Liver from "./pages/GS45Liver";
+import Pancreas from "./pages/GS46Pancreas";
+import Colon from "./pages/GS47Colon";
+import Anorectum from "./pages/GS48Anorectum";
 
 import ObstetricsGynaecology from "./pages/ObstetricsGynaecology";
 import NormalPregnancyCare from "./pages/OBG1NormalPregnancyCare ";
@@ -93,6 +107,11 @@ import IVF_ICSI from "./pages/RP6IVF_ICSI";
 import EggFreezing from "./pages/RP7EggFreezing";
 
 import Blog1IrregularMenstruation from "./pages/blog1IrregularMenstruation";
+import ThyroidFertilityBlog from "./pages/blog2ThyroidFertility";
+import HerniaBlog from "./pages/blog3Hernia";
+import EggFreezingBlog from "./pages/blog4EggFreezing";
+import MenstrualHealthBlog from "./pages/blog5MenstrualHealth";
+import HighRiskPregnancyBlog from "./pages/blog6HighRiskPregnancy";
 
 import './App.css';
 
@@ -173,6 +192,22 @@ function App() {
           <Route path="/BPH" element={<BPH />} />
           <Route path="/Hernia" element={<Hernia />} />
           <Route path="/Hydrocele" element={<Hydrocele />} />
+          <Route path="/Appendicitis" element={<Appendicitis />} />
+          <Route path="/MinimallyInvasiveSurgery" element={<MinimallyInvasiveSurgery />} />
+          <Route path="/LASERSurgery" element={<LASERSurgery />} />
+          <Route path="/RoboticSurgery" element={<RoboticSurgery />} />
+          <Route path="/OralCavity" element={<OralCavity />} />
+          <Route path="/Skin" element={<Skin />} />
+          <Route path="/Penis" element={<Penis />} />
+          <Route path="/SoftTissueSarcom" element={<SoftTissueSarcom />} />
+          <Route path="/Thyroid" element={<Thyroid />} />
+          <Route path="/Breast" element={<Breast />} />
+          <Route path="/Oesophagus" element={<Oesophagus />} />
+          <Route path="/Stomach" element={<Stomach />} />
+          <Route path="/Liver" element={<Liver />} />
+          <Route path="/Pancreas" element={<Pancreas />} />
+          <Route path="/Colon" element={<Colon />} />
+          <Route path="/Anorectum" element={<Anorectum />} />
 
           <Route path="/services/gynecology" element={<ObstetricsGynaecology />} />
           <Route path="/NormalPregnancyCare" element={<NormalPregnancyCare />} />
@@ -208,13 +243,16 @@ function App() {
           <Route path="/blogs" element={<AllBlogs />} />
           <Route path="/blogs/:id" element={<BlogDetails />} />
           <Route path="/Blog1IrregularMenstruation" element={<Blog1IrregularMenstruation/>}/>
+          <Route path="/thyroid-fertility" element={<ThyroidFertilityBlog />} />
+          <Route path="/hernia-awareness" element={<HerniaBlog />} />
+          <Route path="/egg-freezing" element={<EggFreezingBlog />} />
+          <Route path="/menstrual-health" element={<MenstrualHealthBlog />} />
+          <Route path="/high-risk-pregnancy" element={<HighRiskPregnancyBlog />} />
 
           <Route path="/faq" element={<FAQ />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/Sukamvoices" element={<Testimonials/>} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/treatment1" element={<Treatment1 />} />
-          <Route path="/treatment2" element={<Treatment2 />} />
         </Routes>
       </main>
 

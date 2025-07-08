@@ -1,0 +1,50 @@
+.highrisk-blog-container {
+  max-width: 920px;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.7;
+}
+
+.highrisk-blog-container h1 {
+  color: #6a1b9a;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subheading {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 1.8rem;
+}
+
+.highrisk-blog-container section {
+  margin-bottom: 2rem;
+}
+
+.highrisk-blog-container h2 {
+  font-size: 1.4rem;
+  color: #8e24aa;
+  border-bottom: 2px solid #f3e5f5;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.highrisk-blog-container ul {
+  padding-left: 1.4rem;
+}
+
+.highrisk-blog-container ul li {
+  margin-bottom: 0.5rem;
+}
+
+.cta-box {
+  background-color: #fff3e0;
+  border-left: 6px solid #ef6c00;
+  padding: 1rem;
+  font-weight: bold;
+  margin-top: 1.2rem;
+  color: #e65100;
+}

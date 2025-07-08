@@ -1,0 +1,71 @@
+.eggfreezing-blog-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.7;
+}
+
+.eggfreezing-blog-container h1 {
+  font-size: 2rem;
+  color: #3a3a3a;
+  margin-bottom: 0.3rem;
+}
+
+.subheading {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.eggfreezing-blog-container section {
+  margin-bottom: 2rem;
+}
+
+.eggfreezing-blog-container h2 {
+  font-size: 1.4rem;
+  color: #00695c;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #b2dfdb;
+  padding-bottom: 0.2rem;
+}
+
+.eggfreezing-blog-container ul,
+.eggfreezing-blog-container ol {
+  padding-left: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+.eggfreezing-blog-container ul li,
+.eggfreezing-blog-container ol li {
+  margin: 0.4rem 0;
+}
+
+.eggfreezing-blog-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.eggfreezing-blog-container table th,
+.eggfreezing-blog-container table td {
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+  text-align: left;
+}
+
+.eggfreezing-blog-container table th {
+  background-color: #e0f2f1;
+  font-weight: bold;
+}
+
+.cta-box {
+  background: #f1f8e9;
+  padding: 1rem;
+  border-left: 5px solid #558b2f;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #33691e;
+}
