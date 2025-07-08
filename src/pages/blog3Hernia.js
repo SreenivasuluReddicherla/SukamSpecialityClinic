@@ -4,8 +4,8 @@ import './blog3Hernia.css';
 const HerniaBlog = () => {
   return (
     <div className="hernia-blog-container">
-      <h1>🦠 Hernia Myths Busted: Why Ignoring That Bulge May Cost You Your Health</h1>
-      <p className="subheading">A Surgical Awareness Blog from Sukam Speciality Clinic’s General Surgery Division</p>
+      <h1>Hernia Myths Busted: Why Ignoring That Bulge May Cost You Your Health</h1>
+      <p className="hernia-subheading">A Surgical Awareness Blog from Sukam Speciality Clinic’s General Surgery Division</p>
 
       <section>
         <h2>🎯 Introduction: The Bulge That Speaks Volumes — But Are You Listening?</h2>
@@ -118,7 +118,7 @@ const HerniaBlog = () => {
       <section>
         <h2>🗣️ Real Patient Stories</h2>
         <p><strong>Suresh, 47:</strong> “Thought it was fat — turned out to be an inguinal hernia. Surgery next morning. Back to work in 4 days.”</p>
-        <p><strong>Lakshmi Amma, 59:</strong> “Feared surgery for 3 years. Did laparoscopy — just 2 days stay. I lift my grandchild happily now.”</p>
+        <p><strong>Leela, 59:</strong> “Feared surgery for 3 years. Did laparoscopy — just 2 days stay. I lift my grandchild happily now.”</p>
       </section>
 
       <section>

@@ -4,29 +4,34 @@
   padding: 2rem;
   font-family: 'Segoe UI', sans-serif;
   background-color: #fff;
-  color: #333;
+  color: #BC1F6E;
   line-height: 1.7;
 }
 
 .menstrual-blog-container h1 {
   font-size: 2rem;
   margin-bottom: 0.3rem;
-  color: #6a1b9a;
+  color: #BC1F6E;
+  font-weight: 800;
 }
 
-.subheading {
+.menstrual-subheading {
   font-size: 1.1rem;
-  color: #777;
-  margin-bottom: 1.5rem;
+  color: #BC1F6E;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
 }
 
 .menstrual-blog-container section {
   margin-bottom: 2rem;
 }
-
+.intro-blog5{
+  margin-top: 40px;
+}
 .menstrual-blog-container h2 {
   font-size: 1.4rem;
-  color: #8e24aa;
+  color: #bc1f6db2;
   border-bottom: 2px solid #f3e5f5;
   padding-bottom: 0.3rem;
   margin-bottom: 0.8rem;

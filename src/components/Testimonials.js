@@ -32,6 +32,31 @@ const videoTestimonials = [
     url: "https://www.youtube.com/embed/sirKxcCdx9k",
     title: "Recurrent Pregnancy Loss: Causes and Treatments | Dr. Anitha A Manoj",
   },
+  // {
+  //   id: 6,
+  //   url: "https://youtu.be/gxY5ivhRzww?si=z8Sajo6Mh6zP2jqs",
+  //   title: "Urinary Tract Infection: A Simple Guide for Quick Relief | Dr. Manoj Karthik",
+  // },
+  // {
+  //   id: 7,
+  //   url: "https://www.youtube.com/watch?v=pqnmhJwXM1Y",
+  //   title: "Is White Discharge (Leucorrhoea) Worrying You? Here's What You Need to Know! | Dr. Anitha A Manoj",
+  // },
+  // {
+  //   id: 8,
+  //   url: "https://www.youtube.com/watch?v=CXDszX8-P-o",
+  //   title: "Hernia Explained from Formation to Treatment | Dr. Manoj Karthik S",
+  // },
+  // {
+  //   id: 9,
+  //   url: "https://www.youtube.com/watch?v=uJJ3cmA9n7c",
+  //   title: "Expert Advice on Painless Delivery | Dr. Anitha A Manoj",
+  // },
+  // {
+  //   id: 10,
+  //   url: "https://www.youtube.com/watch?v=lgtC_Mnv0yc",
+  //   title: "Thyroid Disorders and Treatment Options | Dr. Manoj Karthik S",
+  // },
 ];
 
 const Testimonials = () => {

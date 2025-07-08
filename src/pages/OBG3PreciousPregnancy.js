@@ -189,11 +189,11 @@ const PreciousPregnancy = () => {
 
   <h3>👩‍⚕️ How Sukam Supports Precious Pregnancies</h3>
   <ul>
-    <li>✅ OB-GYNs with expertise in IVF and pregnancy loss</li>
+    <li>✅ OB-GYNs with expertise in IVF and pregnancy Care</li>
     <li>✅ In-house Fetal Medicine Unit</li>
     <li>✅ Weekly progesterone clinics & custom scan schedules</li>
     <li>✅ Clotting profile and genetic counseling</li>
-    <li>✅ 24x7 NICU support</li>
+    <li>✅ NICU Referral</li>
     <li>✅ Nutrition and psychology support</li>
     <li>✅ Partner education & gentle birth planning</li>
     <li>✅ Postpartum mental health care</li>

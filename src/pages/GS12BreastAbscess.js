@@ -340,7 +340,7 @@ const BreastAbscess = () => {
     </tbody>
   </table>
 
-  <h3>🏥 How We Manage Breast Abscess at [Your Clinic Name]</h3>
+  <h3>🏥 How We Manage Breast Abscess at Sukam Speciality and Fertility Clinic</h3>
   <ul>
     <li>✅ Rapid diagnosis with bedside ultrasound</li>
     <li>✅ On-the-spot aspiration or minor surgical drainage</li>

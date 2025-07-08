@@ -358,7 +358,7 @@ const ThyroidSwelling = () => {
     </tbody>
   </table>
 
-  <h3>🏥 Our Approach to Thyroid Swellings at [Your Clinic Name]</h3>
+  <h3>🏥 Our Approach to Thyroid Swellings at Sukam Speciality and Fertility Clinic</h3>
   <ol>
     <li><strong>Detailed History & Neck Examination:</strong> Focused exam with family and menstrual history</li>
     <li><strong>Same-Day Thyroid Profile:</strong> T3, T4, TSH with rapid reporting</li>

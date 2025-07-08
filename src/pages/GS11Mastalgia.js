@@ -302,7 +302,6 @@ const Mastalgia = () => {
     <li>✅ <strong>Clinical History:</strong> Menstrual pattern, pregnancy status, bra fit, pain features</li>
     <li>✅ <strong>Breast Exam:</strong> Check for lumps, skin or nipple changes</li>
     <li>✅ <strong>Ultrasound:</strong> First-line imaging for focal pain (under 40)</li>
-    <li>✅ <strong>Mammography:</strong> Preferred in women over 40</li>
     <li>✅ <strong>FNAC or Biopsy:</strong> If lump is found or imaging is inconclusive</li>
     <li>✅ <strong>Chest Wall Evaluation:</strong> For rib or muscular pain sources</li>
   </ul>

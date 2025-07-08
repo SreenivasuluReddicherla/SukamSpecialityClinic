@@ -3,21 +3,23 @@
   margin: 0 auto;
   padding: 2rem;
   font-family: 'Segoe UI', sans-serif;
-  color: #333;
   background-color: #fff;
   line-height: 1.7;
 }
 
 .eggfreezing-blog-container h1 {
   font-size: 2rem;
-  color: #3a3a3a;
   margin-bottom: 0.3rem;
+  font-weight: 800;
+  color:#982882;
 }
 
-.subheading {
+.eggfreezing-subheading {
   font-size: 1.1rem;
-  color: #777;
+  color: #982882b0;
   margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
 }
 
 .eggfreezing-blog-container section {
@@ -26,10 +28,11 @@
 
 .eggfreezing-blog-container h2 {
   font-size: 1.4rem;
-  color: #00695c;
+  color:#982882ca;
   margin-bottom: 0.5rem;
-  border-bottom: 2px solid #b2dfdb;
-  padding-bottom: 0.2rem;
+  border-bottom: 2px solid #98288214;
+  padding-bottom: 0.4rem;
+  padding-top: 20px;
 }
 
 .eggfreezing-blog-container ul,

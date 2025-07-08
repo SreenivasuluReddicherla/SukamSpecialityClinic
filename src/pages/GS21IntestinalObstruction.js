@@ -340,12 +340,12 @@ const IntestinalObstruction = () => {
     <li>Death, particularly in elderly or frail patients</li>
   </ul>
 
-  <h3>🏥 How We Manage It at [Your Clinic Name]</h3>
+  <h3>🏥 How We Manage It at Sukam</h3>
   <ul>
     <li>✅ Immediate symptom relief with pain and vomiting control</li>
-    <li>✅ Bedside X-ray and ultrasound access</li>
+    <li>✅ X-ray and ultrasound access</li>
     <li>✅ Quick referral for CT and surgical intervention</li>
-    <li>✅ 24x7 IV fluid and monitoring facility</li>
+    <li>✅ IV fluid and monitoring facility</li>
     <li>✅ Multilingual handouts on surgical prep and recovery</li>
     <li>✅ Ongoing follow-up for cancer, hernia, and GI health</li>
   </ul>

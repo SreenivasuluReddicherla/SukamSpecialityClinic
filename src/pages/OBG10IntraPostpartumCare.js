@@ -283,7 +283,7 @@ const IntraPostpartumCare = () => {
 
   <h3>🏥 Sukam’s Postpartum Support – We Stay With You</h3>
   <ul>
-    <li>24×7 postnatal ward with expert nurses</li>
+    <li>Postnatal ward with expert nurses</li>
     <li>Lactation and infant feeding guidance</li>
     <li>Postnatal physiotherapy for pain relief</li>
     <li>Mental health screening & therapy</li>

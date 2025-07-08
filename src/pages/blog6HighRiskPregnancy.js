@@ -4,8 +4,8 @@ import './blog6HighRiskPregnancy.css';
 const HighRiskPregnancyBlog = () => {
   return (
     <div className="highrisk-blog-container">
-      <h1>🌼 High-Risk Pregnancy: Understanding the Invisible Warnings and Ensuring Safe Motherhood</h1>
-      <p className="subheading">A comprehensive guide from Sukam Speciality Clinic & Fertility Centre</p>
+      <h1>High-Risk Pregnancy: Understanding the Invisible Warnings and Ensuring Safe Motherhood</h1>
+      <p className="high-risk-subheading">A comprehensive guide from Sukam Speciality Clinic & Fertility Centre</p>
 
       <section>
         <h2>🌸 Introduction: The Bulge That Speaks Volumes — But Are You Listening?</h2>

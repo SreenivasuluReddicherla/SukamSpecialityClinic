@@ -201,8 +201,8 @@ const HighRiskPregnancy = () => {
   <h3>🏥 What We Do at Sukam for High-Risk Pregnancies</h3>
   <ul>
     <li>✅ Specialist obstetricians for high-risk pregnancies</li>
-    <li>✅ MFM expert access</li>
-    <li>✅ 24x7 fetal monitoring and emergency care</li>
+    
+    <li>✅ Fetal monitoring and emergency care</li>
     <li>✅ Endocrinology and dietician support</li>
     <li>✅ NICU support with pediatricians on standby</li>
     <li>✅ Mental health and partner education</li>

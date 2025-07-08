@@ -1,49 +1,44 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./RecentBlogs.css";
-import img1 from "../assets/1.jpg";
-import img2 from "../assets/2.jpg";
-import img3 from "../assets/3.jpg";
+import blog1 from "../assets/blog1.jpg"
+import blog2 from "../assets/blog2.png"
+import blog3 from "../assets/blog3.jpg"
+import blog4 from "../assets/blog4.jpg"
+import blog5 from "../assets/blog5.jpg"
 import { useNavigate } from "react-router-dom";
 
 const blogs = [
   {
     id: 1,
-    image: img1,
-    title: "Understanding Irregular Menstruation: Causes, Signs, and When to Seek Help",
+    image: blog1,
+    title: "Understandig Menstrual Health",
     author: "Dr. Anitha A Manoj",
-    date: "March 20, 2025",
+    date: "March 28, 2025",
   },
   {
     id: 2,
-    image: img2,
+    image: blog2,
     title: "Understandig Thyroid Fertility",
     author: "Dr. Manoj Karthik",
     date: "March 22, 2025",
   },
   {
     id: 3,
-    image: img1,
+    image: blog3,
     title: "Understandig Egg Freezing",
     author: "Dr. Anitha A Manoj",
     date: "March 24, 2025",
   },
    {
     id: 4,
-    image: img2,
+    image: blog4,
     title: "Understandig Hernia",
     author: "Dr. Manoj Karthik",
     date: "March 26, 2025",
   },
-  // {
-  //   id: 5,
-  //   image: img1,
-  //   title: "Understandig Menstrual Health",
-  //   author: "Dr. Anitha A Manoj",
-  //   date: "March 28, 2025",
-  // },
   {
-    id: 6,
-    image: img1,
+    id: 5,
+    image: blog5,
     title: "Understandig High Risk Pregnancy",
     author: "Dr. Anitha A Manoj",
     date: "March 30, 2025",

@@ -4,8 +4,8 @@ import './blog4EggFreezing.css';
 const EggFreezingBlog = () => {
   return (
     <div className="eggfreezing-blog-container">
-      <h1>🧬 Egg Freezing, Fertility Preservation, and You</h1>
-      <p className="subheading">A Modern Woman’s Guide to Reproductive Freedom – from Sukam Speciality Clinic</p>
+      <h1> Egg Freezing, Fertility Preservation, and You</h1>
+      <p className="eggfreezing-subheading">A Modern Woman’s Guide to Reproductive Freedom – from Sukam Speciality Clinic</p>
 
       <section>
         <h2>🌸 Introduction: Why Fertility Preservation Matters</h2>
@@ -83,18 +83,13 @@ const EggFreezingBlog = () => {
           <li>✅ Egg retrieval with sedation</li>
           <li>✅ Cryopreservation and storage (1–5 years)</li>
         </ul>
-        <p>We also offer:</p>
-        <ul>
-          <li>🎯 EMI & flexible packages</li>
-          <li>💬 Fertility counseling sessions</li>
-          <li>👩‍❤️‍👨 Option to freeze embryos (if partner is involved)</li>
-        </ul>
+        
       </section>
 
       <section>
         <h2>🌟 Why Choose Sukam?</h2>
         <ul>
-          <li>👩‍⚕️ Fertility experts with 15+ years of experience</li>
+          <li>👩‍⚕️ Experienced Fertility Specialist</li>
           <li>🧪 Cutting-edge freezing technology (vitrification)</li>
           <li>🧘‍♀️ Supportive, judgment-free counseling</li>
           <li>🔒 Confidential and secure environment</li>
@@ -105,7 +100,7 @@ const EggFreezingBlog = () => {
       <section>
         <h2>🗣️ Real Women, Real Stories</h2>
         <p><strong>Shruthi, 33 (Engineer):</strong> “I wasn’t sure about kids yet, but I didn’t want that decision made for me by time. Now I feel relieved.”</p>
-        <p><strong>Anita, 29 (Breast cancer survivor):</strong> “Freezing my eggs before chemo gave me hope — Sukam made the process smooth and reassuring.”</p>
+        <p><strong>Susheela, 29 (Breast cancer survivor):</strong> “Freezing my eggs before chemo gave me hope — Sukam made the process smooth and reassuring.”</p>
       </section>
 
       <section>

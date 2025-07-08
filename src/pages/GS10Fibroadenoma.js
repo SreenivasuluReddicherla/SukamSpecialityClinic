@@ -351,7 +351,7 @@ const Fibroadenoma = () => {
 
   <h3>🏥 Our Clinic’s Breast Lump Care Program</h3>
   <ul>
-    <li>✅ Clinical exam + same-day imaging (ultrasound/mammogram)</li>
+    <li>✅ Clinical exam + same-day imaging (ultrasound)</li>
     <li>✅ FNAC or biopsy under local anesthesia if required</li>
     <li>✅ Quick pathology turnaround</li>
     <li>✅ Treatment options based on lump size and patient preference</li>

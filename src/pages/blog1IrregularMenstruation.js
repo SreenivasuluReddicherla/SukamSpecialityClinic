@@ -9,7 +9,7 @@ const IrregularMenstruation = () => {
   return (
     <div className="menstruation-page">
       <div className="menstruation-container">
-        <h1>🩸 Understanding Irregular Menstruation</h1>
+        <h1>Understanding Irregular Menstruation</h1>
         <p className="subtitle">Causes, Signs, and When to Seek Help</p>
 
         <section>

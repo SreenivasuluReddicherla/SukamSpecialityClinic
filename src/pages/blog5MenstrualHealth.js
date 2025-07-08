@@ -4,32 +4,47 @@ import './blog5MenstrualHealth.css';
 const MenstrualHealthBlog = () => {
   return (
     <div className="menstrual-blog-container">
-      <h1>🌺 Understanding Menstrual Health: When to Worry About Irregular Periods</h1>
-      <p className="subheading">A compassionate, clinic-guided journey into the rhythms of a woman’s body</p>
+      <h1>Understanding Menstrual Health: When to Worry About Irregular Periods</h1>
+      <p className="menstrual-subheading">A compassionate, clinic-guided journey into the rhythms of a woman’s body</p>
 
       <section>
-        <h2>🌸 Introduction: A Cycle That Speaks</h2>
+        <h2 className="intro-blog5">🌸 Introduction: A Cycle That Speaks</h2>
         <p>
-          A woman’s period is more than a monthly event — it’s a vital sign. When menstrual patterns shift from their natural rhythm — becoming erratic, painful, or absent — the body may be signaling deeper issues. 
-          At Sukam Speciality Clinic, we believe in listening to these signals early to protect hormonal harmony, emotional well-being, and fertility.
+          Every woman’s body carries an internal rhythm — a cycle that whispers about her health, 
+hormones, and well-being. Periods are not just about bleeding every month — they’re a vital 
+sign. When they become irregular, unpredictable, heavy, or absent, the body is often 
+sending a signal that something deeper needs attention. 
         </p>
+        <p>
+          At Sukam Speciality Clinic, we listen to those signals. Whether it’s a teenager’s first cycle 
+that’s too far apart, a young adult with stubborn acne and delayed periods, or a woman in her 
+30s suddenly facing heavy, painful menstruation — our goal is to help decode the message. 
+        </p>
+        <h2>This guide will help you understand:</h2>
+        <ul>
+          <li>What’s normal and what’s not in your cycle </li>
+          <li>Common causes of menstrual irregularities </li>
+          <li>Why early diagnosis matters </li>
+          <li>How we evaluate and treat menstrual disorders gently and holistically</li>
+        </ul>
       </section>
 
       <section>
-        <h2>🩸 What’s a Normal Period?</h2>
+        <h2> What Is Considered a “Normal” Period? </h2>
         <ul>
-          <li>Cycle length between 21–35 days</li>
-          <li>Bleeding lasts 2–7 days</li>
-          <li>Blood loss around 25–80 ml</li>
-          <li>Mild cramps, bloating, and mood changes are common</li>
+          <li>A cycle length of 21 to 35 days </li>
+          <li>Bleeding lasts 2 to 7 days</li>
+          <li>Around 25–80 ml blood loss (roughly 3–6 pads/day)</li>
+          <li>Mild cramps, mood changes, and minor bloating </li>
         </ul>
         <p>
-          If your cycle becomes unpredictable, absent, heavy, or painful — it’s time to investigate.
+          But when these patterns shift — too frequent, too delayed, too heavy, or absent 
+altogether — it’s time to take a closer look. 
         </p>
       </section>
 
       <section>
-        <h2>⚠️ Common Irregularities in Menstrual Cycles</h2>
+        <h2>⚠️ Common Types of Menstrual Irregularities</h2>
         <ul>
           <li><strong>Oligomenorrhea:</strong> Infrequent cycles (&gt;35 days apart)</li>
           <li><strong>Polymenorrhea:</strong> Frequent cycles (&lt;21 days apart)</li>
@@ -39,88 +54,129 @@ const MenstrualHealthBlog = () => {
           <li><strong>Dysmenorrhea:</strong> Debilitating menstrual pain</li>
           <li><strong>Intermenstrual Bleeding:</strong> Spotting between periods</li>
         </ul>
+        <p>
+          Even if these seem manageable now, long-term neglect may lead to fertility issues, anemia, 
+or underlying hormonal imbalances. 
+        </p>
       </section>
 
       <section>
-        <h2>🔍 Why Cycles Go Off Track: Underlying Causes</h2>
+        <h2>🔍 Why Periods Become Irregular: Root Causes Explained </h2>
         <ul>
-          <li><strong>PCOS:</strong> Hormonal imbalance causing irregular cycles, acne, and weight gain</li>
-          <li><strong>Thyroid Disorders:</strong> Hypo/hyperthyroidism can delay or stop periods</li>
-          <li><strong>Stress:</strong> Impacts the hypothalamus and hormone regulation</li>
-          <li><strong>Weight Fluctuations:</strong> Both obesity and low body fat affect ovulation</li>
-          <li><strong>Uterine Fibroids/Polyps:</strong> Can lead to heavy or painful bleeding</li>
-          <li><strong>Pituitary Tumors:</strong> May disrupt prolactin and menstruation</li>
-          <li><strong>POI:</strong> Early menopause before 40, leads to cycle cessation</li>
+          <li><strong>PCOS:</strong> One of the most common reasons in young women. 
+• Caused by hormonal imbalance (high androgens, insulin resistance). 
+• Associated with: 
+o Delayed or missed periods 
+o Excess facial/body hair 
+o Weight gain 
+o Acne 
+o Difficulty conceiving</li>
+          <li><strong>Thyroid Disorders:</strong> Both hypothyroidism (low function) and hyperthyroidism (overactive) can disturb 
+cycles. 
+• Symptoms may include: 
+o Fatigue, weight changes 
+o Mood swings 
+o Cold or heat intolerance 
+o Irregular or absent periods </li>
+          <li><strong>Stress and Mental Health: </strong> IChronic stress affects the hypothalamus, which regulates reproductive hormones. 
+• Leads to delayed, missed, or erratic periods. 
+• Common in students, working professionals, caregivers.</li>
+          <li><strong> Sudden Weight Changes: </strong> Rapid weight loss, eating disorders, or extreme exercise (e.g., athletes) can stop periods. 
+• Obesity can worsen PCOS and estrogen imbalance. </li>
+          <li><strong>Fibroids and Uterine Polyps : </strong> Non-cancerous growths in the uterus. 
+• Cause heavy, painful, or prolonged bleeding. </li>
+          <li><strong>Pituitary Disorders :</strong> Prolactinoma and other pituitary tumors affect hormone release. 
+• Can lead to missed periods, milky discharge from breasts. </li>
+          <li><strong>Premature Ovarian Insufficiency (POI):</strong> Early depletion of ovarian function before age 40. 
+• May present with irregular or stopped cycles and hot flashes.</li>
         </ul>
       </section>
 
       <section>
-        <h2>🧪 Diagnosis at Sukam</h2>
-        <p>We don’t just treat the period — we treat the person. Our approach includes:</p>
+        <h2>🧪 How We Diagnose Menstrual Irregularities at Sukam </h2>
+        <p>At Sukam, we don’t just ask about periods. We listen to your full story — your body, lifestyle, 
+stress levels, nutrition, and family history. </p>
+        <p>Investigations We Commonly Use: </p>
         <ul>
-          <li>Pelvic Ultrasound</li>
-          <li>Hormonal profile (FSH, LH, TSH, AMH, Prolactin, Testosterone)</li>
-          <li>Blood sugar & insulin levels</li>
-          <li>Endometrial biopsy (if indicated)</li>
+          <li>Pelvic ultrasound (to check ovaries, endometrium, fibroids)</li>
+          <li>Hormonal profile: LH, FSH, TSH, Prolactin, AMH, Testosterone, Insulin</li>
+          <li>CBC and Iron studies (for anemia) </li>
+          <li>Thyroid function tests  </li>
+          <li>Endometrial biopsy (in select cases) </li>
           <li>Menstrual calendar tracking</li>
         </ul>
       </section>
 
       <section>
-        <h2>🌿 Individualised, Gentle Treatment Plans</h2>
-        <p>No one-size-fits-all. Your care depends on the root cause, fertility needs, and personal comfort.</p>
-        <h4>Lifestyle Support</h4>
+        <h2> How We Treat It: Individualised, Gentle, Root-Cause Based</h2>
+        <p>There is no one-size-fits-all treatment. Management depends on your age, whether you're 
+trying to conceive, the underlying cause, and your lifestyle. </p>
+        <h4>Lifestyle & Non-Pharmacologic Measures: </h4>
         <ul>
-          <li>Balanced diet (e.g., low-GI for PCOS)</li>
-          <li>Yoga, meditation, and stress reduction</li>
-          <li>Weight optimization</li>
+          <li>Diet changes (low-carb for PCOS, iodine-rich for thyroid)</li>
+          <li>Exercise & stress reduction (yoga, meditation) </li>
+          <li>Weight management </li>
         </ul>
         <h4>Medical Management</h4>
         <ul>
-          <li>Hormone therapy (OCPs, progestins)</li>
-          <li>Metformin (for insulin resistance)</li>
-          <li>Iron supplements (for anemia)</li>
-          <li>Thyroid medications</li>
-          <li>Ovulation induction (if trying to conceive)</li>
+          <li>Hormonal therapy (OCPs, progestins)</li>
+          <li>Thyroid medications (if needed)</li>
+          <li>Metformin (for insulin resistance) </li>
+          <li>Iron supplements (for anemia) </li>
+          <li>Fertility planning (ovulation induction when needed)</li>
         </ul>
-        <h4>Surgical (Only When Required)</h4>
+        <h4>Surgical Options (Only When Necessary): </h4>
         <ul>
-          <li>Myomectomy (fibroid removal)</li>
-          <li>Polypectomy (polyp removal)</li>
-          <li>Cyst drainage</li>
+          <li>Fibroid removal (Myomectomy) </li>
+          <li>Polyp removal (Hysteroscopic polypectomy)</li>
+          <li>Cyst aspiration (for large PCOS cysts) </li>
         </ul>
       </section>
 
       <section>
-        <h2>💗 Sukam’s Gynaecology Philosophy</h2>
+        <h2>Sukam’s Approach: Gentle Gynaecology with Clinical Rigor </h2>
         <p>
-          At Sukam, we blend science and sensitivity. We know periods are tied to identity, mood, fertility, and self-worth.
+          We understand that menstrual health is both physical and emotional. Many young women 
+suffer silently, thinking their problem is “normal” or “just hormonal”.
+        </p>
+        <p>
+          At Sukam:
         </p>
         <ul>
-          <li>✅ Private, respectful consultations</li>
-          <li>✅ Stepwise, evidence-based diagnosis</li>
-          <li>✅ Customised, long-term treatment paths</li>
-          <li>✅ Emotional support alongside clinical care</li>
+          <li>✅ We offer private consultations, not rushed opinions</li>
+          <li>✅ Our diagnosis is layered, not guesswork </li>
+          <li>✅ Treatment is customised, not generic </li>
+          <li>✅ And most importantly, we believe you — your pain, your confusion, your concern </li>
         </ul>
       </section>
 
       <section>
-        <h2>👩‍💼 Real Stories</h2>
+        <h2>👩‍💼  Real Stories, Real Relief</h2>
         <p>
-          <strong>Divya, 24:</strong> Only 3 periods in a year. With PCOS diagnosis and lifestyle revamp, her cycles returned in 4 months.
+          A 24-year-old engineering student came to us with only 3 periods in the past year. She 
+had gained 7 kg, had facial hair and acne. Investigations confirmed PCOS. 
         </p>
         <p>
-          <strong>Radha, 35:</strong> Suffered prolonged, heavy bleeding. Diagnosed with fibroids and underwent successful myomectomy. She's back to a normal routine — and energy!
+          With 4 months of dietary changes, hormonal balancing, and regular yoga, she now has 
+regular periods — and her confidence is back. 
         </p>
+        <p>
+          With 4 months of dietary changes, hormonal balancing, and regular yoga, she now has 
+regular periods — and her confidence is back. 
+        </p>
+        <p>A 35-year-old homemaker with two children presented with prolonged bleeding and 
+clots. Ultrasound revealed multiple fibroids. After a planned myomectomy, she was 
+relieved of heavy flow and weakness. </p>
       </section>
 
       <section>
-        <h2>❤️ Final Thoughts: Don’t Suffer Silently</h2>
+        <h2>❤️ Final Word: Don't Suffer in Silence </h2>
         <p>
           Irregular periods are not “normal” or something to just “wait out.” They could be your body’s early cry for help.
         </p>
+        <h2>Come talk to us at Sukam. </h2>
         <div className="cta-box">
-          💡 <strong>Book a menstrual health consult today at Sukam Speciality Clinic</strong> — and take the first step toward cycle harmony and peace of mind.
+          💡 We’ll listen, investigate, and walk with you until your cycle — and your confidence — returns
         </div>
       </section>
     </div>

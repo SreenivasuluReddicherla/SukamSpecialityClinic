@@ -4,11 +4,11 @@ import './blog2ThyroidFertility.css';
 const ThyroidFertilityBlog = () => {
   return (
     <div className="thyroid-blog-container">
-      <h1>🦋 From Hormones to Health: How Thyroid Disorders Affect Fertility and Pregnancy</h1>
-      <p className="subheading">A Women’s Health & Fertility Insight Blog by Sukam Speciality Clinic</p>
+      <h1>From Hormones to Health: How Thyroid Disorders Affect Fertility and Pregnancy</h1>
+      <p className="thyroid-subheading">A Women’s Health & Fertility Insight Blog by Sukam Speciality Clinic</p>
 
       <section>
-        <h2>🧬 Introduction: The Butterfly Gland with Mighty Wings</h2>
+        <h2 className="Introduction">🧬 Introduction: The Butterfly Gland with Mighty Wings</h2>
         <p>
           Tucked at the base of your neck, the thyroid gland may be small in size but plays a monumental role in a woman’s reproductive journey.
           It controls your metabolism, menstrual cycle, ovulation, and even the brain development of your baby during pregnancy.
@@ -19,7 +19,7 @@ const ThyroidFertilityBlog = () => {
       </section>
 
       <section>
-        <h2>📘 Thyroid 101: What Does It Do?</h2>
+        <h2>📘 Thyroid: What Does It Do?</h2>
         <p>The thyroid gland produces:</p>
         <ul>
           <li>T3 (Triiodothyronine)</li>
@@ -103,7 +103,7 @@ const ThyroidFertilityBlog = () => {
       <section>
         <h2>💬 Real Patient Voices</h2>
         <p><strong>Divya, 32:</strong> “Didn’t know thyroid was the reason for my irregular periods. Now, my cycles are normal and I’m trying to conceive.”</p>
-        <p><strong>Anita, 29:</strong> “TSH of 3.8 was considered ‘normal’ elsewhere. Sukam brought it below 2.5 and I conceived within 3 months.”</p>
+        <p><strong>Haritha, 36:</strong> “TSH of 3.8 was considered ‘normal’ elsewhere. Sukam brought it below 2.5 and I conceived within 3 months.”</p>
       </section>
 
       <section>
@@ -112,8 +112,8 @@ const ThyroidFertilityBlog = () => {
           If you’re struggling with irregular periods, infertility, or miscarriages — don’t overlook your thyroid.
           At Sukam Speciality Clinic, we blend reproductive medicine, endocrinology, and holistic care to restore balance.
         </p>
-        <p className="cta">📞 Get tested. Get treated. Let’s restore your hormonal harmony!</p>
       </section>
+      <p className="cta-blog2">📞 Get tested. Get treated. Let’s restore your hormonal harmony!</p>
     </div>
   );
 };

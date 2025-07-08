@@ -309,7 +309,7 @@ const GastricOutletObstruction = () => {
     <li>Cachexia and fatal complications in elderly or cancer patients</li>
   </ul>
 
-  <h3>👨‍⚕️ Our Approach to GOO at [Your Clinic Name]</h3>
+  <h3>👨‍⚕️ Our Approach to GOO at Sukam</h3>
   <ul>
     <li>✅ Fast-track evaluation via bedside ultrasound and endoscopy</li>
     <li>✅ Immediate NG tube insertion and IV correction when needed</li>

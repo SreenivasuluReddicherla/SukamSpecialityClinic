@@ -124,7 +124,7 @@ function App() {
       <div className="top-ribbon">
         <div className="scrolling-text">
           📞 Call us: +91-91081 08980 | +91-81081 08310 &nbsp;&nbsp;&nbsp;
-          🕒 Open Daily: 5:30 AM – 9:00 PM &nbsp;&nbsp;&nbsp; Sunday Closed
+          🕒 Open Daily: 5:30 PM – 9:00 PM &nbsp;&nbsp;&nbsp; <strong>Sunday Closed</strong>
         </div>
       </div>
 

@@ -4,20 +4,24 @@
   padding: 2rem;
   font-family: 'Segoe UI', sans-serif;
   background: #fff;
-  color: #333;
+  color: #BC1F6E;
   line-height: 1.7;
 }
 
 .highrisk-blog-container h1 {
-  color: #6a1b9a;
+  color: #BC1F6E;
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  font-weight: 800;
 }
 
-.subheading {
+.high-risk-subheading {
   font-size: 1.1rem;
-  color: #777;
+  color: #BC1F6E;
   margin-bottom: 1.8rem;
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 20px;
 }
 
 .highrisk-blog-container section {
@@ -26,7 +30,7 @@
 
 .highrisk-blog-container h2 {
   font-size: 1.4rem;
-  color: #8e24aa;
+  color: #bc1f6dae;
   border-bottom: 2px solid #f3e5f5;
   padding-bottom: 0.3rem;
   margin-bottom: 0.8rem;

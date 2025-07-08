@@ -304,7 +304,7 @@ const LowerGIBleed = () => {
     <li><strong>Rectal Evaluation:</strong> Proctoscopy or digital rectal exam</li>
     <li><strong>Sigmoidoscopy:</strong> Useful for recto-sigmoid pathology</li>
     <li><strong>Colonoscopy:</strong> Gold standard in stable patients — diagnostic + therapeutic</li>
-    <li><strong>CT Angiography:</strong> For brisk bleeds not localizable by colonoscopy</li>
+    
     <li><strong>Capsule Endoscopy:</strong> If small bowel source suspected</li>
   </ol>
 

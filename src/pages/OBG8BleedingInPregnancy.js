@@ -204,7 +204,7 @@ const BleedingInPregnancy = () => {
 
   <h3>🏥 How Sukam Handles Bleeding in Pregnancy</h3>
   <ul>
-    <li>🩺 24x7 emergency evaluation and admission</li>
+    <li>🩺 Emergency evaluation</li>
     <li>🩷 Onsite ultrasound, lab, and fetal monitoring</li>
     <li>💉 Blood transfusion access</li>
     <li>👶 High-risk pregnancy team coordination</li>

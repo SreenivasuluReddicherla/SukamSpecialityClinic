@@ -226,8 +226,8 @@ const Appendicitis = () => {
   <h3>🏨 At Our Clinic</h3>
   <ul>
     <li>✅ Timely identification with focused clinical and ultrasound evaluation</li>
-    <li>✅ 24x7 emergency care for acute abdomen cases</li>
-    <li>✅ On-site labs and imaging</li>
+    <li>✅ Emergency care for acute abdomen cases</li>
+    <li>✅ On-site labs and Ultrasound</li>
     <li>✅ Same-day laparoscopic surgery with early discharge options</li>
     <li>✅ Pediatric and elderly-specific protocols</li>
     <li>✅ Patient follow-up for recovery and scar care</li>

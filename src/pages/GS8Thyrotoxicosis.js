@@ -331,7 +331,7 @@ const Thyrotoxicosis = () => {
     </tbody>
   </table>
 
-  <h3>🏥 Our Approach to Thyrotoxicosis at [Your Clinic Name]</h3>
+  <h3>🏥 Our Approach to Thyrotoxicosis at Sukam Speciality and Fertility Clinic</h3>
   <ol>
     <li><strong>Detailed Consultation:</strong> History, vitals, thyroid size, eye exam</li>
     <li><strong>On-Site Thyroid Profile:</strong> TSH, T3, T4, antibodies with rapid reports</li>

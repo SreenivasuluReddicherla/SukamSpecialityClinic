@@ -116,14 +116,14 @@
 .expert-card.dr-anitha-a-manoj .expert-name {
   font-size: 22px;
   font-weight: 800;
-  color: #982882;
+  color: #bc1f6d;
   margin-bottom: 12px;
 }
 
 .expert-card.dr-anitha-a-manoj .expert-qualification,
 .expert-card.dr-anitha-a-manoj .expert-designation {
   font-size: 15px;
-  color: #982882;
+  color: #bc1f6d;
   font-weight: 600;
   margin-bottom: 4px;
 }
@@ -146,7 +146,7 @@
 }
 
 .expert-card.dr-anitha-a-manoj img {
-  background-color: #9828829c;
+  background-color: #bc1f6dc5;
 }
 
 /* 🔹 Responsive Enhancements */
