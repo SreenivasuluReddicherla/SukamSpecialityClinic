@@ -61,7 +61,7 @@ const AllBlogs = () => {
               <p className="blog-author">
                 By {blog.author} | {blog.date}
               </p>
-              <Link className="blog-link" to={`${blog.id}`}>
+              <Link className="blog-link" to={`/${blog.id}`}>
                 See more about it →
               </Link>
 
