@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Gallery.css";
 import img2 from "../assets/gallery2.png";
 import img3 from "../assets/gallery3.png";
-import img4 from "../assets/gallery4.png";
 import img5 from "../assets/gallery5.png";
 import img6 from "../assets/gallery6.png";
 import img7 from "../assets/gallery7.png";
@@ -64,23 +63,25 @@ const Gallery = () => {
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setInView(entry.isIntersecting);
-      },
-      { threshold: 0.3 }
-    );
+  const node = galleryRef.current; // ✅ Local snapshot
 
-    if (galleryRef.current) {
-      observer.observe(galleryRef.current);
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setInView(entry.isIntersecting);
+    },
+    { threshold: 0.3 }
+  );
+
+  if (node) {
+    observer.observe(node);
+  }
+
+  return () => {
+    if (node) {
+      observer.unobserve(node);
     }
-
-    return () => {
-      if (galleryRef.current) {
-        observer.unobserve(galleryRef.current);
-      }
-    };
-  }, []);
+  };
+}, []);
 
   return (
     <div className={`gallery-container ${inView ? "animate" : ""}`} ref={galleryRef}>

@@ -30,20 +30,20 @@ const Navbar = () => {
     closeMenu();
   };
 
-  const handleScrollToTestimonials = (e) => {
-    e.preventDefault(); // Prevent default link behavior
+  // const handleScrollToTestimonials = (e) => {
+  //   e.preventDefault(); // Prevent default link behavior
 
-    // Navigate to home page
-    navigate("/");
+  //   // Navigate to home page
+  //   navigate("");
 
-    // Scroll to testimonials after navigating to home
-    setTimeout(() => {
-      const testimonialsSection = document.getElementById("testimonials");
-      if (testimonialsSection) {
-        testimonialsSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 300); // Delay to ensure the page has loaded before scrolling
-  };
+  //   // Scroll to testimonials after navigating to home
+  //   setTimeout(() => {
+  //     const testimonialsSection = document.getElementById("testimonials");
+  //     if (testimonialsSection) {
+  //       testimonialsSection.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   }, 300); // Delay to ensure the page has loaded before scrolling
+  // };
 
   const closeMenu = () => {
     setMenuOpen(false);

@@ -1,29 +1,25 @@
 import React from "react";
 import "./Footer.css";
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
   FaWhatsapp,
   FaEnvelope,
   FaMapMarkerAlt
 } from "react-icons/fa";
 
 const Footer = () => {
-  const navigate = useNavigate();
+// const navigate = useNavigate();
 
-  const handleScrollToTestimonials = (e) => {
-    e.preventDefault();
-    navigate("/");
-    setTimeout(() => {
-      const testimonialsSection = document.getElementById("testimonials");
-      if (testimonialsSection) {
-        testimonialsSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 300);
-  };
+//   const handleScrollToTestimonials = () => {
+//   navigate("/");
+//   setTimeout(() => {
+//     const el = document.getElementById("testimonials");
+//     el?.scrollIntoView({ behavior: "smooth" });
+//   }, 300);
+// };
 
   return (
     <footer className="footer">

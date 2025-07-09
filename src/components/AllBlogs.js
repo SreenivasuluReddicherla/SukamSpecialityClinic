@@ -1,12 +1,13 @@
 import React from "react";
 import "./AllBlogs.css";
+import { Link } from 'react-router-dom';
 
 import blog1 from "../assets/blog1.jpg"
 import blog2 from "../assets/blog2.png"
 import blog3 from "../assets/blog3.jpg"
 import blog4 from "../assets/blog4.jpg"
 import blog5 from "../assets/blog5.jpg"
-import { useNavigate } from "react-router-dom";
+
 
 const blogs = [
   {
@@ -47,7 +48,6 @@ const blogs = [
 ];
 
 const AllBlogs = () => {
-  const navigate = useNavigate();
 
   return (
     <div className="all-blogs-container">
@@ -61,13 +61,9 @@ const AllBlogs = () => {
               <p className="blog-author">
                 By {blog.author} | {blog.date}
               </p>
-              {/* <p className="blog-description">{blog.content}</p> */}
-              <a
-  className="blog-link"
-  onClick={() => navigate(`/${blog.id}`)}
->
-  See more about it →
-</a>
+              <Link className="blog-link" to={`${blog.id}`}>
+                See more about it →
+              </Link>
 
             </div>
           </div>

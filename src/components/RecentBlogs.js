@@ -75,29 +75,31 @@ const RecentBlogs = () => {
 
   // Fade in animation when in view
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-on-scroll");
-        }
-      },
-      { threshold: 0.2 }
-    );
+  const node = containerRef.current; // ✅ Capture the current node
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
-    return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-on-scroll");
       }
-    };
-  }, []);
+    },
+    { threshold: 0.2 }
+  );
 
-  const handleReadMore = (id) => {
-    navigate(`/blogs/${id}`);
+  if (node) {
+    observer.observe(node);
+  }
+
+  return () => {
+    if (node) {
+      observer.unobserve(node);
+    }
   };
+}, []);
+
+  // const handleReadMore = (id) => {
+  //   navigate(`/blogs/${id}`);
+  // };
 
   const handleViewAll = () => {
     navigate("/blogs");

@@ -3,20 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './AboutUs.css';
-import founder1 from '../assets/Founder1.png';
-import founder2 from '../assets/Founder2.png';
-import test1 from '../assets/test1.jpg'
-import test2 from '../assets/test2.jpg'
+
+import founder1 from '../assets/test1.jpg'
+import founder2 from '../assets/test2.jpg'
 import about1 from '../assets/about1.jpg';
 import about2 from '../assets/about2.webp';
-import about3 from '../assets/about3.webp';
 import aboutLogo from '../assets/aboutLogo.png';
 import { Link } from 'react-router-dom';
-import ServicesPage from "./ServicesPage"; // ✅ Correct
-
 
 const AboutUs = () => {
-  const [modal, setModal] = useState('');
+  const [modal] = useState('');
   const modalRef = useRef(null);
   const navigate = useNavigate();
 
@@ -30,8 +26,6 @@ const AboutUs = () => {
     }
   }, [modal]);
 
-  const openModal = (name) => setModal(name);
-  const closeModal = () => setModal('');
 
   const handleAppointmentClick = () => {
     navigate('/appointment');
@@ -70,7 +64,7 @@ const AboutUs = () => {
 
         {/* Founder 1: Image Left */}
         <div className="founder-profiles" data-aos="fade-right">
-          <img src={test1} alt="Dr. Manoj Karthik S" className="founder-img-manoj" />
+          <img src={founder1} alt="Dr. Manoj Karthik S" className="founder-img-manoj" />
           <div className="founder-text-manoj">
             <h3>Dr. Manoj Karthik S</h3>
             <p className="founder-subtitle">
@@ -88,7 +82,7 @@ const AboutUs = () => {
 
         {/* Founder 2: Image Right */}
         <div className="founder-profiles reverse" data-aos="fade-left">
-          <img src={test2} alt="Dr. Anitha A Manoj" className="founder-img-anitha" />
+          <img src={founder2} alt="Dr. Anitha A Manoj" className="founder-img-anitha" />
           <div className="founder-text-anitha">
             <h3>Dr. Anitha A Manoj</h3>
             <p className="founder-subtitle">
