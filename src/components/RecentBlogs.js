@@ -18,8 +18,8 @@ const blogs = [
   {
     id: 2,
     image: blog2,
-    title: "Understandig Thyroid Fertility",
-    author: "Dr. Manoj Karthik",
+    title: "Understandig Thyroid & Fertility",
+    author: "Dr. Anitha A Manoj",
     date: "March 22, 2025",
   },
   {

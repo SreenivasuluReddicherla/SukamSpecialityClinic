@@ -8,7 +8,6 @@ import blog3 from "../assets/blog3.jpg"
 import blog4 from "../assets/blog4.jpg"
 import blog5 from "../assets/blog5.jpg"
 
-
 const blogs = [
   {
     id: "menstrual-health",
@@ -20,8 +19,8 @@ const blogs = [
   {
     id: "thyroid-fertility",
     image: blog2,
-    title: "Understandig Thyroid Fertility",
-    author: "Dr. Manoj Karthik",
+    title: "Understandig Thyroid & Fertility",
+    author: "Dr. Anitha A Manoj",
     date: "March 22, 2025",
   },
   {
