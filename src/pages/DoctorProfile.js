@@ -113,7 +113,7 @@ const DoctorProfile = () => {
               rel="noopener noreferrer"
               className="btn-book"
             >
-              📅 Book an Appointment
+              🗓️ Book an Appointments
             </a>
           </div>
         </div>
