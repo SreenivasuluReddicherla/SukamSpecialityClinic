@@ -8,7 +8,7 @@ import founder1 from '../assets/test1.jpg'
 import founder2 from '../assets/test2.jpg'
 import about1 from '../assets/about1.jpg';
 import about2 from '../assets/about2.webp';
-import aboutLogo from '../assets/aboutLogo.png';
+import aboutLogo from '../assets/SPIcon1.png';
 import { Link } from 'react-router-dom';
 
 const AboutUs = () => {

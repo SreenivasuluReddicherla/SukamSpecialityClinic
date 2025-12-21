@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // 🧭 Import navigation
 import AOS from "aos";
 import "aos/dist/aos.css";
-import aboutLogo from "../assets/aboutLogo.png"; // ✅ Should be a transparent PNG
+import aboutLogo from "../assets/SPIcon1.png"; // ✅ Should be a transparent PNG
 import "./HomeWelcomeBanner.css";
 
 const HomeWelcomeBanner = () => {
