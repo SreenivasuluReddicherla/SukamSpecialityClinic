@@ -66,7 +66,7 @@ const AboutUs = () => {
         <div className="founder-profiles" data-aos="fade-right">
           <img src={founder1} alt="Dr. Manoj Karthik S" className="founder-img-manoj" />
           <div className="founder-text-manoj">
-            <h3>Prof. Manoj Karthik S</h3>
+            <h3>Prof. Dr. Manoj Karthik S</h3>
             <p className="founder-subtitle">
               MBBS | MS (Gen Surg) | FMAS | PGDHE | Senior Consultant Surgeon | 22+ Years of Experience 
 

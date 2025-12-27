@@ -8,7 +8,7 @@ import anitha from "../assets/profile1.png";
 const experts = [
   {
     id: "dr-manoj-karthik",
-    name: "Prof. Manoj Karthik S",
+    name: "Prof. Dr. Manoj Karthik S",
     qualification: "MBBS, MS (Gen Surg), FMAS, PGDHE",
     designation: "Senior Consultant Surgeon",
     category: ["General Surgery"],
