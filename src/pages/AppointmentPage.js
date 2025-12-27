@@ -7,9 +7,9 @@ import anitha from "../assets/profile1.png";
 const doctors = [
   {
     id: "dr-manoj-karthik",
-    name: "Dr. Manoj Karthik S",
+    name: "Prof. Manoj Karthik S",
     qualification: "MBBS, MS (Gen Surg), FMAS, PGDHE)",
-    designation: "Senior General , Laparoscopic and Endoscopic Surgeon",
+    designation: "Senior Consultant Surgeon",
     image: manoj,
     bookLink:
       "https://www.eka.care/doctor/dr-manoj-karthik-general-surgeon-bengaluru/calendar?cid=674933ac16f48e001dd639b6&utm_source=%2Fclinic%2F%5Bclinicslug%5D&utm_medium=eka-web&utm_campaign=web-navigation",

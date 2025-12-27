@@ -42,7 +42,7 @@ const Footer = () => {
         <div className="footer-section">
           <h4>About</h4>
           <ul>
-            <li><Link to="/doctor-profile/dr-manoj-karthik">Dr. Manoj Karthik S</Link></li>
+            <li><Link to="/doctor-profile/dr-manoj-karthik">Prof. Manoj Karthik S</Link></li>
             <li><Link to="/doctor-profile/dr-anitha-a-manoj">Dr. Anitha A Manoj</Link></li>
           </ul>
         </div>

@@ -10,9 +10,9 @@ import anitha from "../assets/profile1.png";
 
 const doctors = {
   "dr-manoj-karthik": {
-    name: "Dr. Manoj Karthik S",
+    name: "Prof. Manoj Karthik S",
     qualification: "MBBS, MS (Gen Surg), FMAS, PGDHE",
-    designation: ["Senior General,", "Laparoscopic and Endoscopic Surgeon "],
+    designation: ["Senior Consultant Surgeon"],
     experience: "22+ Years of Experience",
     regNumber: "674933",
     languages: ["English", "Kannada", "Hindi", "Tamil"],

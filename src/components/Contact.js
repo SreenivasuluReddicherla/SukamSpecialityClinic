@@ -59,6 +59,18 @@ const Contact = () => {
           <a href="mailto:sukamspecialityclinic@gmail.com" className="phone-btn">
             <FaEnvelope /> sukamspecialityclinic@gmail.com
           </a>
+          <h2><FaMapMarkerAlt className="icon" /> Find Us on Google Maps</h2>
+        <iframe
+          title="Sukam Maternity & Speciality Clinic Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2074.261270702708!2d77.545740922999!3d12.93105856279173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f2308a30fcd%3A0x51e0547b450bb1b!2sSukam%20Maternity%20%26%20Speciality%20Clinic!5e0!3m2!1sen!2sin!4v1766851318910!5m2!1sen!2sin"
+          width="100%"
+          height="300"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
         </div>
       </div>
 
