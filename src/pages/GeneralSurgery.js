@@ -416,7 +416,7 @@ const GeneralSurgeryPage = () => {
     <div className="doctor-info-left-gs">
       <img src={manoj} alt="Dr. Manoj Karthik S" className="doctor-img-gs" />
       <div className="doctor-basic-info-gs">
-        <h2>Dr. Manoj Karthik S</h2>
+        <h2>Prof. Dr. Manoj Karthik S</h2>
         <p className="qualification-gs">MBBS, MS (Gen Surg), FMAS, PGDHE</p>
         <p className="designation-gs">Senior General , Laparoscopic and Endoscopic Surgeon</p>
         <Link to="/doctor-profile/dr-manoj-karthik" className="consult-button-manoj-gs mobile-only">

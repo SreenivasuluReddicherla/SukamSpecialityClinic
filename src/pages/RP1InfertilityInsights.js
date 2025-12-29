@@ -207,133 +207,561 @@ const InfertilityInsights = () => {
   const progressPercentage = (answeredCount / totalQuestions) * 100;
 
   return (
-    <div className="infertility-container">
+   <div className="infertility-container">
       <h1>🧬 Infertility – Insights</h1>
       <p className="lead">“Every story has its hurdles — let’s decode the ‘why not yet.’”</p>
 
       <section className="info-section">
-  <h3>💗 What is Infertility?</h3>
-  <p>
-    Infertility is defined as the inability to conceive after 12 months of regular, unprotected intercourse 
-    (or 6 months if the woman is over 35). It may affect individuals or couples and can involve male, 
-    female, or combined factors.
-  </p>
-  <p>
-    <strong>It is a medical condition</strong> — not a personal failure. Around 15–20% of couples experience infertility, 
-    but with the right care, many go on to conceive successfully.
-  </p>
-  <ul>
-    <li><strong>Primary infertility:</strong> No prior pregnancies</li>
-    <li><strong>Secondary infertility:</strong> Difficulty conceiving after a previous successful pregnancy</li>
-  </ul>
+        <h3>INFERTILITY – A JOURNEY, NOT A LABEL</h3>
+        <p>
+          Infertility is not a failure, a diagnosis stamped overnight, or a verdict on one’s worth. It is a
+          journey shaped by biology, timing, health, emotions, and sometimes unexplained variables. For many
+          couples, the most painful part is not the condition itself—but the uncertainty, the repeated “maybe
+          next month,” and the silent question: Why hasn’t it happened yet?
+        </p>
+        <p>
+          Globally, infertility affects 1 in 6 couples at some point in their reproductive lives. Yet every
+          infertility story is unique. Some struggle briefly, others longer. Some have clear medical causes;
+          others face unexplained delays despite normal reports.
+        </p>
+        <p>Understanding infertility begins with shifting the mindset:</p>
+        <ul>
+          <li>From blame → to biology</li>
+          <li>From guilt → to knowledge</li>
+          <li>From silence → to informed conversations</li>
+        </ul>
+        <p>
+          This insight guide aims to decode infertility layer by layer, empowering individuals and couples
+          with clarity, compassion, and confidence.
+        </p>
 
-  <h3>🔍 Common Causes of Infertility</h3>
-  <p><strong>In Women:</strong></p>
-  <ul>
-    <li>Ovulatory disorders (PCOS, premature ovarian insufficiency)</li>
-    <li>Blocked fallopian tubes (due to infections, surgery, endometriosis)</li>
-    <li>Uterine abnormalities (fibroids, polyps, adhesions)</li>
-    <li>Endometriosis</li>
-    <li>Age-related decline in egg quality and reserve</li>
-  </ul>
-  <p><strong>In Men:</strong></p>
-  <ul>
-    <li>Low sperm count or poor motility</li>
-    <li>Varicocele</li>
-    <li>Hormonal imbalances (low testosterone, high prolactin)</li>
-    <li>Infections or lifestyle-related sperm damage (smoking, obesity, alcohol)</li>
-  </ul>
-  <p><strong>Unexplained Infertility:</strong> Normal test results, but conception still doesn’t occur (10–15% cases).</p>
+        <h3>HOW NATURAL CONCEPTION REALLY WORKS (AND WHY IT OFTEN DOESN’T)</h3>
+        <p>Pregnancy is not automatic. Even in the healthiest couples:</p>
+        <ul>
+          <li>
+            The chance of conception per cycle is 15–20%
+            <br />
+            → This means even healthy couples do not get pregnant every month; pregnancy takes time.
+          </li>
+          <li>
+            Nearly 80–85% conceive within one year
+            <br />
+            → Most couples conceive naturally within one year of regular, well-timed intercourse.
+          </li>
+          <li>
+            Stress, illness, timing, and lifestyle can reduce this probability
+            <br />
+            → Physical and mental stress, poor health, wrong timing, or unhealthy habits can delay pregnancy.
+          </li>
+        </ul>
 
-  <h3>🩺 How is Infertility Diagnosed?</h3>
-  <p><strong>For Women:</strong></p>
-  <ul>
-    <li>Hormonal tests: AMH, FSH, LH, TSH, Prolactin, Estradiol</li>
-    <li>Ultrasound scan for follicle count, ovarian and uterine evaluation</li>
-    <li>HSG (Hysterosalpingography) to check tube patency</li>
-    <li>Hysteroscopy/SIS to evaluate uterine cavity</li>
-  </ul>
-  <p><strong>For Men:</strong></p>
-  <ul>
-    <li>Semen analysis: count, motility, morphology</li>
-    <li>Hormone tests: FSH, LH, Testosterone</li>
-    <li>Scrotal ultrasound (if needed)</li>
-  </ul>
-  <p><strong>Advanced options:</strong> Genetic tests, post-coital test (rare), infection screening</p>
+        <p>For pregnancy to occur, multiple steps must align perfectly:</p>
 
-  <h3>📉 Fertility Timeline and Age Impact</h3>
-  <table>
-    <thead>
-      <tr><th>Age Range</th><th>Monthly Pregnancy Rate</th><th>Egg Reserve & Quality</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>&lt;30</td><td>20–25%</td><td>Excellent</td></tr>
-      <tr><td>30–34</td><td>15–20%</td><td>Good</td></tr>
-      <tr><td>35–37</td><td>10–15%</td><td>Declining</td></tr>
-      <tr><td>38–40</td><td>5–10%</td><td>Reduced</td></tr>
-      <tr><td>41–43</td><td>&lt;5%</td><td>Poor</td></tr>
-      <tr><td>&gt;44</td><td>&lt;2%</td><td>Very poor</td></tr>
-    </tbody>
-  </table>
-  <p>Male fertility also declines with age, affecting motility and DNA integrity.</p>
+        <p>
+          <strong>In Women</strong>
+        </p>
+        <ul>
+          <li>
+            Regular ovulation
+            <br />
+            → The ovary releases one egg every month on time, which is necessary for pregnancy.
+          </li>
+          <li>
+            Healthy eggs with genetic integrity
+            <br />
+            → Eggs should be strong and genetically normal to form a healthy embryo.
+          </li>
+          <li>
+            Open fallopian tubes
+            <br />
+            → The tubes should be open so the egg and sperm can meet naturally.
+          </li>
+          <li>
+            Balanced hormones
+            <br />
+            → Hormones should be in proper balance to control ovulation, periods, and implantation.
+          </li>
+          <li>
+            Receptive uterine lining
+            <br />
+            → The uterus lining should be healthy and thick enough to allow the embryo to attach.
+          </li>
+        </ul>
 
-  <h3>⚕️ Treatment Options Based on Cause</h3>
-  <ul>
-    <li><strong>Lifestyle changes:</strong> Weight loss, antioxidants, stress reduction</li>
-    <li><strong>Ovulation Induction:</strong> Letrozole, Clomiphene for women with irregular ovulation</li>
-    <li><strong>OITI:</strong> Timed intercourse after ovulation tracking</li>
-    <li><strong>IUI:</strong> For mild male factor, cervical factor, or unexplained infertility</li>
-    <li><strong>IVF:</strong> For tubal issues, endometriosis, or failed IUI cycles</li>
-    <li><strong>ICSI:</strong> For poor sperm quality or failed fertilization in IVF</li>
-    <li><strong>Advanced options:</strong> Donor eggs/sperm, surrogacy, PGT (genetic testing)</li>
-  </ul>
+        <p>
+          <strong>In Men</strong>
+        </p>
+        <ul>
+          <li>
+            Adequate sperm count
+            <br />
+            → Enough sperm should be present to increase the chance of reaching the egg.
+          </li>
+          <li>
+            Good motility (movement)
+            <br />
+            → Sperm should be able to swim forward properly to reach the egg.
+          </li>
+          <li>
+            Normal morphology (shape)
+            <br />
+            → Sperm should have a normal shape to successfully enter the egg.
+          </li>
+          <li>
+            Healthy DNA integrity
+            <br />
+            → The genetic material inside the sperm should be intact to support embryo growth.
+          </li>
+        </ul>
 
-  <h3>💬 Emotional and Social Impact</h3>
-  <ul>
-    <li>Feelings of shame, guilt, or inadequacy</li>
-    <li>Relationship strain and intimacy challenges</li>
-    <li>Social stigma or family pressure</li>
-    <li>Anxiety and depression during long treatment periods</li>
-  </ul>
-  <p>
-    At Sukam, emotional wellness is part of every fertility journey. We offer:<br />
-    🧘‍♀️ Counseling • Peer groups • Mind-body therapies • Partner communication guidance
-  </p>
+        <p>
+          <strong>For the Couple</strong>
+        </p>
+        <ul>
+          <li>
+            Correct timing of intercourse
+            <br />
+            → Intercourse should happen during the fertile days when the egg is available.
+          </li>
+          <li>
+            Emotional and physical wellbeing
+            <br />
+            → Good mental and physical health supports normal fertility function.
+          </li>
+          <li>
+            Absence of chronic inflammation or infections
+            <br />
+            → Long-standing infections or inflammation can interfere with conception.
+          </li>
+        </ul>
+        <p>
+          A delay in pregnancy does not always mean infertility—but persistent delays signal the need for
+          deeper evaluation.
+        </p>
 
-  <h3>❌ Fertility Myths & Misconceptions</h3>
-  <ul>
-    <li><strong>Myth:</strong> Infertility is always due to the woman → <em>Fact:</em> Male factors are involved in ~50% cases</li>
-    <li><strong>Myth:</strong> IVF guarantees pregnancy → <em>Fact:</em> Success depends on age, gametes, uterus</li>
-    <li><strong>Myth:</strong> Just relax and it will happen → <em>Fact:</em> Stress is not the only cause; proper diagnosis is key</li>
-    <li><strong>Myth:</strong> If you had a child once, infertility can’t happen → <em>Fact:</em> Secondary infertility is real</li>
-    <li><strong>Myth:</strong> Donor eggs or sperm means it’s not “your baby” → <em>Fact:</em> Parenthood is about love and care</li>
-  </ul>
+        <h3>FEMALE FACTORS – BEYOND PERIODS AND OVULATION</h3>
+        <h4>1. Ovulatory Disorders</h4>
+        <p>Ovulation may be:</p>
+        <ul>
+          <li>Irregular</li>
+          <li>Delayed</li>
+          <li>Absent</li>
+        </ul>
+        <p>Common causes include:</p>
+        <ul>
+          <li>
+            PCOS
+            <br />
+            → A hormonal condition causing irregular ovulation and periods.
+          </li>
+          <li>
+            Thyroid disorders
+            <br />
+            → Thyroid imbalance affects hormones needed for ovulation.
+          </li>
+          <li>
+            High prolactin levels
+            <br />
+            → Excess prolactin hormone can stop ovulation.
+          </li>
+          <li>
+            Stress and weight fluctuations
+            <br />
+            → Sudden stress or weight changes can disturb hormonal balance.
+          </li>
+        </ul>
 
-  <h3>🧑‍⚕️ When to See a Fertility Specialist</h3>
-  <ul>
-    <li>If under 35 and not conceived in 12 months</li>
-    <li>If over 35 and not conceived in 6 months</li>
-    <li>Irregular periods, PCOS, endometriosis, thyroid problems</li>
-    <li>History of multiple miscarriages</li>
-    <li>Low sperm count or sexual dysfunction in men</li>
-    <li>Interested in fertility preservation (egg/sperm freezing)</li>
-  </ul>
+        <h4>2. Egg Quality & Ovarian Reserve</h4>
+        <p>Age plays a major role:</p>
+        <ul>
+          <li>Egg quantity and quality decline after 30</li>
+          <li>
+            Sharp decline after 35
+            <br />
+            → Fertility drops faster after 35 due to poorer egg quality.
+          </li>
+          <li>Genetic errors increase with age</li>
+          <li>
+            Low AMH, poor response to stimulation, or repeated embryo failures may indicate compromised egg
+            quality.
+          </li>
+        </ul>
 
-  <h3>📘 Knowledge is the First Step</h3>
-  <p>
-    Infertility may feel overwhelming, but it is highly treatable. Early diagnosis, the right support, and 
-    personalized care make a huge difference. Whether you pursue natural methods or advanced ART 
-    like IVF/ICSI, your dream of parenthood is within reach.
-  </p>
-  <p>
-    <strong>At Sukam Speciality Clinic & Fertility Centre, we believe in:</strong><br />
-    ✅ Medical precision + emotional sensitivity<br />
-    ✅ Personalized protocols<br />
-    ✅ Full transparency and holistic wellness
-  </p>
-  <p><strong>Let us walk beside you — from uncertainty to new beginnings.</strong></p>
-</section>
+        <h4>3. Tubal & Pelvic Factors</h4>
+        <ul>
+          <li>
+            Blocked fallopian tubes
+            <br />
+            → Egg and sperm cannot meet if the tubes are blocked.
+          </li>
+          <li>Pelvic inflammatory disease</li>
+          <li>
+            Endometriosis
+            <br />
+            → Tissue growing outside the uterus causes inflammation and fertility problems.
+          </li>
+          <li>
+            Adhesions from previous surgeries
+            <br />
+            → Scar tissue may block or distort reproductive organs.
+          </li>
+        </ul>
+        <p>Even partial tubal damage can impair fertilization.</p>
 
+        <h4>4. Uterine Factors</h4>
+        <ul>
+          <li>
+            Fibroids
+            <br />
+            → Non-cancerous growths that can affect implantation.
+          </li>
+          <li>
+            Polyps
+            <br />
+            → Small growths inside the uterus that interfere with pregnancy.
+          </li>
+          <li>
+            Congenital anomalies
+            <br />
+            → Structural abnormalities present from birth.
+          </li>
+          <li>
+            Thin or inflamed endometrium
+            <br />
+            → The uterine lining is not healthy enough to support pregnancy.
+          </li>
+        </ul>
+        <p>The uterus must be not only normal in shape—but functionally receptive.</p>
+
+        <h3>MALE FACTORS – THE SILENT HALF OF INFERTILITY</h3>
+        <p>Male infertility contributes to 40–50% of infertility cases, yet remains under-discussed.</p>
+        <p>
+          <strong>Key Male Factors</strong>
+        </p>
+        <ul>
+          <li>Low sperm count (Oligospermia)</li>
+          <li>Poor motility (Asthenospermia)</li>
+          <li>Abnormal morphology (Teratospermia)</li>
+          <li>
+            Complete absence of sperm (Azoospermia)
+            <br />
+            → No sperm present in semen.
+          </li>
+        </ul>
+
+        <p>
+          <strong>Hidden Contributors</strong>
+        </p>
+        <ul>
+          <li>
+            Varicocele
+            <br />
+            → Enlarged veins around the testis affecting sperm quality.
+          </li>
+          <li>Hormonal imbalance</li>
+          <li>Infections</li>
+          <li>Smoking, alcohol, heat exposure</li>
+          <li>Occupational toxins</li>
+          <li>Genetic abnormalities</li>
+        </ul>
+
+        <p>
+          <strong>Advanced Considerations</strong>
+        </p>
+        <p>Even with normal semen reports:</p>
+        <ul>
+          <li>
+            DNA fragmentation
+            <br />
+            → Damage to sperm DNA affecting embryo development.
+          </li>
+          <li>Oxidative stress</li>
+          <li>Epigenetic defects</li>
+        </ul>
+        <p>may impair fertilization or embryo development.</p>
+        <p>Male fertility is dynamic and treatable, especially when detected early.</p>
+
+        <h3>UNEXPLAINED INFERTILITY – WHEN REPORTS ARE NORMAL BUT PREGNANCY IS NOT</h3>
+        <p>Unexplained infertility affects 10–15% of couples.</p>
+        <p>Possible hidden reasons:</p>
+        <ul>
+          <li>Subtle egg or sperm quality issues</li>
+          <li>
+            Implantation failure
+            <br />
+            → Embryo forms but does not attach to the uterus.
+          </li>
+          <li>Immune dysregulation</li>
+          <li>
+            Poor embryo-endometrial synchrony
+            <br />
+            → Timing mismatch between embryo and uterine lining.
+          </li>
+          <li>
+            Lifestyle and stress effects
+            <br />
+            → Daily habits and stress impact fertility silently.
+          </li>
+        </ul>
+
+        <p>Unexplained infertility does not mean untreatable infertility. Many couples conceive with:</p>
+        <ul>
+          <li>
+            Ovulation induction
+            <br />
+            → Medicines used to help release eggs.
+          </li>
+          <li>
+            IUI
+            <br />
+            → Sperm placed directly into the uterus.
+          </li>
+          <li>
+            IVF
+            <br />
+            → Egg and sperm fertilised outside the body.
+          </li>
+          <li>
+            Lifestyle correction
+            <br />
+            → Improving diet, weight, sleep, and stress.
+          </li>
+          <li>
+            Psychological support
+            <br />
+            → Emotional counselling to reduce stress impact.
+          </li>
+        </ul>
+        <p>Sometimes, the explanation emerges only during treatment.</p>
+
+        <h3>THE ROLE OF AGE, TIME & MODERN LIFESTYLES</h3>
+        <p>
+          <strong>Age Matters</strong>
+        </p>
+        <ul>
+          <li>
+            Female fertility peaks in the 20s
+            <br />
+            → Best egg quality and quantity.
+          </li>
+          <li>Declines gradually after 30</li>
+          <li>Rapid decline after 35</li>
+          <li>
+            Male fertility also declines after 40
+            <br />
+            → Reduced sperm quality and genetic stability.
+          </li>
+        </ul>
+
+        <p>
+          <strong>Lifestyle Influences</strong>
+        </p>
+        <ul>
+          <li>Poor sleep</li>
+          <li>
+            Obesity or underweight
+            <br />
+            → Disturbs ovulation and sperm production.
+          </li>
+          <li>Sedentary habits</li>
+          <li>Processed foods</li>
+          <li>Chronic stress</li>
+          <li>Excessive caffeine, alcohol, smoking</li>
+        </ul>
+
+        <p>
+          <strong>Environmental Factors</strong>
+        </p>
+        <ul>
+          <li>Pollution</li>
+          <li>Plastics (endocrine disruptors)</li>
+          <li>
+            Radiation exposure
+            <br />
+            → Damages eggs and sperm.
+          </li>
+          <li>Occupational hazards</li>
+        </ul>
+        <p>
+          Modern life has extended timelines for parenthood, but biology still follows its own clock.
+        </p>
+
+        <h3>EMOTIONAL & PSYCHOLOGICAL DIMENSIONS OF INFERTILITY</h3>
+        <p>Infertility affects:</p>
+        <ul>
+          <li>Self-esteem</li>
+          <li>
+            Marital intimacy
+            <br />
+            → Strain in emotional and physical closeness.
+          </li>
+          <li>
+            Social relationships
+            <br />
+            → Isolation from family and society.
+          </li>
+          <li>
+            Mental health
+            <br />
+            → Increased anxiety and depression.
+          </li>
+        </ul>
+
+        <p>Common emotions include:</p>
+        <ul>
+          <li>Guilt</li>
+          <li>Anger</li>
+          <li>Grief</li>
+          <li>Isolation</li>
+          <li>Anxiety</li>
+        </ul>
+
+        <p>Repeated cycles of hope and disappointment can lead to:</p>
+        <ul>
+          <li>Depression</li>
+          <li>Sexual dysfunction</li>
+          <li>Relationship strain</li>
+        </ul>
+
+        <p>
+          Emotional care is not optional—it is integral to fertility care. Couples who receive counselling
+          often show:
+        </p>
+        <ul>
+          <li>Better treatment adherence</li>
+          <li>Improved outcomes</li>
+          <li>Healthier coping mechanisms</li>
+        </ul>
+
+        <h3>DIAGNOSIS – MOVING FROM CONFUSION TO CLARITY</h3>
+        <p>A structured fertility evaluation includes:</p>
+
+        <p>
+          <strong>For Women</strong>
+        </p>
+        <ul>
+          <li>Hormonal profile</li>
+          <li>
+            Ultrasound
+            <br />
+            → Visual assessment of ovaries and uterus.
+          </li>
+          <li>
+            AMH testing
+            <br />
+            → Measures egg reserve.
+          </li>
+          <li>Tubal patency tests</li>
+          <li>Uterine cavity assessment</li>
+        </ul>
+
+        <p>
+          <strong>For Men</strong>
+        </p>
+        <ul>
+          <li>
+            Semen analysis
+            <br />
+            → Tests sperm count, movement, and shape.
+          </li>
+          <li>Hormonal evaluation</li>
+          <li>
+            Scrotal examination
+            <br />
+            → Physical examination of testes.
+          </li>
+          <li>
+            Genetic tests
+            <br />
+            → Detects inherited causes when needed.
+          </li>
+        </ul>
+
+        <p>
+          <strong>For Couples</strong>
+        </p>
+        <ul>
+          <li>Timing analysis</li>
+          <li>Sexual health evaluation</li>
+          <li>Infection screening</li>
+          <li>
+            Lifestyle assessment
+            <br />
+            → Reviews daily habits affecting fertility.
+          </li>
+        </ul>
+
+        <p>Diagnosis should be personalized—not rushed or generic.</p>
+
+        <h3>TREATMENT PATHWAYS – FROM SIMPLE TO ADVANCED</h3>
+        <p>Infertility treatment is stepwise, not one-size-fits-all.</p>
+
+        <p>
+          <strong>Conservative Options</strong>
+        </p>
+        <ul>
+          <li>
+            Cycle tracking
+            <br />
+            → Monitoring ovulation and fertile days.
+          </li>
+          <li>
+            Ovulation induction
+            <br />
+            → Medicines to stimulate egg release.
+          </li>
+          <li> Lifestyle modification</li>
+        </ul>
+
+        <p>
+          <strong>Assisted Options</strong>
+        </p>
+        <ul>
+          <li>IUI (Intrauterine Insemination)</li>
+          <li>IVF (In Vitro Fertilization)</li>
+          <li>ICSI</li>
+          <li>Surgical correction</li>
+          <li>Fertility preservation</li>
+        </ul>
+
+        <p>Treatment choice depends on:</p>
+        <ul>
+          <li>Age</li>
+          <li>Duration of infertility</li>
+          <li>Cause</li>
+          <li>Emotional readiness</li>
+          <li>Financial considerations</li>
+        </ul>
+
+        <p>Success is not only pregnancy—but a healthy mother, baby, and family.</p>
+
+        <h3>HOPE, SCIENCE & MOVING FORWARD</h3>
+        <p>Infertility is not the end of the story—it is often the middle chapter.</p>
+        <p>Today’s reproductive medicine offers:</p>
+        <ul>
+          <li>Advanced diagnostics</li>
+          <li>Precision treatments</li>
+          <li>Personalized protocols</li>
+          <li>Emotional support systems</li>
+        </ul>
+
+        <p>What matters most:</p>
+        <ul>
+          <li>Early evaluation</li>
+          <li>Evidence-based care</li>
+          <li>Trust in the medical team</li>
+          <li>Emotional resilience</li>
+        </ul>
+
+        <h4>Final Message</h4>
+        <p>
+          Infertility does not define a person or a couple. It is a medical condition with solutions, not a
+          personal shortcoming. Every story has its hurdles—but with the right insights, the ‘why not yet’
+          becomes a ‘how we got there.’
+        </p>
+        <p> <strong>At Sukam Speciality Clinic & Fertility Centre, we believe in:</strong><br /> ✅ Medical precision + emotional sensitivity<br /> ✅ Personalized protocols<br /> ✅ Full transparency and holistic wellness </p> 
+        <p><strong>Let us walk beside you — from uncertainty to new beginnings.</strong></p>
+      </section>
 
       <section className="quiz-section">
         <h2>🧠 Infertility Quiz — How Much Do You Know?</h2>

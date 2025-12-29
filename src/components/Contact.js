@@ -19,6 +19,9 @@ const Contact = () => {
           <a href="tel:+918108108310" className="phone-btn">
             <FaPhoneAlt /> +91 8108108310
           </a>
+          <a href="tel:+918108108310" className="phone-btn">
+            <FaPhoneAlt /> +91 9449628823
+          </a>
           <a href="tel:08026731314" className="phone-btn">
           <span role="img" aria-label="landline">☎️</span> 080 2673 1314
 </a>
@@ -52,6 +55,9 @@ const Contact = () => {
           </a>
           <a href="tel:+918108108310" className="phone-btn">
             <FaPhoneAlt /> +91 8108108310
+          </a>
+          <a href="tel:+918108108310" className="phone-btn">
+            <FaPhoneAlt /> +91 9449628823
           </a>
           <a href="tel:08026731314" className="phone-btn">
           <span role="img" aria-label="landline">☎️</span> 080 2673 1314

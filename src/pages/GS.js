@@ -30,7 +30,7 @@ const GeneralSurgeryPage = () => {
             {/* Left: Doctor Profile & Expertise */}
             <div className="doctor-profile-box-manoj">
                 <img src={manoj} alt="Dr. Manoj Karthik" className="doctor-img-manoj" />
-                <h2>Dr. Manoj Karthik S</h2>
+                <h2>Prof. Dr. Manoj Karthik S</h2>
                 <p className="qualification-manoj">MBBS, MS (Gen Surg), FMAS, PGDHE</p>
                 <p className="designation-manoj">Senior General , Laparoscopic and Endoscopic Surgeon </p>
                 <ul className="expertise-list">
