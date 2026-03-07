@@ -40,7 +40,7 @@ const doctors = {
     regNumber: "69779",
     languages: ["Kannada", "English", "Hindi", "Tamil", "Telugu"],
     image: anitha,
-    appointmentLink: "https://www.eka.care/doctor/dr-anitha-a-manoj-obstetrics-and-gynecologist-bengaluru/calendar?cid=674933ac16f48e001dd639b6",
+    appointmentLink: "https://book.healthplix.com/dr-anitha-a-manoj-gynaecologist-karnataka-bangalore",
     phoneNumber: "+919108108980",
     whatsappNumber: "919108108980",
     about: `Dr. Anitha A Manoj is a highly regarded specialist in women’s health, with over 16 years of experience in obstetrics, gynecology, and fertility care. Her practice is rooted in empathy, clinical excellence, and a deep commitment to supporting women through every phase of life—from adolescence to motherhood and beyond.`,

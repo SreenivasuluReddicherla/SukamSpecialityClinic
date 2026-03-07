@@ -21,7 +21,7 @@ const doctors = [
     designation: "Senior Consultant Obstetrician, Gynaecologist and Fertility Specialist",
     image: anitha,
     bookLink:
-      "https://www.eka.care/doctor/dr-anitha-a-manoj-obstetrics-and-gynecologist-bengaluru/calendar?cid=674933ac16f48e001dd639b6&utm_source=%2Fclinic%2F%5Bclinicslug%5D&utm_medium=eka-web&utm_campaign=web-navigation",
+      "https://book.healthplix.com/dr-anitha-a-manoj-gynaecologist-karnataka-bangalore",
   },
 ];
 
