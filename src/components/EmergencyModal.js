@@ -16,12 +16,12 @@ const EmergencyModal = ({ onClose }) => {
           <div className="phone-links">
             {/* Phone Number */}
             <div className="phone-number">
-              <a href="tel:+919108108980">+91 910 810 8980</a>
+              <a href="tel:+918108108310">+91 81081 08310</a>
             </div>
 
             {/* Phone Icon */}
             <div className="phone-icon">
-              <a href="tel:+919108108980">
+              <a href="tel:+918108108310">
                 <FaPhoneAlt className="phone-icon" />
               </a>
             </div>
@@ -29,7 +29,7 @@ const EmergencyModal = ({ onClose }) => {
             {/* WhatsApp Icon */}
             <div className="whatsapp-icon">
   <a
-    href="https://wa.me/919108108980"
+    href="https://wa.me/918108108310"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -41,16 +41,16 @@ const EmergencyModal = ({ onClose }) => {
           {/* Emergency Number 2 */}
           <div className="phone-links">
             <div className="phone-number">
-              <a href="tel:+919449628823">+91 9449 6288 23</a>
+              <a href="tel:+919108108980">+91 91081 08980</a>
             </div>
             <div className="phone-icon">
-              <a href="tel:+919449628823">
+              <a href="tel:+919108108980">
                 <FaPhoneAlt className="phone-icon" />
               </a>
             </div>
             <div className="whatsapp-icon">
   <a
-    href="https://wa.me/919449628823"
+    href="https://wa.me/919108108980"
     target="_blank"
     rel="noopener noreferrer"
   >

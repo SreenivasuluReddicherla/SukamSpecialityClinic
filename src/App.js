@@ -11,6 +11,7 @@ import GoogleReviews from "./components/GoogleReviews";
 import Footer from "./components/Footer";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./components/Contact";
+// import Locations from "./components/Locations";
 import AccessReportsLogin from "./pages/AccessReportsLogin";
 import Testimonials from "./components/Testimonials";
 import AppointmentPage from "./pages/AppointmentPage";
@@ -123,8 +124,8 @@ function App() {
       {/* 🔷 Top Announcement Bar */}
       <div className="top-ribbon">
         <div className="scrolling-text">
-          📞 Call us: +91-91081 08980 | +91-81081 08310 &nbsp;&nbsp;&nbsp;
-          🕒 Open Daily: 5:30 PM – 9:00 PM &nbsp;&nbsp;&nbsp; <strong>Sunday Closed</strong>
+          📞 Call us:   +91-81081 08310 &nbsp;| +91-91081 08980  &nbsp;&nbsp;&nbsp;
+          🕒 Open Daily: 8:00 AM – 9:00 PM &nbsp;&nbsp;&nbsp; <strong>Sunday Closed</strong>
         </div>
       </div>
 
@@ -253,6 +254,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/Sukamvoices" element={<Testimonials/>} />
           <Route path="/Contact" element={<Contact />} />
+          {/* <Route path="/Locations" element={<Locations />} /> */}
         </Routes>
       </main>
 

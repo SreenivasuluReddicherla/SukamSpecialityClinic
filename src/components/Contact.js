@@ -6,7 +6,7 @@ import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 const Contact = () => {
   return (
     <div className="contact-section">
-      <div className="contact-card contact-left">
+      {/* <div className="contact-card contact-left">
         <h2> Sukam Speciality and Fertility Clinic</h2>
         <p className="clinic-name">Sukam Speciality and Fertility Clinic</p>
         <p>428, Sarvagna Circle, Arehalli, AGS Layout</p>
@@ -42,22 +42,22 @@ const Contact = () => {
         </iframe>
           
         </div>
-      </div>
+      </div> */}
       <div className="contact-card contact-left">
-        <h2> Sukam Maternity and Speciality Clinic</h2>
-        <p className="clinic-name">Sukam Maternity and Speciality Clinic</p>
+        <h2> Sukam Clinic</h2>
+        <p className="clinic-name">Maternity  Fertility Speciality</p>
         <p>50Feet Road, kattiriguppe Water Tank Circle, BSK 3rd Stage, </p>
         <p>3rd Phase, opposite SBI, Bengaluru, Karnataka 560085</p>
 
         <div className="phone-numbers">
+          <a href="tel:+918108108310" className="phone-btn">
+            <FaPhoneAlt /> +91 8108108310
+          </a>
           <a href="tel:+919108108980" className="phone-btn">
             <FaPhoneAlt /> +91 9108108980
           </a>
           <a href="tel:+918108108310" className="phone-btn">
             <FaPhoneAlt /> +91 8108108310
-          </a>
-          <a href="tel:+918108108310" className="phone-btn">
-            <FaPhoneAlt /> +91 9449628823
           </a>
           <a href="tel:08026731314" className="phone-btn">
           <span role="img" aria-label="landline">☎️</span> 080 2673 1314

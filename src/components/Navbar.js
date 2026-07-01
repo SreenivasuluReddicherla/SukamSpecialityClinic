@@ -189,9 +189,20 @@ const Navbar = () => {
             )}
           </div>
 
+          {/* <div className="dropdown">
+            <div className="dropbtn" onClick={() => toggleDropdown("locations")} aria-haspopup="true" aria-expanded={dropdownOpen === "locations" ? "true" : "false"}>
+              Locations ▾
+            </div>
+            {dropdownOpen === "locations" && (
+              <div className="dropdown-content">
+                <Link to="/locations" onClick={closeMenu}>🩺Katriguppe</Link>
+                <Link to="/locations" onClick={closeMenu}>🩺AGSLayout</Link>
+              </div>
+            )}
+          </div> */}
+
           <Link to="/Contact" onClick={closeMenu}>Contact</Link>
         </div>
-
         <div className="right-section">
           <button className="btns" onClick={() =>{ window.open("https://wa.me/919108108980", "_blank");}}>Access Lab Reports</button>
           <button className="btns" onClick={() => navigate("/appointment")}>Book an Appointment</button>

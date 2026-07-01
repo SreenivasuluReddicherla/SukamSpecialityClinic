@@ -2,7 +2,7 @@ import React from "react";
 import "./FloatingWhatsAppButton.css";
 
 const FloatingWhatsAppButton = () => {
-  const phoneNumber = "919108108980"; // Replace with your clinic's WhatsApp number (without '+' or spaces)
+  const phoneNumber = "918108108310"; // Replace with your clinic's WhatsApp number (without '+' or spaces)
 
   return (
     <a

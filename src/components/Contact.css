@@ -14,7 +14,7 @@
   box-shadow: 0 4px 25px rgba(0,0,0,0.05);
   padding: 30px;
   width: 100%;
-  max-width: 500px;
+  max-width: 1000px;
   animation: fadeIn 1s ease forwards;
   border: 1px solid #54007b;
 }
