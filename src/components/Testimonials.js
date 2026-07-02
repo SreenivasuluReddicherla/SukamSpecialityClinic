@@ -9,54 +9,54 @@ import "./Testimonials.css";
 const videoTestimonials = [
   {
     id: 1,
+    url: "https://www.youtube.com/embed/wy2QXpB2A6s?si=zQyaqfNTQoKCAnB7",
+    title: "Sukam Specialty and Fertility Clinic is a leading healthcare centre in Bengaluru. | Dr. Manoj Karthik | Dr. Anitha A Manoj",
+  },
+  {
+    id: 2,
     url: "https://www.youtube.com/embed/AE8Z-0N8Lzc",
     title: "Fertile Window Explained: When Are You Most Likely to Conceive? | Dr. Anitha A Manoj",
   },
   {
-    id: 2,
+    id: 3,
     url: "https://www.youtube.com/embed/mY25sY26Ztc",
     title: "Fatty Liver Risks, Prevention & Treatment | Dr. Manoj Karthik S",
   },
   {
-    id: 3,
+    id: 4,
     url: "https://www.youtube.com/embed/ajhkuQssQ10",
     title: "Bleeding in Early Pregnancy? Here's What You Need to Know | Dr. Anitha A Manoj",
   },
   {
-    id: 4,
+    id: 5,
     url: "https://www.youtube.com/embed/uuWYyEUjrkw",
     title: "Surgery Preparation: Essential Steps | Dr. Manoj Karthik S",
   },
   {
-    id: 5,
+    id: 6,
     url: "https://www.youtube.com/embed/sirKxcCdx9k",
     title: "Recurrent Pregnancy Loss: Causes and Treatments | Dr. Anitha A Manoj",
   },
-  // {
-  //   id: 6,
-  //   url: "https://youtu.be/gxY5ivhRzww?si=z8Sajo6Mh6zP2jqs",
-  //   title: "Urinary Tract Infection: A Simple Guide for Quick Relief | Dr. Manoj Karthik",
-  // },
-  // {
-  //   id: 7,
-  //   url: "https://www.youtube.com/watch?v=pqnmhJwXM1Y",
-  //   title: "Is White Discharge (Leucorrhoea) Worrying You? Here's What You Need to Know! | Dr. Anitha A Manoj",
-  // },
-  // {
-  //   id: 8,
-  //   url: "https://www.youtube.com/watch?v=CXDszX8-P-o",
-  //   title: "Hernia Explained from Formation to Treatment | Dr. Manoj Karthik S",
-  // },
-  // {
-  //   id: 9,
-  //   url: "https://www.youtube.com/watch?v=uJJ3cmA9n7c",
-  //   title: "Expert Advice on Painless Delivery | Dr. Anitha A Manoj",
-  // },
-  // {
-  //   id: 10,
-  //   url: "https://www.youtube.com/watch?v=lgtC_Mnv0yc",
-  //   title: "Thyroid Disorders and Treatment Options | Dr. Manoj Karthik S",
-  // },
+  {
+    id: 7,
+    url: "https://www.youtube.com/embed/RkbK9A9E3R0?si=tGPVX0GFk9mOvPj-",
+    title: "🎗 Cervical Cancer: What Every Woman Must Know! | Dr. Anitha A Manoj",
+  },
+  {
+    id: 8,
+    url: "https://www.youtube.com/embed/OVkNXEgbhFE?si=tvGPHjdJUTVHmTRG",
+    title: "🎗 Why Is Cancer Rising in Young People? | Dr. Manoj Karthik",
+  },
+  {
+    id: 9,
+    url: "https://www.youtube.com/embed/pqnmhJwXM1Y?si=pleXJ-sySZMDFbRf",
+    title: "Is White Discharge (Leucorrhoea) Worrying You? Here's What You Need to Know!| Dr. Anitha A Manoj",
+  },
+  {
+    id: 10,
+    url: "https://www.youtube.com/embed/uuWYyEUjrkw?si=SD051IqdlfPqSBnr",
+    title: "Surgery Preparation: Essential Steps | Dr. Manoj Karthik S",
+  },
 ];
 
 const Testimonials = () => {

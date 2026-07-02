@@ -32,6 +32,16 @@ const videoTestimonials = [
       url: "https://www.youtube.com/embed/uuWYyEUjrkw",
       title: "Surgery Preparation: Essential Steps | Dr. Manoj Karthik S",
     },
+    {
+      id: 6,
+      url: "https://www.youtube.com/embed/OVkNXEgbhFE?si=tvGPHjdJUTVHmTRG",
+      title: "🎗 Why Is Cancer Rising in Young People? | Dr. Manoj Karthik",
+    },
+    {
+      id: 7,
+      url: "https://www.youtube.com/embed/uuWYyEUjrkw?si=SD051IqdlfPqSBnr",
+      title: "Surgery Preparation: Essential Steps | Dr. Manoj Karthik S",
+    },
   ];
   
 const Testimonials = () => {

@@ -32,6 +32,16 @@ const videoTestimonials = [
     url: "https://www.youtube.com/embed/r4pWeOBpeb8",
     title: "Menstrual Hygiene Essential Care for Health & Comfort | Dr. Anitha A Manoj",
   },
+  {
+    id: 6,
+    url: "https://www.youtube.com/embed/RkbK9A9E3R0?si=tGPVX0GFk9mOvPj-",
+    title: "🎗 Cervical Cancer: What Every Woman Must Know! | Dr. Anitha A Manoj",
+  },
+  {
+    id: 7,
+    url: "https://www.youtube.com/embed/pqnmhJwXM1Y?si=pleXJ-sySZMDFbRf",
+    title: "Is White Discharge (Leucorrhoea) Worrying You? Here's What You Need to Know!| Dr. Anitha A Manoj",
+  },
 ];
 
 

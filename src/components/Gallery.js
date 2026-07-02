@@ -1,30 +1,40 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Gallery.css";
-import img2 from "../assets/gallery2.png";
-import img3 from "../assets/gallery3.png";
-import img5 from "../assets/gallery5.png";
-import img6 from "../assets/gallery6.png";
-import img7 from "../assets/gallery7.png";
-import img8 from "../assets/gallery8.png";
-import img9 from "../assets/img11.JPG";
-import img10 from "../assets/img12.JPG";
-import img11 from "../assets/img13.JPG";
-import img12 from "../assets/img14.JPG";
+import img2 from "../assets/G0.JPG";
+import img3 from "../assets/G1.JPG";
+import img5 from "../assets/G2.JPG";
+import img6 from "../assets/G3.JPG";
+import img7 from "../assets/G4.JPG";
+import img8 from "../assets/G5.JPG";
+import img9 from "../assets/G6.JPG";
+import img10 from "../assets/G7.JPG";
+import img11 from "../assets/G8.JPG";
+import img12 from "../assets/G9.JPG";
+import img13 from "../assets/G10.JPG";
+import img14 from "../assets/G11.JPG";
+import img15 from "../assets/G12.JPG";
+import img16 from "../assets/G13.JPG";
+import img17 from "../assets/G12.JPG";
 
 
 const allImages = [
  
   { id: 2, src: img2, category: "Hospital" },
-  { id: 3, src: img3, category: "Hospital" },
-  { id: 4, src: img12, category: "Reception" },
-  { id: 5, src: img5, category: "Hospital" },
-  { id: 6, src: img6, category: "Labs" },
+  { id: 3, src: img3, category: "Reception" },
+  { id: 5, src: img5, category: "Reception" },
+  { id: 6, src: img6, category: "Hospital" },
   { id: 7, src: img7, category: "Labs" },
-  { id: 8, src: img8, category: "Hospital" },
-  { id: 9, src: img9, category: "Reception" },
-  { id: 10, src: img10, category: "Reception" },
-  { id: 11, src: img11, category: "Reception" },
-  
+  { id: 8, src: img8, category: "Labs" },
+  { id: 9, src: img9, category: "Labs" },
+  { id: 10, src: img10, category: "Labs" },
+  { id: 11, src: img11, category: "Labs" },
+  { id: 12, src: img12, category: "Wards" },
+  { id: 13, src: img13, category: "Wards" },
+  { id: 14, src: img14, category: "Hospital" },
+  { id: 15, src: img15, category: "Hospital" },
+  { id: 16, src: img16, category: "Hospital" },
+  { id: 17, src: img17, category: "Reception" },
+
 ];
 
 const categories = ["All", "Hospital", "Wards", "Labs", "Reception"];
