@@ -16,7 +16,7 @@ const Contact = () => {
           <span className="contact-badge">
             <FaHospitalAlt /> Sukam Clinic
           </span>
-          <h1>Maternity & Fertility Speciality</h1>
+          <h1>Maternity & Fertility & Speciality</h1>
           {/* <p>
             We are here to support you with maternity, fertility, speciality,
             and compassionate healthcare services.

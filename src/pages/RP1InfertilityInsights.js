@@ -1,199 +1,359 @@
-import React, { useState } from 'react';
-import './RP1InfertilityInsights.css';
+import React, { useMemo, useState } from "react";
+import "./RP1Infertility.css";
+
+const fertilitySteps = [
+  "The woman must release a mature egg.",
+  "The fallopian tube must be open and functional.",
+  "Healthy sperm must reach and fertilise the egg.",
+  "The fertilised egg must develop into an embryo.",
+  "The embryo must travel to the uterus.",
+  "The uterine environment must support implantation and pregnancy.",
+];
+
+const consultationTimings = [
+  "After 12 months of trying when the female partner is below 35 years",
+  "After six months when the female partner is 35 years or older",
+  "Without delay when the female partner is above 40 years",
+  "Earlier when either partner has a known condition that may affect fertility",
+];
+
+const femaleFactors = [
+  {
+    title: "Ovulation problems",
+    intro:
+      "Irregular or absent ovulation is a common reason for delayed conception. It may be associated with:",
+    items: [
+      "PCOS or PCOD",
+      "Thyroid disorders",
+      "Elevated prolactin",
+      "Significant weight changes",
+      "Excessive exercise",
+      "Severe physical or emotional stress",
+      "Diminished ovarian reserve",
+      "Premature ovarian insufficiency",
+    ],
+    note:
+      "Irregular menstrual cycles can be an important sign that ovulation is not occurring consistently.",
+  },
+  {
+    title: "Age-related decline in fertility",
+    paragraphs: [
+      "Female fertility gradually declines with age, with a more noticeable reduction after the mid-thirties. Both the number and quality of available eggs decrease over time.",
+      "Age can also affect the possibility of natural conception, the response to fertility medication and the risk of miscarriage. Age alone does not determine the outcome, but it is an important factor when planning evaluation and treatment.",
+    ],
+  },
+  {
+    title: "Fallopian tube problems",
+    intro:
+      "The fallopian tubes allow the egg and sperm to meet. Tubal blockage or damage may follow:",
+    items: [
+      "Pelvic infections",
+      "Genital tuberculosis",
+      "Previous pelvic or abdominal surgery",
+      "Endometriosis",
+      "A previous ectopic pregnancy",
+      "Pelvic adhesions",
+    ],
+    note:
+      "Tubal problems may not cause obvious symptoms and are often discovered only during fertility evaluation.",
+  },
+  {
+    title: "Endometriosis",
+    paragraphs: [
+      "Endometriosis occurs when tissue similar to the uterine lining grows outside the uterus. It may affect the ovaries, fallopian tubes and surrounding pelvic structures.",
+    ],
+    intro: "Possible symptoms include:",
+    items: [
+      "Painful periods",
+      "Chronic pelvic pain",
+      "Pain during intercourse",
+      "Pain during bowel movements around menstruation",
+      "Difficulty conceiving",
+    ],
+    note:
+      "Some women with endometriosis may have mild symptoms or no noticeable pain.",
+  },
+  {
+    title: "Uterine conditions",
+    intro:
+      "Certain conditions affecting the uterus may interfere with implantation or pregnancy. These include:",
+    items: [
+      "Fibroids",
+      "Endometrial polyps",
+      "Congenital uterine abnormalities",
+      "Intrauterine adhesions",
+      "Problems affecting the uterine lining",
+    ],
+    note:
+      "Not every fibroid or uterine abnormality causes infertility. Its size, number and location help determine whether treatment is necessary.",
+  },
+];
+
+const maleConcerns = [
+  "Low sperm count",
+  "Reduced sperm movement",
+  "Abnormal sperm shape",
+  "Absence of sperm in the semen",
+  "Varicocele",
+  "Hormonal disorders",
+  "Previous infections",
+  "Testicular injury or surgery",
+  "Ejaculation or erection difficulties",
+  "Genetic conditions",
+  "Exposure to excessive heat, tobacco, alcohol, anabolic steroids or certain medications",
+];
+
+const earlyAdviceItems = [
+  "Female age of 35 years or above",
+  "Very irregular or absent periods",
+  "Severe menstrual or pelvic pain",
+  "Known PCOS, endometriosis or fibroids",
+  "Previous pelvic infection or genital tuberculosis",
+  "History of ectopic pregnancy",
+  "Previous ovarian, pelvic or abdominal surgery",
+  "Recurrent pregnancy loss",
+  "Cancer treatment or planned chemotherapy",
+  "Known low ovarian reserve",
+  "Sexual or ejaculation difficulties",
+  "Previous testicular injury, surgery or undescended testis",
+  "Known abnormal semen analysis",
+  "A medical condition or medication that may affect fertility",
+];
+
+const consultationTopics = [
+  "Duration of trying to conceive",
+  "Menstrual cycle pattern",
+  "Frequency and timing of intercourse",
+  "Previous pregnancies or miscarriages",
+  "Past medical conditions",
+  "Previous operations and treatments",
+  "Current medications",
+  "Family and genetic history",
+  "Lifestyle and occupational exposures",
+  "Previous fertility investigations or treatments",
+];
+
+const femaleEvaluation = [
+  "Physical and gynaecological examination",
+  "Pelvic ultrasound",
+  "Assessment of ovulation",
+  "Ovarian reserve tests when indicated",
+  "Thyroid, prolactin or other hormonal tests",
+  "Evaluation of the uterus",
+  "Testing the fallopian tubes when required",
+];
+
+const maleEvaluation = [
+  "Medical and reproductive history",
+  "Semen analysis",
+  "Physical examination when indicated",
+  "Hormonal, genetic or specialised testing in selected cases",
+];
+
+const treatmentOptions = [
+  "Fertility awareness and correctly timed intercourse",
+  "Lifestyle and preconception guidance",
+  "Treatment of thyroid or other hormonal conditions",
+  "Ovulation induction",
+  "Timed intercourse",
+  "Intrauterine insemination, or IUI",
+  "Treatment of selected male fertility conditions",
+  "Surgery for carefully selected uterine, tubal or pelvic conditions",
+  "In-vitro fertilisation, or IVF",
+  "Intracytoplasmic sperm injection, or ICSI",
+  "Donor-assisted treatment when medically appropriate",
+];
+
+const lifestyleMeasures = [
+  "Maintaining a healthy and sustainable body weight",
+  "Eating a balanced diet",
+  "Exercising regularly without extreme physical strain",
+  "Avoiding tobacco and recreational drugs",
+  "Limiting or avoiding alcohol",
+  "Getting adequate sleep",
+  "Reviewing medications and supplements with a doctor",
+  "Managing diabetes, thyroid disease and other medical conditions",
+  "Avoiding non-prescribed hormonal or fertility products",
+];
+
+const clinicApproach = [
+  "Evaluating both partners",
+  "Identifying factors that may delay conception",
+  "Avoiding unnecessary investigations",
+  "Explaining findings in understandable language",
+  "Supporting natural conception whenever reasonably possible",
+  "Using ovulation induction or IUI when clinically appropriate",
+  "Recommending IVF or ICSI when there is a clear indication",
+  "Preparing couples for a healthy pregnancy",
+  "Providing continuity from fertility care through pregnancy and delivery",
+];
+
+const mythsAndFacts = [
+  {
+    myth: "Infertility is usually the woman’s fault.",
+    fact:
+      "Fertility concerns may involve the woman, the man, both partners or sometimes no clearly identifiable factor.",
+  },
+  {
+    myth: "Regular periods always mean fertility is normal.",
+    fact:
+      "Regular cycles are reassuring, but they do not confirm egg quality, tubal function, sperm health or implantation.",
+  },
+  {
+    myth: "A previous child means infertility cannot occur later.",
+    fact:
+      "Secondary infertility can develop even after an earlier natural conception.",
+  },
+  {
+    myth: "Every couple with infertility requires IVF.",
+    fact:
+      "Treatment depends on the cause. Some couples may conceive with guidance, medication, timed intercourse or IUI.",
+  },
+  {
+    myth: "Stress is the only reason pregnancy is not happening.",
+    fact:
+      "Stress can affect well-being, but infertility should not be dismissed as “just stress.” Appropriate medical evaluation is important.",
+  },
+  {
+    myth: "One abnormal semen analysis confirms permanent infertility.",
+    fact:
+      "Semen parameters can vary. The result should be clinically interpreted and may need reassessment.",
+  },
+];
+
+const faqs = [
+  {
+    question:
+      "How frequently should couples have intercourse while trying to conceive?",
+    answer:
+      "Regular intercourse every one to two days during the fertile window can help maximise the opportunity for conception. Couples who find strict timing stressful may instead have intercourse regularly throughout the cycle.",
+  },
+  {
+    question: "Can I conceive if I have PCOS?",
+    answer:
+      "Yes. Many women with PCOS conceive naturally or with appropriate treatment. Management depends on menstrual regularity, ovulation, age, metabolic health and other fertility factors.",
+  },
+  {
+    question: "Does low AMH mean pregnancy is impossible?",
+    answer:
+      "No. AMH mainly helps estimate ovarian reserve and likely response to ovarian stimulation. It does not, by itself, determine whether natural conception can or cannot occur.",
+  },
+  {
+    question: "Is male infertility treatable?",
+    answer:
+      "Some male fertility conditions can be treated or improved. Others may require assisted reproductive techniques. The appropriate option depends on the cause and severity.",
+  },
+  {
+    question: "When is IVF recommended?",
+    answer:
+      "IVF may be considered for blocked or severely damaged fallopian tubes, significant male-factor infertility, reduced reproductive time, failure of simpler treatments or other specific clinical indications.",
+  },
+  {
+    question: "Can infertility be prevented?",
+    answer:
+      "Not every cause is preventable. However, prevention and timely treatment of reproductive infections, avoiding tobacco and anabolic steroids, protecting against testicular injury, maintaining general health and seeking timely fertility advice may reduce certain risks or prevent avoidable delays.",
+  },
+];
 
 const quizData = [
   {
-    question: "What is the medical definition of infertility in women under 35?",
+    question: "Fertility evaluation concerns:",
     options: [
-      "No periods for 3 months",
-      "Failure to conceive after 6 months",
-      "Failure to conceive after 12 months",
-      "Painful periods"
+      "Only the woman",
+      "Only the man",
+      "Both partners",
+      "Only couples requiring IVF",
     ],
-    answer: "Failure to conceive after 12 months"
+    answer: "Both partners",
   },
   {
-    question: "Which condition is a common cause of anovulation in women?",
-    options: ["Endometriosis", "PCOS", "Fibroids", "Tuberculosis"],
-    answer: "PCOS"
-  },
-  {
-    question: "What is AMH primarily used to assess?",
-    options: ["Ovulation timing", "Uterine lining", "Egg reserve", "Menstrual cycle length"],
-    answer: "Egg reserve"
-  },
-  {
-    question: "Which test is done to assess if fallopian tubes are open?",
-    options: ["Transvaginal ultrasound", "HSG (Hysterosalpingography)", "Pap smear", "FSH test"],
-    answer: "HSG (Hysterosalpingography)"
-  },
-  {
-    question: "A male fertility test that checks count, motility, and shape is called:",
-    options: ["Scrotal scan", "Semen analysis", "Sperm washing", "Hormonal assay"],
-    answer: "Semen analysis"
-  },
-  {
-    question: "At what female age does fertility begin to significantly decline?",
-    options: ["28", "30", "35", "40"],
-    answer: "35"
-  },
-  {
-    question: "Which hormone triggers egg release from the ovary?",
-    options: ["FSH", "LH", "Prolactin", "TSH"],
-    answer: "LH"
-  },
-  {
-    question: "Which condition is characterized by tissue similar to the uterine lining growing outside the uterus?",
-    options: ["PCOS", "Endometriosis", "Adenomyosis", "Fibroids"],
-    answer: "Endometriosis"
-  },
-  {
-    question: "In IVF, where does fertilization take place?",
-    options: ["In the uterus", "In the lab", "In the fallopian tube", "In the ovary"],
-    answer: "In the lab"
-  },
-  {
-    question: "Which is NOT typically part of a female fertility work-up?",
-    options: ["Semen analysis", "AMH test", "HSG", "Ultrasound"],
-    answer: "Semen analysis"
-  },
-  {
-    question: "What lifestyle factor is known to negatively affect both egg and sperm quality?",
-    options: ["Caffeine", "Smoking", "Yoga", "Hydration"],
-    answer: "Smoking"
-  },
-  {
-    question: "What percentage of infertility cases involve male factors?",
-    options: ["10%", "20%", "40–50%", "80%"],
-    answer: "40–50%"
-  },
-  {
-    question: "Which of the following is true about unexplained infertility?",
+    question: "A woman aged 36 should generally seek evaluation after:",
     options: [
-      "It means both partners have no reproductive organs",
-      "It is untreatable",
-      "It accounts for 10–15% of infertility cases",
-      "It only affects older women"
+      "Two years",
+      "Six months of trying",
+      "Five years",
+      "Menopause",
     ],
-    answer: "It accounts for 10–15% of infertility cases"
+    answer: "Six months of trying",
   },
   {
-    question: "Which hormone is often elevated in women with PCOS?",
-    options: ["Estrogen", "FSH", "LH", "Prolactin"],
-    answer: "LH"
+    question: "Does infertility always require IVF?",
+    options: ["Yes", "No"],
+    answer: "No",
   },
   {
-    question: "What is secondary infertility?",
-    options: [
-      "Infertility due to age",
-      "Inability to conceive after having one child",
-      "Infertility in men",
-      "Infertility due to blocked tubes"
-    ],
-    answer: "Inability to conceive after having one child"
+    question: "Can infertility occur after a previous pregnancy?",
+    options: ["Yes", "No"],
+    answer: "Yes",
   },
   {
-    question: "Which treatment is used for severe male infertility?",
-    options: ["IUI", "Clomiphene", "ICSI", "Hysteroscopy"],
-    answer: "ICSI"
+    question: "Can one test alone explain every fertility problem?",
+    options: ["Yes", "No"],
+    answer: "No",
   },
-  {
-    question: "Which fertility treatment involves placing sperm directly into the uterus?",
-    options: ["IVF", "IUI", "OI", "HSG"],
-    answer: "IUI"
-  },
-  {
-    question: "Which of the following is a sign of ovulation?",
-    options: [
-      "Heavy bleeding",
-      "Mild abdominal pain (Mittelschmerz)",
-      "High prolactin",
-      "Fever"
-    ],
-    answer: "Mild abdominal pain (Mittelschmerz)"
-  },
-  {
-    question: "Which statement is FALSE?",
-    options: [
-      "Men’s fertility remains constant throughout life",
-      "Egg quality declines with age",
-      "IVF doesn’t guarantee success",
-      "Lifestyle changes can improve fertility"
-    ],
-    answer: "Men’s fertility remains constant throughout life"
-  },
-  {
-    question: "Which supplement may help improve sperm motility?",
-    options: ["Calcium", "Vitamin D", "Coenzyme Q10", "Iron"],
-    answer: "Coenzyme Q10"
-  },
-  {
-    question: "Which of the following is NOT a typical emotional reaction to infertility?",
-    options: ["Anxiety", "Guilt", "Joy", "Isolation"],
-    answer: "Joy"
-  },
-  {
-    question: "How does stress affect fertility?",
-    options: [
-      "It boosts ovulation",
-      "It may disrupt hormonal balance",
-      "It has no effect",
-      "It guarantees pregnancy"
-    ],
-    answer: "It may disrupt hormonal balance"
-  },
-  {
-    question: "A blocked fallopian tube prevents:",
-    options: [
-      "Egg maturation",
-      "Sperm production",
-      "Fertilization and egg transport",
-      "Menstrual flow"
-    ],
-    answer: "Fertilization and egg transport"
-  },
-  {
-    question: "When should a woman over 35 seek fertility evaluation?",
-    options: [
-      "After 1 year of trying",
-      "After 6 months of trying",
-      "Immediately",
-      "After 2 years"
-    ],
-    answer: "After 6 months of trying"
-  },
-  {
-    question: "Which statement about IVF is TRUE?",
-    options: [
-      "It always leads to twins",
-      "It guarantees pregnancy",
-      "It involves embryo transfer into the uterus",
-      "It requires surgery every time"
-    ],
-    answer: "It involves embryo transfer into the uterus"
-  }
 ];
+
+const SectionHeading = ({ eyebrow, title, description }) => (
+  <div className="sukam-infertility-section-heading">
+    {eyebrow && (
+      <span className="sukam-infertility-section-eyebrow">{eyebrow}</span>
+    )}
+
+    <h2>{title}</h2>
+
+    {description && <p>{description}</p>}
+  </div>
+);
+
+const CheckList = ({ items, className = "" }) => (
+  <ul className={`sukam-infertility-check-list ${className}`.trim()}>
+    {items.map((item) => (
+      <li key={item}>
+        <span className="sukam-infertility-check-icon" aria-hidden="true">
+          ✓
+        </span>
+        <span>{item}</span>
+      </li>
+    ))}
+  </ul>
+);
 
 const InfertilityInsights = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
 
-  const handleOptionClick = (questionIndex, option) => {
-    setSelectedAnswers({
-      ...selectedAnswers,
-      [questionIndex]: option
-    });
-  };
+  const totalQuestions = quizData.length;
+  const answeredCount = Object.keys(selectedAnswers).length;
+  const progressPercentage = (answeredCount / totalQuestions) * 100;
+  const isQuizComplete = answeredCount === totalQuestions;
 
-  const calculateResults = () => {
-    let correct = 0;
-    quizData.forEach((q, i) => {
-      if (selectedAnswers[i] === q.answer) correct++;
-    });
+  const results = useMemo(() => {
+    const correct = quizData.reduce((score, question, index) => {
+      return score + (selectedAnswers[index] === question.answer ? 1 : 0);
+    }, 0);
+
     return {
       correct,
-      wrong: quizData.length - correct
+      wrong: totalQuestions - correct,
+      percentage: Math.round((correct / totalQuestions) * 100),
     };
+  }, [selectedAnswers, totalQuestions]);
+
+  const handleOptionClick = (questionIndex, option) => {
+    if (showResults) {
+      return;
+    }
+
+    setSelectedAnswers((currentAnswers) => ({
+      ...currentAnswers,
+      [questionIndex]: option,
+    }));
+  };
+
+  const handleShowResults = () => {
+    if (isQuizComplete) {
+      setShowResults(true);
+    }
   };
 
   const handleTryAgain = () => {
@@ -201,624 +361,848 @@ const InfertilityInsights = () => {
     setShowResults(false);
   };
 
-  const results = calculateResults();
-  const totalQuestions = quizData.length;
-  const answeredCount = Object.keys(selectedAnswers).length;
-  const progressPercentage = (answeredCount / totalQuestions) * 100;
+  const getOptionStateClass = (questionIndex, option, answer) => {
+    const isSelected = selectedAnswers[questionIndex] === option;
+
+    if (!showResults) {
+      return isSelected ? "is-selected" : "";
+    }
+
+    if (option === answer) {
+      return "is-correct";
+    }
+
+    if (isSelected && option !== answer) {
+      return "is-incorrect";
+    }
+
+    return "";
+  };
 
   return (
-   <div className="infertility-container">
-      <h1>🧬 Infertility – Insights</h1>
-      <p className="lead">“Every story has its hurdles — let’s decode the ‘why not yet.’”</p>
+    <main className="sukam-infertility-page">
+      <div className="sukam-infertility-shell">
+        {/* =========================================================
+            Hero Section
+        ========================================================= */}
 
-      <section className="info-section">
-        <h3>INFERTILITY – A JOURNEY, NOT A LABEL</h3>
-        <p>
-          Infertility is not a failure, a diagnosis stamped overnight, or a verdict on one’s worth. It is a
-          journey shaped by biology, timing, health, emotions, and sometimes unexplained variables. For many
-          couples, the most painful part is not the condition itself—but the uncertainty, the repeated “maybe
-          next month,” and the silent question: Why hasn’t it happened yet?
-        </p>
-        <p>
-          Globally, infertility affects 1 in 6 couples at some point in their reproductive lives. Yet every
-          infertility story is unique. Some struggle briefly, others longer. Some have clear medical causes;
-          others face unexplained delays despite normal reports.
-        </p>
-        <p>Understanding infertility begins with shifting the mindset:</p>
-        <ul>
-          <li>From blame → to biology</li>
-          <li>From guilt → to knowledge</li>
-          <li>From silence → to informed conversations</li>
-        </ul>
-        <p>
-          This insight guide aims to decode infertility layer by layer, empowering individuals and couples
-          with clarity, compassion, and confidence.
-        </p>
+        <header className="sukam-infertility-hero">
+          <div className="sukam-infertility-hero-content">
 
-        <h3>HOW NATURAL CONCEPTION REALLY WORKS (AND WHY IT OFTEN DOESN’T)</h3>
-        <p>Pregnancy is not automatic. Even in the healthiest couples:</p>
-        <ul>
-          <li>
-            The chance of conception per cycle is 15–20%
-            <br />
-            → This means even healthy couples do not get pregnant every month; pregnancy takes time.
-          </li>
-          <li>
-            Nearly 80–85% conceive within one year
-            <br />
-            → Most couples conceive naturally within one year of regular, well-timed intercourse.
-          </li>
-          <li>
-            Stress, illness, timing, and lifestyle can reduce this probability
-            <br />
-            → Physical and mental stress, poor health, wrong timing, or unhealthy habits can delay pregnancy.
-          </li>
-        </ul>
+            <h1>Infertility – Insights</h1>
 
-        <p>For pregnancy to occur, multiple steps must align perfectly:</p>
+            <p className="sukam-infertility-hero-subtitle">
+              Every fertility journey begins with understanding
+            </p>
 
-        <p>
-          <strong>In Women</strong>
-        </p>
-        <ul>
-          <li>
-            Regular ovulation
-            <br />
-            → The ovary releases one egg every month on time, which is necessary for pregnancy.
-          </li>
-          <li>
-            Healthy eggs with genetic integrity
-            <br />
-            → Eggs should be strong and genetically normal to form a healthy embryo.
-          </li>
-          <li>
-            Open fallopian tubes
-            <br />
-            → The tubes should be open so the egg and sperm can meet naturally.
-          </li>
-          <li>
-            Balanced hormones
-            <br />
-            → Hormones should be in proper balance to control ovulation, periods, and implantation.
-          </li>
-          <li>
-            Receptive uterine lining
-            <br />
-            → The uterus lining should be healthy and thick enough to allow the embryo to attach.
-          </li>
-        </ul>
+            <p className="sukam-infertility-hero-text">
+              For many couples, trying to conceive begins with hope and
+              excitement. But when pregnancy does not happen as expected, the
+              same journey can gradually become confusing, stressful and
+              emotionally exhausting.
+            </p>
 
-        <p>
-          <strong>In Men</strong>
-        </p>
-        <ul>
-          <li>
-            Adequate sperm count
-            <br />
-            → Enough sperm should be present to increase the chance of reaching the egg.
-          </li>
-          <li>
-            Good motility (movement)
-            <br />
-            → Sperm should be able to swim forward properly to reach the egg.
-          </li>
-          <li>
-            Normal morphology (shape)
-            <br />
-            → Sperm should have a normal shape to successfully enter the egg.
-          </li>
-          <li>
-            Healthy DNA integrity
-            <br />
-            → The genetic material inside the sperm should be intact to support embryo growth.
-          </li>
-        </ul>
+            <div className="sukam-infertility-question-panel">
+              <p className="sukam-infertility-question-panel-title">
+                Questions often arise:
+              </p>
 
-        <p>
-          <strong>For the Couple</strong>
-        </p>
-        <ul>
-          <li>
-            Correct timing of intercourse
-            <br />
-            → Intercourse should happen during the fertile days when the egg is available.
-          </li>
-          <li>
-            Emotional and physical wellbeing
-            <br />
-            → Good mental and physical health supports normal fertility function.
-          </li>
-          <li>
-            Absence of chronic inflammation or infections
-            <br />
-            → Long-standing infections or inflammation can interfere with conception.
-          </li>
-        </ul>
-        <p>
-          A delay in pregnancy does not always mean infertility—but persistent delays signal the need for
-          deeper evaluation.
-        </p>
-
-        <h3>FEMALE FACTORS – BEYOND PERIODS AND OVULATION</h3>
-        <h4>1. Ovulatory Disorders</h4>
-        <p>Ovulation may be:</p>
-        <ul>
-          <li>Irregular</li>
-          <li>Delayed</li>
-          <li>Absent</li>
-        </ul>
-        <p>Common causes include:</p>
-        <ul>
-          <li>
-            PCOS
-            <br />
-            → A hormonal condition causing irregular ovulation and periods.
-          </li>
-          <li>
-            Thyroid disorders
-            <br />
-            → Thyroid imbalance affects hormones needed for ovulation.
-          </li>
-          <li>
-            High prolactin levels
-            <br />
-            → Excess prolactin hormone can stop ovulation.
-          </li>
-          <li>
-            Stress and weight fluctuations
-            <br />
-            → Sudden stress or weight changes can disturb hormonal balance.
-          </li>
-        </ul>
-
-        <h4>2. Egg Quality & Ovarian Reserve</h4>
-        <p>Age plays a major role:</p>
-        <ul>
-          <li>Egg quantity and quality decline after 30</li>
-          <li>
-            Sharp decline after 35
-            <br />
-            → Fertility drops faster after 35 due to poorer egg quality.
-          </li>
-          <li>Genetic errors increase with age</li>
-          <li>
-            Low AMH, poor response to stimulation, or repeated embryo failures may indicate compromised egg
-            quality.
-          </li>
-        </ul>
-
-        <h4>3. Tubal & Pelvic Factors</h4>
-        <ul>
-          <li>
-            Blocked fallopian tubes
-            <br />
-            → Egg and sperm cannot meet if the tubes are blocked.
-          </li>
-          <li>Pelvic inflammatory disease</li>
-          <li>
-            Endometriosis
-            <br />
-            → Tissue growing outside the uterus causes inflammation and fertility problems.
-          </li>
-          <li>
-            Adhesions from previous surgeries
-            <br />
-            → Scar tissue may block or distort reproductive organs.
-          </li>
-        </ul>
-        <p>Even partial tubal damage can impair fertilization.</p>
-
-        <h4>4. Uterine Factors</h4>
-        <ul>
-          <li>
-            Fibroids
-            <br />
-            → Non-cancerous growths that can affect implantation.
-          </li>
-          <li>
-            Polyps
-            <br />
-            → Small growths inside the uterus that interfere with pregnancy.
-          </li>
-          <li>
-            Congenital anomalies
-            <br />
-            → Structural abnormalities present from birth.
-          </li>
-          <li>
-            Thin or inflamed endometrium
-            <br />
-            → The uterine lining is not healthy enough to support pregnancy.
-          </li>
-        </ul>
-        <p>The uterus must be not only normal in shape—but functionally receptive.</p>
-
-        <h3>MALE FACTORS – THE SILENT HALF OF INFERTILITY</h3>
-        <p>Male infertility contributes to 40–50% of infertility cases, yet remains under-discussed.</p>
-        <p>
-          <strong>Key Male Factors</strong>
-        </p>
-        <ul>
-          <li>Low sperm count (Oligospermia)</li>
-          <li>Poor motility (Asthenospermia)</li>
-          <li>Abnormal morphology (Teratospermia)</li>
-          <li>
-            Complete absence of sperm (Azoospermia)
-            <br />
-            → No sperm present in semen.
-          </li>
-        </ul>
-
-        <p>
-          <strong>Hidden Contributors</strong>
-        </p>
-        <ul>
-          <li>
-            Varicocele
-            <br />
-            → Enlarged veins around the testis affecting sperm quality.
-          </li>
-          <li>Hormonal imbalance</li>
-          <li>Infections</li>
-          <li>Smoking, alcohol, heat exposure</li>
-          <li>Occupational toxins</li>
-          <li>Genetic abnormalities</li>
-        </ul>
-
-        <p>
-          <strong>Advanced Considerations</strong>
-        </p>
-        <p>Even with normal semen reports:</p>
-        <ul>
-          <li>
-            DNA fragmentation
-            <br />
-            → Damage to sperm DNA affecting embryo development.
-          </li>
-          <li>Oxidative stress</li>
-          <li>Epigenetic defects</li>
-        </ul>
-        <p>may impair fertilization or embryo development.</p>
-        <p>Male fertility is dynamic and treatable, especially when detected early.</p>
-
-        <h3>UNEXPLAINED INFERTILITY – WHEN REPORTS ARE NORMAL BUT PREGNANCY IS NOT</h3>
-        <p>Unexplained infertility affects 10–15% of couples.</p>
-        <p>Possible hidden reasons:</p>
-        <ul>
-          <li>Subtle egg or sperm quality issues</li>
-          <li>
-            Implantation failure
-            <br />
-            → Embryo forms but does not attach to the uterus.
-          </li>
-          <li>Immune dysregulation</li>
-          <li>
-            Poor embryo-endometrial synchrony
-            <br />
-            → Timing mismatch between embryo and uterine lining.
-          </li>
-          <li>
-            Lifestyle and stress effects
-            <br />
-            → Daily habits and stress impact fertility silently.
-          </li>
-        </ul>
-
-        <p>Unexplained infertility does not mean untreatable infertility. Many couples conceive with:</p>
-        <ul>
-          <li>
-            Ovulation induction
-            <br />
-            → Medicines used to help release eggs.
-          </li>
-          <li>
-            IUI
-            <br />
-            → Sperm placed directly into the uterus.
-          </li>
-          <li>
-            IVF
-            <br />
-            → Egg and sperm fertilised outside the body.
-          </li>
-          <li>
-            Lifestyle correction
-            <br />
-            → Improving diet, weight, sleep, and stress.
-          </li>
-          <li>
-            Psychological support
-            <br />
-            → Emotional counselling to reduce stress impact.
-          </li>
-        </ul>
-        <p>Sometimes, the explanation emerges only during treatment.</p>
-
-        <h3>THE ROLE OF AGE, TIME & MODERN LIFESTYLES</h3>
-        <p>
-          <strong>Age Matters</strong>
-        </p>
-        <ul>
-          <li>
-            Female fertility peaks in the 20s
-            <br />
-            → Best egg quality and quantity.
-          </li>
-          <li>Declines gradually after 30</li>
-          <li>Rapid decline after 35</li>
-          <li>
-            Male fertility also declines after 40
-            <br />
-            → Reduced sperm quality and genetic stability.
-          </li>
-        </ul>
-
-        <p>
-          <strong>Lifestyle Influences</strong>
-        </p>
-        <ul>
-          <li>Poor sleep</li>
-          <li>
-            Obesity or underweight
-            <br />
-            → Disturbs ovulation and sperm production.
-          </li>
-          <li>Sedentary habits</li>
-          <li>Processed foods</li>
-          <li>Chronic stress</li>
-          <li>Excessive caffeine, alcohol, smoking</li>
-        </ul>
-
-        <p>
-          <strong>Environmental Factors</strong>
-        </p>
-        <ul>
-          <li>Pollution</li>
-          <li>Plastics (endocrine disruptors)</li>
-          <li>
-            Radiation exposure
-            <br />
-            → Damages eggs and sperm.
-          </li>
-          <li>Occupational hazards</li>
-        </ul>
-        <p>
-          Modern life has extended timelines for parenthood, but biology still follows its own clock.
-        </p>
-
-        <h3>EMOTIONAL & PSYCHOLOGICAL DIMENSIONS OF INFERTILITY</h3>
-        <p>Infertility affects:</p>
-        <ul>
-          <li>Self-esteem</li>
-          <li>
-            Marital intimacy
-            <br />
-            → Strain in emotional and physical closeness.
-          </li>
-          <li>
-            Social relationships
-            <br />
-            → Isolation from family and society.
-          </li>
-          <li>
-            Mental health
-            <br />
-            → Increased anxiety and depression.
-          </li>
-        </ul>
-
-        <p>Common emotions include:</p>
-        <ul>
-          <li>Guilt</li>
-          <li>Anger</li>
-          <li>Grief</li>
-          <li>Isolation</li>
-          <li>Anxiety</li>
-        </ul>
-
-        <p>Repeated cycles of hope and disappointment can lead to:</p>
-        <ul>
-          <li>Depression</li>
-          <li>Sexual dysfunction</li>
-          <li>Relationship strain</li>
-        </ul>
-
-        <p>
-          Emotional care is not optional—it is integral to fertility care. Couples who receive counselling
-          often show:
-        </p>
-        <ul>
-          <li>Better treatment adherence</li>
-          <li>Improved outcomes</li>
-          <li>Healthier coping mechanisms</li>
-        </ul>
-
-        <h3>DIAGNOSIS – MOVING FROM CONFUSION TO CLARITY</h3>
-        <p>A structured fertility evaluation includes:</p>
-
-        <p>
-          <strong>For Women</strong>
-        </p>
-        <ul>
-          <li>Hormonal profile</li>
-          <li>
-            Ultrasound
-            <br />
-            → Visual assessment of ovaries and uterus.
-          </li>
-          <li>
-            AMH testing
-            <br />
-            → Measures egg reserve.
-          </li>
-          <li>Tubal patency tests</li>
-          <li>Uterine cavity assessment</li>
-        </ul>
-
-        <p>
-          <strong>For Men</strong>
-        </p>
-        <ul>
-          <li>
-            Semen analysis
-            <br />
-            → Tests sperm count, movement, and shape.
-          </li>
-          <li>Hormonal evaluation</li>
-          <li>
-            Scrotal examination
-            <br />
-            → Physical examination of testes.
-          </li>
-          <li>
-            Genetic tests
-            <br />
-            → Detects inherited causes when needed.
-          </li>
-        </ul>
-
-        <p>
-          <strong>For Couples</strong>
-        </p>
-        <ul>
-          <li>Timing analysis</li>
-          <li>Sexual health evaluation</li>
-          <li>Infection screening</li>
-          <li>
-            Lifestyle assessment
-            <br />
-            → Reviews daily habits affecting fertility.
-          </li>
-        </ul>
-
-        <p>Diagnosis should be personalized—not rushed or generic.</p>
-
-        <h3>TREATMENT PATHWAYS – FROM SIMPLE TO ADVANCED</h3>
-        <p>Infertility treatment is stepwise, not one-size-fits-all.</p>
-
-        <p>
-          <strong>Conservative Options</strong>
-        </p>
-        <ul>
-          <li>
-            Cycle tracking
-            <br />
-            → Monitoring ovulation and fertile days.
-          </li>
-          <li>
-            Ovulation induction
-            <br />
-            → Medicines to stimulate egg release.
-          </li>
-          <li> Lifestyle modification</li>
-        </ul>
-
-        <p>
-          <strong>Assisted Options</strong>
-        </p>
-        <ul>
-          <li>IUI (Intrauterine Insemination)</li>
-          <li>IVF (In Vitro Fertilization)</li>
-          <li>ICSI</li>
-          <li>Surgical correction</li>
-          <li>Fertility preservation</li>
-        </ul>
-
-        <p>Treatment choice depends on:</p>
-        <ul>
-          <li>Age</li>
-          <li>Duration of infertility</li>
-          <li>Cause</li>
-          <li>Emotional readiness</li>
-          <li>Financial considerations</li>
-        </ul>
-
-        <p>Success is not only pregnancy—but a healthy mother, baby, and family.</p>
-
-        <h3>HOPE, SCIENCE & MOVING FORWARD</h3>
-        <p>Infertility is not the end of the story—it is often the middle chapter.</p>
-        <p>Today’s reproductive medicine offers:</p>
-        <ul>
-          <li>Advanced diagnostics</li>
-          <li>Precision treatments</li>
-          <li>Personalized protocols</li>
-          <li>Emotional support systems</li>
-        </ul>
-
-        <p>What matters most:</p>
-        <ul>
-          <li>Early evaluation</li>
-          <li>Evidence-based care</li>
-          <li>Trust in the medical team</li>
-          <li>Emotional resilience</li>
-        </ul>
-
-        <h4>Final Message</h4>
-        <p>
-          Infertility does not define a person or a couple. It is a medical condition with solutions, not a
-          personal shortcoming. Every story has its hurdles—but with the right insights, the ‘why not yet’
-          becomes a ‘how we got there.’
-        </p>
-        <p> <strong>At Sukam Speciality Clinic & Fertility Centre, we believe in:</strong><br /> ✅ Medical precision + emotional sensitivity<br /> ✅ Personalized protocols<br /> ✅ Full transparency and holistic wellness </p> 
-        <p><strong>Let us walk beside you — from uncertainty to new beginnings.</strong></p>
-      </section>
-
-      <section className="quiz-section">
-        <h2>🧠 Infertility Quiz — How Much Do You Know?</h2>
-
-        {/* Progress Bar */}
-        <div className="progress-bar-container">
-          <div className="progress-bar" style={{ width: `${progressPercentage}%` }}></div>
-        </div>
-
-        {quizData.map((q, i) => (
-          <div key={i} className="quiz-question">
-            <p>{i + 1}. {q.question}</p>
-            <div className="options">
-              {q.options.map((opt, idx) => (
-                <button
-                  key={idx}
-                  className={`option-button ${selectedAnswers[i] === opt ? 'selected' : ''}`}
-                  onClick={() => handleOptionClick(i, opt)}
-                  disabled={showResults}
-                >
-                  {opt}
-                </button>
-              ))}
+              <div className="sukam-infertility-question-grid">
+                <span>Why are we not conceiving?</span>
+                <span>Is something wrong with me or my partner?</span>
+                <span>Have we waited too long?</span>
+                <span>Will we need IVF?</span>
+                <span>Is pregnancy still possible?</span>
+              </div>
             </div>
+
+            <p className="sukam-infertility-hero-text">
+              Delayed conception does not always mean that pregnancy is
+              impossible. It simply means that the couple may benefit from a
+              systematic fertility evaluation. Identifying the possible reason
+              early can help avoid unnecessary delays, repeated treatments and
+              emotional distress.
+            </p>
+
+            <p className="sukam-infertility-hero-emphasis">
+              Infertility is not solely a woman’s concern or a man’s concern.
+              Fertility is a shared journey, and both partners should ideally be
+              evaluated together.
+            </p>
           </div>
-        ))}
 
-        {!showResults && answeredCount === totalQuestions && (
-          <button className="submit-button" onClick={() => setShowResults(true)}>See Results</button>
-        )}
+          <aside className="sukam-infertility-hero-card">
+            <span className="sukam-infertility-hero-card-kicker">
+              A clearer first step
+            </span>
 
-        {showResults && (
-          <div className="results-section">
-            <p>✅ Correct Answers: {results.correct}</p>
-            <p>❌ Wrong Answers: {results.wrong}</p>
+            <h2>Understand before assuming</h2>
 
-            <div className="score-breakdown">
-              <h4>Detailed Score Breakdown</h4>
-              <ul>
-                {quizData.map((q, idx) => (
-                  <li key={idx}>
-                    <strong>Q{idx + 1}:</strong> {q.question} —&nbsp;
-                    <span style={{ color: selectedAnswers[idx] === q.answer ? 'green' : 'red' }}>
-                      {selectedAnswers[idx] === q.answer ? 'Correct' : 'Incorrect'} (Your Answer: {selectedAnswers[idx]})
-                    </span>
-                  </li>
+            <p>
+              A fertility evaluation is designed to identify possible causes,
+              understand both partners’ health and guide the next appropriate
+              step.
+            </p>
+
+            <div className="sukam-infertility-hero-card-stat">
+              <strong>Both partners</strong>
+              <span>should ideally be evaluated together.</span>
+            </div>
+          </aside>
+        </header>
+
+        {/* =========================================================
+            What is Infertility?
+        ========================================================= */}
+
+        <section className="sukam-infertility-section">
+          <SectionHeading
+            eyebrow="Understanding infertility"
+            title="What is infertility?"
+          />
+
+          <div className="sukam-infertility-definition-card">
+            <p>
+              Infertility is generally defined as the inability to achieve
+              pregnancy after 12 months or more of regular, unprotected sexual
+              intercourse.
+            </p>
+          </div>
+
+          <p className="sukam-infertility-body-copy">
+            However, couples do not always need to wait for an entire year
+            before seeking medical advice.
+          </p>
+
+          <div className="sukam-infertility-timing-grid">
+            {consultationTimings.map((item, index) => (
+              <article className="sukam-infertility-timing-card" key={item}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <p>{item}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="sukam-infertility-note">
+            <span aria-hidden="true">i</span>
+
+            <p>
+              Seeking an evaluation does not automatically mean that advanced
+              fertility treatment will be required. In many cases, identifying
+              ovulation timing, correcting a hormonal condition, treating an
+              infection or addressing a male fertility factor may improve the
+              possibility of conception.
+            </p>
+          </div>
+        </section>
+
+        {/* =========================================================
+            Primary and Secondary Infertility
+        ========================================================= */}
+
+        <section className="sukam-infertility-section">
+          <SectionHeading
+            eyebrow="Types"
+            title="Primary and secondary infertility"
+            description="Infertility may be classified into two broad types."
+          />
+
+          <div className="sukam-infertility-two-column-grid">
+            <article className="sukam-infertility-info-card">
+              <span className="sukam-infertility-card-number">01</span>
+
+              <h3>Primary infertility</h3>
+
+              <p>
+                Primary infertility refers to difficulty achieving a first
+                pregnancy despite regular, unprotected intercourse for the
+                recommended period.
+              </p>
+            </article>
+
+            <article className="sukam-infertility-info-card">
+              <span className="sukam-infertility-card-number">02</span>
+
+              <h3>Secondary infertility</h3>
+
+              <p>
+                Secondary infertility occurs when a couple has conceived in the
+                past but is currently unable to achieve another pregnancy.
+              </p>
+
+              <p>
+                The previous pregnancy may have resulted in childbirth,
+                miscarriage or an ectopic pregnancy. Having conceived earlier
+                does not guarantee that fertility will remain unchanged. Age,
+                changes in ovulation, reduced ovarian reserve, sperm-related
+                factors, infections, surgery and other health conditions can
+                influence future fertility.
+              </p>
+            </article>
+          </div>
+
+          <p className="sukam-infertility-section-closing">
+            Both primary and secondary infertility deserve appropriate
+            evaluation and care.
+          </p>
+        </section>
+
+        {/* =========================================================
+            Fertility Depends on Both Partners
+        ========================================================= */}
+
+        <section className="sukam-infertility-section sukam-infertility-section--tinted">
+          <SectionHeading
+            eyebrow="How conception works"
+            title="Fertility depends on both partners"
+            description="Pregnancy requires several biological events to occur in the correct sequence."
+          />
+
+          <div className="sukam-infertility-steps-grid">
+            {fertilitySteps.map((step, index) => (
+              <article className="sukam-infertility-step-card" key={step}>
+                <span>{index + 1}</span>
+                <p>{step}</p>
+              </article>
+            ))}
+          </div>
+
+          <p className="sukam-infertility-section-closing">
+            A difficulty at any stage can reduce the chance of conception.
+            Sometimes more than one factor may be present, and in some couples,
+            routine testing may not identify a definite cause.
+          </p>
+        </section>
+
+        {/* =========================================================
+            Female Fertility Factors
+        ========================================================= */}
+
+        <section className="sukam-infertility-section">
+          <SectionHeading
+            eyebrow="Female fertility"
+            title="Common fertility factors in women"
+          />
+
+          <div className="sukam-infertility-factor-grid">
+            {femaleFactors.map((factor) => (
+              <article
+                className="sukam-infertility-factor-card"
+                key={factor.title}
+              >
+                <h3>{factor.title}</h3>
+
+                {factor.paragraphs?.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
                 ))}
-              </ul>
+
+                {factor.intro && <p>{factor.intro}</p>}
+
+                {factor.items && <CheckList items={factor.items} />}
+
+                {factor.note && (
+                  <p className="sukam-infertility-card-note">{factor.note}</p>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* =========================================================
+            Male Fertility Factors
+        ========================================================= */}
+
+        <section className="sukam-infertility-section sukam-infertility-section--accent">
+          <SectionHeading
+            eyebrow="Male fertility"
+            title="Common fertility factors in men"
+          />
+
+          <div className="sukam-infertility-content-grid">
+            <div>
+              <p className="sukam-infertility-body-copy">
+                Male fertility depends on sperm production, sperm quality and
+                the ability to deliver sperm into the female reproductive
+                tract.
+              </p>
+
+              <p className="sukam-infertility-body-copy">
+                Common concerns include:
+              </p>
+
+              <CheckList
+                items={maleConcerns}
+                className="sukam-infertility-check-list--two-column"
+              />
             </div>
 
-            <div className="results-buttons">
-              <button className="try-again-button" onClick={handleTryAgain}>Try Again</button>
+            <aside className="sukam-infertility-highlight-card">
+              <h3>Semen analysis</h3>
+
+              <p>
+                A semen analysis is usually one of the first investigations in a
+                fertility evaluation. An abnormal report should be interpreted
+                carefully and may sometimes need to be repeated because semen
+                parameters can vary.
+              </p>
+
+              <p>
+                Male evaluation should not be postponed while the female partner
+                undergoes multiple tests.
+              </p>
+            </aside>
+          </div>
+        </section>
+
+        {/* =========================================================
+            Unexplained Infertility
+        ========================================================= */}
+
+        <section className="sukam-infertility-section">
+          <SectionHeading
+            eyebrow="When routine tests are normal"
+            title="What is unexplained infertility?"
+          />
+
+          <div className="sukam-infertility-reading-card">
+            <p>
+              In some couples, ovulation appears normal, the fallopian tubes are
+              open, the uterus does not show a significant abnormality and semen
+              parameters are within acceptable limits—but pregnancy still does
+              not occur.
+            </p>
+
+            <p className="sukam-infertility-reading-card-emphasis">
+              This is known as unexplained infertility.
+            </p>
+
+            <p>
+              The term does not mean that there is no reason. It means that
+              standard investigations have not identified a definite cause.
+              Fertilisation, egg quality, sperm function, embryo development or
+              implantation may involve factors that routine tests cannot fully
+              measure.
+            </p>
+
+            <p>
+              Treatment is selected according to the couple’s age, duration of
+              infertility, previous treatments and overall fertility profile.
+            </p>
+          </div>
+        </section>
+
+        {/* =========================================================
+            When to Seek Advice
+        ========================================================= */}
+
+        <section className="sukam-infertility-section">
+          <SectionHeading
+            eyebrow="Do not delay when"
+            title="When should you seek fertility advice earlier?"
+            description="Consider consulting a fertility specialist without waiting for 12 months if there is:"
+          />
+
+          <div className="sukam-infertility-warning-card">
+            <CheckList
+              items={earlyAdviceItems}
+              className="sukam-infertility-check-list--two-column"
+            />
+          </div>
+
+          <p className="sukam-infertility-section-closing">
+            Early evaluation is particularly important when time may influence
+            the available treatment choices.
+          </p>
+        </section>
+
+        {/* =========================================================
+            Fertility Evaluation
+        ========================================================= */}
+
+        <section className="sukam-infertility-section sukam-infertility-section--tinted">
+          <SectionHeading
+            eyebrow="Evaluation"
+            title="What happens during a fertility evaluation?"
+            description="Fertility evaluation should be systematic and individualised. Not every couple requires every available test."
+          />
+
+          <div className="sukam-infertility-evaluation-grid">
+            <article className="sukam-infertility-evaluation-card">
+              <span className="sukam-infertility-evaluation-label">
+                Consultation
+              </span>
+
+              <h3>Detailed consultation</h3>
+
+              <p>The doctor may discuss:</p>
+
+              <CheckList items={consultationTopics} />
+
+              <p className="sukam-infertility-card-note">
+                Both partners should participate whenever possible.
+              </p>
+            </article>
+
+            <article className="sukam-infertility-evaluation-card">
+              <span className="sukam-infertility-evaluation-label">
+                Women
+              </span>
+
+              <h3>Evaluation of the female partner</h3>
+
+              <p>
+                Depending on the clinical history, the evaluation may include:
+              </p>
+
+              <CheckList items={femaleEvaluation} />
+
+              <p className="sukam-infertility-card-note">
+                Ovarian reserve tests help estimate the likely response of the
+                ovaries to stimulation. They do not independently confirm
+                whether natural pregnancy is possible or impossible.
+              </p>
+            </article>
+
+            <article className="sukam-infertility-evaluation-card">
+              <span className="sukam-infertility-evaluation-label">Men</span>
+
+              <h3>Evaluation of the male partner</h3>
+
+              <p>Initial evaluation commonly includes:</p>
+
+              <CheckList items={maleEvaluation} />
+
+              <p className="sukam-infertility-card-note">
+                The results of both partners are considered together before
+                treatment is planned.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        {/* =========================================================
+            Treatment
+        ========================================================= */}
+
+        <section className="sukam-infertility-section">
+          <SectionHeading
+            eyebrow="Treatment"
+            title="Does infertility always require IVF?"
+          />
+
+          <div className="sukam-infertility-answer-banner">
+            <span>No.</span>
+
+            <p>
+              IVF is one of several fertility treatments, but it is not the
+              first or only solution for every couple.
+            </p>
+          </div>
+
+          <p className="sukam-infertility-body-copy">
+            Depending on the diagnosis, age and duration of infertility,
+            treatment may include:
+          </p>
+
+          <div className="sukam-infertility-treatment-grid">
+            {treatmentOptions.map((option) => (
+              <div className="sukam-infertility-treatment-item" key={option}>
+                <span aria-hidden="true">+</span>
+                <p>{option}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="sukam-infertility-section-closing">
+            The aim is to recommend the most suitable treatment—not
+            automatically the most advanced treatment.
+          </p>
+        </section>
+
+        {/* =========================================================
+            Lifestyle & Emotional Wellbeing
+        ========================================================= */}
+
+        <section className="sukam-infertility-section">
+          <div className="sukam-infertility-wellbeing-grid">
+            <article className="sukam-infertility-wellbeing-card">
+              <span className="sukam-infertility-section-eyebrow">
+                Daily health
+              </span>
+
+              <h2>Lifestyle and fertility</h2>
+
+              <p>
+                Lifestyle changes cannot correct every fertility condition, but
+                they can support reproductive and general health.
+              </p>
+
+              <p>Helpful measures may include:</p>
+
+              <CheckList items={lifestyleMeasures} />
+
+              <p className="sukam-infertility-card-note">
+                Couples should be cautious about unproven supplements, detox
+                programmes and treatments that promise guaranteed pregnancy.
+              </p>
+            </article>
+
+            <article className="sukam-infertility-wellbeing-card">
+              <span className="sukam-infertility-section-eyebrow">
+                Emotional wellbeing
+              </span>
+
+              <h2>The emotional side of infertility</h2>
+
+              <p>
+                Infertility can affect emotional well-being, relationships,
+                intimacy, work and social life. Feelings of sadness, anger,
+                guilt, anxiety and isolation are common.
+              </p>
+
+              <p className="sukam-infertility-emphasis-line">
+                Neither partner should be blamed. Infertility is a medical
+                concern—not a personal failure.
+              </p>
+
+              <p>
+                Open communication, emotional support and counselling can help
+                couples cope with investigations and treatment. Seeking
+                psychological support does not indicate weakness; it is part of
+                comprehensive fertility care.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        {/* =========================================================
+            Sukam Clinic Approach
+        ========================================================= */}
+
+        <section className="sukam-infertility-section sukam-infertility-clinic-panel">
+          <div className="sukam-infertility-clinic-panel-heading">
+            <span className="sukam-infertility-section-eyebrow">
+              Sukam Clinic
+            </span>
+
+            <h2>Our approach at Sukam Clinic</h2>
+
+            <p>
+              At Sukam Clinic, fertility care begins by listening to the
+              couple’s concerns and understanding their complete medical and
+              reproductive history.
+            </p>
+          </div>
+
+          <CheckList
+            items={clinicApproach}
+            className="sukam-infertility-check-list--two-column sukam-infertility-check-list--light"
+          />
+
+          <div className="sukam-infertility-clinic-panel-footer">
+            <p>
+              Every couple’s situation is different. Therefore, treatment is
+              planned according to age, diagnosis, duration of infertility,
+              ovarian reserve, semen findings, previous treatment and personal
+              preferences.
+            </p>
+
+            <p>
+              No fertility treatment can guarantee pregnancy. Clear counselling
+              and realistic expectations are essential parts of ethical
+              fertility care.
+            </p>
+          </div>
+        </section>
+
+        {/* =========================================================
+            Myths and Facts
+        ========================================================= */}
+
+        <section className="sukam-infertility-section">
+          <SectionHeading
+            eyebrow="Clarity over misconceptions"
+            title="Fertility myths and facts"
+          />
+
+          <div className="sukam-infertility-myth-grid">
+            {mythsAndFacts.map((item) => (
+              <article className="sukam-infertility-myth-card" key={item.myth}>
+                <div className="sukam-infertility-myth-label">Myth</div>
+
+                <h3>{item.myth}</h3>
+
+                <div className="sukam-infertility-fact-block">
+                  <span>Fact</span>
+                  <p>{item.fact}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* =========================================================
+            Frequently Asked Questions
+        ========================================================= */}
+
+        <section className="sukam-infertility-section">
+          <SectionHeading
+            eyebrow="Common questions"
+            title="Frequently asked questions"
+          />
+
+          <div className="sukam-infertility-faq-list">
+            {faqs.map((faq, index) => (
+              <details
+                className="sukam-infertility-faq-item"
+                key={faq.question}
+                open={index === 0}
+              >
+                <summary>
+                  <span>{faq.question}</span>
+
+                  <span
+                    className="sukam-infertility-faq-icon"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </summary>
+
+                <div className="sukam-infertility-faq-answer">
+                  <p>{faq.answer}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        {/* =========================================================
+            Fertility Awareness Quiz
+        ========================================================= */}
+
+        <section className="sukam-infertility-section sukam-infertility-quiz-section">
+          <SectionHeading
+            eyebrow="Knowledge check"
+            title="Quick fertility awareness quiz"
+            description="Answer all five questions and check your score."
+          />
+
+          <div className="sukam-infertility-quiz-progress-wrap">
+            <div className="sukam-infertility-quiz-progress-meta">
+              <span>
+                {answeredCount} of {totalQuestions} answered
+              </span>
+
+              <span>{Math.round(progressPercentage)}%</span>
+            </div>
+
+            <div
+              className="sukam-infertility-quiz-progress-track"
+              role="progressbar"
+              aria-label="Quiz progress"
+              aria-valuemin="0"
+              aria-valuemax={totalQuestions}
+              aria-valuenow={answeredCount}
+            >
+              <div
+                className="sukam-infertility-quiz-progress-bar"
+                style={{ width: `${progressPercentage}%` }}
+              />
             </div>
           </div>
-        )}
-      </section>
-    </div>
+
+          <div className="sukam-infertility-quiz-list">
+            {quizData.map((question, questionIndex) => (
+              <article
+                className="sukam-infertility-quiz-card"
+                key={question.question}
+              >
+                <div className="sukam-infertility-quiz-card-heading">
+                  <span>
+                    Question {questionIndex + 1} of {totalQuestions}
+                  </span>
+
+                  <h3>{question.question}</h3>
+                </div>
+
+                <div className="sukam-infertility-quiz-options">
+                  {question.options.map((option, optionIndex) => {
+                    const stateClass = getOptionStateClass(
+                      questionIndex,
+                      option,
+                      question.answer
+                    );
+
+                    return (
+                      <button
+                        type="button"
+                        className={`sukam-infertility-quiz-option ${stateClass}`.trim()}
+                        key={option}
+                        onClick={() =>
+                          handleOptionClick(questionIndex, option)
+                        }
+                        disabled={showResults}
+                        aria-pressed={
+                          selectedAnswers[questionIndex] === option
+                        }
+                      >
+                        <span className="sukam-infertility-option-letter">
+                          {String.fromCharCode(65 + optionIndex)}
+                        </span>
+
+                        <span>{option}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {showResults && (
+                  <div
+                    className={`sukam-infertility-question-result ${
+                      selectedAnswers[questionIndex] === question.answer
+                        ? "is-correct"
+                        : "is-incorrect"
+                    }`}
+                  >
+                    <strong>
+                      {selectedAnswers[questionIndex] === question.answer
+                        ? "Correct"
+                        : "Incorrect"}
+                    </strong>
+
+                    <span>Correct answer: {question.answer}</span>
+                  </div>
+                )}
+              </article>
+            ))}
+          </div>
+
+          {!showResults && (
+            <div className="sukam-infertility-quiz-actions">
+              <p>
+                {isQuizComplete
+                  ? "You have answered all questions."
+                  : `Answer ${totalQuestions - answeredCount} more ${
+                      totalQuestions - answeredCount === 1
+                        ? "question"
+                        : "questions"
+                    } to view your result.`}
+              </p>
+
+              <button
+                type="button"
+                className="sukam-infertility-primary-button"
+                onClick={handleShowResults}
+                disabled={!isQuizComplete}
+              >
+                See Results
+              </button>
+            </div>
+          )}
+
+          {showResults && (
+            <div
+              className="sukam-infertility-results-card"
+              aria-live="polite"
+            >
+              <div className="sukam-infertility-score-circle">
+                <strong>{results.percentage}%</strong>
+                <span>Your score</span>
+              </div>
+
+              <div className="sukam-infertility-results-content">
+                <span className="sukam-infertility-section-eyebrow">
+                  Quiz complete
+                </span>
+
+                <h3>
+                  {results.correct} correct out of {totalQuestions}
+                </h3>
+
+                <p>
+                  Correct answers: {results.correct} · Incorrect answers:{" "}
+                  {results.wrong}
+                </p>
+
+                <button
+                  type="button"
+                  className="sukam-infertility-secondary-button"
+                  onClick={handleTryAgain}
+                >
+                  Try Again
+                </button>
+              </div>
+            </div>
+          )}
+        </section>
+
+        {/* =========================================================
+            Final CTA
+        ========================================================= */}
+
+        <section className="sukam-infertility-cta-section">
+          <div className="sukam-infertility-cta-content">
+            <span className="sukam-infertility-section-eyebrow">
+              Take the first step with clarity
+            </span>
+
+            <h2>
+              Understanding the reason is the beginning of the right path.
+            </h2>
+
+            <p>
+              If pregnancy has not occurred within the expected time—or if
+              either partner has a condition that may affect fertility—an early
+              consultation can provide clarity.
+            </p>
+
+            <p>
+              A fertility evaluation is not a commitment to IVF. It is the
+              first step toward understanding the possible reason for delayed
+              conception and selecting an appropriate path forward.
+            </p>
+          </div>
+
+          <aside className="sukam-infertility-contact-card">
+            <span className="sukam-infertility-contact-kicker">
+              Consult
+            </span>
+
+            <h3>Dr Anitha A Manoj</h3>
+
+            <p>Senior Fertility Specialist</p>
+            <p>Highrisk Obstetrician</p>
+
+            <div className="sukam-infertility-contact-divider" />
+
+            <strong>
+              Sukam Clinic – Maternity, Fertility & Speciality
+            </strong>
+
+            <span>Building Dreams, Delivering Miracles</span>
+
+            <div className="sukam-infertility-contact-actions">
+              <a href="tel:8108108310">
+                Call 8108108310
+              </a>
+
+              <a href="tel:9108108980">
+                Call 9108108980
+              </a>
+
+              <a
+                href="https://www.sukamspeciality.in/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Visit Website
+              </a>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
   );
 };
 
