@@ -1,5 +1,24 @@
-import React, { useMemo, useState } from "react";
-import "./RP1Infertility.css";
+import React, { useEffect, useMemo, useState } from "react";
+
+import "./RP1InfertilityInsights.css";
+
+const consultationTimings = [
+  {
+    title: "After 12 months",
+    description:
+      "If the female partner is under 35 and pregnancy has not occurred after 12 months of regular, unprotected intercourse.",
+  },
+  {
+    title: "After 6 months",
+    description:
+      "If the female partner is 35 or older and pregnancy has not occurred after six months of trying.",
+  },
+  {
+    title: "Seek advice earlier",
+    description:
+      "If there are irregular periods, a known reproductive condition, male fertility concerns, previous surgery or any other concern about fertility.",
+  },
+];
 
 const fertilitySteps = [
   "The woman must release a mature egg.",
@@ -10,18 +29,9 @@ const fertilitySteps = [
   "The uterine environment must support implantation and pregnancy.",
 ];
 
-const consultationTimings = [
-  "After 12 months of trying when the female partner is below 35 years",
-  "After six months when the female partner is 35 years or older",
-  "Without delay when the female partner is above 40 years",
-  "Earlier when either partner has a known condition that may affect fertility",
-];
-
 const femaleFactors = [
   {
     title: "Ovulation problems",
-    intro:
-      "Irregular or absent ovulation is a common reason for delayed conception. It may be associated with:",
     items: [
       "PCOS or PCOD",
       "Thyroid disorders",
@@ -39,13 +49,11 @@ const femaleFactors = [
     title: "Age-related decline in fertility",
     paragraphs: [
       "Female fertility gradually declines with age, with a more noticeable reduction after the mid-thirties. Both the number and quality of available eggs decrease over time.",
-      "Age can also affect the possibility of natural conception, the response to fertility medication and the risk of miscarriage. Age alone does not determine the outcome, but it is an important factor when planning evaluation and treatment.",
+      "Age can also affect natural conception, response to fertility medication and the risk of miscarriage.",
     ],
   },
   {
     title: "Fallopian tube problems",
-    intro:
-      "The fallopian tubes allow the egg and sperm to meet. Tubal blockage or damage may follow:",
     items: [
       "Pelvic infections",
       "Genital tuberculosis",
@@ -59,10 +67,6 @@ const femaleFactors = [
   },
   {
     title: "Endometriosis",
-    paragraphs: [
-      "Endometriosis occurs when tissue similar to the uterine lining grows outside the uterus. It may affect the ovaries, fallopian tubes and surrounding pelvic structures.",
-    ],
-    intro: "Possible symptoms include:",
     items: [
       "Painful periods",
       "Chronic pelvic pain",
@@ -75,8 +79,6 @@ const femaleFactors = [
   },
   {
     title: "Uterine conditions",
-    intro:
-      "Certain conditions affecting the uterus may interfere with implantation or pregnancy. These include:",
     items: [
       "Fibroids",
       "Endometrial polyps",
@@ -293,913 +295,1569 @@ const quizData = [
   },
 ];
 
-const SectionHeading = ({ eyebrow, title, description }) => (
-  <div className="sukam-infertility-section-heading">
-    {eyebrow && (
-      <span className="sukam-infertility-section-eyebrow">{eyebrow}</span>
-    )}
+const chapters = [
+  "Your fertility journey",
+  "Understanding fertility",
+  "Female fertility factors",
+  "Male fertility factors",
+  "When to seek help",
+  "Fertility tests",
+  "Treatment options",
+  "Care, myths & support",
+];
 
-    <h2>{title}</h2>
-
-    {description && <p>{description}</p>}
-  </div>
-);
-
-const CheckList = ({ items, className = "" }) => (
-  <ul className={`sukam-infertility-check-list ${className}`.trim()}>
+const BulletList = ({ items, compact = false }) => (
+  <ul className={`inf-reader-list ${compact ? "is-compact" : ""}`}>
     {items.map((item) => (
-      <li key={item}>
-        <span className="sukam-infertility-check-icon" aria-hidden="true">
-          ✓
-        </span>
-        <span>{item}</span>
-      </li>
+      <li key={item}>{item}</li>
     ))}
   </ul>
 );
 
+const PageNumber = ({ number }) => (
+  <div className="inf-reader-page-number">
+    <span>{String(number).padStart(2, "0")}</span>
+  </div>
+);
+
+const InfoNote = ({ children }) => (
+  <div className="inf-reader-info-note">
+    <span className="inf-reader-info-icon">i</span>
+    <p>{children}</p>
+  </div>
+);
+
+const ConsultationIllustration = () => (
+  <svg
+    className="inf-reader-illustration"
+    viewBox="0 0 620 275"
+    role="img"
+    aria-label="Couple speaking with a fertility doctor"
+  >
+    <rect width="620" height="275" rx="16" fill="#f8f4f2" />
+
+    <circle cx="85" cy="66" r="36" fill="#dcefe9" />
+    <circle cx="554" cy="70" r="46" fill="#e4f1eb" />
+
+    <rect
+      x="44"
+      y="193"
+      width="536"
+      height="52"
+      rx="8"
+      fill="#d7e6f3"
+    />
+
+    <rect
+      x="438"
+      y="143"
+      width="82"
+      height="54"
+      rx="6"
+      fill="#ffffff"
+    />
+
+    <rect
+      x="451"
+      y="156"
+      width="56"
+      height="7"
+      rx="3.5"
+      fill="#ef8cb8"
+    />
+
+    <rect
+      x="451"
+      y="171"
+      width="42"
+      height="7"
+      rx="3.5"
+      fill="#9cb9d7"
+    />
+
+    <circle cx="170" cy="116" r="29" fill="#e8b18d" />
+
+    <path
+      d="M137 113c3-37 55-50 70-13-11-7-20-6-27-3-12 5-24 14-43 16Z"
+      fill="#244d72"
+    />
+
+    <rect
+      x="143"
+      y="144"
+      width="69"
+      height="84"
+      rx="25"
+      fill="#4d87c5"
+    />
+
+    <circle cx="278" cy="116" r="29" fill="#efb38e" />
+
+    <path
+      d="M243 112c8-36 56-45 72-7-10-7-25-10-39-7-13 3-24 10-33 14Z"
+      fill="#43364b"
+    />
+
+    <path
+      d="M246 128c2 52 8 79 8 104h55c0-27 5-58 6-106-22 18-46 17-69 2Z"
+      fill="#4d3548"
+    />
+
+    <rect
+      x="245"
+      y="148"
+      width="72"
+      height="80"
+      rx="28"
+      fill="#ef78a6"
+    />
+
+    <circle cx="445" cy="103" r="29" fill="#ebb18c" />
+
+    <path
+      d="M410 100c8-34 53-42 68-5-12-7-26-9-39-6-11 3-20 7-29 11Z"
+      fill="#263a58"
+    />
+
+    <path
+      d="M422 132c14 18 38 18 49 0l28 24-10 72h-91l-7-73 31-23Z"
+      fill="#ffffff"
+    />
+
+    <path
+      d="M438 134v66M455 134v66"
+      stroke="#6d8fb2"
+      strokeWidth="5"
+    />
+
+    <circle
+      cx="447"
+      cy="176"
+      r="10"
+      fill="none"
+      stroke="#6d8fb2"
+      strokeWidth="5"
+    />
+
+    <path
+      d="M391 170c-34 7-48 31-63 43"
+      stroke="#ebb18c"
+      strokeWidth="12"
+      strokeLinecap="round"
+    />
+
+    <path
+      d="M497 171c29 2 40 18 49 31"
+      stroke="#ebb18c"
+      strokeWidth="12"
+      strokeLinecap="round"
+    />
+
+    <path
+      d="M59 204c-13-44 4-74 25-97 9 28 2 60-25 97Z"
+      fill="#8fc8b1"
+      opacity=".8"
+    />
+
+    <path
+      d="M557 202c-10-38 4-68 25-91 6 27-3 60-25 91Z"
+      fill="#9bcab9"
+      opacity=".8"
+    />
+  </svg>
+);
+
+const QuickCheck = ({
+  questionIndex,
+  selectedAnswers,
+  onOptionClick,
+  showResults,
+}) => {
+  const question = quizData[questionIndex];
+
+  return (
+    <div className="inf-reader-quick-check">
+      <div className="inf-reader-quick-check-title">
+        <span aria-hidden="true">✦</span>
+        <strong>Quick check</strong>
+      </div>
+
+      <p>{question.question}</p>
+
+      <div className="inf-reader-radio-list">
+        {question.options.map((option) => {
+          const isSelected = selectedAnswers[questionIndex] === option;
+          const isCorrect = showResults && option === question.answer;
+
+          const isIncorrect =
+            showResults &&
+            isSelected &&
+            option !== question.answer;
+
+          return (
+            <button
+              type="button"
+              key={option}
+              className={[
+                "inf-reader-radio-option",
+                isSelected ? "is-selected" : "",
+                isCorrect ? "is-correct" : "",
+                isIncorrect ? "is-incorrect" : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              onClick={() =>
+                onOptionClick(questionIndex, option)
+              }
+              disabled={showResults}
+            >
+              <span className="inf-reader-radio-dot" />
+              <span>{option}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+const BookPage = ({
+  side,
+  pageNumber,
+  children,
+  onTurnPage,
+}) => (
+  <article
+    className={`inf-reader-book-page inf-reader-book-page--${side}`}
+  >
+    <div
+      className="inf-reader-paper-grain"
+      aria-hidden="true"
+    />
+
+    <PageNumber number={pageNumber} />
+
+    <div className="inf-reader-page-scroll">
+      {children}
+    </div>
+
+    {side === "right" && onTurnPage && (
+      <button
+        type="button"
+        className="inf-reader-turn-page"
+        onClick={onTurnPage}
+      >
+        Turn page <span aria-hidden="true">↗</span>
+      </button>
+    )}
+  </article>
+);
+
 const InfertilityInsights = () => {
-  const [selectedAnswers, setSelectedAnswers] = useState({});
-  const [showResults, setShowResults] = useState(false);
+  const [currentChapter, setCurrentChapter] = useState(0);
+
+  const [selectedAnswers, setSelectedAnswers] =
+    useState({});
+
+  const [showResults, setShowResults] =
+    useState(false);
+
+  const [fontScale, setFontScale] =
+    useState(1);
+
+  const [isSpeaking, setIsSpeaking] =
+    useState(false);
 
   const totalQuestions = quizData.length;
-  const answeredCount = Object.keys(selectedAnswers).length;
-  const progressPercentage = (answeredCount / totalQuestions) * 100;
-  const isQuizComplete = answeredCount === totalQuestions;
 
-  const results = useMemo(() => {
-    const correct = quizData.reduce((score, question, index) => {
-      return score + (selectedAnswers[index] === question.answer ? 1 : 0);
-    }, 0);
+  const answeredCount =
+    Object.keys(selectedAnswers).length;
+
+  const chapterProgress =
+    ((currentChapter + 1) / chapters.length) * 100;
+
+  const quizResults = useMemo(() => {
+    const correct = quizData.reduce(
+      (score, question, index) =>
+        score +
+        (selectedAnswers[index] === question.answer
+          ? 1
+          : 0),
+      0
+    );
 
     return {
       correct,
       wrong: totalQuestions - correct,
-      percentage: Math.round((correct / totalQuestions) * 100),
+      percentage: Math.round(
+        (correct / totalQuestions) * 100
+      ),
     };
   }, [selectedAnswers, totalQuestions]);
 
-  const handleOptionClick = (questionIndex, option) => {
+  useEffect(() => {
+    return () => {
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+      setIsSpeaking(false);
+    }
+  }, [currentChapter]);
+
+  const handleOptionClick = (
+    questionIndex,
+    option
+  ) => {
     if (showResults) {
       return;
     }
 
-    setSelectedAnswers((currentAnswers) => ({
-      ...currentAnswers,
+    setSelectedAnswers((current) => ({
+      ...current,
       [questionIndex]: option,
     }));
   };
 
-  const handleShowResults = () => {
-    if (isQuizComplete) {
-      setShowResults(true);
+  const goToChapter = (index) => {
+    if (
+      index < 0 ||
+      index >= chapters.length
+    ) {
+      return;
     }
+
+    setCurrentChapter(index);
+
+    window.requestAnimationFrame(() => {
+      document
+        .querySelector(
+          ".inf-reader-book-stage"
+        )
+        ?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+    });
   };
 
-  const handleTryAgain = () => {
-    setSelectedAnswers({});
-    setShowResults(false);
+  const handleFontSize = () => {
+    setFontScale((current) => {
+      if (current === 1) {
+        return 1.08;
+      }
+
+      if (current === 1.08) {
+        return 0.94;
+      }
+
+      return 1;
+    });
   };
 
-  const getOptionStateClass = (questionIndex, option, answer) => {
-    const isSelected = selectedAnswers[questionIndex] === option;
-
-    if (!showResults) {
-      return isSelected ? "is-selected" : "";
+  const handleListen = () => {
+    if (
+      !("speechSynthesis" in window)
+    ) {
+      return;
     }
 
-    if (option === answer) {
-      return "is-correct";
+    if (isSpeaking) {
+      window.speechSynthesis.cancel();
+      setIsSpeaking(false);
+      return;
     }
 
-    if (isSelected && option !== answer) {
-      return "is-incorrect";
+    const text =
+      document.querySelector(
+        ".inf-reader-book-spread"
+      )?.innerText || "";
+
+    if (!text.trim()) {
+      return;
     }
 
-    return "";
+    const utterance =
+      new SpeechSynthesisUtterance(text);
+
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+
+    utterance.onend = () =>
+      setIsSpeaking(false);
+
+    utterance.onerror = () =>
+      setIsSpeaking(false);
+
+    window.speechSynthesis.cancel();
+
+    window.speechSynthesis.speak(
+      utterance
+    );
+
+    setIsSpeaking(true);
   };
 
-  return (
-    <main className="sukam-infertility-page">
-      <div className="sukam-infertility-shell">
-        {/* =========================================================
-            Hero Section
-        ========================================================= */}
+  const renderChapter = () => {
+    const leftPageNumber =
+      currentChapter * 2 + 1;
 
-        <header className="sukam-infertility-hero">
-          <div className="sukam-infertility-hero-content">
+    const rightPageNumber =
+      leftPageNumber + 1;
 
-            <h1>Infertility – Insights</h1>
+    switch (currentChapter) {
+      case 0:
+        return (
+          <>
+            <BookPage
+              side="left"
+              pageNumber={leftPageNumber}
+            >
+              <h2>
+                Understanding Your Fertility
+                Journey
+              </h2>
 
-            <p className="sukam-infertility-hero-subtitle">
-              Every fertility journey begins with understanding
-            </p>
-
-            <p className="sukam-infertility-hero-text">
-              For many couples, trying to conceive begins with hope and
-              excitement. But when pregnancy does not happen as expected, the
-              same journey can gradually become confusing, stressful and
-              emotionally exhausting.
-            </p>
-
-            <div className="sukam-infertility-question-panel">
-              <p className="sukam-infertility-question-panel-title">
-                Questions often arise:
+              <p className="inf-reader-lead-copy">
+                Every fertility journey begins
+                with understanding.
               </p>
 
-              <div className="sukam-infertility-question-grid">
-                <span>Why are we not conceiving?</span>
-                <span>Is something wrong with me or my partner?</span>
-                <span>Have we waited too long?</span>
-                <span>Will we need IVF?</span>
-                <span>Is pregnancy still possible?</span>
+              <p>
+                For many couples, trying to
+                conceive begins with hope and
+                excitement. But when pregnancy
+                does not happen as expected,
+                the same journey can gradually
+                become confusing, stressful
+                and emotionally exhausting.
+              </p>
+
+              <p>
+                Delayed conception does not
+                always mean that pregnancy is
+                impossible. It may simply mean
+                that the couple would benefit
+                from a systematic fertility
+                evaluation.
+              </p>
+
+              <div className="inf-reader-quote-card">
+                <span aria-hidden="true">
+                  “
+                </span>
+
+                <p>
+                  Every journey to parenthood
+                  is different. The right
+                  information can help you
+                  take the next step with
+                  confidence.
+                </p>
               </div>
-            </div>
 
-            <p className="sukam-infertility-hero-text">
-              Delayed conception does not always mean that pregnancy is
-              impossible. It simply means that the couple may benefit from a
-              systematic fertility evaluation. Identifying the possible reason
-              early can help avoid unnecessary delays, repeated treatments and
-              emotional distress.
-            </p>
+              <ConsultationIllustration />
+            </BookPage>
 
-            <p className="sukam-infertility-hero-emphasis">
-              Infertility is not solely a woman’s concern or a man’s concern.
-              Fertility is a shared journey, and both partners should ideally be
-              evaluated together.
-            </p>
-          </div>
+            <BookPage
+              side="right"
+              pageNumber={rightPageNumber}
+              onTurnPage={() =>
+                goToChapter(1)
+              }
+            >
+              <h2>
+                When should you seek help?
+              </h2>
 
-          <aside className="sukam-infertility-hero-card">
-            <span className="sukam-infertility-hero-card-kicker">
-              A clearer first step
-            </span>
+              <div className="inf-reader-timeline">
+                {consultationTimings.map(
+                  (item, index) => (
+                    <div
+                      className="inf-reader-timeline-item"
+                      key={item.title}
+                    >
+                      <span>
+                        {index + 1}
+                      </span>
 
-            <h2>Understand before assuming</h2>
+                      <div>
+                        <h3>
+                          {item.title}
+                        </h3>
 
-            <p>
-              A fertility evaluation is designed to identify possible causes,
-              understand both partners’ health and guide the next appropriate
-              step.
-            </p>
-
-            <div className="sukam-infertility-hero-card-stat">
-              <strong>Both partners</strong>
-              <span>should ideally be evaluated together.</span>
-            </div>
-          </aside>
-        </header>
-
-        {/* =========================================================
-            What is Infertility?
-        ========================================================= */}
-
-        <section className="sukam-infertility-section">
-          <SectionHeading
-            eyebrow="Understanding infertility"
-            title="What is infertility?"
-          />
-
-          <div className="sukam-infertility-definition-card">
-            <p>
-              Infertility is generally defined as the inability to achieve
-              pregnancy after 12 months or more of regular, unprotected sexual
-              intercourse.
-            </p>
-          </div>
-
-          <p className="sukam-infertility-body-copy">
-            However, couples do not always need to wait for an entire year
-            before seeking medical advice.
-          </p>
-
-          <div className="sukam-infertility-timing-grid">
-            {consultationTimings.map((item, index) => (
-              <article className="sukam-infertility-timing-card" key={item}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <p>{item}</p>
-              </article>
-            ))}
-          </div>
-
-          <div className="sukam-infertility-note">
-            <span aria-hidden="true">i</span>
-
-            <p>
-              Seeking an evaluation does not automatically mean that advanced
-              fertility treatment will be required. In many cases, identifying
-              ovulation timing, correcting a hormonal condition, treating an
-              infection or addressing a male fertility factor may improve the
-              possibility of conception.
-            </p>
-          </div>
-        </section>
-
-        {/* =========================================================
-            Primary and Secondary Infertility
-        ========================================================= */}
-
-        <section className="sukam-infertility-section">
-          <SectionHeading
-            eyebrow="Types"
-            title="Primary and secondary infertility"
-            description="Infertility may be classified into two broad types."
-          />
-
-          <div className="sukam-infertility-two-column-grid">
-            <article className="sukam-infertility-info-card">
-              <span className="sukam-infertility-card-number">01</span>
-
-              <h3>Primary infertility</h3>
-
-              <p>
-                Primary infertility refers to difficulty achieving a first
-                pregnancy despite regular, unprotected intercourse for the
-                recommended period.
-              </p>
-            </article>
-
-            <article className="sukam-infertility-info-card">
-              <span className="sukam-infertility-card-number">02</span>
-
-              <h3>Secondary infertility</h3>
-
-              <p>
-                Secondary infertility occurs when a couple has conceived in the
-                past but is currently unable to achieve another pregnancy.
-              </p>
-
-              <p>
-                The previous pregnancy may have resulted in childbirth,
-                miscarriage or an ectopic pregnancy. Having conceived earlier
-                does not guarantee that fertility will remain unchanged. Age,
-                changes in ovulation, reduced ovarian reserve, sperm-related
-                factors, infections, surgery and other health conditions can
-                influence future fertility.
-              </p>
-            </article>
-          </div>
-
-          <p className="sukam-infertility-section-closing">
-            Both primary and secondary infertility deserve appropriate
-            evaluation and care.
-          </p>
-        </section>
-
-        {/* =========================================================
-            Fertility Depends on Both Partners
-        ========================================================= */}
-
-        <section className="sukam-infertility-section sukam-infertility-section--tinted">
-          <SectionHeading
-            eyebrow="How conception works"
-            title="Fertility depends on both partners"
-            description="Pregnancy requires several biological events to occur in the correct sequence."
-          />
-
-          <div className="sukam-infertility-steps-grid">
-            {fertilitySteps.map((step, index) => (
-              <article className="sukam-infertility-step-card" key={step}>
-                <span>{index + 1}</span>
-                <p>{step}</p>
-              </article>
-            ))}
-          </div>
-
-          <p className="sukam-infertility-section-closing">
-            A difficulty at any stage can reduce the chance of conception.
-            Sometimes more than one factor may be present, and in some couples,
-            routine testing may not identify a definite cause.
-          </p>
-        </section>
-
-        {/* =========================================================
-            Female Fertility Factors
-        ========================================================= */}
-
-        <section className="sukam-infertility-section">
-          <SectionHeading
-            eyebrow="Female fertility"
-            title="Common fertility factors in women"
-          />
-
-          <div className="sukam-infertility-factor-grid">
-            {femaleFactors.map((factor) => (
-              <article
-                className="sukam-infertility-factor-card"
-                key={factor.title}
-              >
-                <h3>{factor.title}</h3>
-
-                {factor.paragraphs?.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-
-                {factor.intro && <p>{factor.intro}</p>}
-
-                {factor.items && <CheckList items={factor.items} />}
-
-                {factor.note && (
-                  <p className="sukam-infertility-card-note">{factor.note}</p>
+                        <p>
+                          {
+                            item.description
+                          }
+                        </p>
+                      </div>
+                    </div>
+                  )
                 )}
-              </article>
-            ))}
-          </div>
-        </section>
+              </div>
 
-        {/* =========================================================
-            Male Fertility Factors
-        ========================================================= */}
+              <InfoNote>
+                Your doctor may recommend an
+                earlier evaluation based on
+                your medical history and
+                individual situation.
+              </InfoNote>
 
-        <section className="sukam-infertility-section sukam-infertility-section--accent">
-          <SectionHeading
-            eyebrow="Male fertility"
-            title="Common fertility factors in men"
-          />
+              <QuickCheck
+                questionIndex={1}
+                selectedAnswers={
+                  selectedAnswers
+                }
+                onOptionClick={
+                  handleOptionClick
+                }
+                showResults={showResults}
+              />
+            </BookPage>
+          </>
+        );
 
-          <div className="sukam-infertility-content-grid">
-            <div>
-              <p className="sukam-infertility-body-copy">
-                Male fertility depends on sperm production, sperm quality and
-                the ability to deliver sperm into the female reproductive
-                tract.
+      case 1:
+        return (
+          <>
+            <BookPage
+              side="left"
+              pageNumber={leftPageNumber}
+            >
+              <h2>
+                What is infertility?
+              </h2>
+
+              <p>
+                Infertility is generally
+                defined as the inability to
+                achieve pregnancy after 12
+                months or more of regular,
+                unprotected sexual
+                intercourse.
               </p>
 
-              <p className="sukam-infertility-body-copy">
-                Common concerns include:
+              <div className="inf-reader-highlight-box">
+                <strong>
+                  Fertility is a shared
+                  journey.
+                </strong>
+
+                <p>
+                  Infertility is not solely a
+                  woman’s concern or a man’s
+                  concern. Both partners
+                  should ideally be evaluated
+                  together.
+                </p>
+              </div>
+
+              <h3>
+                Primary infertility
+              </h3>
+
+              <p>
+                Primary infertility refers to
+                difficulty achieving a first
+                pregnancy despite regular,
+                unprotected intercourse for
+                the recommended period.
               </p>
 
-              <CheckList
+              <h3>
+                Secondary infertility
+              </h3>
+
+              <p>
+                Secondary infertility occurs
+                when a couple has conceived
+                in the past but is currently
+                unable to achieve another
+                pregnancy.
+              </p>
+
+              <p className="inf-reader-small-note">
+                Having conceived earlier does
+                not guarantee that fertility
+                will remain unchanged. Age,
+                ovulation, ovarian reserve,
+                sperm factors, infections and
+                surgery can influence future
+                fertility.
+              </p>
+            </BookPage>
+
+            <BookPage
+              side="right"
+              pageNumber={rightPageNumber}
+              onTurnPage={() =>
+                goToChapter(2)
+              }
+            >
+              <h2>
+                How conception works
+              </h2>
+
+              <p>
+                Pregnancy requires several
+                biological events to occur
+                in the correct sequence.
+              </p>
+
+              <div className="inf-reader-numbered-list">
+                {fertilitySteps.map(
+                  (step, index) => (
+                    <div key={step}>
+                      <span>
+                        {index + 1}
+                      </span>
+
+                      <p>{step}</p>
+                    </div>
+                  )
+                )}
+              </div>
+
+              <InfoNote>
+                A difficulty at any stage can
+                reduce the chance of
+                conception. Sometimes more
+                than one factor may be
+                present, and routine testing
+                may not always identify a
+                definite cause.
+              </InfoNote>
+
+              <QuickCheck
+                questionIndex={0}
+                selectedAnswers={
+                  selectedAnswers
+                }
+                onOptionClick={
+                  handleOptionClick
+                }
+                showResults={showResults}
+              />
+            </BookPage>
+          </>
+        );
+
+      case 2:
+        return (
+          <>
+            <BookPage
+              side="left"
+              pageNumber={leftPageNumber}
+            >
+              <h2>
+                Female fertility factors
+              </h2>
+
+              <h3>
+                {femaleFactors[0].title}
+              </h3>
+
+              <p>
+                Irregular or absent
+                ovulation is a common reason
+                for delayed conception. It
+                may be associated with:
+              </p>
+
+              <BulletList
+                items={
+                  femaleFactors[0].items
+                }
+                compact
+              />
+
+              <p className="inf-reader-small-note">
+                {femaleFactors[0].note}
+              </p>
+
+              <h3>
+                {femaleFactors[1].title}
+              </h3>
+
+              {femaleFactors[1].paragraphs.map(
+                (paragraph) => (
+                  <p key={paragraph}>
+                    {paragraph}
+                  </p>
+                )
+              )}
+            </BookPage>
+
+            <BookPage
+              side="right"
+              pageNumber={rightPageNumber}
+              onTurnPage={() =>
+                goToChapter(3)
+              }
+            >
+              <h2>
+                Tubal, pelvic & uterine
+                factors
+              </h2>
+
+              <h3>
+                {femaleFactors[2].title}
+              </h3>
+
+              <BulletList
+                items={
+                  femaleFactors[2].items
+                }
+                compact
+              />
+
+              <p className="inf-reader-small-note">
+                {femaleFactors[2].note}
+              </p>
+
+              <h3>
+                {femaleFactors[3].title}
+              </h3>
+
+              <BulletList
+                items={
+                  femaleFactors[3].items
+                }
+                compact
+              />
+
+              <h3>
+                {femaleFactors[4].title}
+              </h3>
+
+              <BulletList
+                items={
+                  femaleFactors[4].items
+                }
+                compact
+              />
+
+              <InfoNote>
+                {femaleFactors[4].note}
+              </InfoNote>
+            </BookPage>
+          </>
+        );
+
+      case 3:
+        return (
+          <>
+            <BookPage
+              side="left"
+              pageNumber={leftPageNumber}
+            >
+              <h2>
+                Male fertility factors
+              </h2>
+
+              <p>
+                Male fertility depends on
+                sperm production, sperm
+                quality and the ability to
+                deliver sperm into the
+                female reproductive tract.
+              </p>
+
+              <BulletList
                 items={maleConcerns}
-                className="sukam-infertility-check-list--two-column"
+                compact
               />
-            </div>
 
-            <aside className="sukam-infertility-highlight-card">
-              <h3>Semen analysis</h3>
+              <div className="inf-reader-highlight-box">
+                <strong>
+                  Semen analysis
+                </strong>
 
-              <p>
-                A semen analysis is usually one of the first investigations in a
-                fertility evaluation. An abnormal report should be interpreted
-                carefully and may sometimes need to be repeated because semen
-                parameters can vary.
-              </p>
-
-              <p>
-                Male evaluation should not be postponed while the female partner
-                undergoes multiple tests.
-              </p>
-            </aside>
-          </div>
-        </section>
-
-        {/* =========================================================
-            Unexplained Infertility
-        ========================================================= */}
-
-        <section className="sukam-infertility-section">
-          <SectionHeading
-            eyebrow="When routine tests are normal"
-            title="What is unexplained infertility?"
-          />
-
-          <div className="sukam-infertility-reading-card">
-            <p>
-              In some couples, ovulation appears normal, the fallopian tubes are
-              open, the uterus does not show a significant abnormality and semen
-              parameters are within acceptable limits—but pregnancy still does
-              not occur.
-            </p>
-
-            <p className="sukam-infertility-reading-card-emphasis">
-              This is known as unexplained infertility.
-            </p>
-
-            <p>
-              The term does not mean that there is no reason. It means that
-              standard investigations have not identified a definite cause.
-              Fertilisation, egg quality, sperm function, embryo development or
-              implantation may involve factors that routine tests cannot fully
-              measure.
-            </p>
-
-            <p>
-              Treatment is selected according to the couple’s age, duration of
-              infertility, previous treatments and overall fertility profile.
-            </p>
-          </div>
-        </section>
-
-        {/* =========================================================
-            When to Seek Advice
-        ========================================================= */}
-
-        <section className="sukam-infertility-section">
-          <SectionHeading
-            eyebrow="Do not delay when"
-            title="When should you seek fertility advice earlier?"
-            description="Consider consulting a fertility specialist without waiting for 12 months if there is:"
-          />
-
-          <div className="sukam-infertility-warning-card">
-            <CheckList
-              items={earlyAdviceItems}
-              className="sukam-infertility-check-list--two-column"
-            />
-          </div>
-
-          <p className="sukam-infertility-section-closing">
-            Early evaluation is particularly important when time may influence
-            the available treatment choices.
-          </p>
-        </section>
-
-        {/* =========================================================
-            Fertility Evaluation
-        ========================================================= */}
-
-        <section className="sukam-infertility-section sukam-infertility-section--tinted">
-          <SectionHeading
-            eyebrow="Evaluation"
-            title="What happens during a fertility evaluation?"
-            description="Fertility evaluation should be systematic and individualised. Not every couple requires every available test."
-          />
-
-          <div className="sukam-infertility-evaluation-grid">
-            <article className="sukam-infertility-evaluation-card">
-              <span className="sukam-infertility-evaluation-label">
-                Consultation
-              </span>
-
-              <h3>Detailed consultation</h3>
-
-              <p>The doctor may discuss:</p>
-
-              <CheckList items={consultationTopics} />
-
-              <p className="sukam-infertility-card-note">
-                Both partners should participate whenever possible.
-              </p>
-            </article>
-
-            <article className="sukam-infertility-evaluation-card">
-              <span className="sukam-infertility-evaluation-label">
-                Women
-              </span>
-
-              <h3>Evaluation of the female partner</h3>
-
-              <p>
-                Depending on the clinical history, the evaluation may include:
-              </p>
-
-              <CheckList items={femaleEvaluation} />
-
-              <p className="sukam-infertility-card-note">
-                Ovarian reserve tests help estimate the likely response of the
-                ovaries to stimulation. They do not independently confirm
-                whether natural pregnancy is possible or impossible.
-              </p>
-            </article>
-
-            <article className="sukam-infertility-evaluation-card">
-              <span className="sukam-infertility-evaluation-label">Men</span>
-
-              <h3>Evaluation of the male partner</h3>
-
-              <p>Initial evaluation commonly includes:</p>
-
-              <CheckList items={maleEvaluation} />
-
-              <p className="sukam-infertility-card-note">
-                The results of both partners are considered together before
-                treatment is planned.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        {/* =========================================================
-            Treatment
-        ========================================================= */}
-
-        <section className="sukam-infertility-section">
-          <SectionHeading
-            eyebrow="Treatment"
-            title="Does infertility always require IVF?"
-          />
-
-          <div className="sukam-infertility-answer-banner">
-            <span>No.</span>
-
-            <p>
-              IVF is one of several fertility treatments, but it is not the
-              first or only solution for every couple.
-            </p>
-          </div>
-
-          <p className="sukam-infertility-body-copy">
-            Depending on the diagnosis, age and duration of infertility,
-            treatment may include:
-          </p>
-
-          <div className="sukam-infertility-treatment-grid">
-            {treatmentOptions.map((option) => (
-              <div className="sukam-infertility-treatment-item" key={option}>
-                <span aria-hidden="true">+</span>
-                <p>{option}</p>
+                <p>
+                  A semen analysis is usually
+                  one of the first
+                  investigations in a
+                  fertility evaluation. An
+                  abnormal result should be
+                  interpreted carefully and
+                  may sometimes need to be
+                  repeated.
+                </p>
               </div>
-            ))}
-          </div>
+            </BookPage>
 
-          <p className="sukam-infertility-section-closing">
-            The aim is to recommend the most suitable treatment—not
-            automatically the most advanced treatment.
-          </p>
-        </section>
-
-        {/* =========================================================
-            Lifestyle & Emotional Wellbeing
-        ========================================================= */}
-
-        <section className="sukam-infertility-section">
-          <div className="sukam-infertility-wellbeing-grid">
-            <article className="sukam-infertility-wellbeing-card">
-              <span className="sukam-infertility-section-eyebrow">
-                Daily health
-              </span>
-
-              <h2>Lifestyle and fertility</h2>
-
-              <p>
-                Lifestyle changes cannot correct every fertility condition, but
-                they can support reproductive and general health.
-              </p>
-
-              <p>Helpful measures may include:</p>
-
-              <CheckList items={lifestyleMeasures} />
-
-              <p className="sukam-infertility-card-note">
-                Couples should be cautious about unproven supplements, detox
-                programmes and treatments that promise guaranteed pregnancy.
-              </p>
-            </article>
-
-            <article className="sukam-infertility-wellbeing-card">
-              <span className="sukam-infertility-section-eyebrow">
-                Emotional wellbeing
-              </span>
-
-              <h2>The emotional side of infertility</h2>
-
-              <p>
-                Infertility can affect emotional well-being, relationships,
-                intimacy, work and social life. Feelings of sadness, anger,
-                guilt, anxiety and isolation are common.
-              </p>
-
-              <p className="sukam-infertility-emphasis-line">
-                Neither partner should be blamed. Infertility is a medical
-                concern—not a personal failure.
-              </p>
-
-              <p>
-                Open communication, emotional support and counselling can help
-                couples cope with investigations and treatment. Seeking
-                psychological support does not indicate weakness; it is part of
-                comprehensive fertility care.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        {/* =========================================================
-            Sukam Clinic Approach
-        ========================================================= */}
-
-        <section className="sukam-infertility-section sukam-infertility-clinic-panel">
-          <div className="sukam-infertility-clinic-panel-heading">
-            <span className="sukam-infertility-section-eyebrow">
-              Sukam Clinic
-            </span>
-
-            <h2>Our approach at Sukam Clinic</h2>
-
-            <p>
-              At Sukam Clinic, fertility care begins by listening to the
-              couple’s concerns and understanding their complete medical and
-              reproductive history.
-            </p>
-          </div>
-
-          <CheckList
-            items={clinicApproach}
-            className="sukam-infertility-check-list--two-column sukam-infertility-check-list--light"
-          />
-
-          <div className="sukam-infertility-clinic-panel-footer">
-            <p>
-              Every couple’s situation is different. Therefore, treatment is
-              planned according to age, diagnosis, duration of infertility,
-              ovarian reserve, semen findings, previous treatment and personal
-              preferences.
-            </p>
-
-            <p>
-              No fertility treatment can guarantee pregnancy. Clear counselling
-              and realistic expectations are essential parts of ethical
-              fertility care.
-            </p>
-          </div>
-        </section>
-
-        {/* =========================================================
-            Myths and Facts
-        ========================================================= */}
-
-        <section className="sukam-infertility-section">
-          <SectionHeading
-            eyebrow="Clarity over misconceptions"
-            title="Fertility myths and facts"
-          />
-
-          <div className="sukam-infertility-myth-grid">
-            {mythsAndFacts.map((item) => (
-              <article className="sukam-infertility-myth-card" key={item.myth}>
-                <div className="sukam-infertility-myth-label">Myth</div>
-
-                <h3>{item.myth}</h3>
-
-                <div className="sukam-infertility-fact-block">
-                  <span>Fact</span>
-                  <p>{item.fact}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* =========================================================
-            Frequently Asked Questions
-        ========================================================= */}
-
-        <section className="sukam-infertility-section">
-          <SectionHeading
-            eyebrow="Common questions"
-            title="Frequently asked questions"
-          />
-
-          <div className="sukam-infertility-faq-list">
-            {faqs.map((faq, index) => (
-              <details
-                className="sukam-infertility-faq-item"
-                key={faq.question}
-                open={index === 0}
-              >
-                <summary>
-                  <span>{faq.question}</span>
-
-                  <span
-                    className="sukam-infertility-faq-icon"
-                    aria-hidden="true"
-                  >
-                    +
-                  </span>
-                </summary>
-
-                <div className="sukam-infertility-faq-answer">
-                  <p>{faq.answer}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </section>
-
-        {/* =========================================================
-            Fertility Awareness Quiz
-        ========================================================= */}
-
-        <section className="sukam-infertility-section sukam-infertility-quiz-section">
-          <SectionHeading
-            eyebrow="Knowledge check"
-            title="Quick fertility awareness quiz"
-            description="Answer all five questions and check your score."
-          />
-
-          <div className="sukam-infertility-quiz-progress-wrap">
-            <div className="sukam-infertility-quiz-progress-meta">
-              <span>
-                {answeredCount} of {totalQuestions} answered
-              </span>
-
-              <span>{Math.round(progressPercentage)}%</span>
-            </div>
-
-            <div
-              className="sukam-infertility-quiz-progress-track"
-              role="progressbar"
-              aria-label="Quiz progress"
-              aria-valuemin="0"
-              aria-valuemax={totalQuestions}
-              aria-valuenow={answeredCount}
+            <BookPage
+              side="right"
+              pageNumber={rightPageNumber}
+              onTurnPage={() =>
+                goToChapter(4)
+              }
             >
-              <div
-                className="sukam-infertility-quiz-progress-bar"
-                style={{ width: `${progressPercentage}%` }}
+              <h2>
+                What is unexplained
+                infertility?
+              </h2>
+
+              <p>
+                In some couples, ovulation
+                appears normal, the fallopian
+                tubes are open, the uterus
+                does not show a significant
+                abnormality and semen
+                parameters are within
+                acceptable limits—but
+                pregnancy still does not
+                occur.
+              </p>
+
+              <div className="inf-reader-quote-card is-blue">
+                <span aria-hidden="true">
+                  “
+                </span>
+
+                <p>
+                  Unexplained infertility
+                  does not mean that there is
+                  no reason. It means
+                  standard investigations
+                  have not identified a
+                  definite cause.
+                </p>
+              </div>
+
+              <p>
+                Fertilisation, egg quality,
+                sperm function, embryo
+                development or implantation
+                may involve factors that
+                routine tests cannot fully
+                measure.
+              </p>
+
+              <p>
+                Treatment is selected
+                according to the couple’s
+                age, duration of infertility,
+                previous treatments and
+                overall fertility profile.
+              </p>
+
+              <QuickCheck
+                questionIndex={4}
+                selectedAnswers={
+                  selectedAnswers
+                }
+                onOptionClick={
+                  handleOptionClick
+                }
+                showResults={showResults}
               />
-            </div>
-          </div>
+            </BookPage>
+          </>
+        );
 
-          <div className="sukam-infertility-quiz-list">
-            {quizData.map((question, questionIndex) => (
-              <article
-                className="sukam-infertility-quiz-card"
-                key={question.question}
-              >
-                <div className="sukam-infertility-quiz-card-heading">
-                  <span>
-                    Question {questionIndex + 1} of {totalQuestions}
-                  </span>
+      case 4:
+        return (
+          <>
+            <BookPage
+              side="left"
+              pageNumber={leftPageNumber}
+            >
+              <h2>
+                When should you seek
+                fertility advice earlier?
+              </h2>
 
-                  <h3>{question.question}</h3>
-                </div>
+              <p>
+                Consider consulting a
+                fertility specialist without
+                waiting for 12 months if any
+                of the following apply:
+              </p>
 
-                <div className="sukam-infertility-quiz-options">
-                  {question.options.map((option, optionIndex) => {
-                    const stateClass = getOptionStateClass(
-                      questionIndex,
-                      option,
-                      question.answer
-                    );
+              <BulletList
+                items={earlyAdviceItems}
+                compact
+              />
 
-                    return (
-                      <button
-                        type="button"
-                        className={`sukam-infertility-quiz-option ${stateClass}`.trim()}
-                        key={option}
-                        onClick={() =>
-                          handleOptionClick(questionIndex, option)
-                        }
-                        disabled={showResults}
-                        aria-pressed={
-                          selectedAnswers[questionIndex] === option
-                        }
-                      >
-                        <span className="sukam-infertility-option-letter">
-                          {String.fromCharCode(65 + optionIndex)}
-                        </span>
+              <InfoNote>
+                Early evaluation is
+                particularly important when
+                time may influence the
+                available treatment choices.
+              </InfoNote>
+            </BookPage>
 
-                        <span>{option}</span>
-                      </button>
-                    );
-                  })}
-                </div>
+            <BookPage
+              side="right"
+              pageNumber={rightPageNumber}
+              onTurnPage={() =>
+                goToChapter(5)
+              }
+            >
+              <h2>
+                What happens during a
+                consultation?
+              </h2>
 
-                {showResults && (
-                  <div
-                    className={`sukam-infertility-question-result ${
-                      selectedAnswers[questionIndex] === question.answer
-                        ? "is-correct"
-                        : "is-incorrect"
-                    }`}
-                  >
-                    <strong>
-                      {selectedAnswers[questionIndex] === question.answer
-                        ? "Correct"
-                        : "Incorrect"}
-                    </strong>
+              <p>
+                Fertility evaluation should
+                be systematic and
+                individualised. Not every
+                couple requires every
+                available test.
+              </p>
 
-                    <span>Correct answer: {question.answer}</span>
-                  </div>
+              <h3>
+                Your doctor may discuss
+              </h3>
+
+              <BulletList
+                items={consultationTopics}
+                compact
+              />
+
+              <div className="inf-reader-highlight-box">
+                <strong>
+                  Attend together whenever
+                  possible
+                </strong>
+
+                <p>
+                  Both partners’ histories
+                  and results are considered
+                  together before treatment
+                  is planned.
+                </p>
+              </div>
+            </BookPage>
+          </>
+        );
+
+      case 5:
+        return (
+          <>
+            <BookPage
+              side="left"
+              pageNumber={leftPageNumber}
+            >
+              <h2>
+                Evaluation of the female
+                partner
+              </h2>
+
+              <p>
+                Depending on the clinical
+                history, the evaluation may
+                include:
+              </p>
+
+              <div className="inf-reader-test-list">
+                {femaleEvaluation.map(
+                  (item, index) => (
+                    <div key={item}>
+                      <span>
+                        {String(
+                          index + 1
+                        ).padStart(2, "0")}
+                      </span>
+
+                      <p>{item}</p>
+                    </div>
+                  )
                 )}
-              </article>
-            ))}
-          </div>
-
-          {!showResults && (
-            <div className="sukam-infertility-quiz-actions">
-              <p>
-                {isQuizComplete
-                  ? "You have answered all questions."
-                  : `Answer ${totalQuestions - answeredCount} more ${
-                      totalQuestions - answeredCount === 1
-                        ? "question"
-                        : "questions"
-                    } to view your result.`}
-              </p>
-
-              <button
-                type="button"
-                className="sukam-infertility-primary-button"
-                onClick={handleShowResults}
-                disabled={!isQuizComplete}
-              >
-                See Results
-              </button>
-            </div>
-          )}
-
-          {showResults && (
-            <div
-              className="sukam-infertility-results-card"
-              aria-live="polite"
-            >
-              <div className="sukam-infertility-score-circle">
-                <strong>{results.percentage}%</strong>
-                <span>Your score</span>
               </div>
 
-              <div className="sukam-infertility-results-content">
-                <span className="sukam-infertility-section-eyebrow">
-                  Quiz complete
+              <InfoNote>
+                Ovarian reserve tests help
+                estimate the likely response
+                of the ovaries to
+                stimulation. They do not
+                independently determine
+                whether natural conception
+                is possible or impossible.
+              </InfoNote>
+            </BookPage>
+
+            <BookPage
+              side="right"
+              pageNumber={rightPageNumber}
+              onTurnPage={() =>
+                goToChapter(6)
+              }
+            >
+              <h2>
+                Evaluation of the male
+                partner
+              </h2>
+
+              <p>
+                Initial evaluation commonly
+                includes:
+              </p>
+
+              <div className="inf-reader-test-list">
+                {maleEvaluation.map(
+                  (item, index) => (
+                    <div key={item}>
+                      <span>
+                        {String(
+                          index + 1
+                        ).padStart(2, "0")}
+                      </span>
+
+                      <p>{item}</p>
+                    </div>
+                  )
+                )}
+              </div>
+
+              <div className="inf-reader-highlight-box">
+                <strong>
+                  Do not postpone male
+                  evaluation
+                </strong>
+
+                <p>
+                  Male evaluation should not
+                  be delayed while the female
+                  partner undergoes multiple
+                  tests.
+                </p>
+              </div>
+
+              <QuickCheck
+                questionIndex={3}
+                selectedAnswers={
+                  selectedAnswers
+                }
+                onOptionClick={
+                  handleOptionClick
+                }
+                showResults={showResults}
+              />
+            </BookPage>
+          </>
+        );
+
+      case 6:
+        return (
+          <>
+            <BookPage
+              side="left"
+              pageNumber={leftPageNumber}
+            >
+              <h2>
+                Does infertility always
+                require IVF?
+              </h2>
+
+              <div className="inf-reader-no-banner">
+                <strong>No.</strong>
+
+                <p>
+                  IVF is one of several
+                  fertility treatments, but
+                  it is not the first or only
+                  solution for every couple.
+                </p>
+              </div>
+
+              <h3>
+                Treatment may include
+              </h3>
+
+              <BulletList
+                items={treatmentOptions}
+                compact
+              />
+
+              <p className="inf-reader-small-note">
+                The aim is to recommend the
+                most suitable treatment—not
+                automatically the most
+                advanced treatment.
+              </p>
+            </BookPage>
+
+            <BookPage
+              side="right"
+              pageNumber={rightPageNumber}
+              onTurnPage={() =>
+                goToChapter(7)
+              }
+            >
+              <h2>
+                Lifestyle & emotional
+                wellbeing
+              </h2>
+
+              <p>
+                Lifestyle changes cannot
+                correct every fertility
+                condition, but they can
+                support reproductive and
+                general health.
+              </p>
+
+              <BulletList
+                items={lifestyleMeasures}
+                compact
+              />
+
+              <div className="inf-reader-quote-card">
+                <span aria-hidden="true">
+                  “
+                </span>
+
+                <p>
+                  Neither partner should be
+                  blamed. Infertility is a
+                  medical concern—not a
+                  personal failure.
+                </p>
+              </div>
+
+              <p>
+                Open communication,
+                emotional support and
+                counselling can help couples
+                cope with investigations and
+                treatment.
+              </p>
+
+              <QuickCheck
+                questionIndex={2}
+                selectedAnswers={
+                  selectedAnswers
+                }
+                onOptionClick={
+                  handleOptionClick
+                }
+                showResults={showResults}
+              />
+            </BookPage>
+          </>
+        );
+
+      case 7:
+      default:
+        return (
+          <>
+            <BookPage
+              side="left"
+              pageNumber={leftPageNumber}
+            >
+              <h2>
+                Our approach at Sukam Clinic
+              </h2>
+
+              <p>
+                Fertility care begins by
+                listening to the couple’s
+                concerns and understanding
+                their complete medical and
+                reproductive history.
+              </p>
+
+              <BulletList
+                items={clinicApproach}
+                compact
+              />
+
+              <h3>
+                Fertility myths & facts
+              </h3>
+
+              <div className="inf-reader-accordion-stack">
+                {mythsAndFacts.map(
+                  (item) => (
+                    <details
+                      key={item.myth}
+                    >
+                      <summary>
+                        {item.myth}
+                      </summary>
+
+                      <p>
+                        <strong>
+                          Fact:
+                        </strong>{" "}
+                        {item.fact}
+                      </p>
+                    </details>
+                  )
+                )}
+              </div>
+
+              <h3>
+                Frequently asked questions
+              </h3>
+
+              <div className="inf-reader-accordion-stack">
+                {faqs.map((item) => (
+                  <details
+                    key={item.question}
+                  >
+                    <summary>
+                      {item.question}
+                    </summary>
+
+                    <p>{item.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </BookPage>
+
+            <BookPage
+              side="right"
+              pageNumber={rightPageNumber}
+            >
+              <h2>
+                Quick fertility awareness
+                quiz
+              </h2>
+
+              <p>
+                Answer all five questions.
+                Your score appears after all
+                questions have been
+                completed.
+              </p>
+
+              <div className="inf-reader-final-quiz">
+                {quizData.map(
+                  (
+                    question,
+                    questionIndex
+                  ) => (
+                    <QuickCheck
+                      key={
+                        question.question
+                      }
+                      questionIndex={
+                        questionIndex
+                      }
+                      selectedAnswers={
+                        selectedAnswers
+                      }
+                      onOptionClick={
+                        handleOptionClick
+                      }
+                      showResults={
+                        showResults
+                      }
+                    />
+                  )
+                )}
+              </div>
+
+              {!showResults && (
+                <button
+                  type="button"
+                  className="inf-reader-result-button"
+                  disabled={
+                    answeredCount !==
+                    totalQuestions
+                  }
+                  onClick={() =>
+                    setShowResults(true)
+                  }
+                >
+                  See Results
+                </button>
+              )}
+
+              {showResults && (
+                <div
+                  className="inf-reader-result-card"
+                  aria-live="polite"
+                >
+                  <strong>
+                    {
+                      quizResults.percentage
+                    }
+                    %
+                  </strong>
+
+                  <div>
+                    <h3>
+                      Your fertility
+                      awareness score
+                    </h3>
+
+                    <p>
+                      {
+                        quizResults.correct
+                      }{" "}
+                      correct ·{" "}
+                      {
+                        quizResults.wrong
+                      }{" "}
+                      incorrect
+                    </p>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSelectedAnswers(
+                          {}
+                        );
+
+                        setShowResults(
+                          false
+                        );
+                      }}
+                    >
+                      Try again
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              <div className="inf-reader-contact-card">
+                <span>
+                  Take the first step with
+                  clarity
                 </span>
 
                 <h3>
-                  {results.correct} correct out of {totalQuestions}
+                  Consult Dr Anitha A Manoj
                 </h3>
 
                 <p>
-                  Correct answers: {results.correct} · Incorrect answers:{" "}
-                  {results.wrong}
+                  Senior Fertility Specialist
+                  · Highrisk Obstetrician
                 </p>
 
+                <strong>
+                  Sukam Clinic – Maternity,
+                  Fertility & Speciality
+                </strong>
+
+                <div>
+                  <a href="tel:8108108310">
+                    8108108310
+                  </a>
+
+                  <a href="tel:9108108980">
+                    9108108980
+                  </a>
+
+                  <a
+                    href="https://www.sukamspeciality.in/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Visit website
+                  </a>
+                </div>
+              </div>
+            </BookPage>
+          </>
+        );
+    }
+  };
+
+  return (
+    <main
+      className="inf-reader"
+      style={{
+        "--reader-scale": fontScale,
+      }}
+    >
+      <header className="inf-reader-header">
+        <div
+          className="inf-reader-header-mark"
+          aria-hidden="true"
+        >
+          ♡
+        </div>
+
+        <div className="inf-reader-header-copy">
+          <h1>
+            Infertility Insights
+          </h1>
+
+          <p>
+            A patient-friendly guide to
+            understanding your fertility
+            journey
+          </p>
+        </div>
+
+        <div
+          className="inf-reader-header-decoration"
+          aria-hidden="true"
+        />
+      </header>
+
+      <div className="inf-reader-layout">
+        <aside className="inf-reader-contents">
+          <h2>CONTENTS</h2>
+
+          <nav
+            aria-label="Infertility guide chapters"
+          >
+            {chapters.map(
+              (chapter, index) => (
                 <button
                   type="button"
-                  className="sukam-infertility-secondary-button"
-                  onClick={handleTryAgain}
+                  key={chapter}
+                  className={
+                    currentChapter ===
+                    index
+                      ? "is-active"
+                      : ""
+                  }
+                  onClick={() =>
+                    goToChapter(index)
+                  }
                 >
-                  Try Again
+                  <span>
+                    {String(
+                      index + 1
+                    ).padStart(2, "0")}
+                  </span>
+
+                  <strong>
+                    {chapter}
+                  </strong>
                 </button>
-              </div>
-            </div>
-          )}
-        </section>
+              )
+            )}
+          </nav>
 
-        {/* =========================================================
-            Final CTA
-        ========================================================= */}
-
-        <section className="sukam-infertility-cta-section">
-          <div className="sukam-infertility-cta-content">
-            <span className="sukam-infertility-section-eyebrow">
-              Take the first step with clarity
+          <div className="inf-reader-contents-footer">
+            <span aria-hidden="true">
+              ♡
             </span>
 
-            <h2>
-              Understanding the reason is the beginning of the right path.
-            </h2>
-
             <p>
-              If pregnancy has not occurred within the expected time—or if
-              either partner has a condition that may affect fertility—an early
-              consultation can provide clarity.
-            </p>
-
-            <p>
-              A fertility evaluation is not a commitment to IVF. It is the
-              first step toward understanding the possible reason for delayed
-              conception and selecting an appropriate path forward.
+              Better information.
+              <br />
+              Brighter tomorrows.
             </p>
           </div>
+        </aside>
 
-          <aside className="sukam-infertility-contact-card">
-            <span className="sukam-infertility-contact-kicker">
-              Consult
-            </span>
+        <section className="inf-reader-book-stage">
+          <div className="inf-reader-tools">
+            <button
+              type="button"
+              className="inf-reader-tool-button"
+              onClick={
+                handleFontSize
+              }
+              aria-label="Change reading font size"
+              title="Change font size"
+            >
+              <span>Aa</span>
+              <small>⌄</small>
+            </button>
 
-            <h3>Dr Anitha A Manoj</h3>
+            <button
+              type="button"
+              className={`inf-reader-tool-button ${
+                isSpeaking
+                  ? "is-active"
+                  : ""
+              }`}
+              onClick={handleListen}
+              aria-label={
+                isSpeaking
+                  ? "Stop listening"
+                  : "Listen to chapter"
+              }
+            >
+              <span aria-hidden="true">
+                ◉
+              </span>
 
-            <p>Senior Fertility Specialist</p>
-            <p>Highrisk Obstetrician</p>
+              <strong>
+                {isSpeaking
+                  ? "Stop"
+                  : "Listen"}
+              </strong>
+            </button>
+          </div>
 
-            <div className="sukam-infertility-contact-divider" />
+          <div className="inf-reader-book-spread">
+            {renderChapter()}
+          </div>
 
-            <strong>
-              Sukam Clinic – Maternity, Fertility & Speciality
-            </strong>
+          <div className="inf-reader-navigation">
+            <button
+              type="button"
+              className="inf-reader-nav-button inf-reader-nav-button--previous"
+              onClick={() =>
+                goToChapter(
+                  currentChapter - 1
+                )
+              }
+              disabled={
+                currentChapter === 0
+              }
+            >
+              <span aria-hidden="true">
+                ←
+              </span>
 
-            <span>Building Dreams, Delivering Miracles</span>
+              Previous
+            </button>
 
-            <div className="sukam-infertility-contact-actions">
-              <a href="tel:8108108310">
-                Call 8108108310
-              </a>
+            <div className="inf-reader-progress">
+              <strong>
+                Chapter{" "}
+                {currentChapter + 1} of{" "}
+                {chapters.length}
+              </strong>
 
-              <a href="tel:9108108980">
-                Call 9108108980
-              </a>
+              <div className="inf-reader-progress-row">
+                <div className="inf-reader-progress-track">
+                  <div
+                    className="inf-reader-progress-fill"
+                    style={{
+                      width: `${chapterProgress}%`,
+                    }}
+                  />
+                </div>
 
-              <a
-                href="https://www.sukamspeciality.in/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Visit Website
-              </a>
+                <span>
+                  {Math.round(
+                    chapterProgress
+                  )}
+                  %
+                </span>
+              </div>
             </div>
-          </aside>
+
+            <button
+              type="button"
+              className="inf-reader-nav-button inf-reader-nav-button--next"
+              onClick={() =>
+                goToChapter(
+                  currentChapter + 1
+                )
+              }
+              disabled={
+                currentChapter ===
+                chapters.length - 1
+              }
+            >
+              Next page
+
+              <span aria-hidden="true">
+                →
+              </span>
+            </button>
+          </div>
         </section>
       </div>
     </main>
