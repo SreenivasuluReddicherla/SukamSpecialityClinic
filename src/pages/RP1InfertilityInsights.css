@@ -1536,9 +1536,58 @@
   outline: 3px solid rgba(239, 119, 173, 0.35);
   outline-offset: 2px;
 }
+/* =========================================================
+   RESPONSIVE DESIGN
+   Tablet + Mobile Optimized
+   Replace the complete old responsive section with this
+========================================================= */
 
 /* =========================================================
-   Responsive
+   Global Responsive Safety
+========================================================= */
+
+.inf-reader {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.inf-reader img,
+.inf-reader svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.inf-reader button,
+.inf-reader a,
+.inf-reader summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.inf-reader-book-stage,
+.inf-reader-book-spread,
+.inf-reader-book-page,
+.inf-reader-page-content {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.inf-reader-book-page p,
+.inf-reader-book-page li,
+.inf-reader-book-page h1,
+.inf-reader-book-page h2,
+.inf-reader-book-page h3,
+.inf-reader-book-page h4,
+.inf-reader-book-page span,
+.inf-reader-book-page strong {
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   Large Tablet / Small Laptop
+   1025px - 1210px
 ========================================================= */
 
 @media (max-width: 1210px) {
@@ -1546,95 +1595,304 @@
     --reader-book-height: 650px;
   }
 
+  .inf-reader-header {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
   .inf-reader-layout {
-    grid-template-columns: 188px minmax(0, 1fr);
-    width: min(1180px, calc(100% - 30px));
+    grid-template-columns: 180px minmax(0, 1fr);
     gap: 16px;
+
+    width: min(1180px, calc(100% - 28px));
+  }
+
+  .inf-reader-contents {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 
   .inf-reader-contents nav button {
-    grid-template-columns: 25px 1fr;
-    padding-inline: 7px;
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 6px;
+
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .inf-reader-contents nav button span {
+    font-size: 0.7rem;
   }
 
   .inf-reader-contents nav button strong {
-    font-size: 0.68rem;
+    font-size: 0.7rem;
   }
 
   .inf-reader-book-page {
-    padding-inline: 27px;
+    padding:
+      24px
+      clamp(24px, 3vw, 34px)
+      32px;
+  }
+
+  .inf-reader-book-page h2 {
+    font-size:
+      calc(
+        clamp(1.55rem, 2.5vw, 2.15rem)
+        * var(--reader-scale)
+      );
+  }
+
+  .inf-reader-page-content {
+    font-size:
+      calc(
+        0.8rem
+        * var(--reader-scale)
+      );
   }
 }
+
+
+/* =========================================================
+   Tablet
+   <= 1000px
+========================================================= */
 
 @media (max-width: 1000px) {
   .inf-reader {
     --reader-book-height: 620px;
   }
 
+  /* -------------------------
+     Header
+  ------------------------- */
+
   .inf-reader-header {
-    grid-template-columns: 80px 1fr 80px;
+    grid-template-columns: 70px 1fr 70px;
+
+    min-height: 94px;
+
+    padding:
+      14px
+      20px;
   }
 
-  .inf-reader-layout {
-    grid-template-columns: 1fr;
+  .inf-reader-header h1 {
+    font-size:
+      clamp(
+        1.9rem,
+        4vw,
+        2.7rem
+      );
   }
+
+  .inf-reader-header p {
+    font-size: 0.92rem;
+  }
+
+  .inf-reader-header-mark {
+    width: 60px;
+    font-size: 55px;
+  }
+
+  /* -------------------------
+     Main Layout
+  ------------------------- */
+
+  .inf-reader-layout {
+    display: block;
+
+    width: min(
+      100% - 24px,
+      960px
+    );
+
+    margin-top: 16px;
+  }
+
+  /* -------------------------
+     Contents Navigation
+  ------------------------- */
 
   .inf-reader-contents {
     position: static;
 
+    display: block;
+
+    width: 100%;
     height: auto;
     min-height: 0;
     max-height: none;
-    padding: 13px;
+
+    margin-bottom: 14px;
+    padding: 12px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
   }
 
   .inf-reader-contents h2 {
-    margin: 0 4px 9px;
+    margin:
+      0
+      4px
+      10px;
+
+    font-size: 0.76rem;
   }
 
   .inf-reader-contents nav {
     display: flex;
-    gap: 6px;
+    gap: 7px;
+
+    width: 100%;
 
     overflow-x: auto;
-    padding-bottom: 4px;
+    overflow-y: hidden;
+
+    padding:
+      0
+      0
+      5px;
+
+    scrollbar-width: thin;
+
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .inf-reader-contents nav::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .inf-reader-contents nav::-webkit-scrollbar-thumb {
+    background:
+      rgba(
+        47,
+        106,
+        168,
+        0.18
+      );
+
+    border-radius: 10px;
   }
 
   .inf-reader-contents nav button {
+    display: flex;
     flex: 0 0 auto;
-    grid-template-columns: auto auto;
+    gap: 7px;
+    align-items: center;
 
     width: auto;
-    min-height: 37px;
-    padding: 7px 10px;
+    min-width: max-content;
+    min-height: 40px;
+
+    padding:
+      8px
+      12px;
 
     border-left: 0;
-    border-bottom: 3px solid transparent;
-    border-radius: 6px;
+    border-bottom:
+      3px
+      solid
+      transparent;
+
+    border-radius: 7px;
   }
 
   .inf-reader-contents nav button.is-active {
-    border-bottom-color: var(--reader-pink-deep);
+    border-left: 0;
+
+    border-bottom-color:
+      var(--reader-pink-deep);
+  }
+
+  .inf-reader-contents nav button span,
+  .inf-reader-contents nav button strong {
+    font-size: 0.72rem;
   }
 
   .inf-reader-contents-footer {
     display: none;
   }
 
-  .inf-reader-page-content {
-    font-size: calc(0.8rem * var(--reader-scale));
+  /* -------------------------
+     Tools
+  ------------------------- */
+
+  .inf-reader-tools {
+    margin:
+      0
+      0
+      9px;
+
+    padding-right: 2px;
   }
 
+  /* -------------------------
+     Book
+  ------------------------- */
+
   .inf-reader-book-page {
-    padding: 23px 24px 31px;
+    padding:
+      22px
+      24px
+      30px;
+  }
+
+  .inf-reader-page-content {
+    font-size:
+      calc(
+        0.79rem
+        * var(--reader-scale)
+      );
+  }
+
+  /* -------------------------
+     Navigation
+  ------------------------- */
+
+  .inf-reader-navigation {
+    grid-template-columns:
+      135px
+      minmax(200px, 1fr)
+      135px;
+
+    gap: 15px;
   }
 }
 
-@media (max-width: 760px) {
+
+/* =========================================================
+   Mobile / Portrait Tablet
+   <= 768px
+========================================================= */
+
+@media (max-width: 768px) {
+  .inf-reader {
+    --reader-book-height: auto;
+
+    min-height: 100vh;
+
+    padding-bottom: 22px;
+  }
+
+  /* -------------------------
+     Header
+  ------------------------- */
+
   .inf-reader-header {
-    grid-template-columns: 1fr;
-    min-height: 92px;
-    padding: 15px 18px;
+    display: block;
+
+    min-height: auto;
+
+    padding:
+      18px
+      16px
+      16px;
+
+    text-align: center;
   }
 
   .inf-reader-header-mark,
@@ -1642,116 +1900,831 @@
     display: none;
   }
 
-  .inf-reader-header h1 {
-    font-size: 2rem;
+  .inf-reader-header-copy {
+    width: 100%;
+    max-width: 100%;
   }
+
+  .inf-reader-header h1 {
+    margin: 0;
+
+    font-size:
+      clamp(
+        1.85rem,
+        7vw,
+        2.4rem
+      );
+
+    line-height: 1.1;
+  }
+
+  .inf-reader-header p {
+    max-width: 460px;
+
+    margin:
+      7px
+      auto
+      0;
+
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  /* -------------------------
+     Main Layout
+  ------------------------- */
 
   .inf-reader-layout {
-    width: min(100% - 18px, 740px);
-    margin-top: 16px;
+    width: calc(100% - 16px);
+
+    margin:
+      14px
+      auto
+      0;
   }
+
+  /* -------------------------
+     Contents
+  ------------------------- */
+
+  .inf-reader-contents {
+    margin-bottom: 12px;
+    padding: 10px;
+
+    border-radius: 10px;
+  }
+
+  .inf-reader-contents h2 {
+    margin-bottom: 8px;
+
+    font-size: 0.72rem;
+  }
+
+  .inf-reader-contents nav {
+    gap: 6px;
+  }
+
+  .inf-reader-contents nav button {
+    min-height: 38px;
+
+    padding:
+      7px
+      10px;
+  }
+
+  .inf-reader-contents nav button strong {
+    font-size: 0.7rem;
+  }
+
+  /* -------------------------
+     Reader Tools
+  ------------------------- */
 
   .inf-reader-tools {
-    margin-right: 0;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+
+    width: 100%;
+
+    margin:
+      0
+      0
+      9px;
   }
 
-  .inf-reader-book-spread {
-    display: block;
+  .inf-reader-tool-button {
+    min-height: 38px;
 
-    height: auto;
+    padding:
+      0
+      12px;
+
+    font-size: 0.78rem;
+  }
+
+  /* =====================================================
+     IMPORTANT:
+     Remove Desktop Book Spread Behaviour
+  ===================================================== */
+
+  .inf-reader-book-spread {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto !important;
+    min-height: 0;
+
+    overflow: visible;
 
     background: transparent;
-    perspective: none;
-    box-shadow: none;
+
+    border: 0;
+    border-radius: 0;
+
+    perspective: none !important;
+
+    box-shadow: none !important;
+
+    transform: none !important;
   }
 
   .inf-reader-book-spread::before,
   .inf-reader-book-spread::after,
-  .inf-reader-page-turn-sheet {
-    display: none;
+  .inf-reader-page-turn-sheet,
+  .inf-reader-page-turn-sheet::before,
+  .inf-reader-page-turn-sheet::after {
+    display: none !important;
+
+    content: none !important;
   }
 
-  .inf-reader-book-page {
-    height: auto;
-    min-height: 540px;
-    margin-bottom: 15px;
-    padding: 24px 24px 30px;
+  /* -------------------------
+     Each paper page
+  ------------------------- */
 
-    border: 1px solid #ece7df;
-    border-radius: 7px;
-    box-shadow: 0 12px 28px rgba(28, 54, 88, 0.12);
-  }
-
+  .inf-reader-book-page,
   .inf-reader-book-page--left,
   .inf-reader-book-page--right {
-    border-right: 1px solid #ece7df;
-    box-shadow: 0 12px 28px rgba(28, 54, 88, 0.12);
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin:
+      0
+      0
+      14px;
+
+    padding:
+      22px
+      20px
+      30px;
+
+    overflow: visible !important;
+
+    background:
+      var(--reader-paper);
+
+    border:
+      1px
+      solid
+      #ece7df;
+
+    border-radius: 9px;
+
+    box-shadow:
+      0
+      9px
+      24px
+      rgba(
+        28,
+        54,
+        88,
+        0.1
+      ) !important;
+
+    transform: none !important;
+
+    transform-origin: center !important;
   }
 
-  .inf-reader-page-content {
-    height: auto;
-    overflow: visible;
+  .inf-reader-book-page--left {
+    order: 1;
   }
+
+  .inf-reader-book-page--right {
+    order: 2;
+  }
+
+  /* Remove desktop center spine effect */
+
+  .inf-reader-book-page--left::before,
+  .inf-reader-book-page--right::before {
+    display: none !important;
+  }
+
+  /* Keep a subtle page corner */
 
   .inf-reader-book-page--right::after {
-    width: 48px;
-    height: 45px;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 42px;
+    height: 40px;
   }
+
+  /* -------------------------
+     Page Content
+  ------------------------- */
+
+  .inf-reader-page-content {
+    width: 100%;
+    height: auto !important;
+    min-height: 0;
+
+    padding: 0 !important;
+
+    overflow: visible !important;
+    overflow-y: visible !important;
+
+    font-size:
+      calc(
+        0.88rem
+        * var(--reader-scale)
+      );
+  }
+
+  .inf-reader-page-number {
+    margin-bottom: 12px;
+  }
+
+  .inf-reader-book-page h2 {
+    margin-bottom: 13px;
+
+    font-size:
+      calc(
+        clamp(
+          1.55rem,
+          6.7vw,
+          2rem
+        )
+        * var(--reader-scale)
+      );
+
+    line-height: 1.12;
+  }
+
+  .inf-reader-book-page h3 {
+    margin:
+      16px
+      0
+      7px;
+
+    font-size:
+      calc(
+        1rem
+        * var(--reader-scale)
+      );
+  }
+
+  .inf-reader-book-page p {
+    margin-bottom: 10px;
+
+    line-height: 1.6;
+  }
+
+  /* -------------------------
+     Lists
+  ------------------------- */
+
+  .inf-reader-list {
+    padding-left: 18px;
+  }
+
+  .inf-reader-list.is-compact li {
+    font-size:
+      calc(
+        0.86rem
+        * var(--reader-scale)
+      );
+
+    line-height: 1.5;
+  }
+
+  /* -------------------------
+     Timeline
+  ------------------------- */
+
+  .inf-reader-timeline-item {
+    grid-template-columns:
+      32px
+      minmax(0, 1fr);
+
+    gap: 10px;
+  }
+
+  .inf-reader-timeline-item > span {
+    width: 29px;
+    height: 29px;
+  }
+
+  .inf-reader-timeline-item p {
+    font-size:
+      calc(
+        0.84rem
+        * var(--reader-scale)
+      );
+  }
+
+  /* -------------------------
+     Numbered / Test Lists
+  ------------------------- */
+
+  .inf-reader-numbered-list > div,
+  .inf-reader-test-list > div {
+    grid-template-columns:
+      30px
+      minmax(0, 1fr);
+
+    gap: 9px;
+  }
+
+  /* -------------------------
+     Quote
+  ------------------------- */
+
+  .inf-reader-quote-card {
+    padding:
+      13px
+      14px
+      13px
+      40px;
+  }
+
+  .inf-reader-quote-card p {
+    font-size:
+      calc(
+        0.88rem
+        * var(--reader-scale)
+      );
+  }
+
+  /* -------------------------
+     Illustration
+  ------------------------- */
+
+  .inf-reader-illustration {
+    width: 100%;
+    max-height: none;
+
+    margin-top: 12px;
+  }
+
+  /* -------------------------
+     Quick Check
+  ------------------------- */
+
+  .inf-reader-quick-check {
+    width: 100%;
+
+    padding:
+      12px
+      13px;
+  }
+
+  .inf-reader-radio-list {
+    grid-template-columns: 1fr !important;
+
+    gap: 7px;
+  }
+
+  .inf-reader-radio-option {
+    width: 100%;
+    min-height: 38px;
+
+    padding:
+      4px
+      2px;
+
+    font-size:
+      calc(
+        0.82rem
+        * var(--reader-scale)
+      );
+  }
+
+  /* -------------------------
+     Two-column blocks
+  ------------------------- */
+
+  .inf-reader-two-mini-columns {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+
+  /* -------------------------
+     Accordions
+  ------------------------- */
+
+  .inf-reader-accordion-stack summary {
+    padding:
+      10px
+      11px;
+
+    font-size:
+      calc(
+        0.82rem
+        * var(--reader-scale)
+      );
+  }
+
+  .inf-reader-accordion-stack details p {
+    padding:
+      0
+      11px
+      11px;
+
+    font-size:
+      calc(
+        0.8rem
+        * var(--reader-scale)
+      );
+  }
+
+  /* -------------------------
+     Turn Page text hidden
+     because bottom navigation
+     is enough on mobile
+  ------------------------- */
 
   .inf-reader-turn-page {
-    display: none;
+    display: none !important;
   }
 
+  /* =====================================================
+     Bottom Navigation
+  ===================================================== */
+
   .inf-reader-navigation {
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
     gap: 10px;
+
+    width: 100%;
+
+    margin-top: 10px;
   }
 
   .inf-reader-progress {
     grid-column: 1 / -1;
     grid-row: 1;
+
+    width: 100%;
+    max-width: none;
+  }
+
+  .inf-reader-nav-button {
+    width: 100%;
+    min-height: 44px;
+
+    padding:
+      0
+      12px;
   }
 
   .inf-reader-nav-button--previous {
     grid-column: 1;
+    grid-row: 2;
   }
 
   .inf-reader-nav-button--next {
     grid-column: 2;
+    grid-row: 2;
   }
 }
 
-@media (max-width: 520px) {
+
+/* =========================================================
+   Small Mobile
+   <= 600px
+========================================================= */
+
+@media (max-width: 600px) {
+  .inf-reader-header {
+    padding:
+      16px
+      12px
+      14px;
+  }
+
+  .inf-reader-header h1 {
+    font-size:
+      clamp(
+        1.75rem,
+        8vw,
+        2.1rem
+      );
+  }
+
   .inf-reader-header p {
+    max-width: 340px;
+
     font-size: 0.84rem;
   }
 
   .inf-reader-layout {
-    width: min(100% - 12px, 500px);
+    width: calc(100% - 12px);
+
+    margin-top: 10px;
   }
 
-  .inf-reader-book-page {
-    min-height: 0;
-    padding: 20px 18px 28px;
+  .inf-reader-contents {
+    padding: 8px;
+  }
+
+  .inf-reader-contents h2 {
+    margin-left: 3px;
+  }
+
+  .inf-reader-contents nav button {
+    min-height: 36px;
+
+    padding:
+      6px
+      9px;
+  }
+
+  .inf-reader-tools {
+    gap: 6px;
+  }
+
+  .inf-reader-tool-button {
+    min-height: 36px;
+
+    padding:
+      0
+      10px;
+  }
+
+  .inf-reader-book-page,
+  .inf-reader-book-page--left,
+  .inf-reader-book-page--right {
+    margin-bottom: 12px;
+
+    padding:
+      20px
+      17px
+      27px;
   }
 
   .inf-reader-book-page h2 {
-    font-size: calc(1.72rem * var(--reader-scale));
+    font-size:
+      calc(
+        1.6rem
+        * var(--reader-scale)
+      );
   }
 
-  .inf-reader-radio-list,
-  .inf-reader-two-mini-columns {
+  .inf-reader-page-content {
+    font-size:
+      calc(
+        0.86rem
+        * var(--reader-scale)
+      );
+  }
+
+  .inf-reader-quote-card {
+    margin:
+      12px
+      0;
+  }
+
+  .inf-reader-info-note {
+    grid-template-columns:
+      25px
+      minmax(0, 1fr);
+
+    padding:
+      10px;
+  }
+
+  .inf-reader-highlight-box {
+    padding:
+      11px
+      12px;
+  }
+
+  .inf-reader-no-banner {
+    grid-template-columns:
+      48px
+      minmax(0, 1fr);
+
+    gap: 10px;
+  }
+
+  .inf-reader-no-banner > strong {
+    width: 44px;
+    height: 44px;
+  }
+
+  .inf-reader-result-card {
+    grid-template-columns:
+      62px
+      minmax(0, 1fr);
+
+    padding: 11px;
+  }
+
+  .inf-reader-result-card > strong {
+    width: 58px;
+    height: 58px;
+
+    font-size: 0.95rem;
+  }
+
+  .inf-reader-contact-card {
+    padding:
+      13px
+      14px;
+  }
+
+  .inf-reader-contact-card > div {
+    display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .inf-reader-contact-card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 38px;
+  }
+}
+
+
+/* =========================================================
+   Standard Mobile
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .inf-reader-header {
+    padding:
+      14px
+      10px
+      12px;
+  }
+
+  .inf-reader-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .inf-reader-header p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .inf-reader-layout {
+    width: calc(100% - 10px);
+  }
+
+  .inf-reader-contents {
+    border-radius: 8px;
+  }
+
+  .inf-reader-contents nav button strong {
+    font-size: 0.68rem;
+  }
+
+  .inf-reader-tools {
+    justify-content: space-between;
+  }
+
+  .inf-reader-tool-button {
+    flex: 1;
+
+    max-width: 130px;
+  }
+
+  .inf-reader-book-page,
+  .inf-reader-book-page--left,
+  .inf-reader-book-page--right {
+    padding:
+      18px
+      15px
+      25px;
+
+    border-radius: 8px;
+  }
+
+  .inf-reader-page-number {
+    margin-bottom: 10px;
+  }
+
+  .inf-reader-book-page h2 {
+    margin-bottom: 12px;
+
+    font-size:
+      calc(
+        1.5rem
+        * var(--reader-scale)
+      );
+  }
+
+  .inf-reader-book-page h3 {
+    font-size:
+      calc(
+        0.98rem
+        * var(--reader-scale)
+      );
+  }
+
+  .inf-reader-page-content {
+    font-size:
+      calc(
+        0.84rem
+        * var(--reader-scale)
+      );
+  }
+
+  .inf-reader-list {
+    padding-left: 17px;
+  }
+
+  .inf-reader-list.is-compact li {
+    font-size:
+      calc(
+        0.82rem
+        * var(--reader-scale)
+      );
+  }
+
+  .inf-reader-timeline-item {
+    grid-template-columns:
+      29px
+      minmax(0, 1fr);
+
+    gap: 8px;
+  }
+
+  .inf-reader-timeline-item > span {
+    width: 27px;
+    height: 27px;
+
+    font-size: 0.78rem;
+  }
+
+  .inf-reader-numbered-list > div,
+  .inf-reader-test-list > div {
+    grid-template-columns:
+      28px
+      minmax(0, 1fr);
+
+    gap: 8px;
+  }
+
+  .inf-reader-numbered-list span,
+  .inf-reader-test-list span {
+    width: 26px;
+    height: 26px;
+
+    font-size: 0.68rem;
+  }
+
+  .inf-reader-quote-card {
+    padding:
+      12px
+      12px
+      12px
+      37px;
+  }
+
+  .inf-reader-quote-card > span {
+    left: 12px;
+
+    font-size: 2rem;
+  }
+
+  .inf-reader-quick-check {
+    padding:
+      11px
+      12px;
+  }
+
+  .inf-reader-radio-option {
+    font-size:
+      calc(
+        0.8rem
+        * var(--reader-scale)
+      );
   }
 
   .inf-reader-navigation {
     grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .inf-reader-progress,
   .inf-reader-nav-button--previous,
   .inf-reader-nav-button--next {
     grid-column: 1;
+  }
+
+  .inf-reader-progress {
+    grid-row: 1;
   }
 
   .inf-reader-nav-button--previous {
@@ -1762,18 +2735,249 @@
     grid-row: 3;
   }
 
-  .inf-reader-illustration {
-    max-height: 170px;
+  .inf-reader-nav-button {
+    min-height: 46px;
+
+    border-radius: 24px;
+  }
+
+  .inf-reader-progress-row {
+    grid-template-columns:
+      minmax(0, 1fr)
+      34px;
+
+    gap: 8px;
   }
 }
+
+
+/* =========================================================
+   Very Small Mobile
+   320px - 390px
+========================================================= */
+
+@media (max-width: 390px) {
+  .inf-reader-header {
+    padding:
+      13px
+      8px
+      11px;
+  }
+
+  .inf-reader-header h1 {
+    font-size: 1.62rem;
+  }
+
+  .inf-reader-header p {
+    max-width: 300px;
+
+    font-size: 0.76rem;
+  }
+
+  .inf-reader-layout {
+    width: calc(100% - 8px);
+  }
+
+  .inf-reader-contents {
+    padding:
+      7px
+      6px;
+  }
+
+  .inf-reader-contents nav {
+    gap: 5px;
+  }
+
+  .inf-reader-contents nav button {
+    padding:
+      6px
+      8px;
+  }
+
+  .inf-reader-contents nav button span,
+  .inf-reader-contents nav button strong {
+    font-size: 0.65rem;
+  }
+
+  .inf-reader-tools {
+    margin-bottom: 7px;
+  }
+
+  .inf-reader-tool-button {
+    min-height: 35px;
+
+    font-size: 0.73rem;
+  }
+
+  .inf-reader-book-page,
+  .inf-reader-book-page--left,
+  .inf-reader-book-page--right {
+    padding:
+      17px
+      13px
+      23px;
+  }
+
+  .inf-reader-book-page h2 {
+    font-size:
+      calc(
+        1.38rem
+        * var(--reader-scale)
+      );
+  }
+
+  .inf-reader-book-page h3 {
+    font-size:
+      calc(
+        0.94rem
+        * var(--reader-scale)
+      );
+  }
+
+  .inf-reader-page-content {
+    font-size:
+      calc(
+        0.8rem
+        * var(--reader-scale)
+      );
+  }
+
+  .inf-reader-book-page p {
+    line-height: 1.55;
+  }
+
+  .inf-reader-quote-card {
+    padding:
+      11px
+      10px
+      11px
+      34px;
+  }
+
+  .inf-reader-info-note {
+    grid-template-columns:
+      23px
+      minmax(0, 1fr);
+
+    gap: 7px;
+
+    padding: 9px;
+  }
+
+  .inf-reader-info-icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  .inf-reader-radio-option {
+    min-height: 36px;
+
+    font-size:
+      calc(
+        0.77rem
+        * var(--reader-scale)
+      );
+  }
+
+  .inf-reader-contact-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .inf-reader-nav-button {
+    font-size: 0.78rem;
+  }
+}
+
+
+/* =========================================================
+   Mobile Landscape
+========================================================= */
+
+@media (
+  max-width: 900px
+)
+and (
+  orientation: landscape
+)
+and (
+  max-height: 520px
+) {
+  .inf-reader-header {
+    min-height: auto;
+
+    padding:
+      10px
+      18px;
+  }
+
+  .inf-reader-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .inf-reader-header p {
+    margin-top: 4px;
+
+    font-size: 0.78rem;
+  }
+
+  .inf-reader-layout {
+    margin-top: 10px;
+  }
+
+  .inf-reader-contents {
+    margin-bottom: 8px;
+  }
+
+  .inf-reader-book-page {
+    min-height: 0;
+
+    padding:
+      18px
+      20px
+      24px;
+  }
+}
+
+
+/* =========================================================
+   Touch Devices
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  .inf-reader-tool-button,
+  .inf-reader-nav-button,
+  .inf-reader-contents nav button,
+  .inf-reader-radio-option,
+  .inf-reader-result-button,
+  .inf-reader-contact-card a {
+    min-height: 44px;
+  }
+
+  .inf-reader-contents nav button:hover,
+  .inf-reader-tool-button:hover,
+  .inf-reader-nav-button:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   Reduced Motion
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
   .inf-reader *,
   .inf-reader *::before,
   .inf-reader *::after {
     scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
   }
 }
