@@ -295,6 +295,7 @@ const quizData = [
   },
 ];
 
+
 const chapters = [
   "Your fertility journey",
   "Understanding fertility",
@@ -303,11 +304,66 @@ const chapters = [
   "When to seek help",
   "Fertility tests",
   "Treatment options",
-  "Care, myths & support",
+  "Healthy fertility habits",
+  "Myths & facts",
+  "Frequently asked questions",
+  "Awareness quiz",
+  "Next steps",
+];
+
+const spreadMeta = [
+  {
+    leftTitle: "Understanding Your Fertility Journey",
+    rightTitle: "When should you seek help?",
+  },
+  {
+    leftTitle: "What is infertility?",
+    rightTitle: "How conception works",
+  },
+  {
+    leftTitle: "Ovulation & age",
+    rightTitle: "Tubal, pelvic & uterine factors",
+  },
+  {
+    leftTitle: "Male fertility factors",
+    rightTitle: "Unexplained infertility",
+  },
+  {
+    leftTitle: "When to seek fertility advice earlier",
+    rightTitle: "When not to wait",
+  },
+  {
+    leftTitle: "Your fertility consultation",
+    rightTitle: "Tests for both partners",
+  },
+  {
+    leftTitle: "Treatment options",
+    rightTitle: "Choosing the right treatment",
+  },
+  {
+    leftTitle: "Lifestyle & fertility",
+    rightTitle: "Emotional care & Sukam approach",
+  },
+  {
+    leftTitle: "Fertility myths & facts",
+    rightTitle: "More myths & facts",
+  },
+  {
+    leftTitle: "Frequently asked questions",
+    rightTitle: "More common questions",
+  },
+  {
+    leftTitle: "Quick fertility awareness quiz",
+    rightTitle: "Complete your quiz",
+  },
+  {
+    leftTitle: "Take the first step with clarity",
+    rightTitle: "End",
+  },
 ];
 
 const BulletList = ({ items, compact = false }) => (
-  <ul className={`inf-reader-list ${compact ? "is-compact" : ""}`}>
+  <ul className={`inf-reader-list ${compact ? "is-compact" : ""}`.trim()}>
     {items.map((item) => (
       <li key={item}>{item}</li>
     ))}
@@ -322,7 +378,9 @@ const PageNumber = ({ number }) => (
 
 const InfoNote = ({ children }) => (
   <div className="inf-reader-info-note">
-    <span className="inf-reader-info-icon">i</span>
+    <span className="inf-reader-info-icon" aria-hidden="true">
+      i
+    </span>
     <p>{children}</p>
   </div>
 );
@@ -335,117 +393,48 @@ const ConsultationIllustration = () => (
     aria-label="Couple speaking with a fertility doctor"
   >
     <rect width="620" height="275" rx="16" fill="#f8f4f2" />
-
     <circle cx="85" cy="66" r="36" fill="#dcefe9" />
     <circle cx="554" cy="70" r="46" fill="#e4f1eb" />
-
-    <rect
-      x="44"
-      y="193"
-      width="536"
-      height="52"
-      rx="8"
-      fill="#d7e6f3"
-    />
-
-    <rect
-      x="438"
-      y="143"
-      width="82"
-      height="54"
-      rx="6"
-      fill="#ffffff"
-    />
-
-    <rect
-      x="451"
-      y="156"
-      width="56"
-      height="7"
-      rx="3.5"
-      fill="#ef8cb8"
-    />
-
-    <rect
-      x="451"
-      y="171"
-      width="42"
-      height="7"
-      rx="3.5"
-      fill="#9cb9d7"
-    />
+    <rect x="44" y="193" width="536" height="52" rx="8" fill="#d7e6f3" />
+    <rect x="438" y="143" width="82" height="54" rx="6" fill="#ffffff" />
+    <rect x="451" y="156" width="56" height="7" rx="3.5" fill="#ef8cb8" />
+    <rect x="451" y="171" width="42" height="7" rx="3.5" fill="#9cb9d7" />
 
     <circle cx="170" cy="116" r="29" fill="#e8b18d" />
-
     <path
       d="M137 113c3-37 55-50 70-13-11-7-20-6-27-3-12 5-24 14-43 16Z"
       fill="#244d72"
     />
-
-    <rect
-      x="143"
-      y="144"
-      width="69"
-      height="84"
-      rx="25"
-      fill="#4d87c5"
-    />
+    <rect x="143" y="144" width="69" height="84" rx="25" fill="#4d87c5" />
 
     <circle cx="278" cy="116" r="29" fill="#efb38e" />
-
     <path
       d="M243 112c8-36 56-45 72-7-10-7-25-10-39-7-13 3-24 10-33 14Z"
       fill="#43364b"
     />
-
     <path
       d="M246 128c2 52 8 79 8 104h55c0-27 5-58 6-106-22 18-46 17-69 2Z"
       fill="#4d3548"
     />
-
-    <rect
-      x="245"
-      y="148"
-      width="72"
-      height="80"
-      rx="28"
-      fill="#ef78a6"
-    />
+    <rect x="245" y="148" width="72" height="80" rx="28" fill="#ef78a6" />
 
     <circle cx="445" cy="103" r="29" fill="#ebb18c" />
-
     <path
       d="M410 100c8-34 53-42 68-5-12-7-26-9-39-6-11 3-20 7-29 11Z"
       fill="#263a58"
     />
-
     <path
       d="M422 132c14 18 38 18 49 0l28 24-10 72h-91l-7-73 31-23Z"
       fill="#ffffff"
     />
-
-    <path
-      d="M438 134v66M455 134v66"
-      stroke="#6d8fb2"
-      strokeWidth="5"
-    />
-
-    <circle
-      cx="447"
-      cy="176"
-      r="10"
-      fill="none"
-      stroke="#6d8fb2"
-      strokeWidth="5"
-    />
-
+    <path d="M438 134v66M455 134v66" stroke="#6d8fb2" strokeWidth="5" />
+    <circle cx="447" cy="176" r="10" fill="none" stroke="#6d8fb2" strokeWidth="5" />
     <path
       d="M391 170c-34 7-48 31-63 43"
       stroke="#ebb18c"
       strokeWidth="12"
       strokeLinecap="round"
     />
-
     <path
       d="M497 171c29 2 40 18 49 31"
       stroke="#ebb18c"
@@ -458,7 +447,6 @@ const ConsultationIllustration = () => (
       fill="#8fc8b1"
       opacity=".8"
     />
-
     <path
       d="M557 202c-10-38 4-68 25-91 6 27-3 60-25 91Z"
       fill="#9bcab9"
@@ -472,11 +460,12 @@ const QuickCheck = ({
   selectedAnswers,
   onOptionClick,
   showResults,
+  compact = false,
 }) => {
   const question = quizData[questionIndex];
 
   return (
-    <div className="inf-reader-quick-check">
+    <div className={`inf-reader-quick-check ${compact ? "is-compact" : ""}`.trim()}>
       <div className="inf-reader-quick-check-title">
         <span aria-hidden="true">✦</span>
         <strong>Quick check</strong>
@@ -488,11 +477,7 @@ const QuickCheck = ({
         {question.options.map((option) => {
           const isSelected = selectedAnswers[questionIndex] === option;
           const isCorrect = showResults && option === question.answer;
-
-          const isIncorrect =
-            showResults &&
-            isSelected &&
-            option !== question.answer;
+          const isIncorrect = showResults && isSelected && option !== question.answer;
 
           return (
             <button
@@ -506,12 +491,10 @@ const QuickCheck = ({
               ]
                 .filter(Boolean)
                 .join(" ")}
-              onClick={() =>
-                onOptionClick(questionIndex, option)
-              }
+              onClick={() => onOptionClick(questionIndex, option)}
               disabled={showResults}
             >
-              <span className="inf-reader-radio-dot" />
+              <span className="inf-reader-radio-dot" aria-hidden="true" />
               <span>{option}</span>
             </button>
           );
@@ -521,77 +504,108 @@ const QuickCheck = ({
   );
 };
 
-const BookPage = ({
-  side,
-  pageNumber,
-  children,
-  onTurnPage,
-}) => (
-  <article
-    className={`inf-reader-book-page inf-reader-book-page--${side}`}
-  >
-    <div
-      className="inf-reader-paper-grain"
-      aria-hidden="true"
-    />
+const MythFact = ({ item }) => (
+  <div className="inf-reader-myth-fact">
+    <span>Myth</span>
+    <h3>{item.myth}</h3>
+    <p>
+      <strong>Fact:</strong> {item.fact}
+    </p>
+  </div>
+);
 
+const FaqItem = ({ item }) => (
+  <div className="inf-reader-faq-card">
+    <h3>{item.question}</h3>
+    <p>{item.answer}</p>
+  </div>
+);
+
+const BookPage = ({ side, pageNumber, children, onTurnPage, isEnd = false }) => (
+  <article
+    className={`inf-reader-book-page inf-reader-book-page--${side} ${
+      isEnd ? "inf-reader-book-page--end" : ""
+    }`.trim()}
+  >
+    <div className="inf-reader-paper-grain" aria-hidden="true" />
     <PageNumber number={pageNumber} />
 
-    <div className="inf-reader-page-scroll">
-      {children}
-    </div>
+    <div className="inf-reader-page-content">{children}</div>
 
     {side === "right" && onTurnPage && (
-      <button
-        type="button"
-        className="inf-reader-turn-page"
-        onClick={onTurnPage}
-      >
+      <button type="button" className="inf-reader-turn-page" onClick={onTurnPage}>
         Turn page <span aria-hidden="true">↗</span>
       </button>
     )}
   </article>
 );
 
+const PageTurnSheet = ({ turnMeta }) => {
+  if (!turnMeta) {
+    return null;
+  }
+
+  return (
+    <div
+      className={`inf-reader-page-turn-sheet inf-reader-page-turn-sheet--${turnMeta.direction}`}
+      aria-hidden="true"
+    >
+      <div className="inf-reader-turn-face inf-reader-turn-face--front">
+        <div className="inf-reader-turn-page-number">
+          {String(turnMeta.frontPage).padStart(2, "0")}
+        </div>
+        <h3>{turnMeta.frontTitle}</h3>
+        <div className="inf-reader-turn-lines">
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
+        <div className="inf-reader-turn-curl" />
+      </div>
+
+      <div className="inf-reader-turn-face inf-reader-turn-face--back">
+        <div className="inf-reader-turn-page-number">
+          {String(turnMeta.backPage).padStart(2, "0")}
+        </div>
+        <h3>{turnMeta.backTitle}</h3>
+        <div className="inf-reader-turn-lines">
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const InfertilityInsights = () => {
   const [currentChapter, setCurrentChapter] = useState(0);
-
-  const [selectedAnswers, setSelectedAnswers] =
-    useState({});
-
-  const [showResults, setShowResults] =
-    useState(false);
-
-  const [fontScale, setFontScale] =
-    useState(1);
-
-  const [isSpeaking, setIsSpeaking] =
-    useState(false);
+  const [selectedAnswers, setSelectedAnswers] = useState({});
+  const [showResults, setShowResults] = useState(false);
+  const [fontScale, setFontScale] = useState(1);
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [isTurning, setIsTurning] = useState(false);
+  const [turnMeta, setTurnMeta] = useState(null);
 
   const totalQuestions = quizData.length;
-
-  const answeredCount =
-    Object.keys(selectedAnswers).length;
-
-  const chapterProgress =
-    ((currentChapter + 1) / chapters.length) * 100;
+  const answeredCount = Object.keys(selectedAnswers).length;
+  const chapterProgress = ((currentChapter + 1) / chapters.length) * 100;
 
   const quizResults = useMemo(() => {
     const correct = quizData.reduce(
       (score, question, index) =>
-        score +
-        (selectedAnswers[index] === question.answer
-          ? 1
-          : 0),
+        score + (selectedAnswers[index] === question.answer ? 1 : 0),
       0
     );
 
     return {
       correct,
       wrong: totalQuestions - correct,
-      percentage: Math.round(
-        (correct / totalQuestions) * 100
-      ),
+      percentage: Math.round((correct / totalQuestions) * 100),
     };
   }, [selectedAnswers, totalQuestions]);
 
@@ -610,10 +624,25 @@ const InfertilityInsights = () => {
     }
   }, [currentChapter]);
 
-  const handleOptionClick = (
-    questionIndex,
-    option
-  ) => {
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "ArrowRight") {
+        requestChapterChange(currentChapter + 1);
+      }
+
+      if (event.key === "ArrowLeft") {
+        requestChapterChange(currentChapter - 1);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  });
+
+  const handleOptionClick = (questionIndex, option) => {
     if (showResults) {
       return;
     }
@@ -624,46 +653,74 @@ const InfertilityInsights = () => {
     }));
   };
 
-  const goToChapter = (index) => {
+  const scrollBookIntoView = () => {
+    window.requestAnimationFrame(() => {
+      document.querySelector(".inf-reader-book-stage")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  };
+
+  const requestChapterChange = (index) => {
     if (
       index < 0 ||
-      index >= chapters.length
+      index >= chapters.length ||
+      index === currentChapter ||
+      isTurning
     ) {
       return;
     }
 
-    setCurrentChapter(index);
+    const direction = index > currentChapter ? "next" : "prev";
+    const fromMeta = spreadMeta[currentChapter];
+    const toMeta = spreadMeta[index];
 
-    window.requestAnimationFrame(() => {
-      document
-        .querySelector(
-          ".inf-reader-book-stage"
-        )
-        ?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-    });
+    const nextTurnMeta =
+      direction === "next"
+        ? {
+            direction,
+            from: currentChapter,
+            to: index,
+            frontTitle: fromMeta.rightTitle,
+            backTitle: toMeta.leftTitle,
+            frontPage: currentChapter * 2 + 2,
+            backPage: index * 2 + 1,
+          }
+        : {
+            direction,
+            from: currentChapter,
+            to: index,
+            frontTitle: fromMeta.leftTitle,
+            backTitle: toMeta.rightTitle,
+            frontPage: currentChapter * 2 + 1,
+            backPage: index * 2 + 2,
+          };
+
+    setTurnMeta(nextTurnMeta);
+    setIsTurning(true);
+
+    window.setTimeout(() => {
+      setCurrentChapter(index);
+    }, 390);
+
+    window.setTimeout(() => {
+      setIsTurning(false);
+      setTurnMeta(null);
+      scrollBookIntoView();
+    }, 820);
   };
 
   const handleFontSize = () => {
     setFontScale((current) => {
-      if (current === 1) {
-        return 1.08;
-      }
-
-      if (current === 1.08) {
-        return 0.94;
-      }
-
+      if (current === 1) return 1.035;
+      if (current === 1.035) return 0.965;
       return 1;
     });
   };
 
   const handleListen = () => {
-    if (
-      !("speechSynthesis" in window)
-    ) {
+    if (!("speechSynthesis" in window)) {
       return;
     }
 
@@ -673,91 +730,55 @@ const InfertilityInsights = () => {
       return;
     }
 
-    const text =
-      document.querySelector(
-        ".inf-reader-book-spread"
-      )?.innerText || "";
+    const text = document.querySelector(".inf-reader-book-spread")?.innerText || "";
 
     if (!text.trim()) {
       return;
     }
 
-    const utterance =
-      new SpeechSynthesisUtterance(text);
-
+    const utterance = new SpeechSynthesisUtterance(text);
     utterance.rate = 0.95;
     utterance.pitch = 1;
-
-    utterance.onend = () =>
-      setIsSpeaking(false);
-
-    utterance.onerror = () =>
-      setIsSpeaking(false);
+    utterance.onend = () => setIsSpeaking(false);
+    utterance.onerror = () => setIsSpeaking(false);
 
     window.speechSynthesis.cancel();
-
-    window.speechSynthesis.speak(
-      utterance
-    );
-
+    window.speechSynthesis.speak(utterance);
     setIsSpeaking(true);
   };
 
   const renderChapter = () => {
-    const leftPageNumber =
-      currentChapter * 2 + 1;
-
-    const rightPageNumber =
-      leftPageNumber + 1;
+    const leftPageNumber = currentChapter * 2 + 1;
+    const rightPageNumber = leftPageNumber + 1;
 
     switch (currentChapter) {
       case 0:
         return (
           <>
-            <BookPage
-              side="left"
-              pageNumber={leftPageNumber}
-            >
-              <h2>
-                Understanding Your Fertility
-                Journey
-              </h2>
+            <BookPage side="left" pageNumber={leftPageNumber}>
+              <h2>Understanding Your Fertility Journey</h2>
 
               <p className="inf-reader-lead-copy">
-                Every fertility journey begins
-                with understanding.
+                Every fertility journey begins with understanding.
               </p>
 
               <p>
-                For many couples, trying to
-                conceive begins with hope and
-                excitement. But when pregnancy
-                does not happen as expected,
-                the same journey can gradually
-                become confusing, stressful
-                and emotionally exhausting.
+                For many couples, trying to conceive begins with hope and excitement. But
+                when pregnancy does not happen as expected, the same journey can gradually
+                become confusing, stressful and emotionally exhausting.
               </p>
 
               <p>
-                Delayed conception does not
-                always mean that pregnancy is
-                impossible. It may simply mean
-                that the couple would benefit
-                from a systematic fertility
+                Delayed conception does not always mean that pregnancy is impossible. It may
+                simply mean that the couple would benefit from a systematic fertility
                 evaluation.
               </p>
 
               <div className="inf-reader-quote-card">
-                <span aria-hidden="true">
-                  “
-                </span>
-
+                <span aria-hidden="true">“</span>
                 <p>
-                  Every journey to parenthood
-                  is different. The right
-                  information can help you
-                  take the next step with
-                  confidence.
+                  Every journey to parenthood is different. The right information can help
+                  you take the next step with confidence.
                 </p>
               </div>
 
@@ -767,56 +788,31 @@ const InfertilityInsights = () => {
             <BookPage
               side="right"
               pageNumber={rightPageNumber}
-              onTurnPage={() =>
-                goToChapter(1)
-              }
+              onTurnPage={() => requestChapterChange(1)}
             >
-              <h2>
-                When should you seek help?
-              </h2>
+              <h2>When should you seek help?</h2>
 
               <div className="inf-reader-timeline">
-                {consultationTimings.map(
-                  (item, index) => (
-                    <div
-                      className="inf-reader-timeline-item"
-                      key={item.title}
-                    >
-                      <span>
-                        {index + 1}
-                      </span>
-
-                      <div>
-                        <h3>
-                          {item.title}
-                        </h3>
-
-                        <p>
-                          {
-                            item.description
-                          }
-                        </p>
-                      </div>
+                {consultationTimings.map((item, index) => (
+                  <div className="inf-reader-timeline-item" key={item.title}>
+                    <span>{index + 1}</span>
+                    <div>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
                     </div>
-                  )
-                )}
+                  </div>
+                ))}
               </div>
 
               <InfoNote>
-                Your doctor may recommend an
-                earlier evaluation based on
-                your medical history and
-                individual situation.
+                Your doctor may recommend an earlier evaluation based on your medical
+                history and individual situation.
               </InfoNote>
 
               <QuickCheck
                 questionIndex={1}
-                selectedAnswers={
-                  selectedAnswers
-                }
-                onOptionClick={
-                  handleOptionClick
-                }
+                selectedAnswers={selectedAnswers}
+                onOptionClick={handleOptionClick}
                 showResults={showResults}
               />
             </BookPage>
@@ -826,122 +822,71 @@ const InfertilityInsights = () => {
       case 1:
         return (
           <>
-            <BookPage
-              side="left"
-              pageNumber={leftPageNumber}
-            >
-              <h2>
-                What is infertility?
-              </h2>
+            <BookPage side="left" pageNumber={leftPageNumber}>
+              <h2>What is infertility?</h2>
 
               <p>
-                Infertility is generally
-                defined as the inability to
-                achieve pregnancy after 12
-                months or more of regular,
-                unprotected sexual
-                intercourse.
+                Infertility is generally defined as the inability to achieve pregnancy after
+                12 months or more of regular, unprotected sexual intercourse.
               </p>
 
               <div className="inf-reader-highlight-box">
-                <strong>
-                  Fertility is a shared
-                  journey.
-                </strong>
-
+                <strong>Fertility is a shared journey.</strong>
                 <p>
-                  Infertility is not solely a
-                  woman’s concern or a man’s
-                  concern. Both partners
-                  should ideally be evaluated
-                  together.
+                  Infertility is not solely a woman’s concern or a man’s concern. Both
+                  partners should ideally be evaluated together.
                 </p>
               </div>
 
-              <h3>
-                Primary infertility
-              </h3>
-
+              <h3>Primary infertility</h3>
               <p>
-                Primary infertility refers to
-                difficulty achieving a first
-                pregnancy despite regular,
-                unprotected intercourse for
-                the recommended period.
+                Primary infertility refers to difficulty achieving a first pregnancy despite
+                regular, unprotected intercourse for the recommended period.
               </p>
 
-              <h3>
-                Secondary infertility
-              </h3>
-
+              <h3>Secondary infertility</h3>
               <p>
-                Secondary infertility occurs
-                when a couple has conceived
-                in the past but is currently
-                unable to achieve another
-                pregnancy.
+                Secondary infertility occurs when a couple has conceived in the past but is
+                currently unable to achieve another pregnancy.
               </p>
 
               <p className="inf-reader-small-note">
-                Having conceived earlier does
-                not guarantee that fertility
-                will remain unchanged. Age,
-                ovulation, ovarian reserve,
-                sperm factors, infections and
-                surgery can influence future
-                fertility.
+                Having conceived earlier does not guarantee that fertility will remain
+                unchanged. Age, ovulation, ovarian reserve, sperm factors, infections and
+                surgery can influence future fertility.
               </p>
             </BookPage>
 
             <BookPage
               side="right"
               pageNumber={rightPageNumber}
-              onTurnPage={() =>
-                goToChapter(2)
-              }
+              onTurnPage={() => requestChapterChange(2)}
             >
-              <h2>
-                How conception works
-              </h2>
+              <h2>How conception works</h2>
 
               <p>
-                Pregnancy requires several
-                biological events to occur
-                in the correct sequence.
+                Pregnancy requires several biological events to occur in the correct
+                sequence.
               </p>
 
               <div className="inf-reader-numbered-list">
-                {fertilitySteps.map(
-                  (step, index) => (
-                    <div key={step}>
-                      <span>
-                        {index + 1}
-                      </span>
-
-                      <p>{step}</p>
-                    </div>
-                  )
-                )}
+                {fertilitySteps.map((step, index) => (
+                  <div key={step}>
+                    <span>{index + 1}</span>
+                    <p>{step}</p>
+                  </div>
+                ))}
               </div>
 
               <InfoNote>
-                A difficulty at any stage can
-                reduce the chance of
-                conception. Sometimes more
-                than one factor may be
-                present, and routine testing
-                may not always identify a
-                definite cause.
+                A difficulty at any stage can reduce the chance of conception. Sometimes
+                more than one factor may be present.
               </InfoNote>
 
               <QuickCheck
                 questionIndex={0}
-                selectedAnswers={
-                  selectedAnswers
-                }
-                onOptionClick={
-                  handleOptionClick
-                }
+                selectedAnswers={selectedAnswers}
+                onOptionClick={handleOptionClick}
                 showResults={showResults}
               />
             </BookPage>
@@ -951,101 +896,40 @@ const InfertilityInsights = () => {
       case 2:
         return (
           <>
-            <BookPage
-              side="left"
-              pageNumber={leftPageNumber}
-            >
-              <h2>
-                Female fertility factors
-              </h2>
+            <BookPage side="left" pageNumber={leftPageNumber}>
+              <h2>Ovulation & age</h2>
 
-              <h3>
-                {femaleFactors[0].title}
-              </h3>
-
+              <h3>{femaleFactors[0].title}</h3>
               <p>
-                Irregular or absent
-                ovulation is a common reason
-                for delayed conception. It
+                Irregular or absent ovulation is a common reason for delayed conception. It
                 may be associated with:
               </p>
+              <BulletList items={femaleFactors[0].items} compact />
+              <p className="inf-reader-small-note">{femaleFactors[0].note}</p>
 
-              <BulletList
-                items={
-                  femaleFactors[0].items
-                }
-                compact
-              />
-
-              <p className="inf-reader-small-note">
-                {femaleFactors[0].note}
-              </p>
-
-              <h3>
-                {femaleFactors[1].title}
-              </h3>
-
-              {femaleFactors[1].paragraphs.map(
-                (paragraph) => (
-                  <p key={paragraph}>
-                    {paragraph}
-                  </p>
-                )
-              )}
+              <h3>{femaleFactors[1].title}</h3>
+              {femaleFactors[1].paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </BookPage>
 
             <BookPage
               side="right"
               pageNumber={rightPageNumber}
-              onTurnPage={() =>
-                goToChapter(3)
-              }
+              onTurnPage={() => requestChapterChange(3)}
             >
-              <h2>
-                Tubal, pelvic & uterine
-                factors
-              </h2>
+              <h2>Tubal, pelvic & uterine factors</h2>
 
-              <h3>
-                {femaleFactors[2].title}
-              </h3>
+              <h3>{femaleFactors[2].title}</h3>
+              <BulletList items={femaleFactors[2].items} compact />
 
-              <BulletList
-                items={
-                  femaleFactors[2].items
-                }
-                compact
-              />
+              <h3>{femaleFactors[3].title}</h3>
+              <BulletList items={femaleFactors[3].items} compact />
 
-              <p className="inf-reader-small-note">
-                {femaleFactors[2].note}
-              </p>
+              <h3>{femaleFactors[4].title}</h3>
+              <BulletList items={femaleFactors[4].items} compact />
 
-              <h3>
-                {femaleFactors[3].title}
-              </h3>
-
-              <BulletList
-                items={
-                  femaleFactors[3].items
-                }
-                compact
-              />
-
-              <h3>
-                {femaleFactors[4].title}
-              </h3>
-
-              <BulletList
-                items={
-                  femaleFactors[4].items
-                }
-                compact
-              />
-
-              <InfoNote>
-                {femaleFactors[4].note}
-              </InfoNote>
+              <InfoNote>{femaleFactors[4].note}</InfoNote>
             </BookPage>
           </>
         );
@@ -1053,41 +937,22 @@ const InfertilityInsights = () => {
       case 3:
         return (
           <>
-            <BookPage
-              side="left"
-              pageNumber={leftPageNumber}
-            >
-              <h2>
-                Male fertility factors
-              </h2>
+            <BookPage side="left" pageNumber={leftPageNumber}>
+              <h2>Male fertility factors</h2>
 
               <p>
-                Male fertility depends on
-                sperm production, sperm
-                quality and the ability to
-                deliver sperm into the
-                female reproductive tract.
+                Male fertility depends on sperm production, sperm quality and the ability to
+                deliver sperm into the female reproductive tract.
               </p>
 
-              <BulletList
-                items={maleConcerns}
-                compact
-              />
+              <BulletList items={maleConcerns} compact />
 
               <div className="inf-reader-highlight-box">
-                <strong>
-                  Semen analysis
-                </strong>
-
+                <strong>Semen analysis</strong>
                 <p>
-                  A semen analysis is usually
-                  one of the first
-                  investigations in a
-                  fertility evaluation. An
-                  abnormal result should be
-                  interpreted carefully and
-                  may sometimes need to be
-                  repeated.
+                  A semen analysis is usually one of the first investigations in a fertility
+                  evaluation. An abnormal result should be interpreted carefully and may
+                  sometimes need to be repeated.
                 </p>
               </div>
             </BookPage>
@@ -1095,67 +960,38 @@ const InfertilityInsights = () => {
             <BookPage
               side="right"
               pageNumber={rightPageNumber}
-              onTurnPage={() =>
-                goToChapter(4)
-              }
+              onTurnPage={() => requestChapterChange(4)}
             >
-              <h2>
-                What is unexplained
-                infertility?
-              </h2>
+              <h2>Unexplained infertility</h2>
 
               <p>
-                In some couples, ovulation
-                appears normal, the fallopian
-                tubes are open, the uterus
-                does not show a significant
-                abnormality and semen
-                parameters are within
-                acceptable limits—but
-                pregnancy still does not
-                occur.
+                In some couples, ovulation appears normal, the fallopian tubes are open, the
+                uterus does not show a significant abnormality and semen parameters are
+                within acceptable limits—but pregnancy still does not occur.
               </p>
 
               <div className="inf-reader-quote-card is-blue">
-                <span aria-hidden="true">
-                  “
-                </span>
-
+                <span aria-hidden="true">“</span>
                 <p>
-                  Unexplained infertility
-                  does not mean that there is
-                  no reason. It means
-                  standard investigations
-                  have not identified a
-                  definite cause.
+                  Unexplained infertility does not mean there is no reason. It means standard
+                  investigations have not identified a definite cause.
                 </p>
               </div>
 
               <p>
-                Fertilisation, egg quality,
-                sperm function, embryo
-                development or implantation
-                may involve factors that
-                routine tests cannot fully
-                measure.
+                Fertilisation, egg quality, sperm function, embryo development or
+                implantation may involve factors that routine tests cannot fully measure.
               </p>
 
               <p>
-                Treatment is selected
-                according to the couple’s
-                age, duration of infertility,
-                previous treatments and
-                overall fertility profile.
+                Treatment is selected according to age, duration of infertility, previous
+                treatment and the overall fertility profile.
               </p>
 
               <QuickCheck
                 questionIndex={4}
-                selectedAnswers={
-                  selectedAnswers
-                }
-                onOptionClick={
-                  handleOptionClick
-                }
+                selectedAnswers={selectedAnswers}
+                onOptionClick={handleOptionClick}
                 showResults={showResults}
               />
             </BookPage>
@@ -1165,75 +1001,45 @@ const InfertilityInsights = () => {
       case 4:
         return (
           <>
-            <BookPage
-              side="left"
-              pageNumber={leftPageNumber}
-            >
-              <h2>
-                When should you seek
-                fertility advice earlier?
-              </h2>
+            <BookPage side="left" pageNumber={leftPageNumber}>
+              <h2>When to seek fertility advice earlier</h2>
 
               <p>
-                Consider consulting a
-                fertility specialist without
-                waiting for 12 months if any
-                of the following apply:
+                Consider consulting a fertility specialist without waiting for 12 months if
+                any of the following apply:
               </p>
 
-              <BulletList
-                items={earlyAdviceItems}
-                compact
-              />
+              <BulletList items={earlyAdviceItems.slice(0, 7)} />
 
               <InfoNote>
-                Early evaluation is
-                particularly important when
-                time may influence the
-                available treatment choices.
+                Early evaluation is particularly important when reproductive time may
+                influence the available treatment choices.
               </InfoNote>
             </BookPage>
 
             <BookPage
               side="right"
               pageNumber={rightPageNumber}
-              onTurnPage={() =>
-                goToChapter(5)
-              }
+              onTurnPage={() => requestChapterChange(5)}
             >
-              <h2>
-                What happens during a
-                consultation?
-              </h2>
+              <h2>When not to wait</h2>
 
-              <p>
-                Fertility evaluation should
-                be systematic and
-                individualised. Not every
-                couple requires every
-                available test.
-              </p>
-
-              <h3>
-                Your doctor may discuss
-              </h3>
-
-              <BulletList
-                items={consultationTopics}
-                compact
-              />
+              <BulletList items={earlyAdviceItems.slice(7)} />
 
               <div className="inf-reader-highlight-box">
-                <strong>
-                  Attend together whenever
-                  possible
-                </strong>
-
+                <strong>Earlier advice can provide clarity.</strong>
                 <p>
-                  Both partners’ histories
-                  and results are considered
-                  together before treatment
-                  is planned.
+                  Seeking an evaluation does not automatically mean IVF will be required.
+                  Sometimes the next step may be timing guidance, treatment of a hormonal
+                  condition, infection management or evaluation of a male factor.
+                </p>
+              </div>
+
+              <div className="inf-reader-quote-card">
+                <span aria-hidden="true">“</span>
+                <p>
+                  A fertility consultation is an assessment, not a commitment to advanced
+                  treatment.
                 </p>
               </div>
             </BookPage>
@@ -1243,103 +1049,54 @@ const InfertilityInsights = () => {
       case 5:
         return (
           <>
-            <BookPage
-              side="left"
-              pageNumber={leftPageNumber}
-            >
-              <h2>
-                Evaluation of the female
-                partner
-              </h2>
+            <BookPage side="left" pageNumber={leftPageNumber}>
+              <h2>Your fertility consultation</h2>
 
               <p>
-                Depending on the clinical
-                history, the evaluation may
-                include:
+                Fertility evaluation should be systematic and individualised. Not every
+                couple requires every available test.
               </p>
 
-              <div className="inf-reader-test-list">
-                {femaleEvaluation.map(
-                  (item, index) => (
-                    <div key={item}>
-                      <span>
-                        {String(
-                          index + 1
-                        ).padStart(2, "0")}
-                      </span>
+              <h3>Your doctor may discuss</h3>
+              <BulletList items={consultationTopics} compact />
 
-                      <p>{item}</p>
-                    </div>
-                  )
-                )}
+              <div className="inf-reader-highlight-box">
+                <strong>Attend together whenever possible</strong>
+                <p>
+                  Both partners’ histories and results are considered together before
+                  treatment is planned.
+                </p>
               </div>
-
-              <InfoNote>
-                Ovarian reserve tests help
-                estimate the likely response
-                of the ovaries to
-                stimulation. They do not
-                independently determine
-                whether natural conception
-                is possible or impossible.
-              </InfoNote>
             </BookPage>
 
             <BookPage
               side="right"
               pageNumber={rightPageNumber}
-              onTurnPage={() =>
-                goToChapter(6)
-              }
+              onTurnPage={() => requestChapterChange(6)}
             >
-              <h2>
-                Evaluation of the male
-                partner
-              </h2>
+              <h2>Tests for both partners</h2>
 
-              <p>
-                Initial evaluation commonly
-                includes:
-              </p>
+              <div className="inf-reader-two-mini-columns">
+                <div>
+                  <h3>For women</h3>
+                  <BulletList items={femaleEvaluation} compact />
+                </div>
 
-              <div className="inf-reader-test-list">
-                {maleEvaluation.map(
-                  (item, index) => (
-                    <div key={item}>
-                      <span>
-                        {String(
-                          index + 1
-                        ).padStart(2, "0")}
-                      </span>
-
-                      <p>{item}</p>
-                    </div>
-                  )
-                )}
+                <div>
+                  <h3>For men</h3>
+                  <BulletList items={maleEvaluation} compact />
+                </div>
               </div>
 
-              <div className="inf-reader-highlight-box">
-                <strong>
-                  Do not postpone male
-                  evaluation
-                </strong>
-
-                <p>
-                  Male evaluation should not
-                  be delayed while the female
-                  partner undergoes multiple
-                  tests.
-                </p>
-              </div>
+              <InfoNote>
+                Ovarian reserve tests estimate likely ovarian response; they do not by
+                themselves determine whether natural conception is possible or impossible.
+              </InfoNote>
 
               <QuickCheck
                 questionIndex={3}
-                selectedAnswers={
-                  selectedAnswers
-                }
-                onOptionClick={
-                  handleOptionClick
-                }
+                selectedAnswers={selectedAnswers}
+                onOptionClick={handleOptionClick}
                 showResults={showResults}
               />
             </BookPage>
@@ -1349,97 +1106,42 @@ const InfertilityInsights = () => {
       case 6:
         return (
           <>
-            <BookPage
-              side="left"
-              pageNumber={leftPageNumber}
-            >
-              <h2>
-                Does infertility always
-                require IVF?
-              </h2>
+            <BookPage side="left" pageNumber={leftPageNumber}>
+              <h2>Treatment options</h2>
 
               <div className="inf-reader-no-banner">
                 <strong>No.</strong>
-
                 <p>
-                  IVF is one of several
-                  fertility treatments, but
-                  it is not the first or only
-                  solution for every couple.
+                  Infertility does not always require IVF. Treatment should match the cause,
+                  age, duration of infertility and individual circumstances.
                 </p>
               </div>
 
-              <h3>
-                Treatment may include
-              </h3>
-
-              <BulletList
-                items={treatmentOptions}
-                compact
-              />
-
-              <p className="inf-reader-small-note">
-                The aim is to recommend the
-                most suitable treatment—not
-                automatically the most
-                advanced treatment.
-              </p>
+              <h3>Treatment may include</h3>
+              <BulletList items={treatmentOptions.slice(0, 6)} />
             </BookPage>
 
             <BookPage
               side="right"
               pageNumber={rightPageNumber}
-              onTurnPage={() =>
-                goToChapter(7)
-              }
+              onTurnPage={() => requestChapterChange(7)}
             >
-              <h2>
-                Lifestyle & emotional
-                wellbeing
-              </h2>
+              <h2>Choosing the right treatment</h2>
 
-              <p>
-                Lifestyle changes cannot
-                correct every fertility
-                condition, but they can
-                support reproductive and
-                general health.
-              </p>
+              <BulletList items={treatmentOptions.slice(6)} />
 
-              <BulletList
-                items={lifestyleMeasures}
-                compact
-              />
-
-              <div className="inf-reader-quote-card">
-                <span aria-hidden="true">
-                  “
-                </span>
-
+              <div className="inf-reader-highlight-box">
+                <strong>Most suitable, not automatically most advanced</strong>
                 <p>
-                  Neither partner should be
-                  blamed. Infertility is a
-                  medical concern—not a
-                  personal failure.
+                  The goal is to select an appropriate pathway while considering medical
+                  findings, time, emotional readiness and personal preferences.
                 </p>
               </div>
 
-              <p>
-                Open communication,
-                emotional support and
-                counselling can help couples
-                cope with investigations and
-                treatment.
-              </p>
-
               <QuickCheck
                 questionIndex={2}
-                selectedAnswers={
-                  selectedAnswers
-                }
-                onOptionClick={
-                  handleOptionClick
-                }
+                selectedAnswers={selectedAnswers}
+                onOptionClick={handleOptionClick}
                 showResults={showResults}
               />
             </BookPage>
@@ -1447,70 +1149,59 @@ const InfertilityInsights = () => {
         );
 
       case 7:
-      default:
         return (
           <>
-            <BookPage
-              side="left"
-              pageNumber={leftPageNumber}
-            >
-              <h2>
-                Our approach at Sukam Clinic
-              </h2>
+            <BookPage side="left" pageNumber={leftPageNumber}>
+              <h2>Lifestyle & fertility</h2>
 
               <p>
-                Fertility care begins by
-                listening to the couple’s
-                concerns and understanding
-                their complete medical and
-                reproductive history.
+                Lifestyle changes cannot correct every fertility condition, but they can
+                support reproductive and general health.
               </p>
 
-              <BulletList
-                items={clinicApproach}
-                compact
-              />
+              <BulletList items={lifestyleMeasures} />
 
-              <h3>
-                Fertility myths & facts
-              </h3>
+              <InfoNote>
+                Be cautious about unproven supplements, detox programmes and treatments that
+                promise guaranteed pregnancy.
+              </InfoNote>
+            </BookPage>
 
-              <div className="inf-reader-accordion-stack">
-                {mythsAndFacts.map(
-                  (item) => (
-                    <details
-                      key={item.myth}
-                    >
-                      <summary>
-                        {item.myth}
-                      </summary>
+            <BookPage
+              side="right"
+              pageNumber={rightPageNumber}
+              onTurnPage={() => requestChapterChange(8)}
+            >
+              <h2>Emotional care & Sukam approach</h2>
 
-                      <p>
-                        <strong>
-                          Fact:
-                        </strong>{" "}
-                        {item.fact}
-                      </p>
-                    </details>
-                  )
-                )}
+              <div className="inf-reader-quote-card">
+                <span aria-hidden="true">“</span>
+                <p>
+                  Neither partner should be blamed. Infertility is a medical concern—not a
+                  personal failure.
+                </p>
               </div>
 
-              <h3>
-                Frequently asked questions
-              </h3>
+              <p>
+                Open communication, emotional support and counselling can help couples cope
+                with investigations and treatment.
+              </p>
 
-              <div className="inf-reader-accordion-stack">
-                {faqs.map((item) => (
-                  <details
-                    key={item.question}
-                  >
-                    <summary>
-                      {item.question}
-                    </summary>
+              <h3>Our approach at Sukam Clinic</h3>
+              <BulletList items={clinicApproach} compact />
+            </BookPage>
+          </>
+        );
 
-                    <p>{item.answer}</p>
-                  </details>
+      case 8:
+        return (
+          <>
+            <BookPage side="left" pageNumber={leftPageNumber}>
+              <h2>Fertility myths & facts</h2>
+
+              <div className="inf-reader-myth-stack">
+                {mythsAndFacts.slice(0, 3).map((item) => (
+                  <MythFact item={item} key={item.myth} />
                 ))}
               </div>
             </BookPage>
@@ -1518,101 +1209,117 @@ const InfertilityInsights = () => {
             <BookPage
               side="right"
               pageNumber={rightPageNumber}
+              onTurnPage={() => requestChapterChange(9)}
             >
-              <h2>
-                Quick fertility awareness
-                quiz
-              </h2>
+              <h2>More myths & facts</h2>
 
-              <p>
-                Answer all five questions.
-                Your score appears after all
-                questions have been
-                completed.
+              <div className="inf-reader-myth-stack">
+                {mythsAndFacts.slice(3).map((item) => (
+                  <MythFact item={item} key={item.myth} />
+                ))}
+              </div>
+
+              <InfoNote>
+                Fertility information should be interpreted in the context of the individual
+                couple rather than through general assumptions.
+              </InfoNote>
+            </BookPage>
+          </>
+        );
+
+      case 9:
+        return (
+          <>
+            <BookPage side="left" pageNumber={leftPageNumber}>
+              <h2>Frequently asked questions</h2>
+
+              <div className="inf-reader-faq-stack">
+                {faqs.slice(0, 3).map((item) => (
+                  <FaqItem item={item} key={item.question} />
+                ))}
+              </div>
+            </BookPage>
+
+            <BookPage
+              side="right"
+              pageNumber={rightPageNumber}
+              onTurnPage={() => requestChapterChange(10)}
+            >
+              <h2>More common questions</h2>
+
+              <div className="inf-reader-faq-stack">
+                {faqs.slice(3).map((item) => (
+                  <FaqItem item={item} key={item.question} />
+                ))}
+              </div>
+            </BookPage>
+          </>
+        );
+
+      case 10:
+        return (
+          <>
+            <BookPage side="left" pageNumber={leftPageNumber}>
+              <h2>Quick fertility awareness quiz</h2>
+
+              <p className="inf-reader-quiz-intro">
+                Answer all five questions, then check your score on the next page.
               </p>
 
-              <div className="inf-reader-final-quiz">
-                {quizData.map(
-                  (
-                    question,
-                    questionIndex
-                  ) => (
-                    <QuickCheck
-                      key={
-                        question.question
-                      }
-                      questionIndex={
-                        questionIndex
-                      }
-                      selectedAnswers={
-                        selectedAnswers
-                      }
-                      onOptionClick={
-                        handleOptionClick
-                      }
-                      showResults={
-                        showResults
-                      }
-                    />
-                  )
-                )}
-              </div>
+              {[0, 1, 2].map((questionIndex) => (
+                <QuickCheck
+                  key={quizData[questionIndex].question}
+                  questionIndex={questionIndex}
+                  selectedAnswers={selectedAnswers}
+                  onOptionClick={handleOptionClick}
+                  showResults={showResults}
+                  compact
+                />
+              ))}
+            </BookPage>
+
+            <BookPage
+              side="right"
+              pageNumber={rightPageNumber}
+              onTurnPage={() => requestChapterChange(11)}
+            >
+              <h2>Complete your quiz</h2>
+
+              {[3, 4].map((questionIndex) => (
+                <QuickCheck
+                  key={quizData[questionIndex].question}
+                  questionIndex={questionIndex}
+                  selectedAnswers={selectedAnswers}
+                  onOptionClick={handleOptionClick}
+                  showResults={showResults}
+                  compact
+                />
+              ))}
 
               {!showResults && (
                 <button
                   type="button"
                   className="inf-reader-result-button"
-                  disabled={
-                    answeredCount !==
-                    totalQuestions
-                  }
-                  onClick={() =>
-                    setShowResults(true)
-                  }
+                  disabled={answeredCount !== totalQuestions}
+                  onClick={() => setShowResults(true)}
                 >
                   See Results
                 </button>
               )}
 
               {showResults && (
-                <div
-                  className="inf-reader-result-card"
-                  aria-live="polite"
-                >
-                  <strong>
-                    {
-                      quizResults.percentage
-                    }
-                    %
-                  </strong>
-
+                <div className="inf-reader-result-card" aria-live="polite">
+                  <strong>{quizResults.percentage}%</strong>
                   <div>
-                    <h3>
-                      Your fertility
-                      awareness score
-                    </h3>
-
+                    <h3>Your fertility awareness score</h3>
                     <p>
-                      {
-                        quizResults.correct
-                      }{" "}
-                      correct ·{" "}
-                      {
-                        quizResults.wrong
-                      }{" "}
-                      incorrect
+                      {quizResults.correct} correct · {quizResults.wrong} incorrect
                     </p>
-
                     <button
                       type="button"
                       onClick={() => {
-                        setSelectedAnswers(
-                          {}
-                        );
-
-                        setShowResults(
-                          false
-                        );
+                        setSelectedAnswers({});
+                        setShowResults(false);
                       }}
                     >
                       Try again
@@ -1621,35 +1328,42 @@ const InfertilityInsights = () => {
                 </div>
               )}
 
+              <InfoNote>
+                Continue to the final spread for clinic details and the end of this guide.
+              </InfoNote>
+            </BookPage>
+          </>
+        );
+
+      case 11:
+      default:
+        return (
+          <>
+            <BookPage side="left" pageNumber={leftPageNumber}>
+              <h2>Take the first step with clarity</h2>
+
+              <p>
+                If pregnancy has not occurred within the expected time—or if either partner
+                has a condition that may affect fertility—an early consultation can provide
+                clarity.
+              </p>
+
+              <p>
+                A fertility evaluation is not a commitment to IVF. It is the first step
+                toward understanding the possible reason for delayed conception and selecting
+                an appropriate path forward.
+              </p>
+
               <div className="inf-reader-contact-card">
-                <span>
-                  Take the first step with
-                  clarity
-                </span>
-
-                <h3>
-                  Consult Dr Anitha A Manoj
-                </h3>
-
-                <p>
-                  Senior Fertility Specialist
-                  · Highrisk Obstetrician
-                </p>
-
-                <strong>
-                  Sukam Clinic – Maternity,
-                  Fertility & Speciality
-                </strong>
+                <span>Consult</span>
+                <h3>Dr Anitha A Manoj</h3>
+                <p>Senior Fertility Specialist · Highrisk Obstetrician</p>
+                <strong>Sukam Clinic – Maternity, Fertility & Speciality</strong>
+                <em>Building Dreams, Delivering Miracles</em>
 
                 <div>
-                  <a href="tel:8108108310">
-                    8108108310
-                  </a>
-
-                  <a href="tel:9108108980">
-                    9108108980
-                  </a>
-
+                  <a href="tel:8108108310">8108108310</a>
+                  <a href="tel:9108108980">9108108980</a>
                   <a
                     href="https://www.sukamspeciality.in/"
                     target="_blank"
@@ -1659,6 +1373,30 @@ const InfertilityInsights = () => {
                   </a>
                 </div>
               </div>
+
+              <div className="inf-reader-final-reminder">
+                <strong>Remember</strong>
+                <p>
+                  Every couple’s situation is different. Clear counselling, realistic
+                  expectations and personalised care remain central to ethical fertility
+                  treatment.
+                </p>
+              </div>
+            </BookPage>
+
+            <BookPage side="right" pageNumber={rightPageNumber} isEnd>
+              <div className="inf-reader-end-page">
+                <div className="inf-reader-end-heart" aria-hidden="true">
+                  ♡
+                </div>
+                <span>Infertility Insights</span>
+                <h2>End</h2>
+                <p>
+                  Thank you for taking the time to understand your fertility journey.
+                </p>
+                <div className="inf-reader-end-rule" />
+                <strong>Better information. Brighter tomorrows.</strong>
+              </div>
             </BookPage>
           </>
         );
@@ -1666,79 +1404,41 @@ const InfertilityInsights = () => {
   };
 
   return (
-    <main
-      className="inf-reader"
-      style={{
-        "--reader-scale": fontScale,
-      }}
-    >
+    <main className="inf-reader" style={{ "--reader-scale": fontScale }}>
       <header className="inf-reader-header">
-        <div
-          className="inf-reader-header-mark"
-          aria-hidden="true"
-        >
+        <div className="inf-reader-header-mark" aria-hidden="true">
           ♡
         </div>
 
         <div className="inf-reader-header-copy">
-          <h1>
-            Infertility Insights
-          </h1>
-
-          <p>
-            A patient-friendly guide to
-            understanding your fertility
-            journey
-          </p>
+          <h1>Infertility Insights</h1>
+          <p>A patient-friendly guide to understanding your fertility journey</p>
         </div>
 
-        <div
-          className="inf-reader-header-decoration"
-          aria-hidden="true"
-        />
+        <div className="inf-reader-header-decoration" aria-hidden="true" />
       </header>
 
       <div className="inf-reader-layout">
         <aside className="inf-reader-contents">
           <h2>CONTENTS</h2>
 
-          <nav
-            aria-label="Infertility guide chapters"
-          >
-            {chapters.map(
-              (chapter, index) => (
-                <button
-                  type="button"
-                  key={chapter}
-                  className={
-                    currentChapter ===
-                    index
-                      ? "is-active"
-                      : ""
-                  }
-                  onClick={() =>
-                    goToChapter(index)
-                  }
-                >
-                  <span>
-                    {String(
-                      index + 1
-                    ).padStart(2, "0")}
-                  </span>
-
-                  <strong>
-                    {chapter}
-                  </strong>
-                </button>
-              )
-            )}
+          <nav aria-label="Infertility guide chapters">
+            {chapters.map((chapter, index) => (
+              <button
+                type="button"
+                key={chapter}
+                className={currentChapter === index ? "is-active" : ""}
+                onClick={() => requestChapterChange(index)}
+                disabled={isTurning}
+              >
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <strong>{chapter}</strong>
+              </button>
+            ))}
           </nav>
 
           <div className="inf-reader-contents-footer">
-            <span aria-hidden="true">
-              ♡
-            </span>
-
+            <span aria-hidden="true">♡</span>
             <p>
               Better information.
               <br />
@@ -1752,11 +1452,10 @@ const InfertilityInsights = () => {
             <button
               type="button"
               className="inf-reader-tool-button"
-              onClick={
-                handleFontSize
-              }
+              onClick={handleFontSize}
               aria-label="Change reading font size"
               title="Change font size"
+              disabled={isTurning}
             >
               <span>Aa</span>
               <small>⌄</small>
@@ -1764,100 +1463,64 @@ const InfertilityInsights = () => {
 
             <button
               type="button"
-              className={`inf-reader-tool-button ${
-                isSpeaking
-                  ? "is-active"
-                  : ""
-              }`}
+              className={`inf-reader-tool-button ${isSpeaking ? "is-active" : ""}`.trim()}
               onClick={handleListen}
-              aria-label={
-                isSpeaking
-                  ? "Stop listening"
-                  : "Listen to chapter"
-              }
+              aria-label={isSpeaking ? "Stop listening" : "Listen to chapter"}
+              disabled={isTurning}
             >
-              <span aria-hidden="true">
-                ◉
-              </span>
-
-              <strong>
-                {isSpeaking
-                  ? "Stop"
-                  : "Listen"}
-              </strong>
+              <span aria-hidden="true">◉</span>
+              <strong>{isSpeaking ? "Stop" : "Listen"}</strong>
             </button>
           </div>
 
-          <div className="inf-reader-book-spread">
+          <div
+            className={`inf-reader-book-spread ${isTurning ? "is-turning" : ""}`.trim()}
+          >
             {renderChapter()}
+            <PageTurnSheet turnMeta={turnMeta} />
           </div>
 
           <div className="inf-reader-navigation">
             <button
               type="button"
               className="inf-reader-nav-button inf-reader-nav-button--previous"
-              onClick={() =>
-                goToChapter(
-                  currentChapter - 1
-                )
-              }
-              disabled={
-                currentChapter === 0
-              }
+              onClick={() => requestChapterChange(currentChapter - 1)}
+              disabled={currentChapter === 0 || isTurning}
             >
-              <span aria-hidden="true">
-                ←
-              </span>
-
+              <span aria-hidden="true">←</span>
               Previous
             </button>
 
             <div className="inf-reader-progress">
               <strong>
-                Chapter{" "}
-                {currentChapter + 1} of{" "}
-                {chapters.length}
+                Chapter {currentChapter + 1} of {chapters.length}
               </strong>
 
               <div className="inf-reader-progress-row">
                 <div className="inf-reader-progress-track">
                   <div
                     className="inf-reader-progress-fill"
-                    style={{
-                      width: `${chapterProgress}%`,
-                    }}
+                    style={{ width: `${chapterProgress}%` }}
                   />
                 </div>
-
-                <span>
-                  {Math.round(
-                    chapterProgress
-                  )}
-                  %
-                </span>
+                <span>{Math.round(chapterProgress)}%</span>
               </div>
             </div>
 
             <button
               type="button"
               className="inf-reader-nav-button inf-reader-nav-button--next"
-              onClick={() =>
-                goToChapter(
-                  currentChapter + 1
-                )
-              }
-              disabled={
-                currentChapter ===
-                chapters.length - 1
-              }
+              onClick={() => requestChapterChange(currentChapter + 1)}
+              disabled={currentChapter === chapters.length - 1 || isTurning}
             >
               Next page
-
-              <span aria-hidden="true">
-                →
-              </span>
+              <span aria-hidden="true">→</span>
             </button>
           </div>
+
+          <p className="inf-reader-keyboard-hint">
+            Tip: use the left and right arrow keys to turn pages.
+          </p>
         </section>
       </div>
     </main>
