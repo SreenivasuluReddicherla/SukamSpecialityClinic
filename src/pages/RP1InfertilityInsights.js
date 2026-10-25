@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 
-import "./RP1InfertilityInsights.css";
+import "./RP1InfertilityInsights1.css";
 
 const consultationTimings = [
   {
