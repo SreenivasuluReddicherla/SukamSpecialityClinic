@@ -1,241 +1,2331 @@
-.contact-section {
+
+/* =========================================================
+   SUKAM CLINIC - CONTACT PAGE
+   Design: Premium Maternity & Healthcare
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Lato:wght@400;500;600;700;900&display=swap");
+
+
+/* =========================================================
+   1. ROOT VARIABLES & GLOBAL COMPONENT STYLES
+========================================================= */
+
+.sukam-contact-page {
+  --sc-primary: #d90872;
+  --sc-primary-dark: #b9005c;
+  --sc-navy: #07366f;
+  --sc-dark: #192c48;
+
+  --sc-purple: #8d149f;
+  --sc-teal: #008d91;
+  --sc-green: #15b94e;
+  --sc-blue: #008dca;
+
+  --sc-soft-pink: #fce6ef;
+  --sc-background: #fffafd;
+  --sc-white: #ffffff;
+
+  --sc-border: #eee4eb;
+
+  --sc-shadow:
+    0 6px 25px rgba(62, 24, 58, 0.07);
+
+  --sc-transition:
+    all 0.3s ease;
+
+  position: relative;
+  width: 100%;
   min-height: 100vh;
-  padding: 80px 20px;
-  background:
-    radial-gradient(circle at top left, rgba(84, 0, 123, 0.12), transparent 35%),
-    linear-gradient(135deg, #fff7fb, #f5f7ff);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
 
-.contact-card {
-  max-width: 1180px;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 26px;
+  margin: 0;
+  padding: 0;
+
   overflow: hidden;
-  box-shadow: 0 20px 55px rgba(84, 0, 123, 0.14);
-  border: 1px solid rgba(84, 0, 123, 0.15);
-  animation: fadeIn 0.9s ease forwards;
-}
 
-.contact-header {
-  text-align: center;
-  padding: 55px 35px 35px;
-  background: linear-gradient(135deg,  #fff7fb,  #fff7fb);
-  color: #fff;
-}
+  background: linear-gradient(
+    180deg,
+    #fffafd 0%,
+    #ffffff 55%,
+    #fff9fc 100%
+  );
 
-.contact-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(3, 70, 227, 0.87);
-  padding: 10px 30px;
-  border-radius: 999px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  font-size: 24px;
-}
+  color: var(--sc-dark);
 
-.contact-header h1 {
-  font-size: 38px;
-  margin-bottom: 6px;
-  font-weight: 700;
-  color: #0141c1;
-}
+  font-family:
+    "Lato",
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
 
-.contact-header p {
-  max-width: 760px;
-  margin: auto;
-  font-size: 17px;
-  line-height: 1.7;
-  opacity: 0.95;
-}
-
-.contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 35px;
-  padding: 45px;
-  font-size: 18px;
-}
-
-.contact-left,
-.contact-right {
-  background: #0141c12d ;
-  text-align: center;
-  border-radius: 22px;
-  padding: 30px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
-}
-
-.contact-left h2,
-.contact-right h2 {
-  color: #54007b;
-  font-size: 30px;
-  font-weight: 800;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.info-box {
-  display: flex;
-  gap: 16px;
-  padding: 18px;
-  border-radius: 16px;
-  background: #faf7ff;
-  margin-bottom: 18px;
-  border: 2px solid rgba(0, 39, 123, 0.941);
-}
-
-.info-icon {
-  font-size: 24px;
-  color: #54007b;
-  margin-top: 5px;
-  min-width: 24px;
-}
-
-.location-icon {
-  color: #e53935;
-}
-
-.info-box h3 {
-  margin: 0 0 8px;
-  color:#0141c1;
-  font-size: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: left;
-}
-
-.info-box p {
-  margin: 4px 0;
-  color: #000000;
+  font-size: 16px;
   line-height: 1.6;
-  font-size: 20px;
+
+  isolation: isolate;
 }
 
-.phone-numbers {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 24px;
+.sukam-contact-page *,
+.sukam-contact-page *::before,
+.sukam-contact-page *::after {
+  box-sizing: border-box;
 }
 
-.phone-btn {
-  background: #f8f9fa;
-  padding: 13px 18px;
-  border-radius: 12px;
+.sukam-contact-page h1,
+.sukam-contact-page h2,
+.sukam-contact-page h3,
+.sukam-contact-page p {
+  margin: 0;
+}
+
+.sukam-contact-page a {
   text-decoration: none;
-  color: #000000;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  transition: all 0.3s ease;
-  border: 1px solid #e2e2e2;
 }
 
-.phone-btn:hover {
-  background: #54007b;
-  color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(84, 0, 123, 0.25);
+.sukam-contact-page button,
+.sukam-contact-page input,
+.sukam-contact-page textarea {
+  font: inherit;
 }
 
-.email-btn {
-  width: 100%;
-  justify-content: center;
+.sukam-contact-page a:focus-visible,
+.sukam-contact-page button:focus-visible {
+  outline: 3px solid var(--sc-purple);
+  outline-offset: 4px;
 }
 
-.whatsapp-btn {
-  background: #00a03b;
-  color: #fff;
-  border-color: #25d366;
-}
+.sukam-contact-page .sc-visually-hidden {
+  position: absolute;
 
-.whatsapp-btn:hover {
-  background: #128c7e;
-}
+  width: 1px;
+  height: 1px;
 
-.icon {
-  color: #e53935;
-}
+  padding: 0;
+  margin: -1px;
 
-.map-wrapper {
   overflow: hidden;
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+
+  border: 0;
 }
 
-.map-wrapper iframe {
-  display: block;
+
+/* =========================================================
+   2. HERO SECTION
+========================================================= */
+
+.sc-hero-section {
+  position: relative;
+
   width: 100%;
-  height: 380px;
+  min-height: 470px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #f7eee700;
+}
+
+
+/* Hero Background Photograph */
+
+.sc-hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  background-image:
+    url("../assets/Contact/CIMG2.png");
+
+  background-size: cover; 
+  background-position: right bottom 90%;
+  background-repeat: no-repeat;
+}
+
+
+/* Background Gradient Overlay */
+/* 
+.sc-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 250, 245, 0.94) 0%,
+    rgba(255, 250, 245, 0.90) 25%,
+    rgba(255, 250, 245, 0.55) 40%,
+    rgba(255, 250, 245, 0.08) 58%,
+    rgba(255, 250, 245, 0) 75%
+  );
+}
+ */
+
+/* Hero Content Container */
+
+.sc-hero-container {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding: 45px 35px 85px;
+}
+
+.sc-hero-content {
+  max-width: 650px;
+
+  animation: scFadeUp 0.8s ease both;
+}
+
+
+/* Contact Us - Main Heading */
+
+.sc-hero-content h1 {
+  color: var(--sc-navy);
+
+  font-size: clamp(48px, 5.4vw, 84px);
+
+  font-weight: 900;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+
+  margin-bottom: 5px;
+}
+
+
+/* Hero Subtitle */
+
+.sc-hero-subtitle {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  color: var(--sc-navy);
+
+  font-size: clamp(50px, 2.3vw, 36px);
+
+  font-weight: 800;
+
+  line-height: 1.4;
+}
+
+
+/* Handwritten Typography */
+
+.sc-script-text {
+  position: relative;
+
+  display: inline-block;
+
+  color: var(--sc-primary);
+
+  font-family:
+    "Dancing Script",
+    "Brush Script MT",
+    cursive;
+
+  font-size: clamp(45px, 3.6vw, 55px);
+
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.sc-script-text::after {
+  content: "";
+
+  position: absolute;
+
+  right: -5px;
+  bottom: -12px;
+
+  width: 90px;
+  height: 13px;
+
+  border-top: 2px solid var(--sc-primary);
+
+  border-radius: 50%;
+
+  transform: rotate(-5deg);
+}
+
+
+/* Small Decorative Line */
+
+.sc-hero-accent {
+  width: 65px;
+  height: 2px;
+
+  margin-top: 20px;
+  margin-bottom: 15px;
+
+  background: linear-gradient(
+    90deg,
+    #f093bc,
+    var(--sc-primary),
+    transparent
+  );
+}
+
+
+/* Hero Description */
+
+.sc-hero-content p {
+  color: var(--sc-dark);
+
+  font-size: clamp(25px, 1.4vw, 21px);
+
+  font-weight: 600;
+
+  line-height: 1.55;
+}
+
+
+/* Hero Right Decorative Wave */
+
+.sc-hero-side-wave {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 250px;
+  height: 250px;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+
+/* Hero Bottom Decorative Wave */
+
+.sc-hero-bottom-wave {
+  position: absolute;
+
+  left: 0;
+  bottom: -1px;
+
+  width: 100%;
+  height: 120px;
+
+  z-index: 4;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   3. QUICK CONTACT CARDS
+========================================================= */
+
+.sc-quick-contact {
+  position: relative;
+
+  z-index: 5;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+
+  width: calc(100% - 60px);
+  max-width: 1280px;
+
+  margin: -42px auto 0;
+
+  animation: scFadeUp 0.85s ease both;
+}
+
+
+/* Individual Quick Contact Card */
+
+.sc-quick-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+
+  min-height: 112px;
+  min-width: 0;
+
+  padding: 17px 20px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid rgba(255, 255, 255, 0.95);
+
+  border-radius: 23px;
+
+  box-shadow:
+    0 5px 18px rgba(69, 35, 65, 0.08);
+
+  backdrop-filter: blur(12px);
+
+  color: var(--sc-navy);
+
+  transition: var(--sc-transition);
+}
+
+.sc-quick-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #f2c6dc;
+
+  box-shadow:
+    0 12px 30px rgba(144, 35, 100, 0.13);
+}
+
+
+/* Contact Card Icon Base */
+
+.sc-contact-icon {
+  position: relative;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 65px;
+  height: 65px;
+
+  border-radius: 50%;
+
+  font-size: 31px;
+
+  transition: var(--sc-transition);
+}
+
+.sc-quick-card:hover .sc-contact-icon {
+  transform: scale(1.08);
+}
+
+
+/* Call Icon */
+
+.sc-phone-icon {
+  color: #e60878;
+
+  background: radial-gradient(
+    circle at 30% 25%,
+    #ffe0ee,
+    #f7a4cc
+  );
+
+  box-shadow:
+    inset 0 0 0 7px rgba(255, 255, 255, 0.20);
+}
+
+
+/* WhatsApp Icon */
+
+.sc-whatsapp-icon {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #35e86d,
+    #00ad43
+  );
+
+  border: 8px solid #dcf8e6;
+
+  font-size: 33px;
+}
+
+
+/* Location Icon */
+
+.sc-location-icon {
+  color: #8f0baa;
+
+  background: radial-gradient(
+    circle at 30% 25%,
+    #f9e7fc,
+    #e0b0f2
+  );
+
+  font-size: 35px;
+
+  box-shadow:
+    inset 0 0 0 7px rgba(255, 255, 255, 0.20);
+}
+
+
+/* Email Icon */
+
+.sc-email-icon {
+  color: #008bc5;
+
+  background: radial-gradient(
+    circle at 30% 25%,
+    #e2f6ff,
+    #a5d8f1
+  );
+
+  box-shadow:
+    inset 0 0 0 7px rgba(255, 255, 255, 0.25);
+}
+
+
+/* Contact Card Text */
+
+.sc-quick-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.sc-quick-card-content h2 {
+  color: var(--sc-navy);
+
+  font-size: 19px;
+  font-weight: 700;
+
+  line-height: 1.35;
+
+  margin-bottom: 3px;
+}
+
+.sc-quick-card-content p {
+  color: var(--sc-dark);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+.sc-quick-card-content .sc-primary-number {
+  font-size: 18px;
+  font-weight: 900;
+
+  color: var(--sc-navy);
+
+  white-space: nowrap;
+}
+
+.sc-quick-card-content .sc-email-address {
+  font-size: 12.5px;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* Individual Card Hover Effects */
+
+.sc-call-card:hover {
+  border-color: #f2adce;
+}
+
+.sc-whatsapp-card:hover {
+  border-color: #ade9c2;
+}
+
+.sc-location-card:hover {
+  border-color: #dab2e9;
+}
+
+.sc-email-card:hover {
+  border-color: #acd9f1;
+}
+
+
+/* =========================================================
+   4. MAIN CONTACT SECTION
+========================================================= */
+
+.sc-main-contact {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(210px, 0.82fr)
+    minmax(0, 1.85fr)
+    minmax(0, 2fr);
+
+  align-items: start;
+
+  gap: 25px;
+
+  width: 100%;
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+  padding: 32px 30px 20px;
+
+  animation: scFadeUp 0.95s ease both;
+}
+
+
+/* =========================================================
+   5. CLINIC TIMINGS CARD
+========================================================= */
+
+.sc-timing-card {
+  position: relative;
+
+  min-height: 280px;
+
+  margin-top: 12px;
+
+  padding: 24px 20px 18px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background: linear-gradient(
+    145deg,
+    #fff0f6 0%,
+    #fbe2ed 100%
+  );
+
+  border: 1px solid #fce5ef;
+
+  border-radius: 23px;
+
+  transition: var(--sc-transition);
+}
+
+.sc-timing-card:hover {
+  box-shadow: var(--sc-shadow);
+}
+
+
+/* Clinic Timing Heading */
+
+.sc-timing-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 22px;
+}
+
+.sc-clock-icon {
+  color: var(--sc-primary);
+
+  font-size: 30px;
+
+  flex-shrink: 0;
+}
+
+.sc-timing-heading h2 {
+  color: var(--sc-navy);
+
+  font-size: clamp(19px, 1.6vw, 25px);
+
+  font-weight: 900;
+
+  line-height: 1.3;
+}
+
+
+/* Timing Content */
+
+.sc-timing-block h3 {
+  color: var(--sc-navy);
+
+  font-size: 17px;
+  font-weight: 700;
+
+  margin-bottom: 5px;
+}
+
+.sc-timing-block p {
+  color: var(--sc-dark);
+
+  font-size: 16px;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+
+/* Divider Between Timings */
+
+.sc-timing-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 18px auto 14px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #bc9bad,
+    transparent
+  );
+}
+
+
+/* Calendar Decoration */
+
+.sc-timing-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 15px;
+
+  color: #e998c3;
+
+  font-size: 19px;
+}
+
+.sc-timing-decoration span {
+  display: block;
+
+  width: 45px;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--sc-primary)
+  );
+}
+
+
+/* =========================================================
+   6. GOOGLE MAPS SECTION
+========================================================= */
+
+.sc-map-section {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 0;
+}
+
+
+/* Google Maps Container */
+
+.sc-map-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 310px;
+
+  overflow: hidden;
+
+  background: #f4f4f4;
+
+  border: 1px solid #e8e5e8;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 4px 15px rgba(43, 42, 60, 0.05);
+}
+
+.sc-map-wrapper iframe {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 310px;
+
   border: none;
 }
 
-/* Animation */
-@keyframes fadeIn {
-  0% {
+
+/* Get Directions Button */
+
+.sc-directions-button {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 45px;
+
+  margin-top: -8px;
+
+  padding: 10px 23px;
+
+  background: #ffffff;
+
+  color: var(--sc-purple);
+
+  border: 1px solid #edcde7;
+
+  border-radius: 50px;
+
+  box-shadow:
+    0 5px 14px rgba(98, 26, 108, 0.05);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: var(--sc-transition);
+}
+
+.sc-directions-button > svg:first-child {
+  font-size: 19px;
+}
+
+.sc-direction-arrow {
+  font-size: 12px;
+
+  transition: transform 0.3s ease;
+}
+
+.sc-directions-button:hover {
+  color: #ffffff;
+
+  background: var(--sc-purple);
+
+  border-color: var(--sc-purple);
+
+  box-shadow:
+    0 6px 18px rgba(141, 20, 159, 0.20);
+
+  transform: translateY(-2px);
+}
+
+.sc-directions-button:hover .sc-direction-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   7. SEND US A MESSAGE CARD
+========================================================= */
+
+.sc-message-card {
+  position: relative;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  padding: 20px 26px 18px;
+
+  background: linear-gradient(
+    120deg,
+    #fffdfd 0%,
+    #fff9fc 50%,
+    #fce8f1 100%
+  );
+
+  border: 1px solid #f0e2eb;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 5px 20px rgba(81, 38, 65, 0.04);
+}
+
+
+/* Decorative Mother and Baby Illustration */
+
+.sc-form-decoration {
+  position: absolute;
+
+  top: 25px;
+  right: -12px;
+  bottom: 5px;
+
+  z-index: 0;
+
+  width: 34%;
+
+  background-image:
+    url("../assets/Contact/CIMG1.jpeg");
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center right;
+
+  opacity: 0.24;
+
+  pointer-events: none;
+}
+
+
+/* Decorative Bottom Wave */
+
+.sc-form-bottom-wave {
+  position: absolute;
+
+  right: -30px;
+  bottom: -60px;
+
+  z-index: 0;
+
+  width: 50%;
+  height: 100px;
+
+  border-radius: 65% 0 0 0;
+
+  background: linear-gradient(
+    135deg,
+    #f5a5ce,
+    #fbd5e8
+  );
+
+  transform: rotate(-12deg);
+
+  opacity: 0.70;
+
+  pointer-events: none;
+}
+
+
+/* Form Heading */
+
+.sc-message-heading {
+  position: relative;
+
+  z-index: 1;
+
+  margin-bottom: 14px;
+}
+
+.sc-message-heading h2 {
+  color: var(--sc-navy);
+
+  font-size: clamp(23px, 2vw, 30px);
+
+  font-weight: 900;
+
+  line-height: 1.3;
+
+  letter-spacing: -0.5px;
+}
+
+.sc-message-heading p {
+  color: var(--sc-dark);
+
+  font-size: 15px;
+  font-weight: 400;
+
+  margin-top: 3px;
+}
+
+
+/* Contact Form Layout */
+
+.sc-contact-form {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  width: 73%;
+}
+
+
+/* Name and Phone Row */
+
+.sc-form-row {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.sc-form-group {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* Contact Form Input Fields */
+
+.sc-form-group input,
+.sc-form-group textarea {
+  display: block;
+
+  width: 100%;
+
+  padding: 10px 13px;
+
+  color: var(--sc-dark);
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid #e3dce3;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  box-shadow:
+    inset 0 1px 3px rgba(54, 25, 47, 0.025);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.sc-form-group input {
+  height: 43px;
+}
+
+.sc-form-group textarea {
+  min-height: 75px;
+
+  resize: vertical;
+}
+
+
+/* Input Placeholder */
+
+.sc-form-group input::placeholder,
+.sc-form-group textarea::placeholder {
+  color: #435068;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  opacity: 1;
+}
+
+
+/* Input Focus Effect */
+
+.sc-form-group input:focus,
+.sc-form-group textarea:focus {
+  background: #ffffff;
+
+  border-color: #e567a8;
+
+  box-shadow:
+    0 0 0 3px rgba(217, 8, 114, 0.08);
+}
+
+
+/* Send Message Button */
+
+.sc-send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  width: 100%;
+  min-height: 45px;
+
+  padding: 11px 20px;
+
+  margin-top: 4px;
+
+  background: linear-gradient(
+    105deg,
+    #e00879,
+    #d40770
+  );
+
+  color: #ffffff;
+
+  border: none;
+  border-radius: 50px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 15px rgba(217, 8, 114, 0.13);
+
+  transition: var(--sc-transition);
+}
+
+.sc-send-button svg {
+  font-size: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+.sc-send-button:hover {
+  background: linear-gradient(
+    105deg,
+    #cc0068,
+    #b90060
+  );
+
+  box-shadow:
+    0 8px 20px rgba(217, 8, 114, 0.23);
+
+  transform: translateY(-2px);
+}
+
+.sc-send-button:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.sc-send-button:active {
+  transform: translateY(0);
+}
+
+
+/* Form Privacy Information */
+
+.sc-form-notice {
+  color: #6d5e70;
+
+  font-size: 11px;
+
+  line-height: 1.45;
+
+  text-align: center;
+}
+
+
+/* Form Status Messages */
+
+.sc-form-status {
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.sc-status-success {
+  color: #176c42;
+
+  background: #e9f8ef;
+
+  border: 1px solid #b9e8ce;
+}
+
+.sc-status-error {
+  color: #b42318;
+
+  background: #fff1f1;
+
+  border: 1px solid #ffcaca;
+}
+
+
+/* =========================================================
+   8. OUR SPECIALITIES SECTION
+========================================================= */
+
+.sc-specialities-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 210px;
+
+  padding: 5px 30px 35px;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fffafd 100%
+  );
+}
+
+
+/* Specialities Heading */
+
+.sc-specialities-heading {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-bottom: 15px;
+}
+
+.sc-specialities-heading h2 {
+  color: var(--sc-navy);
+
+  font-size: 23px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* Horizontal Heading Lines */
+
+.sc-heading-line {
+  display: block;
+
+  width: clamp(45px, 14vw, 200px);
+  height: 1.5px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #708bac
+  );
+}
+
+.sc-heading-line:last-child {
+  background: linear-gradient(
+    90deg,
+    #708bac,
+    transparent
+  );
+}
+
+
+/* Specialities Main Container */
+
+.sc-specialities-container {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 50px;
+
+  max-width: 1440px;
+
+  margin: 0 auto;
+}
+
+
+/* Specialities List */
+
+.sc-specialities-list {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 700px;
+}
+
+
+/* Individual Speciality Item */
+
+.sc-speciality-item {
+  position: relative;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 0 25px;
+
+  text-align: center;
+}
+
+
+/* Vertical Divider Between Specialities */
+
+.sc-speciality-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 15px;
+  right: 0;
+
+  width: 1px;
+  height: 85px;
+
+  background: linear-gradient(
+    180deg,
+    transparent,
+    #9caec2,
+    transparent
+  );
+}
+
+
+/* Speciality Icon */
+
+.sc-speciality-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 82px;
+  height: 82px;
+
+  border-radius: 50%;
+
+  font-size: 40px;
+
+  transition: var(--sc-transition);
+}
+
+.sc-speciality-item:hover .sc-speciality-icon {
+  transform: translateY(-5px) scale(1.04);
+}
+
+.sc-speciality-item h3 {
+  font-size: 17px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+/* Maternity Speciality */
+
+.sc-speciality-maternity {
+  color: #df0875;
+}
+
+.sc-speciality-maternity .sc-speciality-icon {
+  background: radial-gradient(
+    circle at 35% 30%,
+    #ffedf6,
+    #fac0dd
+  );
+
+  border: 1px solid #f9c6df;
+}
+
+
+/* Fertility Speciality */
+
+.sc-speciality-fertility {
+  color: #900ba5;
+}
+
+.sc-speciality-fertility .sc-speciality-icon {
+  background: radial-gradient(
+    circle at 35% 30%,
+    #fbf0ff,
+    #e7c3f2
+  );
+
+  border: 1px solid #ead1f1;
+}
+
+
+/* General Surgery Speciality */
+
+.sc-speciality-surgery {
+  color: #008e91;
+}
+
+.sc-speciality-surgery .sc-speciality-icon {
+  background: radial-gradient(
+    circle at 35% 30%,
+    #e9fffc,
+    #bcece8
+  );
+
+  border: 1px solid #c9eeec;
+}
+
+
+/* =========================================================
+   9. CLINIC COMMITMENT TAGLINE
+========================================================= */
+
+.sc-commitment {
+  position: relative;
+
+  flex-shrink: 0;
+
+  min-width: 275px;
+
+  padding: 10px 20px 18px;
+
+  color: var(--sc-navy);
+
+  text-align: center;
+}
+
+.sc-commitment p {
+  font-family:
+    "Dancing Script",
+    "Brush Script MT",
+    cursive;
+
+  font-size: clamp(28px, 2.6vw, 40px);
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  transform: rotate(-3deg);
+}
+
+.sc-commitment p:last-of-type {
+  margin-left: 20px;
+}
+
+.sc-commitment-underline {
+  display: block;
+
+  width: 75%;
+  height: 15px;
+
+  margin: 8px auto 0;
+
+  border-top: 3px solid var(--sc-primary);
+
+  border-radius: 50%;
+
+  transform: rotate(-4deg);
+}
+
+
+/* Decorative Specialities Waves */
+
+.sc-specialities-wave {
+  position: absolute;
+
+  left: 0;
+  bottom: -1px;
+
+  z-index: 0;
+
+  width: 100%;
+  height: 160px;
+
+  pointer-events: none;
+}
+
+
+/* Floral Decoration */
+
+.sc-flower-decoration {
+  position: absolute;
+
+  left: -20px;
+  bottom: -25px;
+
+  z-index: 1;
+
+  width: 230px;
+  height: 220px;
+
+  /* background-image:
+    url("../assets/Contact/CIMG1.jpeg"); */
+
+  background-size: contain;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   10. ADDITIONAL CONTACT INFORMATION
+========================================================= */
+
+.sc-additional-contact {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 18px 25px 22px;
+
+  background: #fff9fc;
+
+  border-top: 1px solid #f2dce8;
+
+  text-align: center;
+}
+
+
+/* Full Clinic Address */
+
+.sc-address-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  max-width: 1000px;
+
+  margin: 0 auto 10px;
+
+  color: var(--sc-navy);
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sc-address-details svg {
+  flex-shrink: 0;
+
+  color: var(--sc-primary);
+
+  font-size: 17px;
+}
+
+
+/* Additional Contact Numbers */
+
+.sc-additional-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 18px;
+}
+
+.sc-additional-numbers a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--sc-navy);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: var(--sc-transition);
+}
+
+.sc-additional-numbers a svg {
+  color: var(--sc-primary);
+
+  font-size: 13px;
+}
+
+.sc-additional-numbers a:hover {
+  color: var(--sc-primary);
+}
+
+.sc-contact-separator {
+  width: 1px;
+  height: 15px;
+
+  background: #d9b8cd;
+}
+
+
+/* =========================================================
+   11. ANIMATIONS
+========================================================= */
+
+@keyframes scFadeUp {
+  from {
     opacity: 0;
-    transform: translateY(35px);
+
+    transform: translateY(22px);
   }
 
-  100% {
+  to {
     opacity: 1;
+
     transform: translateY(0);
   }
 }
 
-/* Tablet */
-@media (max-width: 992px) {
-  .contact-content {
-    grid-template-columns: 1fr;
-    padding: 30px;
-  }
 
-  .contact-header h1 {
-    font-size: 32px;
+/* Respect Reduced Motion Preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .sukam-contact-page *,
+  .sukam-contact-page *::before,
+  .sukam-contact-page *::after {
+    animation: none !important;
+
+    transition: none !important;
   }
 }
 
-/* Mobile */
-@media (max-width: 576px) {
-  .contact-section {
-    padding: 45px 14px;
+
+/* =========================================================
+   12. LARGE DESKTOP RESPONSIVE DESIGN
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .sc-hero-section {
+    min-height: 410px;
   }
 
-  .contact-header {
-    padding: 40px 22px 30px;
+  .sc-hero-container {
+    max-width: 1440px;
   }
 
-  .contact-header h1 {
+  .sc-quick-contact {
+    max-width: 1440px;
+  }
+
+  .sc-quick-card {
+    min-height: 125px;
+
+    padding: 20px 24px;
+  }
+
+  .sc-main-contact {
+    padding-top: 38px;
+  }
+
+  .sc-map-wrapper,
+  .sc-map-wrapper iframe {
+    height: 340px;
+  }
+
+}
+
+
+/* =========================================================
+   13. LAPTOP RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .sc-hero-section {
+    min-height: 330px;
+  }
+
+  .sc-quick-contact {
+    gap: 12px;
+
+    width: calc(100% - 40px);
+  }
+
+  .sc-quick-card {
+    gap: 10px;
+
+    padding: 15px 12px;
+
+    min-height: 105px;
+  }
+
+  .sc-contact-icon {
+    width: 55px;
+    height: 55px;
+
     font-size: 26px;
   }
 
-  .contact-content {
-    padding: 20px;
+  .sc-quick-card-content h2 {
+    font-size: 16px;
   }
 
-  .contact-left,
-  .contact-right {
-    padding: 22px;
+  .sc-quick-card-content p {
+    font-size: 12px;
   }
 
-  .contact-left h2,
-  .contact-right h2 {
+  .sc-quick-card-content .sc-primary-number {
+    font-size: 15px;
+  }
+
+  .sc-quick-card-content .sc-email-address {
+    font-size: 11px;
+  }
+
+  .sc-main-contact {
+    grid-template-columns:
+      minmax(185px, 0.85fr)
+      minmax(0, 1.6fr)
+      minmax(0, 1.9fr);
+
+    gap: 18px;
+
+    padding: 28px 20px 20px;
+  }
+
+  .sc-timing-card {
+    padding: 22px 12px;
+  }
+
+  .sc-timing-heading {
+    gap: 7px;
+  }
+
+  .sc-timing-heading h2 {
+    font-size: 20px;
+  }
+
+  .sc-clock-icon {
+    font-size: 24px;
+  }
+
+  .sc-timing-block h3 {
+    font-size: 15px;
+  }
+
+  .sc-timing-block p {
+    font-size: 14px;
+  }
+
+  .sc-message-card {
+    padding: 18px;
+  }
+
+  .sc-contact-form {
+    width: 88%;
+  }
+
+  .sc-form-decoration {
+    opacity: 0.15;
+  }
+
+  .sc-specialities-container {
+    gap: 20px;
+  }
+
+  .sc-flower-decoration {
+    width: 170px;
+    height: 180px;
+  }
+
+}
+
+
+/* =========================================================
+   14. TABLET RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .sc-hero-section {
+    min-height: 320px;
+  }
+
+  .sc-hero-container {
+    padding: 40px 30px 80px;
+  }
+
+  .sc-hero-content h1 {
+    font-size: 58px;
+  }
+
+  .sc-hero-subtitle {
+    font-size: 25px;
+  }
+
+  .sc-script-text {
+    font-size: 40px;
+  }
+
+  .sc-quick-contact {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin-top: -30px;
+  }
+
+  .sc-quick-card {
+    min-height: 100px;
+
+    padding: 16px 20px;
+
+    gap: 18px;
+  }
+
+  .sc-quick-card-content h2 {
+    font-size: 18px;
+  }
+
+  .sc-quick-card-content p {
+    font-size: 14px;
+  }
+
+  .sc-quick-card-content .sc-primary-number {
+    font-size: 18px;
+  }
+
+  .sc-quick-card-content .sc-email-address {
+    font-size: 13px;
+  }
+
+  .sc-contact-icon {
+    width: 60px;
+    height: 60px;
+
+    font-size: 28px;
+  }
+
+  .sc-main-contact {
+    grid-template-columns:
+      minmax(210px, 0.9fr)
+      minmax(0, 1.6fr);
+
+    gap: 22px;
+
+    padding: 28px 20px;
+  }
+
+  .sc-timing-card {
+    margin-top: 0;
+
+    min-height: 300px;
+
+    padding: 25px 20px;
+  }
+
+  .sc-timing-heading h2 {
     font-size: 23px;
   }
 
-  .phone-btn {
-    width: 100%;
-    justify-content: center;
+  .sc-timing-block h3 {
+    font-size: 17px;
   }
 
-  .map-wrapper iframe {
-    height: 320px;
+  .sc-timing-block p {
+    font-size: 16px;
   }
+
+  .sc-message-card {
+    grid-column: 1 / -1;
+
+    padding: 26px;
+  }
+
+  .sc-message-heading h2 {
+    font-size: 28px;
+  }
+
+  .sc-contact-form {
+    width: 75%;
+
+    gap: 13px;
+  }
+
+  .sc-form-group input {
+    height: 46px;
+  }
+
+  .sc-form-group textarea {
+    min-height: 100px;
+  }
+
+  .sc-form-decoration {
+    width: 28%;
+
+    opacity: 0.23;
+  }
+
+  .sc-specialities-container {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .sc-specialities-list {
+    max-width: 650px;
+  }
+
+  .sc-commitment {
+    min-width: 0;
+  }
+
+  .sc-commitment p {
+    display: inline;
+
+    font-size: 33px;
+  }
+
+  .sc-commitment p:last-of-type {
+    margin-left: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   15. MOBILE RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 576px) {
+
+  /* Hero Section */
+
+  .sc-hero-section {
+    min-height: 420px;
+
+    align-items: flex-end;
+
+    background: #f8ede7;
+  }
+
+  .sc-hero-image {
+    background-size: auto 100%;
+
+    background-position: 72% center;
+  }
+
+  .sc-hero-overlay {
+    background: linear-gradient(
+      0deg,
+      rgba(255, 249, 246, 1) 0%,
+      rgba(255, 249, 246, 0.97) 22%,
+      rgba(255, 249, 246, 0.78) 40%,
+      rgba(255, 249, 246, 0.05) 67%,
+      transparent 100%
+    );
+  }
+
+  .sc-hero-container {
+    padding: 30px 20px 60px;
+  }
+
+  .sc-hero-content {
+    text-align: center;
+  }
+
+  .sc-hero-content h1 {
+    font-size: 46px;
+
+    letter-spacing: -1px;
+  }
+
+  .sc-hero-subtitle {
+    justify-content: center;
+
+    gap: 7px;
+
+    font-size: 21px;
+  }
+
+  .sc-script-text {
+    font-size: 34px;
+  }
+
+  .sc-script-text::after {
+    width: 65px;
+
+    bottom: -10px;
+  }
+
+  .sc-hero-accent {
+    margin: 18px auto 12px;
+  }
+
+  .sc-hero-content p {
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+  .sc-hero-side-wave {
+    width: 130px;
+    height: 160px;
+
+    opacity: 0.55;
+  }
+
+  .sc-hero-bottom-wave {
+    height: 35px;
+  }
+
+
+  /* Quick Contact Cards */
+
+  .sc-quick-contact {
+    width: calc(100% - 28px);
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-top: -20px;
+  }
+
+  .sc-quick-card {
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+
+    min-height: 142px;
+
+    gap: 8px;
+
+    padding: 13px 8px;
+
+    border-radius: 17px;
+  }
+
+  .sc-contact-icon {
+    width: 49px;
+    height: 49px;
+
+    font-size: 24px;
+  }
+
+  .sc-whatsapp-icon {
+    border-width: 5px;
+  }
+
+  .sc-quick-card-content {
+    flex: initial;
+
+    width: 100%;
+  }
+
+  .sc-quick-card-content h2 {
+    font-size: 16px;
+
+    margin-bottom: 4px;
+  }
+
+  .sc-quick-card-content p {
+    font-size: 12px;
+  }
+
+  .sc-quick-card-content .sc-primary-number {
+    font-size: 14px;
+  }
+
+  .sc-quick-card-content .sc-email-address {
+    font-size: 11px;
+  }
+
+
+  /* Main Contact Layout */
+
+  .sc-main-contact {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    padding: 24px 14px 20px;
+  }
+
+
+  /* Clinic Timings */
+
+  .sc-timing-card {
+    min-height: auto;
+
+    padding: 22px 20px;
+
+    border-radius: 19px;
+  }
+
+  .sc-timing-heading {
+    margin-bottom: 17px;
+  }
+
+  .sc-timing-heading h2 {
+    font-size: 24px;
+  }
+
+  .sc-clock-icon {
+    font-size: 27px;
+  }
+
+  .sc-timing-block h3 {
+    font-size: 17px;
+  }
+
+  .sc-timing-block p {
+    font-size: 16px;
+  }
+
+  .sc-timing-decoration {
+    margin-top: 8px;
+  }
+
+
+  /* Google Maps */
+
+  .sc-map-wrapper {
+    height: 280px;
+
+    border-radius: 18px;
+  }
+
+  .sc-map-wrapper iframe {
+    height: 280px;
+
+    min-height: 280px;
+  }
+
+  .sc-directions-button {
+    min-height: 44px;
+
+    font-size: 13px;
+  }
+
+
+  /* Message Card */
+
+  .sc-message-card {
+    grid-column: auto;
+
+    padding: 21px 16px;
+
+    border-radius: 20px;
+  }
+
+  .sc-message-heading h2 {
+    font-size: 25px;
+  }
+
+  .sc-message-heading p {
+    font-size: 14px;
+  }
+
+  .sc-message-heading {
+    margin-bottom: 18px;
+  }
+
+  .sc-contact-form {
+    width: 100%;
+
+    gap: 12px;
+  }
+
+  .sc-form-row {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .sc-form-group input {
+    height: 46px;
+  }
+
+  .sc-form-group input,
+  .sc-form-group textarea {
+    font-size: 16px;
+
+    padding: 12px 13px;
+  }
+
+  .sc-form-group textarea {
+    min-height: 110px;
+  }
+
+  .sc-form-decoration {
+    width: 45%;
+
+    opacity: 0.10;
+  }
+
+  .sc-send-button {
+    min-height: 48px;
+
+    font-size: 15px;
+  }
+
+
+  /* Specialities Section */
+
+  .sc-specialities-section {
+    padding: 8px 10px 25px;
+  }
+
+  .sc-specialities-heading {
+    gap: 9px;
+
+    margin-bottom: 18px;
+  }
+
+  .sc-specialities-heading h2 {
+    font-size: 21px;
+  }
+
+  .sc-heading-line {
+    width: 45px;
+  }
+
+  .sc-specialities-container {
+    gap: 15px;
+  }
+
+  .sc-specialities-list {
+    width: 100%;
+  }
+
+  .sc-speciality-item {
+    padding: 0 8px;
+
+    gap: 9px;
+  }
+
+  .sc-speciality-icon {
+    width: 63px;
+    height: 63px;
+
+    font-size: 31px;
+  }
+
+  .sc-speciality-item h3 {
+    font-size: 13px;
+  }
+
+  .sc-speciality-item:not(:last-child)::after {
+    height: 65px;
+
+    top: 10px;
+  }
+
+  .sc-commitment {
+    padding: 10px;
+  }
+
+  .sc-commitment p {
+    display: block;
+
+    font-size: 33px;
+  }
+
+  .sc-commitment p:last-of-type {
+    margin-left: 15px;
+  }
+
+  .sc-flower-decoration {
+    width: 100px;
+    height: 130px;
+
+    opacity: 0.6;
+  }
+
+  .sc-specialities-wave {
+    height: 125px;
+  }
+
+
+  /* Additional Contact Information */
+
+  .sc-additional-contact {
+    padding: 18px 15px;
+  }
+
+  .sc-address-details {
+    align-items: flex-start;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+  }
+
+  .sc-address-details svg {
+    margin-top: 4px;
+  }
+
+  .sc-additional-numbers {
+    gap: 12px;
+  }
+
+  .sc-additional-numbers a {
+    font-size: 12px;
+  }
+
+  .sc-contact-separator {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   16. SMALL MOBILE DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .sc-hero-content h1 {
+    font-size: 40px;
+  }
+
+  .sc-hero-subtitle {
+    font-size: 18px;
+  }
+
+  .sc-script-text {
+    font-size: 30px;
+  }
+
+  .sc-quick-card-content h2 {
+    font-size: 14px;
+  }
+
+  .sc-quick-card-content .sc-primary-number {
+    font-size: 12px;
+  }
+
+  .sc-speciality-icon {
+    width: 55px;
+    height: 55px;
+
+    font-size: 27px;
+  }
+
+  .sc-speciality-item h3 {
+    font-size: 12px;
+  }
+
+  .sc-message-heading h2 {
+    font-size: 22px;
+  }
+
 }

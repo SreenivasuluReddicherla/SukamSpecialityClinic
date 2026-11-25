@@ -1,0 +1,3299 @@
+/* =========================================================
+   RP1 Infertility Insights
+   Realistic Open-Book Reader / Page-Turn Experience
+========================================================= */
+
+.df-reader {
+  --reader-scale: 1;
+
+  --reader-navy: #163f73;
+  --reader-blue: #2f6aa8;
+  --reader-pink: #ef77ad;
+  --reader-pink-deep: #df4e94;
+  --reader-pink-soft: #fbe9f2;
+  --reader-blue-soft: #eef5fb;
+  --reader-paper: #ffffff;
+  --reader-paper-edge: #eee7dc;
+  --reader-ink: #395775;
+  --reader-muted: #71849a;
+  --reader-line: #dfe7ef;
+  --reader-bg: #fbfcff;
+  --reader-white: #fffffff5;
+  --reader-book-height: 664px;
+
+  min-height: 100vh;
+  padding: 0 0 34px;
+
+  color: var(--reader-ink);
+  background:
+    radial-gradient(circle at 10% 7%, rgba(239, 119, 173, 0.08), transparent 20rem),
+    radial-gradient(circle at 92% 5%, rgba(239, 119, 173, 0.1), transparent 18rem),
+    var(--reader-bg);
+
+  /* font-family:Inter,"Segoe UI",Arial,sans-serif; */
+}
+
+.df-reader *,
+.df-reader *::before,
+.df-reader *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   Header
+========================================================= */
+
+.df-reader-header {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 160px 1fr 160px;
+  align-items: center;
+
+  min-height: 10px;
+  padding: 10px clamp(10px, 3vw, 10px);
+
+  overflow: hidden;
+
+  /* background: rgba(255, 255, 255, 0.74); */
+  border-bottom: 1px solid rgba(47, 106, 168, 0.05);
+}
+
+.df-reader-header-copy {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+}
+
+.df-reader-header h1 {
+  margin: 20px 0 0;
+
+  color: var(--reader-navy);
+
+  
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.df-reader-header p {
+  margin: 0px 0 0;
+
+  color: var(--reader-muted);
+
+  font-size: clamp(0.92rem, 1.35vw, 1.15rem);
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+
+.df-reader-header-mark {
+  position: relative;
+  z-index: 1;
+
+  width: 84px;
+  height: 72px;
+
+  color: rgba(239, 119, 173, 0.28);
+
+  font-size: 74px;
+  font-weight: 400;
+  line-height: 0.9;
+
+  transform: rotate(-17deg);
+}
+
+.df-reader-header-decoration {
+  position: absolute;
+  top: -56px;
+  right: 20px;
+
+  width: 220px;
+  height: 150px;
+
+  background:
+    radial-gradient(circle at 40% 50%, rgba(239, 119, 173, 0.16), transparent 43%),
+    radial-gradient(circle at 72% 46%, rgba(239, 119, 173, 0.09), transparent 35%);
+  filter: blur(8px);
+}
+
+/* =========================================================
+   Main Layout
+========================================================= */
+
+.df-reader-layout {
+  display: grid;
+  grid-template-columns: 218px minmax(0, 1fr);
+  gap: 20px;
+
+  width: min(1460px, calc(100% - 48px));
+  margin: -20px auto 0;
+}
+
+/* =========================================================
+   Contents Sidebar
+========================================================= */
+
+.df-reader-contents {
+  position: sticky;
+  top: 18px;
+
+  display: flex;
+  flex-direction: column;
+
+  height: calc(100vh - 148px);
+  min-height: 604px;
+  max-height: 730px;
+  padding: 22px 10px 18px;
+
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--reader-line);
+  border-radius: 7px;
+  box-shadow: 0 7px 24px rgba(22, 63, 115, 0.04);
+}
+
+.df-reader-contents h2 {
+  margin: 0 12px 14px;
+
+  color: var(--reader-navy);
+
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.055em;
+}
+
+.df-reader-contents nav {
+  display: grid;
+  gap: 2px;
+}
+
+.df-reader-contents nav button {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 6px;
+  align-items: center;
+
+  width: 100%;
+  min-height: 38px;
+  padding: 6px 9px;
+
+  color: var(--reader-blue);
+  background: transparent;
+  border: 0;
+  border-left: 4px solid transparent;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+
+  font: inherit;
+  text-align: left;
+
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.df-reader-contents nav button:disabled {
+  cursor: default;
+}
+
+.df-reader-contents nav button span {
+  color: var(--reader-blue);
+
+  font-size: 0.69rem;
+  font-weight: 600;
+}
+
+.df-reader-contents nav button strong {
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.df-reader-contents nav button:hover:not(:disabled) {
+  background: rgba(239, 119, 173, 0.07);
+}
+
+.df-reader-contents nav button.is-active {
+  color: var(--reader-navy);
+  background: linear-gradient(
+    90deg,
+    rgba(239, 119, 173, 0.12),
+    rgba(239, 119, 173, 0.18)
+  );
+  border-left-color: var(--reader-pink-deep);
+}
+
+.df-reader-contents nav button.is-active strong {
+  font-weight: 700;
+}
+
+.df-reader-contents-footer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  margin: auto 12px 0;
+
+  color: #8b9ab0;
+}
+
+.df-reader-contents-footer > span {
+  color: rgba(239, 119, 173, 0.48);
+
+  /* font-family: Georgia, serif; */
+  font-size: 2.05rem;
+  line-height: 1;
+}
+
+.df-reader-contents-footer p {
+  margin: 0;
+
+  /* font-family: Georgia, "Times New Roman", serif; */
+  font-size: 0.71rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   Reader Tools
+========================================================= */
+
+.df-reader-book-stage {
+  min-width: 0;
+}
+
+.df-reader-tools {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+
+  min-height: 38px;
+  margin: -2px 10px 7px 0;
+}
+
+.df-reader-tool-button {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+
+  height: 34px;
+  padding: 0 14px;
+
+  color: var(--reader-navy);
+  background: var(--reader-white);
+  border: 1px solid var(--reader-line);
+  border-radius: 18px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(22, 63, 115, 0.04);
+
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.df-reader-tool-button:hover:not(:disabled),
+.df-reader-tool-button.is-active {
+  transform: translateY(-1px);
+
+  background: var(--reader-pink-soft);
+  border-color: rgba(239, 119, 173, 0.34);
+}
+
+.df-reader-tool-button:disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+
+.df-reader-tool-button small {
+  color: #687d96;
+  font-size: 0.72rem;
+}
+
+/* =========================================================
+   Open Book
+========================================================= */
+
+.df-reader-book-spread {
+  position: relative;
+  isolation: isolate;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  height: var(--reader-book-height);
+  overflow: visible;
+
+  background: var(--reader-paper);
+  border-radius: 5px 8px 8px 5px;
+  perspective: 2400px;
+  transform-style: preserve-3d;
+  box-shadow:
+    0 24px 48px rgba(28, 54, 88, 0.18),
+    0 4px 10px rgba(28, 54, 88, 0.08);
+}
+
+.df-reader-book-spread::before,
+.df-reader-book-spread::after {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+
+  z-index: -1;
+
+  width: 13px;
+
+  content: "";
+
+  background: var(--reader-navy);
+  border-radius: 4px;
+}
+
+.df-reader-book-spread::before {
+  left: -8px;
+}
+
+.df-reader-book-spread::after {
+  right: -8px;
+}
+
+.df-reader-book-page {
+  position: relative;
+
+  min-width: 0;
+  height: var(--reader-book-height);
+  padding: 25px clamp(30px, 3.7vw, 52px) 34px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.18),
+      rgba(255, 253, 248, 0.98)
+    ),
+    var(--reader-paper);
+}
+
+.df-reader-book-page--left {
+  border-right: 1px solid #e7dfd2;
+  border-radius: 4px 0 0 7px;
+  box-shadow:
+    inset -21px 0 28px -27px rgba(62, 49, 34, 0.58),
+    inset 8px 0 14px -16px rgba(62, 49, 34, 0.32);
+}
+
+.df-reader-book-page--right {
+  border-radius: 0 8px 8px 0;
+  box-shadow:
+    inset 21px 0 28px -27px rgba(62, 49, 34, 0.58),
+    inset -8px 0 14px -16px rgba(62, 49, 34, 0.32);
+}
+
+.df-reader-book-page--right::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  width: 62px;
+  height: 58px;
+
+  content: "";
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(216, 208, 197, 0.15) 0%,
+      rgba(235, 229, 220, 0.88) 50%,
+      #fffdf8 51%
+    );
+  border-top-left-radius: 58px;
+  box-shadow: -6px -5px 12px rgba(59, 50, 39, 0.08);
+}
+
+.df-reader-book-page--end::after {
+  display: none;
+}
+
+.df-reader-paper-grain {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(145, 120, 90, 0.025) 0 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle at 75% 65%,
+      rgba(145, 120, 90, 0.02) 0 1px,
+      transparent 1.5px
+    );
+  background-size: 24px 24px, 29px 29px;
+}
+
+.df-reader-page-number {
+  position: relative;
+  z-index: 2;
+
+  width: fit-content;
+  margin-bottom: 5px;
+}
+
+.df-reader-page-number span {
+  display: block;
+
+  color: #6e8198;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.df-reader-page-number::after {
+  display: block;
+
+  width: 33px;
+  height: 2px;
+  margin-top: 5px;
+
+  content: "";
+
+  background: var(--reader-pink);
+}
+
+/* Important: no internal page scrolling. Content is truly paginated. */
+.df-reader-page-content {
+  position: relative;
+  z-index: 2;
+
+  height: calc(100% - 42px);
+  overflow: hidden;
+
+  font-size: calc(0.86rem * var(--reader-scale));
+}
+
+.df-reader-book-page h2 {
+  margin: 0 0 13px;
+
+  color: var(--reader-navy);
+
+  /* font-family: Georgia, "Times New Roman", serif; */
+  font-size: calc(clamp(1.5rem, 2vw, 2rem) * var(--reader-scale));
+  font-weight: 700;
+  letter-spacing: -0.00em;
+  line-height: 1;
+}
+
+.df-reader-book-page h3 {
+  margin: 15px 0 6px;
+
+  color: var(--reader-navy);
+
+  /* font-family: Georgia, "Times New Roman", serif; */
+  font-size: calc(0.98rem * var(--reader-scale));
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.df-reader-book-page p {
+  margin: 0 0 9px;
+
+  color: var(--reader-ink);
+
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.df-reader-lead-copy {
+  color: var(--reader-navy) !important;
+
+  /* font-family: Georgia, "Times New Roman", serif; */
+  font-size: calc(1.02rem * var(--reader-scale)) !important;
+  font-weight: 700 !important;
+}
+
+.df-reader-small-note,
+.df-reader-quiz-intro {
+  color: #687d96 !important;
+
+  font-size: calc(0.78rem * var(--reader-scale)) !important;
+  font-weight: 600 !important;
+}
+
+.df-reader-turn-page {
+  position: absolute;
+  right: 22px;
+  bottom: 12px;
+  z-index: 4;
+
+  padding: 3px 5px;
+
+  color: #59728e;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+
+  font: inherit;
+  font-size: 0.67rem;
+  font-weight: 600;
+}
+
+/* =========================================================
+   Realistic Page Turn Animation
+========================================================= */
+
+.df-reader-page-turn-sheet {
+  position: absolute;
+  top: 0;
+  z-index: 30;
+
+  width: 50%;
+  height: 100%;
+
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+.df-reader-page-turn-sheet--next {
+  right: 0;
+
+  transform-origin: left center;
+  animation: dfReaderTurnNext 0.82s cubic-bezier(0.58, 0.03, 0.2, 1) forwards;
+}
+
+.df-reader-page-turn-sheet--prev {
+  left: 0;
+
+  transform-origin: right center;
+  animation: dfReaderTurnPrev 0.82s cubic-bezier(0.58, 0.03, 0.2, 1) forwards;
+}
+
+.df-reader-turn-face {
+  position: absolute;
+  inset: 0;
+
+  padding: 30px 38px;
+
+  overflow: hidden;
+
+  backface-visibility: hidden;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18), rgba(255, 253, 248, 0.98)),
+    var(--reader-paper);
+  border: 1px solid rgba(197, 186, 170, 0.42);
+}
+
+.df-reader-page-turn-sheet--next .df-reader-turn-face--front {
+  box-shadow:
+    inset 17px 0 24px -25px rgba(62, 49, 34, 0.55),
+    -14px 10px 28px rgba(41, 49, 61, 0.1);
+}
+
+.df-reader-page-turn-sheet--prev .df-reader-turn-face--front {
+  box-shadow:
+    inset -17px 0 24px -25px rgba(62, 49, 34, 0.55),
+    14px 10px 28px rgba(41, 49, 61, 0.1);
+}
+
+.df-reader-turn-face--back {
+  transform: rotateY(180deg);
+
+  background:
+    linear-gradient(270deg, rgba(255, 255, 255, 0.16), rgba(255, 253, 248, 0.98)),
+    var(--reader-paper);
+}
+
+.df-reader-turn-page-number {
+  width: fit-content;
+  margin-bottom: 24px;
+  padding-bottom: 5px;
+
+  color: #6e8198;
+  border-bottom: 2px solid var(--reader-pink);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.df-reader-turn-face h3 {
+  max-width: 80%;
+  margin: 0 0 22px;
+
+  color: var(--reader-navy);
+
+  /* font-family: Georgia, "Times New Roman", serif; */
+  font-size: 1.85rem;
+  line-height: 1.12;
+}
+
+.df-reader-turn-lines {
+  display: grid;
+  gap: 10px;
+}
+
+.df-reader-turn-lines span {
+  display: block;
+
+  width: 84%;
+  height: 6px;
+
+  background: rgba(57, 87, 117, 0.09);
+  border-radius: 5px;
+}
+
+.df-reader-turn-lines span:nth-child(2) {
+  width: 92%;
+}
+
+.df-reader-turn-lines span:nth-child(3) {
+  width: 74%;
+}
+
+.df-reader-turn-lines span:nth-child(4) {
+  width: 87%;
+}
+
+.df-reader-turn-lines span:nth-child(5) {
+  width: 61%;
+}
+
+.df-reader-turn-curl {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+
+  width: 95px;
+  height: 90px;
+
+  background: linear-gradient(
+    135deg,
+    transparent 0 47%,
+    rgba(221, 211, 198, 0.7) 48% 51%,
+    rgba(255, 253, 248, 0.95) 52%
+  );
+  border-top-left-radius: 90px;
+  box-shadow: -10px -9px 20px rgba(55, 46, 36, 0.08);
+}
+
+.df-reader-book-spread.is-turning {
+  cursor: progress;
+}
+
+@keyframes dfReaderTurnNext {
+  0% {
+    transform: rotateY(0deg) translateZ(1px);
+    filter: brightness(1);
+  }
+  35% {
+    transform: rotateY(-65deg) translateZ(4px);
+    filter: brightness(0.98);
+  }
+  50% {
+    transform: rotateY(-92deg) translateZ(8px);
+    filter: brightness(0.92);
+  }
+  72% {
+    transform: rotateY(-138deg) translateZ(4px);
+    filter: brightness(0.98);
+  }
+  100% {
+    transform: rotateY(-180deg) translateZ(1px);
+    filter: brightness(1);
+  }
+}
+
+@keyframes dfReaderTurnPrev {
+  0% {
+    transform: rotateY(0deg) translateZ(1px);
+    filter: brightness(1);
+  }
+  35% {
+    transform: rotateY(65deg) translateZ(4px);
+    filter: brightness(0.98);
+  }
+  50% {
+    transform: rotateY(92deg) translateZ(8px);
+    filter: brightness(0.92);
+  }
+  72% {
+    transform: rotateY(138deg) translateZ(4px);
+    filter: brightness(0.98);
+  }
+  100% {
+    transform: rotateY(180deg) translateZ(1px);
+    filter: brightness(1);
+  }
+}
+
+/* =========================================================
+   Content Components
+========================================================= */
+
+.df-reader-quote-card {
+  position: relative;
+
+  margin: 13px 0;
+  padding: 12px 16px 12px 42px;
+
+  background: var(--reader-pink-soft);
+  border-radius: 7px;
+}
+
+.df-reader-quote-card > span {
+  position: absolute;
+  top: 4px;
+  left: 14px;
+
+  color: var(--reader-pink-deep);
+
+  /* font-family: Georgia, "Times New Roman", serif; */
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.df-reader-quote-card p {
+  margin: 0;
+
+  color: #7b4561;
+
+  /* font-family: Georgia, "Times New Roman", serif; */
+  font-size: calc(0.84rem * var(--reader-scale));
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.df-reader-quote-card.is-blue {
+  background: var(--reader-blue-soft);
+}
+
+.df-reader-quote-card.is-blue > span {
+  color: var(--reader-blue);
+}
+
+.df-reader-quote-card.is-blue p {
+  color: var(--reader-navy);
+}
+
+.df-reader-illustration {
+  display: block;
+
+  width: 100%;
+  max-height: 195px;
+  margin-top: 12px;
+
+  border-radius: 8px;
+}
+
+.df-reader-timeline {
+  display: grid;
+  gap: 12px;
+
+  margin: 4px 0 13px;
+}
+
+.df-reader-timeline-item {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.df-reader-timeline-item > span {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+
+  color: var(--reader-white);
+  background: var(--reader-pink);
+  border-radius: 50%;
+
+  /* font-family: Georgia, serif; */
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.df-reader-timeline-item h3 {
+  margin: 0 0 3px;
+
+  /* font-family: inherit; */
+  font-size: calc(0.88rem * var(--reader-scale));
+  font-weight: 800;
+}
+
+.df-reader-timeline-item p {
+  margin: 0;
+
+  font-size: calc(0.75rem * var(--reader-scale));
+  line-height: 1.38;
+}
+
+.df-reader-info-note {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 9px;
+  align-items: start;
+
+  margin: 11px 0;
+  padding: 9px 11px;
+
+  background: var(--reader-blue-soft);
+  border-radius: 7px;
+}
+
+.df-reader-info-icon {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+
+  color: var(--reader-blue);
+  border: 1.5px solid var(--reader-blue);
+  border-radius: 50%;
+
+  /* font-family: Georgia, serif; */
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.df-reader-info-note p {
+  margin: 0;
+
+  font-size: calc(0.72rem * var(--reader-scale));
+  font-weight: 500;
+  line-height: 1.38;
+}
+
+.df-reader-highlight-box {
+  margin: 12px 0;
+  padding: 11px 13px;
+
+  background: var(--reader-blue-soft);
+  border-left: 3px solid var(--reader-blue);
+  border-radius: 4px 7px 7px 4px;
+}
+
+.df-reader-highlight-box strong {
+  display: block;
+  margin-bottom: 4px;
+
+  color: var(--reader-navy);
+
+  font-size: calc(0.84rem * var(--reader-scale));
+  font-weight: 800;
+}
+
+.df-reader-highlight-box p {
+  margin: 0;
+
+  font-size: calc(0.75rem * var(--reader-scale));
+}
+
+.df-reader-list {
+  margin: 7px 0 12px;
+  padding-left: 17px;
+}
+
+.df-reader-list li {
+  margin-bottom: 5px;
+  padding-left: 2px;
+
+  color: var(--reader-ink);
+
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.df-reader-list li::marker {
+  color: var(--reader-pink);
+}
+
+.df-reader-list.is-compact {
+  display: grid;
+  gap: 0;
+
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.df-reader-list.is-compact li {
+  margin-bottom: 2px;
+
+  font-size: calc(0.75rem * var(--reader-scale));
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.df-reader-numbered-list {
+  display: grid;
+  gap: 8px;
+
+  margin: 12px 0;
+}
+
+.df-reader-numbered-list > div {
+  display: grid;
+  grid-template-columns: 29px 1fr;
+  gap: 9px;
+  align-items: start;
+}
+
+.df-reader-numbered-list span {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+
+  color: var(--reader-white);
+  background: var(--reader-pink);
+  border-radius: 50%;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.df-reader-numbered-list p {
+  margin: 3px 0 0;
+
+  font-size: calc(0.78rem * var(--reader-scale));
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.df-reader-no-banner {
+  display: grid;
+  grid-template-columns: 53px 1fr;
+  gap: 12px;
+  align-items: center;
+
+  margin: 10px 0 14px;
+  padding: 11px 13px;
+
+  background: var(--reader-pink-soft);
+  border-radius: 7px;
+}
+
+.df-reader-no-banner > strong {
+  display: grid;
+  width: 47px;
+  height: 47px;
+  place-items: center;
+
+  color: var(--reader-white);
+  background: var(--reader-pink);
+  border-radius: 50%;
+
+  /* font-family: Georgia, serif; */
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.df-reader-no-banner p {
+  margin: 0;
+
+  color: var(--reader-navy);
+
+  font-size: calc(0.79rem * var(--reader-scale));
+  font-weight: 700;
+}
+
+.df-reader-two-mini-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+
+  margin-top: 4px;
+}
+
+.df-reader-two-mini-columns h3 {
+  margin-top: 0;
+}
+
+/* =========================================================
+   Quick Check / Quiz
+========================================================= */
+
+.df-reader-quick-check {
+  margin: 12px 0;
+  padding: 11px 14px;
+
+  background: var(--reader-pink-soft);
+  border-radius: 8px;
+}
+
+.df-reader-quick-check.is-compact {
+  margin: 8px 0;
+  padding: 9px 12px;
+}
+
+.df-reader-quick-check-title {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+
+  margin-bottom: 6px;
+
+  color: var(--reader-pink-deep);
+
+  font-size: calc(0.75rem * var(--reader-scale));
+}
+
+.df-reader-quick-check > p {
+  margin-bottom: 7px;
+
+  color: var(--reader-navy);
+
+  font-size: calc(0.75rem * var(--reader-scale));
+  font-weight: 700;
+}
+
+.df-reader-quick-check.is-compact > p {
+  font-size: calc(0.85rem * var(--reader-scale));
+}
+
+.df-reader-radio-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 10px;
+}
+
+.df-reader-radio-option {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+
+  min-width: 0;
+  padding: 2px 0;
+
+  color: var(--reader-ink);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+
+  font: inherit;
+  font-size: calc(0.75rem * var(--reader-scale));
+  font-weight: 600;
+  text-align: left;
+}
+
+.df-reader-radio-option:disabled {
+  cursor: default;
+}
+
+.df-reader-radio-dot {
+  position: relative;
+
+  flex: 0 0 14px;
+
+  width: 14px;
+  height: 14px;
+
+  background: var(--reader-white);
+  border: 1.5px solid #a7b5c4;
+  border-radius: 50%;
+}
+
+.df-reader-radio-option.is-selected .df-reader-radio-dot {
+  border-color: var(--reader-pink-deep);
+}
+
+.df-reader-radio-option.is-selected .df-reader-radio-dot::after {
+  position: absolute;
+  inset: 3px;
+
+  content: "";
+
+  background: var(--reader-pink-deep);
+  border-radius: 50%;
+}
+
+.df-reader-radio-option.is-correct {
+  color: var(--reader-navy);
+  font-weight: 800;
+}
+
+.df-reader-radio-option.is-incorrect {
+  text-decoration: line-through;
+  opacity: 0.72;
+}
+
+.df-reader-result-button {
+  width: 100%;
+  min-height: 38px;
+  margin-top: 10px;
+
+  color: var(--reader-white);
+  background: var(--reader-navy);
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+
+  font: inherit;
+  font-size: 0.77rem;
+  font-weight: 700;
+}
+
+.df-reader-result-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+.df-reader-result-card {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  gap: 11px;
+  align-items: center;
+
+  margin-top: 10px;
+  padding: 11px;
+
+  background: var(--reader-blue-soft);
+  border-radius: 8px;
+}
+
+.df-reader-result-card > strong {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+
+  color: var(--reader-white);
+  background: var(--reader-blue);
+  border-radius: 50%;
+
+  font-size: 1.04rem;
+}
+
+.df-reader-result-card h3 {
+  margin: 0 0 3px;
+
+  /* font-family: inherit; */
+  font-size: 0.83rem;
+}
+
+.df-reader-result-card p {
+  margin: 0 0 6px;
+
+  font-size: 0.7rem;
+}
+
+.df-reader-result-card button {
+  padding: 5px 10px;
+
+  color: var(--reader-navy);
+  background: var(--reader-white);
+  border: 1px solid rgba(47, 106, 168, 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+
+  font: inherit;
+  font-size: 0.67rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   Myths / FAQs
+========================================================= */
+
+.df-reader-myth-stack,
+.df-reader-faq-stack {
+  display: grid;
+  gap: 11px;
+}
+
+.df-reader-myth-fact,
+.df-reader-faq-card {
+  padding: 11px 12px;
+
+  background: rgba(238, 245, 251, 0.75);
+  border-radius: 7px;
+}
+
+.df-reader-myth-fact > span {
+  display: inline-flex;
+  margin-bottom: 4px;
+  padding: 3px 7px;
+
+  color: var(--reader-white);
+  background: var(--reader-pink);
+  border-radius: 12px;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.df-reader-myth-fact h3,
+.df-reader-faq-card h3 {
+  margin: 0 0 5px;
+
+  /* font-family: inherit; */
+  font-size: calc(0.78rem * var(--reader-scale));
+  line-height: 1.5;
+}
+
+.df-reader-myth-fact p,
+.df-reader-faq-card p {
+  margin: 0;
+
+  font-size: calc(0.71rem * var(--reader-scale));
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.df-reader-myth-fact p strong {
+  color: var(--reader-blue);
+}
+
+/* =========================================================
+   Contact / End Page
+========================================================= */
+
+.df-reader-contact-card {
+  margin-top: 14px;
+  padding: 14px 16px;
+
+  color: var(--reader-white);
+  background: var(--reader-navy);
+  border-radius: 8px;
+}
+
+.df-reader-contact-card > span {
+  display: block;
+  margin-bottom: 4px;
+
+  color: #f7d6e6;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.df-reader-contact-card h3 {
+  margin: 0 0 4px;
+
+  color: var(--reader-white);
+
+  /* font-family: Georgia, serif; */
+  font-size: 1.05rem;
+}
+
+.df-reader-contact-card p,
+.df-reader-contact-card strong,
+.df-reader-contact-card em {
+  color: var(--reader-white);
+  font-size: 0.72rem;
+}
+
+.df-reader-contact-card strong,
+.df-reader-contact-card em {
+  display: block;
+  margin-top: 4px;
+}
+
+.df-reader-contact-card > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  margin-top: 10px;
+}
+
+.df-reader-contact-card a {
+  padding: 5px 8px;
+
+  color: var(--reader-navy);
+  background: var(--reader-white);
+  border-radius: 12px;
+
+  font-size: 0.64rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.df-reader-final-reminder {
+  margin-top: 13px;
+  padding: 11px 13px;
+
+  background: var(--reader-pink-soft);
+  border-radius: 8px;
+}
+
+.df-reader-final-reminder strong {
+  display: block;
+  margin-bottom: 4px;
+
+  color: var(--reader-pink-deep);
+
+  font-size: 0.78rem;
+}
+
+.df-reader-final-reminder p {
+  margin: 0;
+
+  font-size: 0.72rem;
+}
+
+.df-reader-end-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  padding: 40px;
+
+  text-align: center;
+}
+
+.df-reader-end-heart {
+  color: rgba(239, 119, 173, 0.48);
+
+  /* font-family: Georgia, serif; */
+  font-size: 5.4rem;
+  line-height: 0.9;
+}
+
+.df-reader-end-page > span {
+  margin-top: 16px;
+
+  color: var(--reader-blue);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.df-reader-end-page h2 {
+  margin: 10px 0 12px;
+
+  font-size: calc(4.4rem * var(--reader-scale));
+  line-height: 1;
+}
+
+.df-reader-end-page p {
+  max-width: 360px;
+
+  color: var(--reader-muted);
+
+  /* font-family: Georgia, "Times New Roman", serif; */
+  font-size: calc(0.98rem * var(--reader-scale));
+  font-style: italic;
+  text-align: center;
+}
+
+.df-reader-end-rule {
+  width: 84px;
+  height: 3px;
+  margin: 20px 0 14px;
+
+  background: var(--reader-pink);
+  border-radius: 3px;
+}
+
+.df-reader-end-page strong {
+  color: var(--reader-navy);
+
+  /* font-family: Georgia, "Times New Roman", serif; */
+  font-size: 1rem;
+}
+
+/* =========================================================
+   Bottom Navigation
+========================================================= */
+
+.df-reader-navigation {
+  display: grid;
+  grid-template-columns: 150px minmax(220px, 320px) 150px;
+  gap: 26px;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 18px;
+}
+
+.df-reader-nav-button {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 40px;
+  padding: 0 18px;
+
+  border-radius: 21px;
+  cursor: pointer;
+
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  transition:
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.df-reader-nav-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.df-reader-nav-button:disabled {
+  cursor: default;
+  opacity: 0.36;
+}
+
+.df-reader-nav-button--previous {
+  color: var(--reader-blue);
+  background: var(--reader-white);
+  border: 1px solid var(--reader-line);
+}
+
+.df-reader-nav-button--next {
+  color: var(--reader-white);
+  background: var(--reader-blue);
+  border: 1px solid var(--reader-blue);
+}
+
+.df-reader-progress {
+  text-align: center;
+}
+
+.df-reader-progress > strong {
+  display: block;
+  margin-bottom: 7px;
+
+  color: var(--reader-navy);
+
+  font-size: 0.71rem;
+  font-weight: 700;
+}
+
+.df-reader-progress-row {
+  display: grid;
+  grid-template-columns: 1fr 33px;
+  gap: 10px;
+  align-items: center;
+}
+
+.df-reader-progress-track {
+  height: 6px;
+
+  overflow: hidden;
+
+  background: #e3e9ef;
+  border-radius: 5px;
+}
+
+.df-reader-progress-fill {
+  height: 100%;
+
+  background: var(--reader-pink);
+  border-radius: inherit;
+
+  transition: width 0.3s ease;
+}
+
+.df-reader-progress-row > span {
+  color: #7e8fa4;
+
+  font-size: 0.67rem;
+  font-weight: 600;
+}
+
+.df-reader-keyboard-hint {
+  margin: 8px 0 0;
+
+  color: #91a0b1;
+
+  font-size: 0.66rem;
+  text-align: center;
+}
+
+/* =========================================================
+   Focus
+========================================================= */
+
+.df-reader button:focus-visible,
+.df-reader a:focus-visible {
+  outline: 3px solid rgba(239, 119, 173, 0.35);
+  outline-offset: 2px;
+}
+/* =========================================================
+   RESPONSIVE DESIGN
+   Tablet + Mobile Optimized
+   Replace the complete old responsive section with this
+========================================================= */
+
+/* =========================================================
+   Global Responsive Safety
+========================================================= */
+
+.df-reader {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.df-reader img,
+.df-reader svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.df-reader button,
+.df-reader a,
+.df-reader summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.df-reader-book-stage,
+.df-reader-book-spread,
+.df-reader-book-page,
+.df-reader-page-content {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.df-reader-book-page p,
+.df-reader-book-page li,
+.df-reader-book-page h1,
+.df-reader-book-page h2,
+.df-reader-book-page h3,
+.df-reader-book-page h4,
+.df-reader-book-page span,
+.df-reader-book-page strong {
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   Large Tablet / Small Laptop
+   1025px - 1210px
+========================================================= */
+
+@media (max-width: 1210px) {
+  .df-reader {
+    --reader-book-height: 650px;
+  }
+
+  .df-reader-header {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .df-reader-layout {
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 16px;
+
+    width: min(1180px, calc(100% - 28px));
+  }
+
+  .df-reader-contents {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .df-reader-contents nav button {
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 6px;
+
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .df-reader-contents nav button span {
+    font-size: 0.7rem;
+  }
+
+  .df-reader-contents nav button strong {
+    font-size: 0.7rem;
+  }
+
+  .df-reader-book-page {
+    padding:
+      24px
+      clamp(24px, 3vw, 34px)
+      32px;
+  }
+
+  .df-reader-book-page h2 {
+    font-size:
+      calc(
+        clamp(1.55rem, 2.5vw, 2.15rem)
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-page-content {
+    font-size:
+      calc(
+        0.8rem
+        * var(--reader-scale)
+      );
+  }
+}
+
+
+/* =========================================================
+   Tablet
+   <= 1000px
+========================================================= */
+
+@media (max-width: 1000px) {
+  .df-reader {
+    --reader-book-height: 620px;
+  }
+
+  /* -------------------------
+     Header
+  ------------------------- */
+
+  .df-reader-header {
+    grid-template-columns: 70px 1fr 70px;
+
+    min-height: 94px;
+
+    padding:
+      14px
+      20px;
+  }
+
+  .df-reader-header h1 {
+    font-size:
+      clamp(
+        1.9rem,
+        4vw,
+        2.7rem
+      );
+  }
+
+  .df-reader-header p {
+    font-size: 0.92rem;
+  }
+
+  .df-reader-header-mark {
+    width: 60px;
+    font-size: 55px;
+  }
+
+  /* -------------------------
+     Main Layout
+  ------------------------- */
+
+  .df-reader-layout {
+    display: block;
+
+    width: min(
+      100% - 24px,
+      960px
+    );
+
+    margin-top: 16px;
+  }
+
+  /* -------------------------
+     Contents Navigation
+  ------------------------- */
+
+  .df-reader-contents {
+    position: static;
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+
+    margin-bottom: 14px;
+    padding: 12px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+  }
+
+  .df-reader-contents h2 {
+    margin:
+      0
+      4px
+      10px;
+
+    font-size: 0.76rem;
+  }
+
+  .df-reader-contents nav {
+    display: flex;
+    gap: 7px;
+
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding:
+      0
+      0
+      5px;
+
+    scrollbar-width: thin;
+
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .df-reader-contents nav::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .df-reader-contents nav::-webkit-scrollbar-thumb {
+    background:
+      rgba(
+        47,
+        106,
+        168,
+        0.18
+      );
+
+    border-radius: 10px;
+  }
+
+  .df-reader-contents nav button {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 7px;
+    align-items: center;
+
+    width: auto;
+    min-width: max-content;
+    min-height: 40px;
+
+    padding:
+      8px
+      12px;
+
+    border-left: 0;
+    border-bottom:
+      3px
+      solid
+      transparent;
+
+    border-radius: 7px;
+  }
+
+  .df-reader-contents nav button.is-active {
+    border-left: 0;
+
+    border-bottom-color:
+      var(--reader-pink-deep);
+  }
+
+  .df-reader-contents nav button span,
+  .df-reader-contents nav button strong {
+    font-size: 0.72rem;
+  }
+
+  .df-reader-contents-footer {
+    display: none;
+  }
+
+  /* -------------------------
+     Tools
+  ------------------------- */
+
+  .df-reader-tools {
+    margin:
+      0
+      0
+      9px;
+
+    padding-right: 2px;
+  }
+
+  /* -------------------------
+     Book
+  ------------------------- */
+
+  .df-reader-book-page {
+    padding:
+      22px
+      24px
+      30px;
+  }
+
+  .df-reader-page-content {
+    font-size:
+      calc(
+        0.79rem
+        * var(--reader-scale)
+      );
+  }
+
+  /* -------------------------
+     Navigation
+  ------------------------- */
+
+  .df-reader-navigation {
+    grid-template-columns:
+      135px
+      minmax(200px, 1fr)
+      135px;
+
+    gap: 15px;
+  }
+}
+
+
+/* =========================================================
+   Mobile / Portrait Tablet
+   <= 768px
+========================================================= */
+
+@media (max-width: 768px) {
+  .df-reader {
+    --reader-book-height: auto;
+
+    min-height: 100vh;
+
+    padding-bottom: 22px;
+  }
+
+  /* -------------------------
+     Header
+  ------------------------- */
+
+  .df-reader-header {
+    display: block;
+
+    min-height: auto;
+
+    padding:
+      18px
+      16px
+      16px;
+
+    text-align: center;
+  }
+
+  .df-reader-header-mark,
+  .df-reader-header-decoration {
+    display: none;
+  }
+
+  .df-reader-header-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .df-reader-header h1 {
+    margin: 0;
+
+    font-size:
+      clamp(
+        1.85rem,
+        7vw,
+        2.4rem
+      );
+
+    line-height: 1.1;
+  }
+
+  .df-reader-header p {
+    max-width: 460px;
+
+    margin:
+      7px
+      auto
+      0;
+
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  /* -------------------------
+     Main Layout
+  ------------------------- */
+
+  .df-reader-layout {
+    width: calc(100% - 16px);
+
+    margin:
+      14px
+      auto
+      0;
+  }
+
+  /* -------------------------
+     Contents
+  ------------------------- */
+
+  .df-reader-contents {
+    margin-bottom: 12px;
+    padding: 10px;
+
+    border-radius: 10px;
+  }
+
+  .df-reader-contents h2 {
+    margin-bottom: 8px;
+
+    font-size: 0.72rem;
+  }
+
+  .df-reader-contents nav {
+    gap: 6px;
+  }
+
+  .df-reader-contents nav button {
+    min-height: 38px;
+
+    padding:
+      7px
+      10px;
+  }
+
+  .df-reader-contents nav button strong {
+    font-size: 0.7rem;
+  }
+
+  /* -------------------------
+     Reader Tools
+  ------------------------- */
+
+  .df-reader-tools {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+
+    width: 100%;
+
+    margin:
+      0
+      0
+      9px;
+  }
+
+  .df-reader-tool-button {
+    min-height: 38px;
+
+    padding:
+      0
+      12px;
+
+    font-size: 0.78rem;
+  }
+
+  /* =====================================================
+     IMPORTANT:
+     Remove Desktop Book Spread Behaviour
+  ===================================================== */
+
+  .df-reader-book-spread {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto !important;
+    min-height: 0;
+
+    overflow: visible;
+
+    background: transparent;
+
+    border: 0;
+    border-radius: 0;
+
+    perspective: none !important;
+
+    box-shadow: none !important;
+
+    transform: none !important;
+  }
+
+  .df-reader-book-spread::before,
+  .df-reader-book-spread::after,
+  .df-reader-page-turn-sheet,
+  .df-reader-page-turn-sheet::before,
+  .df-reader-page-turn-sheet::after {
+    display: none !important;
+
+    content: none !important;
+  }
+
+  /* -------------------------
+     Each paper page
+  ------------------------- */
+
+  .df-reader-book-page,
+  .df-reader-book-page--left,
+  .df-reader-book-page--right {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin:
+      0
+      0
+      14px;
+
+    padding:
+      22px
+      20px
+      30px;
+
+    overflow: visible !important;
+
+    background:
+      var(--reader-paper);
+
+    border:
+      1px
+      solid
+      #ece7df;
+
+    border-radius: 9px;
+
+    box-shadow:
+      0
+      9px
+      24px
+      rgba(
+        28,
+        54,
+        88,
+        0.1
+      ) !important;
+
+    transform: none !important;
+
+    transform-origin: center !important;
+  }
+
+  .df-reader-book-page--left {
+    order: 1;
+  }
+
+  .df-reader-book-page--right {
+    order: 2;
+  }
+
+  /* Remove desktop center spine effect */
+
+  .df-reader-book-page--left::before,
+  .df-reader-book-page--right::before {
+    display: none !important;
+  }
+
+  /* Keep a subtle page corner */
+
+  .df-reader-book-page--right::after {
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 42px;
+    height: 40px;
+  }
+
+  /* -------------------------
+     Page Content
+  ------------------------- */
+
+  .df-reader-page-content {
+    width: 100%;
+    height: auto !important;
+    min-height: 0;
+
+    padding: 0 !important;
+
+    overflow: visible !important;
+    overflow-y: visible !important;
+
+    font-size:
+      calc(
+        0.88rem
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-page-number {
+    margin-bottom: 12px;
+  }
+
+  .df-reader-book-page h2 {
+    margin-bottom: 13px;
+
+    font-size:
+      calc(
+        clamp(
+          1.55rem,
+          6.7vw,
+          2rem
+        )
+        * var(--reader-scale)
+      );
+
+    line-height: 1.12;
+  }
+
+  .df-reader-book-page h3 {
+    margin:
+      16px
+      0
+      7px;
+
+    font-size:
+      calc(
+        1rem
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-book-page p {
+    margin-bottom: 10px;
+
+    line-height: 1.6;
+  }
+
+  /* -------------------------
+     Lists
+  ------------------------- */
+
+  .df-reader-list {
+    padding-left: 18px;
+  }
+
+  .df-reader-list.is-compact li {
+    font-size:
+      calc(
+        0.86rem
+        * var(--reader-scale)
+      );
+
+    line-height: 1.5;
+  }
+
+  /* -------------------------
+     Timeline
+  ------------------------- */
+
+  .df-reader-timeline-item {
+    grid-template-columns:
+      32px
+      minmax(0, 1fr);
+
+    gap: 10px;
+  }
+
+  .df-reader-timeline-item > span {
+    width: 29px;
+    height: 29px;
+  }
+
+  .df-reader-timeline-item p {
+    font-size:
+      calc(
+        0.84rem
+        * var(--reader-scale)
+      );
+  }
+
+  /* -------------------------
+     Numbered / Test Lists
+  ------------------------- */
+
+  .df-reader-numbered-list > div,
+  .df-reader-test-list > div {
+    grid-template-columns:
+      30px
+      minmax(0, 1fr);
+
+    gap: 9px;
+  }
+
+  /* -------------------------
+     Quote
+  ------------------------- */
+
+  .df-reader-quote-card {
+    padding:
+      13px
+      14px
+      13px
+      40px;
+  }
+
+  .df-reader-quote-card p {
+    font-size:
+      calc(
+        0.88rem
+        * var(--reader-scale)
+      );
+  }
+
+  /* -------------------------
+     Illustration
+  ------------------------- */
+
+  .df-reader-illustration {
+    width: 100%;
+    max-height: none;
+
+    margin-top: 12px;
+  }
+
+  /* -------------------------
+     Quick Check
+  ------------------------- */
+
+  .df-reader-quick-check {
+    width: 100%;
+
+    padding:
+      12px
+      13px;
+  }
+
+  .df-reader-radio-list {
+    grid-template-columns: 1fr !important;
+
+    gap: 7px;
+  }
+
+  .df-reader-radio-option {
+    width: 100%;
+    min-height: 38px;
+
+    padding:
+      4px
+      2px;
+
+    font-size:
+      calc(
+        0.82rem
+        * var(--reader-scale)
+      );
+  }
+
+  /* -------------------------
+     Two-column blocks
+  ------------------------- */
+
+  .df-reader-two-mini-columns {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+
+  /* -------------------------
+     Accordions
+  ------------------------- */
+
+  .df-reader-accordion-stack summary {
+    padding:
+      10px
+      11px;
+
+    font-size:
+      calc(
+        0.82rem
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-accordion-stack details p {
+    padding:
+      0
+      11px
+      11px;
+
+    font-size:
+      calc(
+        0.8rem
+        * var(--reader-scale)
+      );
+  }
+
+  /* -------------------------
+     Turn Page text hidden
+     because bottom navigation
+     is enough on mobile
+  ------------------------- */
+
+  .df-reader-turn-page {
+    display: none !important;
+  }
+
+  /* =====================================================
+     Bottom Navigation
+  ===================================================== */
+
+  .df-reader-navigation {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin-top: 10px;
+  }
+
+  .df-reader-progress {
+    grid-column: 1 / -1;
+    grid-row: 1;
+
+    width: 100%;
+    max-width: none;
+  }
+
+  .df-reader-nav-button {
+    width: 100%;
+    min-height: 44px;
+
+    padding:
+      0
+      12px;
+  }
+
+  .df-reader-nav-button--previous {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .df-reader-nav-button--next {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+
+/* =========================================================
+   Small Mobile
+   <= 600px
+========================================================= */
+
+@media (max-width: 600px) {
+  .df-reader-header {
+    padding:
+      16px
+      12px
+      14px;
+  }
+
+  .df-reader-header h1 {
+    font-size:
+      clamp(
+        1.75rem,
+        8vw,
+        2.1rem
+      );
+  }
+
+  .df-reader-header p {
+    max-width: 340px;
+
+    font-size: 0.84rem;
+  }
+
+  .df-reader-layout {
+    width: calc(100% - 12px);
+
+    margin-top: 10px;
+  }
+
+  .df-reader-contents {
+    padding: 8px;
+  }
+
+  .df-reader-contents h2 {
+    margin-left: 3px;
+  }
+
+  .df-reader-contents nav button {
+    min-height: 36px;
+
+    padding:
+      6px
+      9px;
+  }
+
+  .df-reader-tools {
+    gap: 6px;
+  }
+
+  .df-reader-tool-button {
+    min-height: 36px;
+
+    padding:
+      0
+      10px;
+  }
+
+  .df-reader-book-page,
+  .df-reader-book-page--left,
+  .df-reader-book-page--right {
+    margin-bottom: 12px;
+
+    padding:
+      20px
+      17px
+      27px;
+  }
+
+  .df-reader-book-page h2 {
+    font-size:
+      calc(
+        1.6rem
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-page-content {
+    font-size:
+      calc(
+        0.86rem
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-quote-card {
+    margin:
+      12px
+      0;
+  }
+
+  .df-reader-info-note {
+    grid-template-columns:
+      25px
+      minmax(0, 1fr);
+
+    padding:
+      10px;
+  }
+
+  .df-reader-highlight-box {
+    padding:
+      11px
+      12px;
+  }
+
+  .df-reader-no-banner {
+    grid-template-columns:
+      48px
+      minmax(0, 1fr);
+
+    gap: 10px;
+  }
+
+  .df-reader-no-banner > strong {
+    width: 44px;
+    height: 44px;
+  }
+
+  .df-reader-result-card {
+    grid-template-columns:
+      62px
+      minmax(0, 1fr);
+
+    padding: 11px;
+  }
+
+  .df-reader-result-card > strong {
+    width: 58px;
+    height: 58px;
+
+    font-size: 0.95rem;
+  }
+
+  .df-reader-contact-card {
+    padding:
+      13px
+      14px;
+  }
+
+  .df-reader-contact-card > div {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .df-reader-contact-card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 38px;
+  }
+}
+
+
+/* =========================================================
+   Standard Mobile
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .df-reader-header {
+    padding:
+      14px
+      10px
+      12px;
+  }
+
+  .df-reader-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .df-reader-header p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .df-reader-layout {
+    width: calc(100% - 10px);
+  }
+
+  .df-reader-contents {
+    border-radius: 8px;
+  }
+
+  .df-reader-contents nav button strong {
+    font-size: 0.68rem;
+  }
+
+  .df-reader-tools {
+    justify-content: space-between;
+  }
+
+  .df-reader-tool-button {
+    flex: 1;
+
+    max-width: 130px;
+  }
+
+  .df-reader-book-page,
+  .df-reader-book-page--left,
+  .df-reader-book-page--right {
+    padding:
+      18px
+      15px
+      25px;
+
+    border-radius: 8px;
+  }
+
+  .df-reader-page-number {
+    margin-bottom: 10px;
+  }
+
+  .df-reader-book-page h2 {
+    margin-bottom: 12px;
+
+    font-size:
+      calc(
+        1.5rem
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-book-page h3 {
+    font-size:
+      calc(
+        0.98rem
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-page-content {
+    font-size:
+      calc(
+        0.84rem
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-list {
+    padding-left: 17px;
+  }
+
+  .df-reader-list.is-compact li {
+    font-size:
+      calc(
+        0.82rem
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-timeline-item {
+    grid-template-columns:
+      29px
+      minmax(0, 1fr);
+
+    gap: 8px;
+  }
+
+  .df-reader-timeline-item > span {
+    width: 27px;
+    height: 27px;
+
+    font-size: 0.78rem;
+  }
+
+  .df-reader-numbered-list > div,
+  .df-reader-test-list > div {
+    grid-template-columns:
+      28px
+      minmax(0, 1fr);
+
+    gap: 8px;
+  }
+
+  .df-reader-numbered-list span,
+  .df-reader-test-list span {
+    width: 26px;
+    height: 26px;
+
+    font-size: 0.68rem;
+  }
+
+  .df-reader-quote-card {
+    padding:
+      12px
+      12px
+      12px
+      37px;
+  }
+
+  .df-reader-quote-card > span {
+    left: 12px;
+
+    font-size: 2rem;
+  }
+
+  .df-reader-quick-check {
+    padding:
+      11px
+      12px;
+  }
+
+  .df-reader-radio-option {
+    font-size:
+      calc(
+        0.8rem
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-navigation {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .df-reader-progress,
+  .df-reader-nav-button--previous,
+  .df-reader-nav-button--next {
+    grid-column: 1;
+  }
+
+  .df-reader-progress {
+    grid-row: 1;
+  }
+
+  .df-reader-nav-button--previous {
+    grid-row: 2;
+  }
+
+  .df-reader-nav-button--next {
+    grid-row: 3;
+  }
+
+  .df-reader-nav-button {
+    min-height: 46px;
+
+    border-radius: 24px;
+  }
+
+  .df-reader-progress-row {
+    grid-template-columns:
+      minmax(0, 1fr)
+      34px;
+
+    gap: 8px;
+  }
+}
+
+
+/* =========================================================
+   Very Small Mobile
+   320px - 390px
+========================================================= */
+
+@media (max-width: 390px) {
+  .df-reader-header {
+    padding:
+      13px
+      8px
+      11px;
+  }
+
+  .df-reader-header h1 {
+    font-size: 1.62rem;
+  }
+
+  .df-reader-header p {
+    max-width: 300px;
+
+    font-size: 0.76rem;
+  }
+
+  .df-reader-layout {
+    width: calc(100% - 8px);
+  }
+
+  .df-reader-contents {
+    padding:
+      7px
+      6px;
+  }
+
+  .df-reader-contents nav {
+    gap: 5px;
+  }
+
+  .df-reader-contents nav button {
+    padding:
+      6px
+      8px;
+  }
+
+  .df-reader-contents nav button span,
+  .df-reader-contents nav button strong {
+    font-size: 0.65rem;
+  }
+
+  .df-reader-tools {
+    margin-bottom: 7px;
+  }
+
+  .df-reader-tool-button {
+    min-height: 35px;
+
+    font-size: 0.73rem;
+  }
+
+  .df-reader-book-page,
+  .df-reader-book-page--left,
+  .df-reader-book-page--right {
+    padding:
+      17px
+      13px
+      23px;
+  }
+
+  .df-reader-book-page h2 {
+    font-size:
+      calc(
+        1.38rem
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-book-page h3 {
+    font-size:
+      calc(
+        0.94rem
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-page-content {
+    font-size:
+      calc(
+        0.8rem
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-book-page p {
+    line-height: 1.55;
+  }
+
+  .df-reader-quote-card {
+    padding:
+      11px
+      10px
+      11px
+      34px;
+  }
+
+  .df-reader-info-note {
+    grid-template-columns:
+      23px
+      minmax(0, 1fr);
+
+    gap: 7px;
+
+    padding: 9px;
+  }
+
+  .df-reader-info-icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  .df-reader-radio-option {
+    min-height: 36px;
+
+    font-size:
+      calc(
+        0.77rem
+        * var(--reader-scale)
+      );
+  }
+
+  .df-reader-contact-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .df-reader-nav-button {
+    font-size: 0.78rem;
+  }
+}
+
+
+/* =========================================================
+   Mobile Landscape
+========================================================= */
+
+@media (
+  max-width: 900px
+)
+and (
+  orientation: landscape
+)
+and (
+  max-height: 520px
+) {
+  .df-reader-header {
+    min-height: auto;
+
+    padding:
+      10px
+      18px;
+  }
+
+  .df-reader-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .df-reader-header p {
+    margin-top: 4px;
+
+    font-size: 0.78rem;
+  }
+
+  .df-reader-layout {
+    margin-top: 10px;
+  }
+
+  .df-reader-contents {
+    margin-bottom: 8px;
+  }
+
+  .df-reader-book-page {
+    min-height: 0;
+
+    padding:
+      18px
+      20px
+      24px;
+  }
+}
+
+
+/* =========================================================
+   Touch Devices
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  .df-reader-tool-button,
+  .df-reader-nav-button,
+  .df-reader-contents nav button,
+  .df-reader-radio-option,
+  .df-reader-result-button,
+  .df-reader-contact-card a {
+    min-height: 44px;
+  }
+
+  .df-reader-contents nav button:hover,
+  .df-reader-tool-button:hover,
+  .df-reader-nav-button:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   Reduced Motion
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .df-reader *,
+  .df-reader *::before,
+  .df-reader *::after {
+    scroll-behavior: auto !important;
+
+    transition-duration:
+      0.01ms !important;
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+  }
+}
+/* =========================================================
+   Declining Fertility additions
+   Everything remains scoped to df-reader so the reference
+   Infertility Insights styling is not modified.
+========================================================= */
+
+.df-reader-book-stage,
+.df-reader-book-spread,
+.df-reader-book-page,
+.df-reader-page-content {
+  min-width: 0;
+}
+
+.df-reader-labeled-list {
+  display: grid;
+  gap: 10px;
+  margin: 11px 0 15px;
+}
+
+.df-reader-labeled-item {
+  padding: 9px 12px;
+  background: rgba(238, 245, 251, 0.86);
+  border-left: 3px solid var(--reader-pink);
+  border-radius: 5px;
+}
+
+.df-reader-labeled-item strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--reader-navy);
+  font-size: calc(0.86rem * var(--reader-scale));
+  font-weight: 800;
+}
+
+.df-reader-labeled-item p {
+  margin: 0;
+  font-size: calc(0.78rem * var(--reader-scale));
+  line-height: 1.42;
+}
+
+.df-reader-table-wrap {
+  width: 100%;
+  min-width: 0;
+  margin: 12px 0;
+}
+
+.df-reader-age-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: calc(0.7rem * var(--reader-scale));
+  line-height: 1.35;
+}
+
+.df-reader-age-table caption {
+  margin-bottom: 8px;
+  color: var(--reader-muted);
+  caption-side: top;
+  font-size: calc(0.71rem * var(--reader-scale));
+  font-weight: 700;
+  text-align: left;
+}
+
+.df-reader-age-table th,
+.df-reader-age-table td {
+  padding: 9px 6px;
+  border: 1px solid var(--reader-line);
+  overflow-wrap: break-word;
+  vertical-align: middle;
+}
+
+.df-reader-age-table th:first-child,
+.df-reader-age-table td:first-child {
+  width: 18%;
+}
+
+.df-reader-age-table th {
+  color: var(--reader-navy);
+  background: var(--reader-pink-soft);
+  font-weight: 800;
+  text-align: left;
+}
+
+.df-reader-age-table td {
+  color: var(--reader-ink);
+  background: rgba(255, 255, 255, 0.76);
+  font-weight: 600;
+}
+
+.df-reader-age-table tbody tr:nth-child(even) td {
+  background: rgba(238, 245, 251, 0.75);
+}
+
+.df-reader-preservation-grid {
+  display: grid;
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.df-reader-preservation-grid .df-reader-highlight-box {
+  margin: 0;
+}
+
+.df-reader-quiz-intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 11px;
+}
+
+.df-reader-quiz-intro p {
+  margin: 0;
+  color: var(--reader-navy);
+  font-size: calc(0.78rem * var(--reader-scale));
+  font-weight: 800;
+}
+
+.df-reader-quiz-intro span {
+  color: var(--reader-muted);
+  font-size: 0.73rem;
+  font-weight: 700;
+}
+
+.df-reader-quick-check--decline {
+  padding: 12px 14px;
+}
+
+.df-reader-quick-check--decline .df-reader-quick-check-title {
+  margin-bottom: 8px;
+}
+
+.df-reader-quick-check--decline > p {
+  font-size: calc(0.88rem * var(--reader-scale));
+  line-height: 1.45;
+}
+
+.df-reader-quick-check--decline .df-reader-radio-option {
+  min-height: 28px;
+  font-size: calc(0.78rem * var(--reader-scale));
+  line-height: 1.35;
+}
+
+.df-reader-completion-panel {
+  padding: 8px 2px;
+}
+
+.df-reader-completion-panel > h3 {
+  margin-top: 0;
+}
+
+.df-reader-quiz-progress-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 12px 0 6px;
+  color: var(--reader-blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.df-reader-quiz-progress-track {
+  height: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: var(--reader-line);
+  border-radius: 12px;
+}
+
+.df-reader-quiz-progress-track > div {
+  height: 100%;
+  background: var(--reader-pink);
+  border-radius: inherit;
+  transition: width 0.25s ease;
+}
+
+.df-reader-score-details {
+  display: grid;
+  gap: 9px;
+  margin-top: 6px;
+}
+
+.df-reader-score-detail {
+  padding: 8px 10px;
+  background: var(--reader-blue-soft);
+  border-radius: 7px;
+}
+
+.df-reader-score-detail-heading {
+  display: flex;
+  gap: 7px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.df-reader-score-detail-heading strong {
+  color: var(--reader-navy);
+  font-size: calc(0.74rem * var(--reader-scale));
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.df-reader-score-detail-heading > span {
+  flex: 0 0 auto;
+  color: var(--reader-blue);
+  font-size: calc(0.67rem * var(--reader-scale));
+  font-weight: 800;
+}
+
+.df-reader-score-detail-heading > span.is-incorrect {
+  color: var(--reader-pink-deep);
+}
+
+.df-reader-score-detail > p {
+  margin: 4px 0 0;
+  font-size: calc(0.7rem * var(--reader-scale));
+  line-height: 1.28;
+  text-align: left;
+}
+
+/* Keep page-turn animation exactly the same as the original reader. */
+@media (min-width: 769px) {
+  .df-reader-book-page .df-reader-page-content {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .df-reader-labeled-list {
+    gap: 8px;
+  }
+
+  .df-reader-labeled-item strong {
+    font-size: calc(0.92rem * var(--reader-scale));
+  }
+
+  .df-reader-labeled-item p {
+    font-size: calc(0.85rem * var(--reader-scale));
+  }
+
+  .df-reader-score-detail-heading strong {
+    font-size: calc(0.86rem * var(--reader-scale));
+  }
+
+  .df-reader-score-detail > p {
+    font-size: calc(0.82rem * var(--reader-scale));
+  }
+
+  .df-reader-score-details {
+    gap: 10px;
+  }
+
+  .df-reader-quick-check--decline .df-reader-radio-option {
+    min-height: 44px;
+    font-size: calc(0.87rem * var(--reader-scale));
+  }
+}
+
+@media (max-width: 520px) {
+  /* On narrow phones, table rows become readable key/value mini-cards. */
+  .df-reader-age-table,
+  .df-reader-age-table tbody,
+  .df-reader-age-table tr,
+  .df-reader-age-table td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .df-reader-age-table thead {
+    display: none;
+  }
+
+  .df-reader-age-table tr {
+    margin-bottom: 9px;
+    padding: 6px 9px;
+    background: var(--reader-white);
+    border: 1px solid var(--reader-line);
+    border-radius: 8px;
+  }
+
+  .df-reader-age-table td {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    padding: 5px 0;
+    background: transparent !important;
+    border: 0;
+    border-bottom: 1px solid var(--reader-line);
+    font-size: calc(0.83rem * var(--reader-scale));
+    text-align: right;
+  }
+
+  .df-reader-age-table td:last-child {
+    border-bottom: 0;
+  }
+
+  .df-reader-age-table td::before {
+    content: attr(data-label);
+    flex: 0 1 50%;
+    color: var(--reader-navy);
+    font-weight: 800;
+    text-align: left;
+  }
+
+  .df-reader-quiz-intro {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .df-reader-score-detail-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+  }
+}
